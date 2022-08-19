@@ -1,4 +1,7 @@
 package com.example.Medione.service;
 
-public interface IUserService {
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.example.Medione.pojo.User;
+
+public interface IUserService extends IService<User> {
 }
