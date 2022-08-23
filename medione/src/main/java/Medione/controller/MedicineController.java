@@ -16,8 +16,7 @@ public class MedicineController {
     @Autowired
     private IMedicineService service;
 
-
-    /**
+    /**create a new medicine
      * @param medicine a medicine object
      * @return creation result
      */
