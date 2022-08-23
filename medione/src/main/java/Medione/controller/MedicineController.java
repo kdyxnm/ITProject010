@@ -16,6 +16,11 @@ public class MedicineController {
     @Autowired
     private IMedicineService service;
 
+
+    /**
+     * @param medicine a medicine object
+     * @return creation result
+     */
     @PostMapping
     public R create(@RequestBody Medicine medicine){
         return new R(service.save(medicine));

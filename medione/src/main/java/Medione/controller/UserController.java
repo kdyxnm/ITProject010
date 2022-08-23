@@ -19,6 +19,11 @@ public class UserController {
     @Autowired
     private IUserService service;
 
+
+    /**
+     * @param user a user object
+     * @return creation result
+     */
     @PostMapping
     public R createAccount(@RequestBody User user){
         return new R(service.save(user));
