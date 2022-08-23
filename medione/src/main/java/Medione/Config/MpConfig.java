@@ -1,4 +1,4 @@
-package com.example.Medione.Config;
+package Medione.Config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;

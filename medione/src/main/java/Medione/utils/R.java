@@ -1,4 +1,4 @@
-package com.example.Medione.utils;
+package Medione.utils;
 
 import lombok.Data;
 

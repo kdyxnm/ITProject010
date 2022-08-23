@@ -1,4 +1,4 @@
-package com.example.Medione.pojo;
+package Medione.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.example.Medione.dao;
+package Medione.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.Medione.pojo.User;
+import Medione.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

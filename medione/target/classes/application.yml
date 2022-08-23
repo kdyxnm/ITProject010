@@ -2,9 +2,24 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://localhost:3306/javaweb
-      username: root
-      password: Ss123456789
+      url: jdbc:mysql://localhost:3306/javaweb  #adaptive
+      username: root          #adaptive
+      password: Ss123456789   #adaptive
+
+  mail:
+    host: smtp.gmail.com
+    username: MedicineOne10@gmail.com
+    password: xqxsaifdtwgtfgsg
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465
+    properties.mail.display.sendmail: Medicine One
+    properties.mail.display.sendname: Medicine One
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
 
 server:
-  port: 8321
+  port: 8081  #adaptive
+
