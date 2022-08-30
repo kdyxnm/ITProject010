@@ -102,7 +102,7 @@ This css document is used for following pages:
     height: 49px;
     width: 202px;
     position: absolute;
-    top: 188px;
+    top: 193px;
     right: 45px;
     border-radius: 25px;
     border-style: none;
@@ -197,7 +197,7 @@ h4 {
     font-weight: 400;
     border: 0px;
     position: absolute;
-    top: 475px;
+    top: 485px;
     right: 45px;
 }
 
@@ -207,6 +207,7 @@ h4 {
     font-weight: 600;
     font-family: "Poppins-SemiBold", sans-serif;
     margin-left: 317px;
+    margin-bottom: 30px;
 
 }
 
@@ -225,7 +226,7 @@ h4 {
     height: 49px;
     width: 202px;
     position: absolute;
-    top: 173px;
+    top: 157px;
     right: 45px;
     border-radius: 25px;
     border-style: none;
