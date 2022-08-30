@@ -1,0 +1,305 @@
+/***
+This css document is used for following pages:
+1.Reset Password
+2.login
+3.Register/Register1
+4.Add_location
+***/
+
+/* import the Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+/* the background of login and register pages */
+.container {
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../images/background.png);
+    display: flex;
+    margin: 0 auto;
+    position: relative;
+    /* keep main center_bar  at center */
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*** reset_password page  ***/
+
+/* center content part*/
+.center_bar {
+    height: 860.83px;
+    width: 752.12px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+}
+
+#title1 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", sans-serif;
+    margin-left: 276px;
+
+}
+
+#return_button {
+    height: 30px;
+    width: 28px;
+    background-image: url(../images/return.png);
+    position: absolute;
+    top: 60px;
+    left: 70px;
+
+}
+
+
+.center_bar_title {
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 20px;
+    margin-left: 90px;
+    font-weight: 500;
+}
+
+.input_area {
+    border-radius: 25px;
+    margin-top: 0px;
+    margin-left: 60px;
+    height: 50px;
+    width: 619px;
+    border: none;
+    font-size: 20px;
+    padding-left: 27px;
+}
+
+.notice_words {
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 16px;
+    color: red;
+    margin-left: 83px;
+    margin-top: -5px;
+}
+
+
+.input_submit {
+    height: 50px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 200px;
+    background: #5A7BEF;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+#verify_button {
+    height: 49px;
+    width: 202px;
+    position: absolute;
+    top: 188px;
+    right: 45px;
+    border-radius: 25px;
+    border-style: none;
+    background: #5A7BEF;
+    color: white;
+    margin-left: 20px;
+}
+
+
+/* login page */
+h3 {
+    font-size: 40px;
+    color: #6E78F7;
+    margin-left: 140px;
+    margin-bottom: -5px;
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 25px;
+    color: #6E78F7;
+    font-family: "Poppins-Regular", sans-serif;
+    margin-left: 250px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+    font-weight: 400;
+}
+
+.center_bar2 {
+    height: 762px;
+    width: 560px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+}
+
+.center_bar_title2 {
+    font-size: 25px;
+    margin-left: 90px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #3F4079;
+    font-family: "Poppins-Bold", sans-serif;
+}
+
+.input_area2 {
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: -10px;
+    margin-left: 50px;
+    height: 58px;
+    width: 447px;
+    border: none;
+    font-size: 20px;
+    padding-left: 27px;
+}
+
+
+#login_button {
+    height: 40px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 100px;
+    margin-top: 20px;
+    background: #5A7BEF;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#register_button {
+    height: 40px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 100px;
+    background: white;
+    color: #5A7BEF;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#forget_pwd {
+    font-family: "Poppins-Redular", sans-serif;
+    font-size: 20px;
+    color: #898A8F;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    border: 0px;
+    position: absolute;
+    top: 475px;
+    right: 45px;
+}
+
+/* Register page */
+#title3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", sans-serif;
+    margin-left: 317px;
+
+}
+
+.input_area3 {
+    border-radius: 25px;
+    margin-top: -15px;
+    margin-left: 60px;
+    height: 50px;
+    width: 619px;
+    border: none;
+    font-size: 20px;
+    padding-left: 27px;
+}
+
+#verify_button3 {
+    height: 49px;
+    width: 202px;
+    position: absolute;
+    top: 173px;
+    right: 45px;
+    border-radius: 25px;
+    border-style: none;
+    background: #5A7BEF;
+    color: white;
+    margin-left: 20px;
+}
+
+#input_submit3 {
+    height: 50px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 200px;
+    margin-top: 20px;
+    background: #5A7BEF;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Add_location page */
+
+#title4 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "Poppins-SemiBold", sans-serif;
+    margin-left: 262px;
+
+}
+
+
+.input_area4 {
+    border-radius: 25px;
+    margin-top: 0px;
+    margin-left: 60px;
+    height: 200px;
+    width: 619px;
+    border: none;
+    font-size: 20px;
+    padding-left: 27px;
+}
+
+#notice_words4 {
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 20px;
+    color: #898A8F;
+    margin-left: 172px;
+    margin-top: 10px;
+}
+
+
+
+#add_location_button {
+    height: 40px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 200px;
+    margin-top: 150px;
+    background: #5A7BEF;
+    color: white;
+    font-size: 18px;
+}
+
+#submit_button {
+    height: 40px;
+    width: 368px;
+    border-radius: 25px;
+    border-style: none;
+    margin-left: 200px;
+    margin-top: 30px;
+    background: white;
+    color: #5A7BEF;
+    font-size: 20px;
+
+}
