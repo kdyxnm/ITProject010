@@ -1,0 +1,38 @@
+
+
+
+
+#add_location_center_bar{
+  height: 600px;
+}
+
+#title4 {
+  margin-left: 262px;
+
+}
+
+#input_location {
+  margin-top: 80px;
+  margin-left: 60px;
+  border: none;
+  padding-left: 27px;
+}
+
+#notice_words4 {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 20px;
+  color: #898A8F;
+  margin-left: 172px;
+  margin-top: 10px;
+}
+
+#add_location_button {
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+
+#submit_button {
+  margin-left: 200px;
+  margin-top: 30px;
+}

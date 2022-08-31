@@ -1,0 +1,54 @@
+/* login page */
+h3 {
+  font-size: 40px;
+  color: #6E78F7;
+  margin-left: 140px;
+  margin-bottom: -5px;
+  font-family: "Poppins-Bold", sans-serif;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 25px;
+  color: #6E78F7;
+  font-family: "Poppins-Regular", sans-serif;
+  margin-left: 250px;
+  margin-top: 0px;
+  margin-bottom: 70px;
+  font-weight: 400;
+}
+
+.center_bar2 {
+  height: 762px;
+  width: 560px;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.center_bar_title2 {
+  font-size: 25px;
+  margin-left: 90px;
+  margin-top: 10px;
+  font-weight: 600;
+  color: #3F4079;
+  font-family: "Poppins-Bold", sans-serif;
+}
+
+.input_area2 {
+  border-radius: 25px;
+  margin-bottom: 50px;
+  margin-top: -10px;
+  margin-left: 50px;
+  height: 58px;
+  width: 447px;
+  border: none;
+  font-size: 20px;
+  padding-left: 27px;
+}
+
+#login_button {
+  margin-left: 100px;
+  margin-top: 20px;
+}

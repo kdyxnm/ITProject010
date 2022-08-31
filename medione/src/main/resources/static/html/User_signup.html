@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Register</title>
+  <link rel="stylesheet" href="../css/background_and_center_bar.css" type="text/css">
+  <link rel="stylesheet" href="../css/register_and_reset_pwd.css" type="text/css">
+
+</head>
+
+<body id="body">
+  <div class="container">
+    <div class="center_bar">
+      <h5 class="title" id="title3">Register</h5>
+      <form action="" method="POST" name="">
+        <a href="./Login.html">
+          <div id="return_button" onclick></div>
+        </a>
+        <label class="center_bar_title">Email:</label>
+        <div id = "emial_input_and_verify">
+          <input type="text" name="email" class="input_area">
+          <input type="button" value="Send Vertification Code" id="verify_button">
+        </div>
+        <label class="center_bar_title">Verification Code:</label>
+
+        <p><input type="text" name="vertification code" class="input_area"></p>
+        <label class="center_bar_title">Username:</label>
+        <p><input type="text" name="username" class="input_area"></p>
+        <label class="center_bar_title">Nickname:</label>
+        <p><input type="text" name="nickname" class="input_area"></p>
+        <label class="center_bar_title">Set Password:</label>
+        <p><input type="password" name="pwd" class="input_area"></p>
+        <p class="notice_words">Your password has to be at least 8 characters long. </p>
+        <label class="center_bar_title">Confirm New Password:</label>
+        <p><input type="password" name="pwd" class="input_area"></p>
+        <p><input type="submit" name="submit" value="Confirm" class="purple_button" id="input_submit"></p>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
