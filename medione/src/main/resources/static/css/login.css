@@ -1,54 +1,148 @@
-/* login page */
-h3 {
-  font-size: 40px;
-  color: #6E78F7;
-  margin-left: 140px;
-  margin-bottom: -5px;
-  font-family: "Poppins-Bold", sans-serif;
-  font-weight: 600;
+/***
+This css document for login style:
+***/
+@media screen and (max-width: 992px) {
+  #login_header{
+    height: 450px;
+    padding-top: 0px;
+    margin-top: 0px;
+    border-top: 0px;
+    background-image: url(../images/phone_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #login_open_button{
+    font-size: 38px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #login_website_title{
+    font-size: 38px;
+    font-weight: 300;
+    top: 200px;
+  }
+
+  .center_bar2 {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .center_bar_title2{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+    color: #3F4079;
+    font-family: "Poppins-Bold", sans-serif;
+  }
+
+  .input_area2 {
+    border-radius: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 0;
+    height: 50px;
+    width: 280px;
+    border: none;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 3px rgb(179, 176, 176);
+    font-size: 20px;
+    padding-left: 27px;
+  }
+
+  /* the link to forget password */
+  /* #forget_pwd{
+  } */
+
+  #forget_pwd{
+    margin: 0;
+    border: none;
+    font-family: "Poppins-Redular", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #898A8F;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    top: 5px;
+    left: 170px;
+  }
+    
+
+  #login_button {
+    margin-top: 10px;
+  }
+
 }
 
-h4 {
-  font-size: 25px;
-  color: #6E78F7;
-  font-family: "Poppins-Regular", sans-serif;
-  margin-left: 250px;
-  margin-top: 0px;
-  margin-bottom: 70px;
-  font-weight: 400;
-}
+/* desktop style */
+@media screen and (min-width: 992px) {
+  /* login page */
+  h3 {
+    font-size: 40px;
+    color: #6E78F7;
+    margin-left: 140px;
+    margin-bottom: -5px;
+    font-family: "Poppins-Bold", sans-serif;
+    font-weight: 600;
+  }
 
-.center_bar2 {
-  height: 762px;
-  width: 560px;
-  background-color: rgba(255, 255, 255, 0.8);
-  position: absolute;
-  border-radius: 20px;
-  margin: auto;
-}
+  h4 {
+    font-size: 25px;
+    color: #6E78F7;
+    font-family: "Poppins-Regular", sans-serif;
+    margin-left: 250px;
+    margin-top: 0px;
+    margin-bottom: 70px;
+    font-weight: 400;
+  }
 
-.center_bar_title2 {
-  font-size: 25px;
-  margin-left: 90px;
-  margin-top: 10px;
-  font-weight: 600;
-  color: #3F4079;
-  font-family: "Poppins-Bold", sans-serif;
-}
+  .center_bar2 {
+    height: 762px;
+    width: 560px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    border-radius: 20px;
+    margin: auto;
+  }
 
-.input_area2 {
-  border-radius: 25px;
-  margin-bottom: 50px;
-  margin-top: -10px;
-  margin-left: 50px;
-  height: 58px;
-  width: 447px;
-  border: none;
-  font-size: 20px;
-  padding-left: 27px;
-}
+  .center_bar_title2 {
+    font-size: 25px;
+    margin-left: 90px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #3F4079;
+    font-family: "Poppins-Bold", sans-serif;
+  }
 
-#login_button {
-  margin-left: 100px;
-  margin-top: 20px;
+  .input_area2 {
+    border-radius: 25px;
+    margin-bottom: 50px;
+    margin-top: -10px;
+    margin-left: 50px;
+    height: 58px;
+    width: 447px;
+    border: none;
+    font-size: 20px;
+    padding-left: 27px;
+  }
+
+  #login_button {
+    margin-left: 100px;
+    margin-top: 20px;
+  }
+
+  /* the link to forget password */
+  #forget_pwd {
+    font-family: "Poppins-Redular", sans-serif;
+    font-size: 20px;
+    color: #898A8F;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 400;
+    border: 0px;
+    position: absolute;
+    top: 470px;
+    right: 45px;
+  }
 }

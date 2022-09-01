@@ -4,37 +4,105 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=yes">
   <title>Login</title>
   <link rel="stylesheet" href="../css/background_and_center_bar.css" type="text/css">
   <link rel="stylesheet" href="../css/login.css" type="text/css">
+  <link rel="stylesheet" href="../css/phone_base_format.css" type="text/css">
+  <link rel="stylesheet" href="../css/side_bar.css" type="text/css">
 </head>
 
 <body>
   <div class="container">
-    <div class="center_bar2">
-      <h3>Medicine One</h3>
-      <h4>by Team 010</h4>
+
+
+    <header class = "website_header phone_only" id="login_header">
+      <button class="open_button" id="login_open_button"
+      onclick="openNav()">
+      ☰
+      </button>
+      <h1 class = "website_title" id="login_website_title">
+        Medicine One
+      </h1>
+    </header>
+
+    <div class = "side_bar phone_only" id="side_bar">
+      <div class = "side_bar_title">
+        <a href="javascript:void(0)" 
+           class="close_button" 
+           onclick="closeNav()">
+          <img class="close_button_icon" src="../images/cross.png">
+        </a>
+        <h2 class="side_bar_medicine_one">
+          Medicine One
+        </h2>
+        <div class="side_bar_team_010">
+            by Team 010
+        </div>
+      </div>
+      <hr class="side_bar_line">
+      <a href="User_login.html">
+        <div class="side_bar_item  side_bar_selected">
+          <div>
+            <span style="margin-left: 10px">
+              <img class="side_bar_icon" src="../images/Login.png">
+            </span>
+            <span style="margin-left: 10px">Log in</span>
+          </div>
+        </div>
+      </a>
+
+      <a href="About.html">
+        <div class="side_bar_item">
+          <div>
+            <span style="margin-left: 10px">
+              <img class="side_bar_icon" src="../images/Website.png">
+            </span>
+            <span style="margin-left: 10px">About Medicine One</span>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- The side bar of the website -->
+
+
+    <div class="center_bar2 content_container" style="margin-left: 0;">
+
+      <h3 class="desktop_only">Medicine One</h3>
+
+      <h4 class="desktop_only">by Team 010</h4>
+
       <form action="" method="POST" name="">
+
         <label class="center_bar_title2">User Name:</label>
         <p><input type="text" name="user_name" class="input_area2"></p>
+      
         <label class="center_bar_title2">Password:</label>
         <p><input type="password" name="pwd" class="input_area2"></p>
-        <a href="./Reset_password.html"><p id="forget_pwd">Forget Password?</p></a>
+
+        <a id="forget_pwd" href="./Reset_pwd.html">Forget Password?</a>
+
         <p><input type="submit" name="login" value="Login" class="purple_button" id="login_button"></p>
+
         <div class = "button" onclick>
           <a href="./Register.html">
             <p>Register</p>
           </a>
         </div>
-        <div class = "button" onclick>
-          <a href="./About_this_website.html">
+
+        <div class = "button desktop_only" onclick>
+          <a href="./About.html">
             <p>About Medicine One</p>
           </a>
         </div>
+
       </form>
+
+
     </div>
   </div>
 </body>
+
+<script type="text/javascript" src="../js/sidebar_fold.js"></script>
 
 </html>

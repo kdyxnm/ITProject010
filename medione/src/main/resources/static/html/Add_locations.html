@@ -4,21 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Add_location</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Add Locations</title>
   <link rel="stylesheet" href="../css/background_and_center_bar.css" type="text/css">
   <link rel="stylesheet" href="../css/add_location.css" type="text/css">
+  <link rel="stylesheet" href="../css/phone_base_format.css" type="text/css">
+
 
 </head>
 
 <body>
   <div class="container">
-    <div class="center_bar" id = "add_location_center_bar">
+
+    <header class = "website_header phone_only" id="login_header">
+      <a href=""><div class="return_button" style="display: block;" onclick></div></a>
+      <h1 class = "website_title" id="login_website_title">
+        Add Locations
+      </h1>
+    </header>
+
+
+
+    <div class="center_bar content_container" id = "add_location_center_bar">
       <a href="">
-        <div id="return_button"></div>
+        <div class="return_button desktop_only"></div>
       </a>
       <h5 class="title" id="title4">Set your locations</h5>
       <form action="" method="POST" name="">
+        <label class="center_bar_title phone_only">New Location:</label>
         <p><input type="text" name="location" class="input_area" id="input_location"></p>
         <p id="notice_words4">Add the location where you might store drugs</p>
         <p><input type="submit" name="add_location" value="Confirm and Add New Location"
