@@ -1,8 +1,6 @@
-
-
-
-
-
+/***
+The css style for add location web page
+***/
 
 @media screen and (max-width: 992px) {
 
@@ -21,7 +19,6 @@
   }
 
   #notice_words4 {
-    
     font-family: "Poppins-Regular", sans-serif;
     font-size: 12px;
     color: #898A8F;
