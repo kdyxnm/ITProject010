@@ -112,12 +112,13 @@
 // get user 还有这里
 function get()
 {
-  axios.get("/user/get").then((res) => {
+  const nickname = document.getElementById("nickname").value;
+  axios.get("/user/get/"+nickname).then((res) => {
     // console.log(res.data);
-    // alert(res.data.value);
-    alert("ssssssssssssssssssss");
-    console.log(123);
-    return 123;
+    alert(nickname);
+    alert("niceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+    console.log(nickname);
+    return nickname.outerText;
   });
 }
   </script>

@@ -39,10 +39,10 @@ public class UserController {
 
 
     @CrossOrigin(origins = "*")
-    @GetMapping("get")
-    public String Login2(){
-        String nickname = "goggle";
+    @GetMapping("get/{nickname}")
+    public String Login2(@PathVariable String nickname){
         System.out.println(nickname);
+        System.out.println(nickname+"login 2 success");
         return nickname+ " \nlogin 2 success";
     }
 
