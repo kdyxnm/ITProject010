@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+import java.sql.Blob;
+
 @RestController
 @RequestMapping("/medicine")
 public class MedicineController {
@@ -21,8 +24,13 @@ public class MedicineController {
      * @return creation result
      */
     @PostMapping
-    public R create(@RequestBody Medicine medicine){
-        return new R(service.save(medicine));
+    public void create(@RequestBody Medicine medicine){
+
     }
 
-}
+   // @PostMapping("upload")
+    //public R createImage(@RequestBody Blob image){
+
+    }
+
+

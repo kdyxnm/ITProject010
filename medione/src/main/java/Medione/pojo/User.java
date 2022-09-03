@@ -8,5 +8,5 @@ import lombok.Data;
 public class User {
     private int id;
     private String password;
-    private int nickname;
+    private String nickname;
 }

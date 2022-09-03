@@ -75,14 +75,16 @@
       <form action="" method="POST" name="">
 
         <label class="center_bar_title2">User Name:</label>
-        <p><input type="text" name="user_name" class="input_area2"></p>
+        <p><input id="nickname" type="text" name="nickname" class="input_area2"></p>
       
         <label class="center_bar_title2">Password:</label>
         <p><input type="password" name="pwd" class="input_area2"></p>
 
         <a id="forget_pwd" href="./Reset_pwd.html">Forget Password?</a>
 
-        <p><input type="submit" name="login" value="Login" class="purple_button" id="login_button"></p>
+<!--        我改了这-->
+        <p> <input type="submit" name="login" value="Login" class="purple_button" id="login_button"
+                   formmethod="get" onclick="get()"></p>
 
         <div class = "button" onclick>
           <a href="./Register.html">
@@ -104,5 +106,19 @@
 </body>
 
 <script type="text/javascript" src="../js/sidebar_fold.js"></script>
+<script src="../js/axios-0.18.0.js"></script>
+<script>
 
+// get user 还有这里
+function get()
+{
+  axios.get("/user/get").then((res) => {
+    // console.log(res.data);
+    // alert(res.data.value);
+    alert("ssssssssssssssssssss");
+    console.log(123);
+    return 123;
+  });
+}
+  </script>
 </html>

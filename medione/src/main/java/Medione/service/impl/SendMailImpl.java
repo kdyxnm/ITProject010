@@ -14,7 +14,6 @@ import java.util.HashMap;
 import java.util.Objects;
 
 @Service
-
 public class SendMailImpl implements ISendMailService {
     @Resource
     JavaMailSender javaMailSender;
