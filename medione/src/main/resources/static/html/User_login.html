@@ -25,7 +25,6 @@
         Medicine One
       </h1>
     </header>
-    <!--head bar phone only-->
 
     <div class = "side_bar phone_only" id="side_bar">
       <div class = "side_bar_title">
@@ -83,7 +82,7 @@
 
         <a id="forget_pwd" href="./Reset_pwd.html">Forget Password?</a>
 
-        <!--Input information-->
+<!--        我改了这-->
         <p> <input type="submit" name="login" value="Login" class="purple_button" id="login_button"
                    formmethod="get" onclick="get()"></p>
 
@@ -100,24 +99,22 @@
         </div>
 
       </form>
-      <!--form send username and password to backend for validation-->
+
 
     </div>
-    <!--center bar-->
   </div>
 </body>
 
 <script type="text/javascript" src="../js/sidebar_fold.js"></script>
 <script src="../js/axios-0.18.0.js"></script>
 <script>
-
-// get user
+// get user 还有这里
 function get()
 {
   const nickname = document.getElementById("nickname").value;
   axios.get("/user/get/"+nickname).then((res) => {
     // console.log(res.data);
-    alert(nickname);
+    alert(res.data);
     alert("niceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(nickname);
     return nickname.outerText;
