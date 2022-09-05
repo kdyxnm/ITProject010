@@ -84,7 +84,7 @@
 
 <!--        我改了这-->
         <p> <input type="submit" name="login" value="Login" class="purple_button" id="login_button"
-                   formmethod="get" onclick="get()"></p>
+                   formmethod="get" onclick="login()"></p>
 
         <div class = "button" onclick>
           <a href="./Register.html">
@@ -109,15 +109,13 @@
 <script src="../js/axios-0.18.0.js"></script>
 <script>
 // get user 还有这里
-function get()
+function login()
 {
   const nickname = document.getElementById("nickname").value;
-  axios.get("/user/get/"+nickname).then((res) => {
-    // console.log(res.data);
+  axios.get("/user/login").then((res) => {
     alert(res.data);
     alert("niceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(nickname);
-    return nickname.outerText;
   });
 }
   </script>

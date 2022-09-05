@@ -33,8 +33,8 @@ public class UserController {
     }
 
     @PostMapping("login")
-    public User Login(@RequestBody User user){
-        return user;
+    public R<User> Login(@RequestBody User user){
+        return new R(user);
     }
 
 

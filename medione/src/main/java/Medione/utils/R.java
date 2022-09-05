@@ -4,17 +4,17 @@ import lombok.Data;
 
 @Data
 public class R<T> {
-    Boolean flag = true;
+    int status = 200;
     T data = null;
 
-    public R(Boolean flag){
-        this.flag = flag;
+    public R(int status){
+        this.status = status;
     }
 
     public R(T data){
         this.data = data;
         if (data==null|| data.equals(false)){
-            flag = false;
+            status = 404;
         }
     }
 

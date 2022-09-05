@@ -1,5 +1,7 @@
 package com.example.Medione;
 
+import Medione.pojo.User;
+import Medione.utils.R;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,4 +12,12 @@ class Team10ApplicationTests {
     void contextLoads() {
     }
 
+    @Test
+    void RTest(){
+        User user = new User();
+        user.setId(13);
+        user.setNickname("adam");
+        R r = new R<>(user);
+        System.out.println(r);
+    }
 }
