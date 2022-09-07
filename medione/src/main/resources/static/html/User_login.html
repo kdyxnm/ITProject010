@@ -72,7 +72,7 @@
 
       <h4 class="desktop_only">by Team 010</h4>
 
-      <form action="" method="POST" name="">
+      <form action="" method="get" name="">
 
         <label class="center_bar_title2">User Name:</label>
         <p><input id="nickname" type="text" name="nickname" class="input_area2"></p>
@@ -83,8 +83,7 @@
         <a id="forget_pwd" href="./Reset_pwd.html">Forget Password?</a>
 
 <!--        我改了这-->
-        <p> <input type="submit" name="login" value="Login" class="purple_button" id="login_button"
-                   formmethod="get" onclick="login()"></p>
+        <p> <input type="submit" name="login" value="Login" class="purple_button" id="login_button" formmethod="get" onclick="getter()"></p>
 
         <div class = "button" onclick>
           <a href="./Register.html">
@@ -109,13 +108,21 @@
 <script src="../js/axios-0.18.0.js"></script>
 <script>
 // get user 还有这里
-function login()
+function getter()
 {
   const nickname = document.getElementById("nickname").value;
-  axios.get("/user/login").then((res) => {
+  alert(nickname);
+  console.log(nickname.type);
+  axios.post("/user/login",{params:{
+      "id":123,
+      "username":"adam"
+    }}).then((res) => {
+    // console.log(res.data);
+    alert(nickname);
     alert(res.data);
     alert("niceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
     console.log(nickname);
+    return nickname.outerText;
   });
 }
   </script>

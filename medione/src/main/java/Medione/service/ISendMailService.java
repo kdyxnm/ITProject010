@@ -8,5 +8,5 @@ import org.springframework.stereotype.Service;
 public interface ISendMailService  {
     Boolean sendMail(String account);
 
-    Boolean checkCode(String code);
+    Boolean checkCode(String code,String account);
 }

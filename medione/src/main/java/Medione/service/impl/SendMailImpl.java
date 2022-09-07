@@ -56,22 +56,22 @@ public class SendMailImpl implements ISendMailService {
         System.out.println("sent out!");
         System.out.println(code);
 
-        return Boolean.TRUE;
+        return true;
     }
 
     @Override
-    public Boolean checkCode(String input) {
-        if (!codeMap.containsKey(to)){
+    public Boolean checkCode(String input, String account) {
+        if (!codeMap.containsKey(account)){
             return false;
         }
-        String localCode = codeMap.get(to);
+        String localCode = codeMap.get(account);
         System.out.println(localCode);
         Boolean validity = Objects.equals(input, localCode);
-        LocalTime sentTime = timer.get(to);
+        LocalTime sentTime = timer.get(account);
         int exceed = LocalTime.now().compareTo(sentTime.plusMinutes(EXCEED_TIME)); //
         if (validity && (exceed==-1)){
-            codeMap.remove(to);
-            timer.remove(to);
+            codeMap.remove(account);
+            timer.remove(account);
         }
         return validity&&(exceed==-1);
     }
