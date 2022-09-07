@@ -106,6 +106,8 @@
 
 <script type="text/javascript" src="../js/sidebar_fold.js"></script>
 <script src="../js/axios-0.18.0.js"></script>
+<script src="../js/vue.js"></script>
+
 <script>
 // get user 还有这里
 function getter()
@@ -125,5 +127,16 @@ function getter()
     return nickname.outerText;
   });
 }
-  </script>
+new Vue ({
+  el: "#app",
+  data() {
+    return {
+      username:""
+
+    }
+  }
+});
+
+
+</script>
 </html>
