@@ -67,7 +67,10 @@ public class UserController {
     @PostMapping("login")
     @CachePut(value = "session", key = "#user")
     public R<User> Login(@RequestBody User user){
-
+        String target = "custom";
+        if (!user.getUsername().equals(target)){
+            return new R(404);
+        }
         return new R(user);
     }
 
