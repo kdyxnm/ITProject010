@@ -66,14 +66,24 @@ public class UserController {
 
     @PostMapping("login")
     @CachePut(value = "session", key = "#user")
-    public R<User> Login(@RequestBody User user){
+    public R<User> Login(HttpServletRequest request,@RequestBody User user){
         String target = "custom";
+        request.getSession().setAttribute("username",user.getUsername());
         if (!user.getUsername().equals(target)){
             return new R(404);
         }
         return new R(user);
     }
 
+
+
+    @DeleteMapping("log out")
+    @CachePut(value = "session", key = "#user")
+    public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
+        request.getSession().invalidate();
+        String target = "custom";
+        return new R(200);
+    }
 
     @CrossOrigin(origins = "*")
     @GetMapping("get/{nickname}")
