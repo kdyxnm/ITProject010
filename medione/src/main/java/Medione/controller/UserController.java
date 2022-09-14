@@ -28,6 +28,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.time.LocalTime;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -65,6 +66,7 @@ public class UserController {
         }
         return new R(service.save(user));
     }
+
 
     @PostMapping("login")
     public R<User> Login(HttpServletRequest request,@RequestBody User user){

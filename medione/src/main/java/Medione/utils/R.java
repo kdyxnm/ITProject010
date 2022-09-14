@@ -11,6 +11,9 @@ public class R<T> {
 
     public R(int status){
         this.status = status;
+        if (status !=200) {
+            this.msg = "error";
+        }
     }
 
     public R(T data){
