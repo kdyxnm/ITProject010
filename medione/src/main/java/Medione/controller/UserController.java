@@ -6,6 +6,7 @@ import Medione.pojo.User;
 import Medione.service.IMedicineService;
 import Medione.service.ISendMailService;
 import Medione.service.IUserService;
+import Medione.utils.BaseContext;
 import Medione.utils.CreateAccountError;
 import Medione.utils.R;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
@@ -25,6 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalTime;
 
 @RestController
 @RequestMapping("/user")
@@ -65,20 +67,27 @@ public class UserController {
     }
 
     @PostMapping("login")
-    @CachePut(value = "session", key = "#user")
     public R<User> Login(HttpServletRequest request,@RequestBody User user){
-        String target = "custom";
-        request.getSession().setAttribute("username",user.getUsername());
-        if (!user.getUsername().equals(target)){
+
+        System.out.println("start time: "+LocalTime.now());
+        HttpSession session = request.getSession();
+        BaseContext.setCurrentId((long) session.getId().hashCode());    //String to Long
+        session.setAttribute("username",user.getUsername());
+        User target = service.getByName(user.getUsername());
+        System.out.println("target: "+target);
+        System.out.println("input: "+user);
+
+        System.out.println("time used: "+ LocalTime.now());
+
+        if (target == null ||    ( !target.getPassword().equals(user.getPassword()) )){
             return new R(404);
         }
-        return new R(user);
+        return new R(target);
     }
 
 
 
     @DeleteMapping("log out")
-    @CachePut(value = "session", key = "#user")
     public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
         request.getSession().invalidate();
         String target = "custom";
@@ -97,16 +106,6 @@ public class UserController {
 
         request.setAttribute("username",nickname);
         System.out.println("request attribute set! : " + request.getAttribute("username"));
-        return nickname+ " \nlogin 2 success";
-    }
-
-    @GetMapping("get3/{nickname}")
-    public String Login3(HttpServletRequest request, HttpServletResponse response, @PathVariable String nickname){
-        HttpSession session = request.getSession();
-
-        System.out.println(session.getId());
-
-        System.out.println("session attribute get! : " + session.getAttribute("username"));
         return nickname+ " \nlogin 2 success";
     }
 
@@ -129,4 +128,6 @@ public class UserController {
 
         return nickname+ " \nlogin 2 success";
     }
+
+
 }

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Service;
 
 
 public interface IUserService extends IService<User> {
+    User getByName(String name);
 }

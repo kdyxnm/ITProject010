@@ -17,7 +17,6 @@ class Team10ApplicationTests {
     @Test
     void RTest(){
         User user = new User();
-        user.setId(13);
         user.setNickname("adam");
         R r = new R<>(user);
         System.out.println(r);

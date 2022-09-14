@@ -12,8 +12,7 @@ import java.net.http.HttpRequest;
 public class SessionTest {
     @Test
     void contextLoads() {
-        User user = new User();
-        user.setId(13);
+        User user = new User();;
         user.setNickname("adam");
         R r = new R<>(user);
         System.out.println(r);
