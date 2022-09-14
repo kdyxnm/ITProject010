@@ -1,4 +1,4 @@
-package Medione.Config;
+package Medione.config;
 
 import Medione.handler.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;

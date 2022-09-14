@@ -51,6 +51,7 @@
 </template>
 
 <script>
+import querystring from 'querystring';
 import SideBar from '../components/SideBar.vue'
 
 
@@ -84,12 +85,17 @@ import SideBar from '../components/SideBar.vue'
       },
       verifyUser(){
         var that=this;
+        console.log(that.userName);
+        console.log(that.pwd);
         this.$axios({
           method:'post',
-          url:'"/user/login"',
-          params:{
-            userName:that.userName,  
-            password:that.pwd
+          url:'http://localhost:8081/user/login',
+          data: {
+            username:that.userName.trim(),  
+            password:that.pwd,
+          },
+          headers:{
+            'Content-Type' : 'application/json'
           }
           }).then(function(response){
               console.log(response.data)
