@@ -1,4 +1,4 @@
-package Medione.config;
+package Medione.Config;
 
 import Medione.handler.LoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +28,10 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry){
 //        block exclude/login  /register.....
 //        block register for testing!
-        registry.addInterceptor(loginInterceptor)
-                .addPathPatterns("/html/Register.html")
+ //       registry.addInterceptor(loginInterceptor)
+//                .addPathPatterns("/html/Register.html")
                 //.addPathPatterns("/**")
-                .excludePathPatterns("/html/User_login.html")
+//                .excludePathPatterns("/html/User_login.html")
                 //.excludePathPatterns("/register")
         ;
 
