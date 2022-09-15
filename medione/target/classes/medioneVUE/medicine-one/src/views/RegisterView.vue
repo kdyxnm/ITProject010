@@ -46,7 +46,7 @@
 				<tr>
 					<label class="center_bar_title">Set Password:</label>
 					<p><input type="password"  v-model.trim ="pwd" class="input_area"></p>
-					<p class="notice_words" v-if="iswarning"> {{warningText}} </p>
+					<p class="notice_words" v-if="iswarning"> {{errorMessage}} </p>
 				</tr>
 				<tr>					
 					<label class="center_bar_title">Confirm New Password:</label>
@@ -74,6 +74,7 @@ import HeadBar from '../components/HeadBar.vue';
         displayFlag : false,
         displayDeskOnly: true,
 				iswarning: false,
+				errorMessage : "",
         warningText : "Your password has to be at least 8 characters long.",
         email : " ",
 				verifyCode : "",
@@ -107,21 +108,46 @@ import HeadBar from '../components/HeadBar.vue';
 				console.log(this.nickName);
 				console.log(this.pwd);
 				console.log(this.pwdRepeat);
+				console.log(this.errorMessage);
         this.$axios({
           method:'post',
-          url:'/api/user/login',
+          url:'/api/user/register',
           data: {
 						email: that.email,
 						code: that.verifyCode,
 						username: that.userName.trim(), 
 						nickname: that.nickName,
-            password:that.pwd,
+            password: that.pwd,
+						iswarning: that.iswarning,
+						errorMessage: that.errorMessage
           },
           headers:{
             'Content-Type' : 'application/json'
           }
           }).then(function(response){
-              console.log(response.data)
+						if (response.data.status == 800){
+							if (response.data.msg == "USERNAME_EXIST") {
+								that.iswarning = true
+								that.errorMessage = "This username has already been registered, please change another one!"
+								console.log(response.data.msg)
+							}
+							if (response.data.msg == "EMAIL_EXIST") {
+								that.iswarning = true
+								that.errorMessage = "This email has already been registered, please change another one!"
+								console.log(response.data.msg)
+							}
+							if (response.data.msg == "CODE_MISMATCH") {
+								that.iswarning = true
+								that.errorMessage = "This email verification code incorrect, please try again!"
+								console.log(response.data.msg)
+							}
+            console.log(response.data)
+						console.log(response.data.status)
+						console.log(response.status)
+						} else if(response.data.status == 200) {
+							that.iswarning = true
+							that.errorMessage = "registration success!"
+						}
               
           });
       }
