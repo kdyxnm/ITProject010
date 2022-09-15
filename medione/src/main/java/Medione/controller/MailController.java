@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 @RestController
-@RequestMapping("/Mail")
+@RequestMapping("/mail")
 public class MailController {
     @Autowired
     private ISendMailService mailService;
@@ -19,17 +19,20 @@ public class MailController {
     private IUserService userService;
 
 
-    @PostMapping("forget")
-    public R<User> forgetPassword(HttpServletRequest request, @RequestBody User user){
-        User target = userService.getByName(user.getUsername());
-        mailService.sendMail(target.getEmail());
+    @PostMapping("send")
+    public R<User> send(HttpServletRequest request, @RequestBody User user){
 
-        return new R(user);
+
+        if(mailService.sendMail(user.getEmail(), request.getSession())!=null){
+            return new R(200);
+        }
+
+        return new R(404);
     }
 
-    @PostMapping("check")
-    public R<Object> checkValid(@RequestParam("code") String code,@RequestParam("account") String account ){
-
-        return new R(mailService.checkCode(code, account));
-    }
+//    @PostMapping("check")
+//    public R<Object> checkValid(@RequestParam("code") String code,@RequestParam("account") String account ){
+//
+//        return new R(mailService.checkCode(code, account));
+//    }
 }

@@ -8,6 +8,7 @@ import Medione.service.ISendMailService;
 import Medione.service.IUserService;
 import Medione.utils.BaseContext;
 import Medione.utils.CreateAccountError;
+import Medione.utils.EmailHelper;
 import Medione.utils.R;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -40,18 +41,18 @@ public class UserController {
     private ISendMailService mailService;
 
     /**
-     * @param user a user object
+     * @param helper a user object
      * @return creation result
      */
-    @PostMapping
-    public R createAccount(@RequestBody User user, @PathVariable String code){
-        String email = user.getEmail();
-        String username = user.getUsername();
+    @PostMapping("register")
+    public R createAccount(@RequestBody EmailHelper helper,HttpSession session){
+        String email = helper.getEmail();
+        String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
         qUsername.eq("username",username);
-
         QueryWrapper<User> qEmail = new QueryWrapper<>();
         qEmail.eq("email",email);
+        String codeInSession = (String) session.getAttribute("code");
 
         if (service.getOne(qUsername)!=null){
             return new R(CreateAccountError.USERNAME_EXIST);
@@ -61,10 +62,10 @@ public class UserController {
             return new R(CreateAccountError.EMAIL_EXIST);
         }
 
-        else if (mailService.checkCode(code, username)){
+        else if (!codeInSession.equals(helper.getCode())){
             return new R(CreateAccountError.CODE_MISMATCH);
         }
-        return new R(service.save(user));
+        return new R(service.save(helper.getUser()));
     }
 
 
