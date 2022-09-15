@@ -45,7 +45,9 @@ public class UserController {
      * @return creation result
      */
     @PostMapping("register")
-    public R createAccount(@RequestBody EmailHelper helper,HttpSession session){
+    public R createAccount(@RequestBody EmailHelper helper,HttpServletRequest request,
+                           HttpServletResponse response,
+                           HttpSession session){
         String email = helper.getEmail();
         String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
@@ -55,6 +57,7 @@ public class UserController {
         String codeInSession = (String) session.getAttribute("code");
 
         if (service.getOne(qUsername)!=null){
+            response.setStatus(800);
             return new R(CreateAccountError.USERNAME_EXIST);
         }
 
@@ -62,7 +65,7 @@ public class UserController {
             return new R(CreateAccountError.EMAIL_EXIST);
         }
 
-        else if (!codeInSession.equals(helper.getCode())){
+        else if (!helper.getCode().equals(codeInSession)){
             return new R(CreateAccountError.CODE_MISMATCH);
         }
         return new R(service.save(helper.getUser()));
