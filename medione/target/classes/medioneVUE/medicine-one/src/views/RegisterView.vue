@@ -147,8 +147,7 @@ import HeadBar from '../components/HeadBar.vue';
 						} else if(response.data.status == 200) {
 							that.iswarning = true
 							that.errorMessage = "registration success!"
-						}
-              
+						}  
           });
       }
     },
