@@ -1,0 +1,19 @@
+/***
+The css style for about medicine one web page
+***/
+
+/* phone version */
+@media screen and (max-width: 992px) {
+  .about_content > * {
+    font-size: medium;
+    margin-top: 10px;
+  }
+}
+
+/* desktop version */
+@media screen and (min-width: 992px) {
+  .about_content{
+    font-size: larger;
+    margin-top: 60px;
+  }
+}

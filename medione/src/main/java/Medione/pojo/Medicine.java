@@ -1,5 +1,6 @@
 package Medione.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
@@ -23,13 +24,14 @@ public class Medicine {
     private String producttype;
     private String route;
     private String description;
+    @TableField(value = "`usage`")
     private String usage;
-//    private String warnings;
-//    private String contraindications;
-//    private String adversereaction;
-//    private String overdosage;
-//    private String username;
-//    private Integer locationid;
+    private String warnings;
+    private String contraindications;
+    private String adversereaction;
+    private String overdosage;
+    private String username;
+    private Integer locationid;
 
 
 

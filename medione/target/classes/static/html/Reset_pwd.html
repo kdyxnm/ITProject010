@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+  <title>Reset Password</title>
+  <link rel="stylesheet" href="../css/background_and_center_bar.css" type="text/css">
+  <link rel="stylesheet" href="../css/register_and_reset_pwd.css" type="text/css">
+  <link rel="stylesheet" href="../css/phone_base_format.css" type="text/css">
+
+</head>
+
+<body>
+  <div class="container">
+
+    <header class = "website_header phone_only" id="login_header">
+      <a href="./User_login.html"><div class="return_button" style="display: block;" onclick></div></a>
+      <h1 class = "website_title" id="login_website_title">
+        Reset Password
+      </h1>
+    </header>
+    <!--head bar phone only-->
+
+    <div class="center_bar content_container">
+
+      <h5 class="title desktop_only" id="title1">Reset Password</h5>
+
+
+      <form action="" method="POST" name="">
+
+        <a href="./User_login.html">
+          <div class="return_button desktop_only" onclick></div>
+        </a>
+
+        <label class="center_bar_title">Email:</label>
+        <div id="emial_input_and_verify">
+          <input type="text" name="email" class="input_area">
+          <input type="button" value="Verify Email" class="verify_button desktop_only">
+        </div>
+        <p><input type="button" value="verify" class="purple_button phone_only verify_button"></p>
+
+
+        <label class="center_bar_title">Verification Code:</label>
+        <p><input type="text" name="vertification code" class="input_area" style="margin-bottom: 100px;"></p>
+
+
+        <label class="center_bar_title">New Password:</label>
+        <p><input type="password" name="pwd" class="input_area"></p>
+        <p class="notice_words">Your password has to be at least 8 characters long. </p>
+
+        <label class="center_bar_title">Confirm New Password:</label>
+        <p><input type="password" name="pwd" class="input_area"></p>
+
+        <p><input type="submit" name="submit" value="Confirm" class="purple_button" id="input_submit"></p>
+      </form>
+      <!--Form sent user input reset password information to back end -->
+    </div>
+    <!--center bar-->
+  </div>
+</body>
+
+</html>

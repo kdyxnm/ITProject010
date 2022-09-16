@@ -2,9 +2,9 @@ spring:
   datasource:
     druid:
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://dsa2yw8qpmkt2xd0:els08bjbqa8e2yf3@migae5o25m2psr4q.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/lcjwd2fzp23nme1g  #adaptive
-      username: dsa2yw8qpmkt2xd0          #adaptive
-      password: els08bjbqa8e2yf3   #adaptive
+      url: jdbc:mysql://localhost:3306/info30022db #adaptive
+      username: root          #adaptive
+      password: root   #adaptive
 
   mail:
     host: smtp.gmail.com
@@ -25,6 +25,5 @@ server:
   servlet:
     session:
       timeout: 28800  #8hr = 8*60*60s
-
 
 
