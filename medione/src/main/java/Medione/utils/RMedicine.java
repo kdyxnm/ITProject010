@@ -4,29 +4,35 @@ import lombok.Data;
 
 @Data
 public class RMedicine {
-    private Boolean status;
+    private Integer status;
     private String msg;
     private Object data;
 
 
     public RMedicine() {}
 
-    public RMedicine(Boolean status){
+    public RMedicine(Integer status){
         this.status = status;
-        if (status == true){
+        if (status == 200){
             msg = "success!";
         }else{
             msg = "error.";
         }
     }
 
-    public RMedicine(Boolean status, Object data){
+    public RMedicine(Integer status, Object data){
         this.status = status;
         this.data = data;
-        if (status == true){
+        if (status == 200){
             msg = "success!";
         }else{
             msg = "error.";
         }
+    }
+
+    public RMedicine(Integer status, Object data, String msg){
+        this.status = status;
+        this.data = data;
+        this.msg = msg;
     }
 }

@@ -12,7 +12,22 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     @Autowired
     private MedicineDao medicineDao;
     @Override
-    public boolean saveMedicine(Medicine medicine) {
-        return medicineDao.insert(medicine)>0;
+    public Boolean saveMedicine(Medicine medicine) {
+        return medicineDao.insert(medicine) > 0;
+    }
+
+    @Override
+    public Boolean deleteMedicine(Integer id) {
+        return medicineDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public Boolean modifyMedicine(Medicine medicine) {
+        return medicineDao.updateById(medicine) > 0;
+    }
+
+    @Override
+    public Medicine getMedicine(Integer id) {
+        return medicineDao.selectById(id);
     }
 }
