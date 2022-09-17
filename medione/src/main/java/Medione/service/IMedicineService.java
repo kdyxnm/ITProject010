@@ -6,5 +6,8 @@ import org.springframework.stereotype.Service;
 
 
 public interface IMedicineService extends IService<Medicine> {
-    boolean saveMedicine(Medicine medicine);
+    Boolean saveMedicine(Medicine medicine);
+    Boolean deleteMedicine(Integer id);
+    Boolean modifyMedicine(Medicine medicine);
+    Medicine getMedicine(Integer id);
 }

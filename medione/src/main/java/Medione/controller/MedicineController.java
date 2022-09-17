@@ -2,6 +2,8 @@ package Medione.controller;
 
 import Medione.pojo.Medicine;
 import Medione.service.IMedicineService;
+import Medione.utils.R;
+import Medione.utils.RMedicine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,16 +21,46 @@ public class MedicineController {
      * @return creation result
      */
     @PostMapping
-    public boolean create(@RequestBody Medicine medicine){
-        return service.saveMedicine(medicine);
+    public RMedicine create(@RequestBody Medicine medicine){
+        return new RMedicine(200,service.saveMedicine(medicine));
     }
     @GetMapping
-    public List<Medicine> getAll (){
-        return service.list();
+    public RMedicine getAll (){
+        return new RMedicine(200,service.list());
     }
    // @PostMapping("upload")
     //public R createImage(@RequestBody Blob image){
 
+    @PutMapping
+    public RMedicine update(@RequestBody Medicine medicine){
+        Boolean flag = service.modifyMedicine(medicine);
+        if(flag){
+            return new RMedicine(200);
+        }else{
+            return new RMedicine(404);
+        }
     }
+
+    @DeleteMapping("/{id}")
+    public RMedicine delete(@PathVariable Integer id){
+        Boolean flag  = service.deleteMedicine(id);
+        if(flag){
+            return new RMedicine(200);
+        }else{
+            return new RMedicine(404);
+        }
+    }
+
+    @GetMapping("/{id}")
+    public RMedicine getById(@PathVariable Integer id){
+        Medicine medicine = service.getMedicine(id);
+        if(medicine != null){
+            return new RMedicine(200,medicine,"success!");
+        }else {
+            return new RMedicine(404,null,"failed found medicine.");
+        }
+    }
+
+}
 
 
