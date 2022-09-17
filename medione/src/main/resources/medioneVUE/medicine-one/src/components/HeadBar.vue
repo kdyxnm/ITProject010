@@ -1,10 +1,14 @@
 <template>
   <div class = "website_header">
-    <button @click="openNav" class="open_button">
-    ☰
+    <button v-if="btnStyle == sidebar" @click="openNav" class="open_button">
+      <el-icon><Expand /></el-icon>
     </button>
+    <button v-if="btnStyle == returnbtn" @click="openNav" class="open_button">
+      <el-icon><Back /></el-icon>
+    </button>
+
     <h1 class = "website_title">
-      About Medicine One
+      {{ header }}
     </h1>
   </div>
   <!-- top bar -->
@@ -13,8 +17,20 @@
 <script>
 export default {
   name: 'HeadBar',
+  props : {
+    header : {
+      type : String,
+      default : "About"
+    },
+    btnStyle : {
+      type : String,
+      default : "SideBar"
+    }
+  },
   data() {
     return {
+      sidebar : "SideBar",
+      returnbtn : "Return"
     }
   },
   methods: {
@@ -31,34 +47,8 @@ export default {
     font-family: "Poppins", sans-serif;
   }
   
-  a {
-    text-decoration: none;
-  }
-  
-  
-  
-  .continer {
-    padding-top: 0px;
-    margin-top: 0px;
-    border-top: 0px;
-    display: flex;
-  }
-  
   /* phone style */
   @media screen and (max-width: 992px) {
-    body{
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
-    background-color: #F5F5F5;
-    }
-    
-    /* top bar */
-    header {
-      display: flex;
-      justify-content: center;
-    }
   
     .website_header {
       height: 5em;
@@ -80,12 +70,6 @@ export default {
       text-align: center;
     }
   
-    /* website content */
-    .content_container {
-      margin-left: 0px;
-      margin-top: 30px;
-    }
-  
     .open_button {
       font-size: 2em;
       color: #FFFFFF;
@@ -93,6 +77,17 @@ export default {
       margin-left: 0.3em;
       border: none;
       margin-top: 0.3em;
+    }
+
+    .return_button {
+      height: 3%;
+      width: 3%;
+      background-image: url(../assets/white_left_arrow.png);
+      background-size: contain;
+      position: fixed;
+      top: 30px;
+      left: 30px;
+      display: none;
     }
   }
 
@@ -115,6 +110,10 @@ export default {
       padding-top: 0.3em;
       margin-top: 0;
       text-align: center;
+    }
+
+    .open_button {
+      display: none;
     }
   }
 </style>
