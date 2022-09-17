@@ -33,11 +33,11 @@ This css document for side bar format:
   }
 
   .close_button {
-    margin-left: 10px;
+    margin-left: 0em;
     background-color: rgba(0, 0, 0, 0);
     position: relative;
     border: none;
-    top: 5em;
+    top: 3em;
   }
   
   .close_button_icon{
@@ -54,27 +54,22 @@ This css document for side bar format:
     margin-inline-end: 0px;
     padding-top: 1em;
     font-weight: bold;
-    position: relative;
-    top: 70px;
   }
 
   .side_bar_team_010 {
     font-size: 12px;
     margin-top: -20px;
     margin-bottom: 10px;
-    position: relative;
-    top: 70px;
   }
 
   .side_bar_item {
-    margin-top: 3em;
+    margin-top: 1em;
     padding-left: 1em;
     color: #FFFFFF;
     font-size: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    position: relative;
-    top: 70px;
+    font-weight: 900;
   }
 
   .side_bar_icon {
@@ -83,8 +78,9 @@ This css document for side bar format:
     display: none;
   }
 
-  .side_bar_selected {
+  .side_bar_item:hover {
     background-color: #505bf5;
+    margin-left: 3%;
   }
 
   .el-icon svg {
@@ -92,7 +88,21 @@ This css document for side bar format:
     padding-top : 0.3em;
   }
 
+
+  .user_name {
+    font-size: 1em;
+    text-align: right;
+    margin:0;
+  }
+
+  .user_nick_name {
+    font-size: 0.5em;
+    text-align: right;
+    margin:0;
+  }
 }
+
+
 
 
 
@@ -106,6 +116,7 @@ This css document for side bar format:
     margin-left: 1em;
     background-color: #F5F5F5;
     border-radius: 1em;
+    padding-right: 1em;
   }
 
   .side_bar_title {
@@ -129,6 +140,8 @@ This css document for side bar format:
     font-size: 1.2em;
     margin-bottom: 2em;
     padding-left: 1em;
+    font-weight: 900;
+    color:#3037a1;
   }
   
   .side_bar_icon {
@@ -140,8 +153,10 @@ This css document for side bar format:
     color: #505bf5;
   }
 
-  .side_bar_selected {
+  .side_bar_item:hover {
     background-color: #DFE0E2;
+    color:#6E78F7;
+    margin-left: 3%;
   }
   
   .side_bar_line {
@@ -159,4 +174,17 @@ This css document for side bar format:
     padding-top : 0.3em;
   }
 
+
+
+  .user_name {
+    font-size: 1.3em;
+    text-align: right;
+    margin:0;
+  }
+
+  .user_nick_name {
+    font-size: 0.7em;
+    text-align: right;
+    margin:0;
+  }
 }

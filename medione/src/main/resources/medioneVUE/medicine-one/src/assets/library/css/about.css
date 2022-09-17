@@ -42,7 +42,7 @@ header.el-header {
   }
 
   .main {
-    height: 100%em;
+    height: 100%;
   }
   .about_content{
     font-size: larger;

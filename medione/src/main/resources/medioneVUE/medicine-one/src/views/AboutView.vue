@@ -1,6 +1,6 @@
 <template>
-  <div class="common-layout">
-    <el-container>
+  <div class="common-layout" style="height:100%">
+    <el-container style="height:100%">
       <el-header height="8em"> <HeadBar @open-side-bar-event="openSideBar"></HeadBar></el-header>
       <el-container>
         <el-aside class="aisde"> <SideBar @close-side-bar-event="closeSideBar" v-show="display_flag" ref="ChildSideBar"></SideBar></el-aside>
@@ -48,10 +48,8 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 import HeadBar from '../components/HeadBar.vue'
 import SideBar from '../components/SideBar.vue'
-import SomeComponent from '../components/SomeComponent.vue'
 
 export default {
   name: 'AboutView',
