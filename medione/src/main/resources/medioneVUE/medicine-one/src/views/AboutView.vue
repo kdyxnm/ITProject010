@@ -3,7 +3,11 @@
     <el-container style="height:100%">
       <el-header height="8em"> <HeadBar @open-side-bar-event="openSideBar"></HeadBar></el-header>
       <el-container>
-        <el-aside class="aisde"> <SideBar @close-side-bar-event="closeSideBar" v-show="display_flag" ref="ChildSideBar"></SideBar></el-aside>
+        <el-aside class="aisde">
+          <SideBar @close-side-bar-event="closeSideBar" v-show="display_flag" ref="ChildSideBar">
+
+          </SideBar>
+        </el-aside>
         <el-main class="main">
           <div class="about_content">
             <h2>
@@ -59,10 +63,8 @@ export default {
     }
   },
   components: {
-    HelloWorld,
     HeadBar,
     SideBar,
-    SomeComponent
   },
   methods: {
     openSideBar(){

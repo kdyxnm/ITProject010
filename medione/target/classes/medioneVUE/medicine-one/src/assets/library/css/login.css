@@ -1,0 +1,75 @@
+/***
+This css document for login style:
+***/
+@media screen and (max-width: 992px) {
+  .website_header {
+    height: 54%;
+    padding-top: 0;
+    margin-top: 0;
+    border-top: 0;
+    background-image: url(../../phone_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0 0 2em 2em;
+  }
+
+  .open_button {
+    font-size: 2em;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0px;
+    border: none;
+    position: absolute;
+    top: 2em;
+    left: 1em;
+    overflow-y: hidden;
+  }
+
+  .website_title {
+    font-size: 3em;
+    font-weight: 900;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    top: 6em;
+  }
+
+  .center_bar {
+    justify-content: center;
+    align-content: center;
+  }
+
+  .center_bar_title{
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    margin-left: 2em;
+    font-weight: 600;
+    color: #3F4079;
+    font-family: "Poppins-Bold", sans-serif;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* desktop style */
+@media screen and (min-width: 992px) {
+  h4 {
+    font-size: 1em;
+    color: #6E78F7;
+    margin-top: 0px;
+    font-weight: 600;
+    text-align: center;
+  }
+}

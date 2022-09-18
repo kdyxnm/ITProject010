@@ -14,7 +14,8 @@ module.exports = defineConfig({
           resolvers: [ElementPlusResolver()],
         }),
     ],
-  }
+  },
+  // publicPath:'./'
 })
 
 // module.exports = {

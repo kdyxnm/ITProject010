@@ -16,7 +16,7 @@
         </el-aside>
         <el-main class="main">
           <div class="content_container">
-            <SearchBar></SearchBar>
+            <!-- <SearchBar/> -->
 
 
           </div></el-main>
@@ -68,7 +68,7 @@ export default {
 }
 </script>
 
-<style scpoed>
+<style>
 
 
 </style>
