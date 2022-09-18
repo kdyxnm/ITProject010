@@ -3,6 +3,8 @@ package Medione.service.impl;
 import Medione.dao.MedicineDao;
 import Medione.pojo.Medicine;
 import Medione.service.IMedicineService;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,5 +31,17 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     @Override
     public Medicine getMedicine(Integer id) {
         return medicineDao.selectById(id);
+    }
+
+    @Override
+    public IPage<Medicine> getPage(int currentPage, int pageSize) {
+        IPage page = new Page(currentPage,pageSize);
+        medicineDao.selectPage(page,null);
+        return page;
+    }
+
+    @Override
+    public IPage<Medicine> getPage(int currentPage, int pageSize, Medicine medicine) {
+        return null;
     }
 }
