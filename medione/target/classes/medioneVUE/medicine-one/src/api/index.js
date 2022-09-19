@@ -9,11 +9,22 @@ const api = {
     };
     return axios.post(path.baseUrl + path.login, userinfo)
   },
-  emialVerify(emailAdd){
-    var data = {
-      'email' : emailAdd
+  emailVerify(userName, email){
+    var emailinfo = {
+      'username' : userName,
+      'email' : email
     }
-    return axios.get
+    return axios.post(path.baseUrl + path.email, emailinfo)
+  },
+  register(email, code, userName, nickName, pwd){
+    var registerinfo = {
+      'email': email,
+      'code': code,
+      'username': userName,
+      'nickname': nickName,
+      'password': pwd,
+    };
+    return axios.post(path.baseUrl + path.register, registerinfo)
   }
 }
 export default api

@@ -54,10 +54,10 @@ registerview.vue
 					<label class="center_bar_title">Verification Code:</label>
 				</tr>
 				<tr>
-					<p><input type="text" v-model.trim ="verifyCode" class="input_area"></p>
+					<p><input type="text" v-model.trim ="code" class="input_area"></p>
 				</tr>
 				<tr>
-					<p><input type="button" class="purple_button" value= "Verify Email" @click="verifyButton"></p>
+					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
 				</tr>
 				<!-- <tr>
 					<el-icon id='tick'><Select /></el-icon>
@@ -77,20 +77,19 @@ registerview.vue
 
 <script>
 import HeadBar from '../components/HeadBar.vue';
-
-
+import api from '../api/index';
 
   export default {
     name: 'RegisterView',
     data() {
       return {
-        displayFlag : false,
-        displayDeskOnly: true,
+        // displayFlag : false,
+        // displayDeskOnly: true,
 				iswarning: false,
 				errorMessage : "",
         warningText : "Your password has to be at least 8 characters long.",
         email : " ",
-				verifyCode : "",
+				code : "",
 				userName : "",
 				nickName : "",
         pwd : "",
@@ -104,71 +103,37 @@ import HeadBar from '../components/HeadBar.vue';
     },
     methods: {
       verifyButton(){
+				this.verifyCode()
       },
+			verifyCode(){
+				var that=this;
+				console.log(this.code)
+				api.emailVerify(that.userName, that.email).then(function(response){
+					console.log(response.data)  
+				})
+			},
 			confirmButton(){
-        console.log(this.email);
-        console.log(this.verifyCode);
-				console.log(this.userName);
-				console.log(this.nickName);
-				console.log(this.pwd);
-				console.log(this.pwdRepeat);
         this.registerUser()
 			},
       registerUser(){
         var that=this;
         console.log(this.email);
-        console.log(this.verifyCode);
+        console.log(this.code);
 				console.log(this.userName);
 				console.log(this.nickName);
 				console.log(this.pwd);
 				console.log(this.pwdRepeat);
 				console.log(this.errorMessage);
-        this.$axios({
-          method:'post',
-          url:'http://localhost:8081/api/user/register',
-          data: {
-						email: that.email,
-						code: that.verifyCode,
-						username: that.userName.trim(), 
-						nickname: that.nickName,
-            password: that.pwd,
-						iswarning: that.iswarning,
-						errorMessage: that.errorMessage
-          },
-          headers:{
-            'Content-Type' : 'application/json'
-          }
-          }).then(function(response){
-						if (response.data.status == 800){
-							if (response.data.msg == "USERNAME_EXIST") {
-								that.iswarning = true
-								that.errorMessage = "This username has already been registered, please change another one!"
-								console.log(response.data.msg)
-							}
-							if (response.data.msg == "EMAIL_EXIST") {
-								that.iswarning = true
-								that.errorMessage = "This email has already been registered, please change another one!"
-								console.log(response.data.msg)
-							}
-							if (response.data.msg == "CODE_MISMATCH") {
-								that.iswarning = true
-								that.errorMessage = "This email verification code incorrect, please try again!"
-								console.log(response.data.msg)
-							}
-            console.log(response.data)
-						console.log(response.data.status)
-						console.log(response.status)
-						} else if(response.data.status == 200) {
-							that.iswarning = true
-							that.errorMessage = "registration success!"
-						}  
-          });
-      }
+				api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
+					console.log(response.data)  
+				})
+   		}
     },
     mounted() {
       this.displayDeskOnly = (window.innerWidth > 992)
     }
-  }
+ }
+
 </script>
 
 <style scoped src="../assets/library/css/background_and_center_bar.css"></style>

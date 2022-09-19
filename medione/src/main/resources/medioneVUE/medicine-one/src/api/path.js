@@ -1,8 +1,8 @@
 const base = {
   baseUrl     : 'http://localhost:8081',
   login       : '/user/login',
-  emial       : '/mail',
-  register    : '/register',
+  email       : '/mail/send',
+  register    : '/user/register',
 
   addLocation : '',
   delLocation : '',

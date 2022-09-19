@@ -28,7 +28,7 @@
         <tr><input type="submit" name="login" 
             value="Login" class="purple_button" @click="handleLogin"></tr>
         <tr>
-          <router-link to="/">
+          <router-link to="/register">
             <div class = "purple_button" style="display: inline-block">
               <p style="margin-top:0.2em">Register</p>
             </div>
@@ -61,7 +61,7 @@ import api from '../api/index';
       return {
         displayFlag : false,
         displayDeskOnly: true,
-        warningText : "Incorrect username or password, please tray again",
+        warningText : "Incorrect username or password, please try again",
         userName : "",
         pwd : "",
 
