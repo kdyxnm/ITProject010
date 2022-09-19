@@ -24,6 +24,14 @@ server:
   port: 8081  #adaptive
   servlet:
     session:
-      timeout: 28800  #8hr = 8*60*60s
+
+      persistent: true
+      cookie:
+        name: mediSession
+        same-site: none
+        http-only: false
+        secure: false
+#      timeout: 28800  #8hr = 8*60*60s
+
 
 
