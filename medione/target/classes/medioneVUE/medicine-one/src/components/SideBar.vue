@@ -15,8 +15,22 @@
     </div>
     <!--sidebar title-->
 
-    <hr class="side_bar_line">
-    <router-link to="/">      
+    <hr class="side_bar_line" v-if="displayVersion == 'complex'"/>
+
+    <div class="side_bar_item" v-if="displayVersion == 'complex'" @click="switchMode('default')">
+      <div style="padding-right:1.2em">
+        <el-icon :size=sidebarIconSize><House /></el-icon>
+        <span style="margin-left: 1em"> Dashboard </span>
+        <p class="user_name">{{user.username}}</p>
+        <p class="user_nick_name">{{user.nickname}}</p>
+      </div>
+    </div>
+
+
+    <hr class="side_bar_line" style="margin-top: 1em;"/>
+
+
+    <router-link to="/" v-if="displayVersion == 'simple'">      
       <div class="side_bar_item">
         <div>
           <el-icon :size=sidebarIconSize><User /></el-icon>
@@ -24,24 +38,10 @@
         </div>
       </div>
     </router-link>
-    <!-- <router-link to="/">      
-      <div class="side_bar_item">
-        <div>
-          <el-icon :size=sidebarIconSize><User /></el-icon>
-          <span style="margin-left: 1em">Log in</span>
-        </div>
-      </div>
-    </router-link>
-    <router-link to="/">      
-      <div class="side_bar_item">
-        <div>
-          <el-icon :size=sidebarIconSize><User /></el-icon>
-          <span style="margin-left: 1em">Log in</span>
-        </div>
-      </div>
-    </router-link> -->
+
+
     <!--log in side bar link-->
-    <router-link to="/about">
+    <router-link to="/about" v-if="displayVersion == 'simple'">
       <div class="side_bar_item side_bar_selected">
         <div>
           <el-icon :size=sidebarIconSize><InfoFilled /></el-icon>
@@ -50,6 +50,40 @@
       </div>
     </router-link>
     <!--About side bar link-->
+
+
+
+    <div class="side_bar_item" v-if="displayVersion == 'complex'" @click="switchMode('add_medi')">
+      <div>
+        <el-icon :size=sidebarIconSize><CirclePlus /></el-icon>
+        <span style="margin-left: 1em">Add Medicine</span>
+      </div>
+    </div>     
+
+
+    <div class="side_bar_item" v-if="displayVersion == 'complex'" @click="switchMode('my_loca')">
+      <div>
+        <el-icon :size=sidebarIconSize><Location /></el-icon>
+        <span style="margin-left: 1em">My Location</span>
+      </div>
+    </div>
+
+    
+    <div class="side_bar_item" v-if="displayVersion == 'complex'" @click="switchMode('log_off')">
+      <div>
+        <el-icon :size=sidebarIconSize><SwitchButton /></el-icon>
+        <span style="margin-left: 1em">Log off</span>
+      </div>
+    </div>
+
+
+    <div class="side_bar_item" v-if="displayVersion == 'complex'" @click="switchMode('about')">
+      <div>
+        <el-icon :size=sidebarIconSize><InfoFilled /></el-icon>
+        <span style="margin-left: 1em">About</span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -58,16 +92,30 @@ export default {
   name: 'SideBar',
   data() {
     return {
-      sidebarIconSize : 30
+      sidebarIconSize : 30,
     }
   },
   props: {
-    // msg: String
+    displayVersion : {
+      type : String,
+      default : "simple"
+    },
+    user : {
+      type : Object,
+      default : {
+        username : "User Name",
+        nickname : "User Nick Name",
+      }
+    }
   },
   methods: {
     closeBar(){
       this.$emit("close-side-bar-event");
-    }
+    },
+    switchMode(mode){
+      this.$emit("switch-event", mode);
+    },
+
     
   },
   mounted(){
@@ -80,166 +128,4 @@ export default {
 
 </script>
 
-<style scoped>
-/* import the Poppins font family */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
-* {
-  font-family: "Poppins", sans-serif;
-}
-
-@media screen and (max-width: 992px) {
-
-  .side_bar{
-    height: 100%;
-    width: 12em;
-    top: 0;
-    left: 0;
-    margin-top: 0;
-    margin-left: 0;
-    /*Stays in place */
-    background-color: #5c66ee;
-    border-radius: 0 20px 20px 0;
-    position: absolute;
-    /*green*/
-    overflow-x: hidden;
-    /*for Disabling horizontal scroll */
-  }
-
-  .side_bar_title {
-    display: block;
-    color: #FFFFFF;
-    margin-left: 1em;
-
-  }
-
-  .close_button {
-    margin-left: 10px;
-    background-color: rgba(0, 0, 0, 0);
-    position: relative;
-    border: none;
-    top: 5em;
-  }
-  
-  .close_button_icon{
-    height: 18px;
-    width: 18px;
-  }
-
-  .side_bar_medicine_one{
-    display: block;
-    font-size: 1.3em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-top: 1em;
-    font-weight: bold;
-    position: relative;
-    top: 70px;
-    
-  }
-
-  .side_bar_team_010 {
-    font-size: 12px;
-    margin-top: -20px;
-    margin-bottom: 10px;
-    position: relative;
-    top: 70px;
-  }
-
-  .side_bar_item {
-    margin-top: 3em;
-    padding-left: 1em;
-    color: #FFFFFF;
-    font-size: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    top: 70px;
-  }
-
-  .side_bar_icon {
-    width: 18px;
-    height: 20px;
-    display: none;
-  }
-
-  .side_bar_selected {
-    background-color: #505bf5;
-  }
-
-  .el-icon svg {
-    color : #FFFFFF;
-    padding-top : 0.3em;
-  }
-
-}
-
-
-
-
-
-
-@media screen and (min-width: 992px) {
-  .side_bar {
-    height: 90%;
-    width: 90%;
-    margin-left: 1em;
-    background-color: #F5F5F5;
-    border-radius: 1em;
-    /* position: relative; */
-
-  }
-  
-  .side_bar_title {
-    display: block;
-    color: #6E78F7;
-    margin-left: 1.2em;
-  }
-  
-  .side_bar_medicine_one{
-    display: block;
-    font-size: 1.7em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
-    padding-top: 1em;
-    font-weight: bold;
-  }
-
-  
-  .side_bar_item {
-    font-size: 1.2em;
-    margin-bottom: 2em;
-    padding-left: 1em;
-  }
-  
-  .side_bar_icon {
-    width: 18px;
-    height: 20px;
-  }
-  
-  .side_bar_selected {
-    background-color: #DFE0E2;
-  }
-  
-  .side_bar_line {
-    border: 1px solid #D3D3D3;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-
-  .close_button {
-    display: none;
-  }
-
-  .el-icon svg {
-    color : #6E78F7;
-    padding-top : 0.3em;
-  }
-
-}
-
-</style>
+<style scoped src="../assets/library/css/side_bar.css"></style>
