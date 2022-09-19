@@ -18,10 +18,6 @@ public class UserImpl extends ServiceImpl<UserDao, User> implements IUserService
     @Autowired
     UserDao userDao;
 
-    @Cacheable(value="session", key = "#user")
-    public String setSession(User user, HttpSession session){
-        return session.getId();
-    }
 
     public User getByName(String name){
         QueryWrapper<User>  userWrapper = new QueryWrapper<>();
