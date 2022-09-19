@@ -45,9 +45,7 @@ public class UserController {
      * @return creation result
      */
     @PostMapping("register")
-    public R createAccount(@RequestBody EmailHelper helper,HttpServletRequest request,
-                           HttpServletResponse response,
-                           HttpSession session){
+    public R createAccount(@RequestBody EmailHelper helper, HttpSession session){
         String email = helper.getEmail();
         String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
@@ -57,7 +55,6 @@ public class UserController {
         String codeInSession = (String) session.getAttribute("code");
 
         if (service.getOne(qUsername)!=null){
-            response.setStatus(800);
             return new R(CreateAccountError.USERNAME_EXIST);
         }
 
@@ -76,9 +73,8 @@ public class UserController {
     public R<User> Login(HttpServletRequest request,@RequestBody User user){
 
         System.out.println("start time: "+LocalTime.now());
-        HttpSession session = request.getSession();
-        BaseContext.setCurrentId((long) session.getId().hashCode());    //String to Long
-        session.setAttribute("username",user.getUsername());
+
+
         User target = service.getByName(user.getUsername());
         System.out.println("target: "+target);
         System.out.println("input: "+user);
@@ -88,6 +84,9 @@ public class UserController {
         if (target == null ||    ( !target.getPassword().equals(user.getPassword()) )){
             return new R(404);
         }
+        HttpSession session = request.getSession();
+        session.setAttribute("user",user);
+        BaseContext.setCurrentSession(session);    //String to Long
         return new R(target);
     }
 
