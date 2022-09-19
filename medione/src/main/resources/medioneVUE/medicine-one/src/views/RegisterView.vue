@@ -53,7 +53,7 @@ registerview.vue
 					<label class="center_bar_title">Verification Code:</label>
 				</tr>
 				<tr>
-					<p><input type="number" v-model.trim ="code" class="input_area"></p>
+					<p><input type="string" v-model.trim ="code" class="input_area"></p>
 				</tr>
 				<tr>
 					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
@@ -133,7 +133,6 @@ import api from '../api/index';
 			},
       registerUser(){
         var that=this;
-				that.code = that.code.toString()
 				console.log(that.code)
         // console.log(this.email);
 				console.log(that.pwd.length > 0 ? "password entered" : "Password is empty");

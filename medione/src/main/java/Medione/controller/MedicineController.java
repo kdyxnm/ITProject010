@@ -2,6 +2,7 @@ package Medione.controller;
 
 import Medione.pojo.Medicine;
 import Medione.service.IMedicineService;
+import Medione.utils.BaseContext;
 import Medione.utils.R;
 import Medione.utils.RMedicine;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -65,7 +66,8 @@ public class MedicineController {
 
     @GetMapping("/{currentPage}/{pageSize}")
     public RMedicine getAll(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
-        IPage<Medicine> page = service.getPage(currentPage, pageSize);
+        IPage<Medicine> page = service.getPage(currentPage, pageSize, BaseContext.getCurrentUser().getUsername());
+
         if(page != null){
             return new RMedicine(200,page,"success!");
         }else {

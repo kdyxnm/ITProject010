@@ -3,6 +3,7 @@ package Medione.service.impl;
 import Medione.dao.MedicineDao;
 import Medione.pojo.Medicine;
 import Medione.service.IMedicineService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -34,14 +35,14 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     }
 
     @Override
-    public IPage<Medicine> getPage(int currentPage, int pageSize) {
+    public IPage<Medicine> getPage(int currentPage, int pageSize, String username) {
         IPage page = new Page(currentPage,pageSize);
-        medicineDao.selectPage(page,null);
+        medicineDao.selectPage(page,new QueryWrapper<Medicine>().eq("username", username));
         return page;
     }
 
     @Override
-    public IPage<Medicine> getPage(int currentPage, int pageSize, Medicine medicine) {
+    public IPage<Medicine> getPage(int currentPage, int pageSize, Medicine medicine, String username) {
         return null;
     }
 }

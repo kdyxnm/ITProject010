@@ -29,7 +29,7 @@ registerview.vue
 				</tr>
 				<tr>
 					<p><input type="password"  v-model.trim ="pwd" class="input_area"></p>
-					<p class="warning" v-if="iswarning"> {{errorMessage}} </p>
+					<p class="warning" v-if="iswarning"> {{warningText}} </p>
 				</tr>
 
 				<tr class="center_bar_label">
@@ -53,7 +53,7 @@ registerview.vue
 					<label class="center_bar_title">Verification Code:</label>
 				</tr>
 				<tr>
-					<p><input type="text" v-model.trim ="code" class="input_area"></p>
+					<p><input type="string" v-model.trim ="code" class="input_area"></p>
 				</tr>
 				<tr>
 					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
@@ -86,15 +86,15 @@ import api from '../api/index';
         // displayDeskOnly: true,
 				iswarning: false,
 				errorMessage : "",
-        warningText : "Your password has to be at least 8 characters long.",
-        email : " ",
+        warningText : "",
+        email : "",
 				code : "",
 				userName : "",
 				nickName : "",
         pwd : "",
 				pwdRepeat : "",
 				headerTitle : "Register",
-				headerStyle : "Return"
+				headerStyle : "Return",
       }
     },
     components: {
@@ -111,20 +111,34 @@ import api from '../api/index';
 					console.log(response.data)  
 				})
 			},
+
 			confirmButton(){
-        this.registerUser()
+				this.isEmpty()
+			},
+			isEmpty(){
+				var that=this;
+				if(that.email.length < 1||that.code.length < 1||that.userName < 1||that.nickName < 1||that.pwd < 1||that.pwdRepeat < 1){
+					that.iswarning = true
+					that.warningText = "You must complete all information!"
+					console.log(that.warningText)
+				}
+				else if(that.pwd != that.pwdRepeat){
+					that.iswarning = true
+					that.warningText = "The two password entries are inconsistent, please enter again"
+				}
+				else{
+					that.iswarning = false
+					this.registerUser()
+				}
 			},
       registerUser(){
         var that=this;
-        console.log(this.email);
-        console.log(this.code);
-				console.log(this.userName);
-				console.log(this.nickName);
-				console.log(this.pwd);
-				console.log(this.pwdRepeat);
-				console.log(this.errorMessage);
+				console.log(that.code)
+        // console.log(this.email);
+				console.log(that.pwd.length > 0 ? "password entered" : "Password is empty");
 				api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
 					console.log(response.data)  
+					console.log(typeof that.code)
 				})
    		}
     },

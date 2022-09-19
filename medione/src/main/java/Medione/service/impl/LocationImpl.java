@@ -18,8 +18,8 @@ public class LocationImpl extends ServiceImpl<LocationDao, Location> implements 
     }
 
     @Override
-    public Boolean deleteLocation(Integer id) {
-        return locationDao.deleteById(id) >0;
+    public Boolean deleteLocation(Integer locationid) {
+        return locationDao.deleteById(locationid) >0;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class LocationImpl extends ServiceImpl<LocationDao, Location> implements 
     }
 
     @Override
-    public Location getLocation(Integer id) {
-        return locationDao.selectById(id);
+    public Location getLocation(Integer locationid) {
+        return locationDao.selectById(locationid);
     }
 }
