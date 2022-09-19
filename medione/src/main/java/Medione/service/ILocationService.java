@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface ILocationService extends IService<Location> {
     Boolean saveLocation(Location location);
-    Boolean deleteLocation(Integer id);
+    Boolean deleteLocation(Integer locationid);
     Boolean modifyLocation(Location location);
-    Location getLocation(Integer id);
+    Location getLocation(Integer locationid);
 }

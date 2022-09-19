@@ -1,31 +1,33 @@
-registerview.vue
 <template>
 	<div class="container">
 		<HeadBar :header="headerTitle" :btnStyle="headerStyle" class="phone_only" @open-side-bar-event="openSideBar"></HeadBar>
 
 			<!--head bar phone only-->
 		<div class="center_bar content_container" style="margin-left: 0;">
-			<h3 class="desk_top_only">Register</h3>
+			<h3 class="desk_top_only">Reset Password</h3>
 			<!-- <router-link v-if="displayDeskOnly" to="/">
 			<div class="return_button desktop_only" ></div>
 			</router-link> -->
 			<table class="center_bar_content">
 				<tr class="center_bar_label">
-					<label class="center_bar_title">Username:</label>
+					<label class="center_bar_title">Email:</label>
 				</tr>
 				<tr>
-					<p><input type="text" v-model.trim ="userName" class="input_area"></p>
-				</tr>
-				
-				<tr class="center_bar_label">
-					<label class="center_bar_title">Nickname:</label>
-				</tr>
-				<tr>
-					<p><input type="text"  v-model.trim ="nickName" class="input_area"></p>
+					<input type="text" v-model.trim ="email" class="input_area">
 				</tr>
 
 				<tr class="center_bar_label">
-					<label class="center_bar_title">Set Password:</label>
+					<label class="center_bar_title">Verification Code:</label>
+				</tr>
+				<tr>
+					<p><input type="number" v-model.trim ="code" class="input_area"></p>
+				</tr>
+				<tr>
+					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
+				</tr>
+
+				<tr class="center_bar_label">
+					<label class="center_bar_title">New Password:</label>
 				</tr>
 				<tr>
 					<p><input type="password"  v-model.trim ="pwd" class="input_area"></p>
@@ -38,26 +40,12 @@ registerview.vue
 				<tr>					
 					<p><input type="password"  v-model.trim ="pwdRepeat" class="input_area"></p>
 				</tr>
-				<tr class="center_bar_label">
-					<label class="center_bar_title">Email:</label>
-				</tr>
-				<tr>
-					<input type="text" v-model.trim ="email" class="input_area">
-				</tr>
 				
 				<!-- <tr>
 					<p><input type="button" class="purple_button phone_only" value= "Verify Email" @click="verifyButton"></p>
 				</tr> -->
 
-				<tr class="center_bar_label">
-					<label class="center_bar_title">Verification Code:</label>
-				</tr>
-				<tr>
-					<p><input type="number" v-model.trim ="code" class="input_area"></p>
-				</tr>
-				<tr>
-					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
-				</tr>
+
 				<!-- <tr>
 					<el-icon id='tick'><Select /></el-icon>
 				</tr> -->
@@ -79,7 +67,7 @@ import HeadBar from '../components/HeadBar.vue';
 import api from '../api/index';
 
   export default {
-    name: 'RegisterView',
+    name: 'ResetPasswordView',
     data() {
       return {
         // displayFlag : false,
@@ -89,11 +77,9 @@ import api from '../api/index';
         warningText : "",
         email : "",
 				code : "",
-				userName : "",
-				nickName : "",
         pwd : "",
 				pwdRepeat : "",
-				headerTitle : "Register",
+				headerTitle : "Reset Password",
 				headerStyle : "Return",
       }
     },
