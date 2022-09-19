@@ -100,40 +100,6 @@ public class UserController {
         return new R(200);
     }
 
-    @CrossOrigin(origins = "*")
-    @GetMapping("get/{nickname}")
-    public String Login2(HttpServletRequest request, HttpServletResponse response, @PathVariable String nickname){
-        HttpSession session = request.getSession();
-        session.setMaxInactiveInterval(30);    //8*60*60s
-        session.setAttribute("user","nickname");
-        System.out.println(session.getId());
-        System.out.println(nickname);
-        System.out.println(nickname+"login 2 success");
-
-        request.setAttribute("username",nickname);
-        System.out.println("request attribute set! : " + request.getAttribute("username"));
-        return nickname+ " \nlogin 2 success";
-    }
-
-
-
-    @GetMapping("get4/{nickname}")
-    @Cacheable(value = "session", key ="#nickname")
-    public String Login4(HttpServletRequest request, HttpServletResponse response, @PathVariable String nickname){
-        HttpSession session = request.getSession();
-        request.getSession(false);
-        System.out.println(session.getId());
-
-        Cache cache = new ConcurrentMapCache("session");
-        System.out.println("cache get!" + cache.get(nickname));
-        return nickname+ " \nlogin 2 success";
-    }
-
-    @GetMapping("get5/{nickname}")
-    public String Login5(HttpServletRequest request, HttpServletResponse response, @PathVariable String nickname){
-
-        return nickname+ " \nlogin 2 success";
-    }
 
 
 }
