@@ -3,7 +3,7 @@
     v-model="state"
     :fetch-suggestions="querySearch"
     popper-class="my-autocomplete"
-    placeholder="Please input"
+    placeholder="Search Medicine"
     @select="handleSelect"
   >
     <template #suffix>
