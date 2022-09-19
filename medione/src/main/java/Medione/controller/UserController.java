@@ -45,15 +45,17 @@ public class UserController {
      * @return creation result
      */
     @PostMapping("register")
-    public R createAccount(@RequestBody EmailHelper helper, HttpSession session){
+    public R createAccount(@RequestBody EmailHelper helper, HttpServletRequest request){
         String email = helper.getEmail();
         String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
         qUsername.eq("username",username);
         QueryWrapper<User> qEmail = new QueryWrapper<>();
         qEmail.eq("email",email);
-        String codeInSession = (String) session.getAttribute("code");
-
+        String codeInSession = (String) request.getSession().getAttribute("code");
+        System.out.println("===================================");
+        System.out.println(request.getSession().getId());
+        System.out.println("===================================");
         if (service.getOne(qUsername)!=null){
             return new R(CreateAccountError.USERNAME_EXIST);
         }
@@ -71,9 +73,9 @@ public class UserController {
 
     @PostMapping("login")
     public R<User> Login(HttpServletRequest request,@RequestBody User user){
-
-        System.out.println("start time: "+LocalTime.now());
-
+        System.out.println("===================================");
+        System.out.println(request.getSession().getId());
+        System.out.println("===================================");
 
         User target = service.getByName(user.getUsername());
         System.out.println("target: "+target);

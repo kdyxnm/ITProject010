@@ -11,4 +11,11 @@ public class ENUMTest {
         System.out.println(CreateAccountError.CODE_MISMATCH);
         System.out.println(new R(CreateAccountError.USERNAME_EXIST));
     }
+
+    @Test
+    void numTes(){
+        String a = "123";
+
+        System.out.println(a.equals(123));
+    }
 }
