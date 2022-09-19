@@ -8,8 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/mail")
 public class MailController {
@@ -21,10 +22,10 @@ public class MailController {
 
 
     @PostMapping("send")
-    public R<User> send(HttpServletRequest request, @RequestBody User user){
+    public R<User> send(HttpSession session, @RequestBody User user){
 
 
-        if(mailService.sendMail(user.getEmail(), request.getSession())!=null ){
+        if(mailService.sendMail(user.getEmail(), session)!=null ){
             return new R(200);
         }
 
