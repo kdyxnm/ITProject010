@@ -55,6 +55,8 @@ public class UserController {
         String codeInSession = (String) request.getSession().getAttribute("code");
         System.out.println("===================================");
         System.out.println(request.getSession().getId());
+        System.out.println("In Session: "+codeInSession);
+        System.out.println("input: "+helper.getCode());
         System.out.println("===================================");
         if (service.getOne(qUsername)!=null){
             return new R(CreateAccountError.USERNAME_EXIST);

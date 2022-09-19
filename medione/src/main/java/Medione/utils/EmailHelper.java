@@ -9,7 +9,7 @@ public class EmailHelper {
     private String username;
     private String nickname;
     private String email;
-    String code;
+    private String code;
 
     public User getUser(){
         User user = new User();
