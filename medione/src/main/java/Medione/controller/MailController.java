@@ -24,7 +24,7 @@ public class MailController {
     public R<User> send(HttpServletRequest request, @RequestBody User user){
 
 
-        if(mailService.sendMail(user.getEmail(), request.getSession())!=null){
+        if(mailService.sendMail(user.getEmail(), request.getSession())!=null ){
             return new R(200);
         }
 

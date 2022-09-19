@@ -45,7 +45,13 @@ public class SendMailImpl implements ISendMailService {
         mailMessage.setText(context+code+context2);
         //sending
         session.setAttribute("code",code);
+        try{
         javaMailSender.send(mailMessage);
+        }
+        catch (Exception e){
+            return null;
+        }
+
         System.out.println("sent out!");
         System.out.println("sent out!");
         System.out.println("sent out!");
