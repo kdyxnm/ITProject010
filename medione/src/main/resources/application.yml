@@ -22,15 +22,6 @@ spring:
 
 server:
   port: 8081  #adaptive
-  servlet:
-    session:
-
-      persistent: true
-      cookie:
-        name: JSESSIONID
-        same-site: none
-        http-only: false
-        secure: false
 #      timeout: 28800  #8hr = 8*60*60s
 
 

@@ -52,18 +52,19 @@ public class WebConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry){
 //        block exclude/login  /register.....
 //        block register for testing!
-//        registry.addInterceptor(loginInterceptor)
-//                .addPathPatterns("/**")
-//                .excludePathPatterns("/login")
-//                .excludePathPatterns("/user/**")
-//                .excludePathPatterns("/medicine/**")
-//                .excludePathPatterns("/dashboard/**")
-//                .excludePathPatterns("/dashboard")
-//                .excludePathPatterns("/register")
-//                .excludePathPatterns("/about")
-//                .excludePathPatterns("/mail")
-//                .excludePathPatterns("/mail/**")
-//                .excludePathPatterns("/reset_password")
+        registry.addInterceptor(loginInterceptor)
+                .addPathPatterns("/**")
+                .excludePathPatterns("/login")
+                .excludePathPatterns("/user/**")
+                .excludePathPatterns("/medicine/**")
+                .excludePathPatterns("/dashboard/**")
+                .excludePathPatterns("/dashboard")
+                .excludePathPatterns("/register")
+                .excludePathPatterns("/about")
+                .excludePathPatterns("/mail")
+                .excludePathPatterns("/mail/**")
+                .excludePathPatterns("/generator/**")
+                .excludePathPatterns("/reset_password")
         ;
 
 

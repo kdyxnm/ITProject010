@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.time.LocalTime;
+import java.util.Arrays;
 
 //@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
@@ -33,7 +34,9 @@ public class UserController {
      * @return creation result
      */
     @PostMapping("register")
-    public R createAccount(@RequestBody EmailHelper helper){
+    public R createAccount(@RequestBody EmailHelper helper,HttpServletRequest request){
+        System.out.println(request.getSession());
+        System.out.println("register: " + Thread.currentThread().getId());
         String email = helper.getEmail();
         String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
@@ -60,9 +63,11 @@ public class UserController {
 
 
     @PostMapping("login")
-    public R<User> Login(@RequestBody User user){
+    public R<User> Login(@RequestBody User user, HttpServletRequest request){
         System.out.println("===================================");
+        System.out.println(request.getSession());
 
+        System.out.println("login: " + Thread.currentThread().getId());
         System.out.println("===================================");
         User target = service.getByName(user.getUsername());
         System.out.println("target: "+target);
@@ -75,6 +80,7 @@ public class UserController {
         }
 //        HttpSession session = request.getSession();
 //        session.setAttribute("user",user);
+        request.getSession().setAttribute("username",user.getUsername());
         BaseContext.setCurrentUser(user);    //set session in thread
         return new R(target);
     }

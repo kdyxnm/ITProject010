@@ -15,6 +15,7 @@ import Medione.utils.RMedicine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @RestController
@@ -29,8 +30,9 @@ public class DashboardController {
 
 
     @GetMapping
-    public RDashboard getDashboardMsg(){
-        String username = "zisu1";  //写死测试
+    public RDashboard getDashboardMsg(HttpServletRequest request){
+//        String username = "zisu1";  //写死测试
+        String username = (String) request.getSession().getAttribute("username");
         String email = userService.getByName(username).getEmail();
         String nickname = userService.getByName(username).getNickname();
         List<Location> locations = locationService.getAll(email);
