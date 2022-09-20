@@ -87,7 +87,10 @@ import api from '../api/index';
         console.log(that.pwd.length > 0 ? "password entered" : "Password is empty");
         
         api.login(that.userName, that.pwd).then(function(response){
-          console.log(response.data.data)
+          console.log(response.data.data);
+          if(response.data.data.statu == 200){
+            
+          }
         })
       }
     },

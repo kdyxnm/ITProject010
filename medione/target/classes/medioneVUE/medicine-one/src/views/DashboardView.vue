@@ -5,6 +5,7 @@
         <HeadBar :header="user.username" @open-side-bar-event="openSideBar"></HeadBar>
       </el-header>
       <el-container>
+
         <el-aside class="aisde">
           <SideBar 
             :displayVersion="'complex'" 
@@ -15,25 +16,39 @@
             @switch-event="handleSwitch"
           ></SideBar>
         </el-aside>
+        
         <el-main class="main">
           <div class="content_container">
+
             <div class="serach_bar_container">
               <SearchBar></SearchBar>
             </div>
-            <div class="dynamic_content_container">
-              <div v-if="displayMode == 'default'">
-                <h1> Medicine list component</h1>
-              </div>
-              <div  v-if="displayMode == 'add_medi'">
-                <h1> Add medicine component</h1>
-              </div>
-              <div  v-if="displayMode == 'my_loca'">
-                <h1> Add location component</h1>
-              </div>
-              <div v-if="displayMode == 'about'">
-                <h1> About component version 2</h1>
-              </div>
+
+
+
+            <div v-if="displayMode == 'default'" class="dynamic_content_container">
+              <h1> Medicine list component</h1>
             </div>
+
+            <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
+              <h1> Medicine Description</h1>
+            </div>
+
+
+            <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
+              <h1> Add medicine component</h1>
+            </div>
+
+
+            <div  v-if="displayMode == 'my_loca'" class="dynamic_content_container">
+              <h1> Add location component</h1>
+            </div>
+
+
+            <div v-if="displayMode == 'about'" class="dynamic_content_container">
+              <h1> About component version 2</h1>
+            </div>
+
             
 
 
@@ -57,7 +72,7 @@ export default {
     return {
       display_flag : true,
       isPhone : true,
-      displayMode : 'medi_list',
+      displayMode : 'default',
       
       user : {
         username : 'superadmin',

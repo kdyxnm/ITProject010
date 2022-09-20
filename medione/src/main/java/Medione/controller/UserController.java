@@ -78,7 +78,7 @@ public class UserController {
         }
         HttpSession session = request.getSession();
         session.setAttribute("user",user);
-        BaseContext.setCurrentSession(session);    //String to Long
+        BaseContext.setCurrentSession(session);    //set session in thread
         return new R(target);
     }
 
