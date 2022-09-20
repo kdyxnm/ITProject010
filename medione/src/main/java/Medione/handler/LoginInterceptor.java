@@ -7,6 +7,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import javax.servlet.FilterChain;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -17,10 +18,13 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
+        Cookie cookie = new Cookie("JSESSIONID",request.getSession().getId());
+        response.addCookie(cookie);
+        response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
         response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
         response.setHeader("Access-Control-Allow-Methods", "GET,POST");
         response.setHeader("Access-Control-Allow-Credentials", "true");//是否支持cookie跨域
-        response.setHeader("Access-Control-Allow-Headers", "Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
+        response.setHeader("Access-Control-Allow-Headers", "Set-Cookie,Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
         HttpSession session =request.getSession();
 
         User user = (User) session.getAttribute("user");

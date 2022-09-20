@@ -27,7 +27,7 @@ server:
 
       persistent: true
       cookie:
-        name: mediSession
+        name: JSESSIONID
         same-site: none
         http-only: false
         secure: false

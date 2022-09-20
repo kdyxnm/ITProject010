@@ -60,15 +60,15 @@ public class MedicineController {
         }
     }
 
-    @GetMapping("/{currentPage}/{pageSize}")
-    public RMedicine getAll(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
-        IPage<Medicine> page = service.getPage(currentPage, pageSize);
-        if(page != null){
-            return new RMedicine(200,page,"success!");
-        }else {
-            return new RMedicine(404,null,"Wrong page range.");
-        }
-    }
+//    @GetMapping("/{currentPage}/{pageSize}")
+//    public RMedicine getAll(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
+//        IPage<Medicine> page = service.getPage(currentPage, pageSize);
+//        if(page != null){
+//            return new RMedicine(200,page,"success!");
+//        }else {
+//            return new RMedicine(404,null,"Wrong page range.");
+//        }
+//    }
 }
 
 
