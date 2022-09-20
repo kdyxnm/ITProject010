@@ -30,15 +30,18 @@ public class DashboardController {
 
     @GetMapping
     public RDashboard getDashboardMsg(){
-        String username = BaseContext.getCurrentUser().getUsername();
+        String username = "zisu1";  //写死测试
         String email = userService.getByName(username).getEmail();
         String nickname = userService.getByName(username).getNickname();
         List<Location> locations = locationService.getAll(email);
         List<SimpleMessage> simpleMessages = medicineService.getSimpleMsgs(username);
         DashboardMessage dashboardMessage = new DashboardMessage(username, nickname, email, locations, simpleMessages);
+        System.out.println("==================================");
+        System.out.println("dashboardmsg: "+ dashboardMessage);
         if(dashboardMessage != null){
             return new RDashboard(200, dashboardMessage, "success!");
-        }else {
+        }
+        else {
             return new RDashboard(404, null, "error.");
         }
     }

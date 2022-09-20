@@ -18,6 +18,7 @@ public class LoginInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
+
         Cookie cookie = new Cookie("JSESSIONID",request.getSession().getId());
         cookie.setHttpOnly(false);
         cookie.setSecure(false);
@@ -32,8 +33,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         response.setHeader("Access-Control-Allow-Headers", "Set-Cookie,Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
         HttpSession session =request.getSession();
 
-        User user = (User) session.getAttribute("user");
-        if(user == null){
+//        User user = (User) session.getAttribute("user");
+        if(false){
 //            response.sendRedirect("http://localhost:8080").;
             //未登陆，返回登陆页面
 //            request.setAttribute("msg","没有权限请先登陆");
@@ -45,7 +46,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         }
         else {
-//            BaseContext.setCurrentUser(session);
+//            BaseContext.setCurrentUser(user);
 //            request.getRequestDispatcher()
         }
         System.out.println("already login");

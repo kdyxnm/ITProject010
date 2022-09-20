@@ -10,6 +10,7 @@ import Medione.utils.EmailHelper;
 import Medione.utils.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -80,12 +81,16 @@ public class UserController {
 
 
 
+
+
     @DeleteMapping("log out")
     public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
         request.getSession().invalidate();
         String target = "custom";
         return new R(200);
     }
+
+
 
 
 
