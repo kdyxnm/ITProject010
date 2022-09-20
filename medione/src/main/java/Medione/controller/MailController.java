@@ -3,12 +3,14 @@ package Medione.controller;
 import Medione.pojo.User;
 import Medione.service.ISendMailService;
 import Medione.service.IUserService;
+import Medione.utils.BaseContext;
 import Medione.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.prefs.BackingStoreException;
 
 //@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
@@ -26,6 +28,7 @@ public class MailController {
 
 
         if(mailService.sendMail(user.getEmail(), session)!=null ){
+            BaseContext.setCurrentSession(session);
             return new R(200);
         }
 
