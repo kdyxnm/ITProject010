@@ -3,9 +3,12 @@ package Medione.service.impl;
 import Medione.dao.LocationDao;
 import Medione.pojo.Location;
 import Medione.service.ILocationService;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class LocationImpl extends ServiceImpl<LocationDao, Location> implements ILocationService {
@@ -31,4 +34,11 @@ public class LocationImpl extends ServiceImpl<LocationDao, Location> implements 
     public Location getLocation(Integer locationid) {
         return locationDao.selectById(locationid);
     }
+
+    @Override
+    public List<Location> getAll(String email) {
+        return locationDao.selectList(new QueryWrapper<Location>().eq("email", email));
+    }
+
+
 }

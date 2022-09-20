@@ -2,6 +2,7 @@ package Medione.service.impl;
 
 import Medione.dao.MedicineDao;
 import Medione.pojo.Medicine;
+import Medione.pojo.SimpleMessage;
 import Medione.service.IMedicineService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -9,6 +10,11 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.SortedMap;
 
 @Service
 public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements IMedicineService {
@@ -45,4 +51,55 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     public IPage<Medicine> getPage(int currentPage, int pageSize, Medicine medicine, String username) {
         return null;
     }
+
+    @Override
+    public List<Integer> getOne(String brandname, Integer locationid, String username) {
+        List<Medicine> list;
+        List<Integer> ans  = new ArrayList<Integer>();
+        QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
+        queryWrapper.eq("username", username);
+        queryWrapper.eq("brandname", brandname);
+        queryWrapper.eq("locationid", locationid);
+        list = medicineDao.selectList(queryWrapper);
+        for(Medicine medicine : list){
+            ans.add(medicine.getId());
+        }
+        return ans;
+    }
+
+    @Override
+    public List<Integer> getList(String brandname, String username) {
+        List<Medicine> list;
+        List<Integer> ans  = new ArrayList<Integer>();
+        QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
+        queryWrapper.eq("username", username);
+        queryWrapper.like("brandname", brandname);
+        list  = medicineDao.selectList(queryWrapper);
+        for(Medicine medicine : list){
+            ans.add(medicine.getId());
+        }
+        if(ans.size() <= 5) {
+            return ans;
+        }else{
+            return ans.subList(0,5);
+        }
+    }
+
+    @Override
+    public List<SimpleMessage> getSimpleMsgs(String username) {
+        List<Medicine> list;
+        QueryWrapper<Medicine> queryWrapper = new QueryWrapper<Medicine>();
+        queryWrapper.eq("username", username);
+        list = medicineDao.selectList(queryWrapper);
+
+        List<SimpleMessage> simpleMessages = new ArrayList<SimpleMessage>();
+        for(Medicine medicine : list){
+            SimpleMessage simpleMessage = new SimpleMessage(medicine.getId(), medicine.getBrandname(),medicine.getLocationid());
+            System.out.println(simpleMessage);
+            simpleMessages.add(simpleMessage);
+        }
+        return simpleMessages;
+    }
+
+
 }
