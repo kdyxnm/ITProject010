@@ -3,7 +3,7 @@
     <button v-if="btnStyle == sidebar" @click="openNav" class="open_button">
       <el-icon><Expand /></el-icon>
     </button>
-    <button v-if="btnStyle == returnbtn" @click="openNav" class="open_button">
+    <button v-if="btnStyle == returnbtn" @click="backToPrev" class="open_button">
       <el-icon><Back /></el-icon>
     </button>
 
@@ -36,6 +36,9 @@ export default {
   methods: {
     openNav() {
       this.$emit("open-side-bar-event")
+    },
+    backToPrev(){
+      this.$router.back(-1)
     }
   }
 }

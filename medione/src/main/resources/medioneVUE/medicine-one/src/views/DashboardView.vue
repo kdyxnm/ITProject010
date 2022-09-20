@@ -75,8 +75,8 @@ export default {
       displayMode : 'default',
       
       user : {
-        username : 'superadmin',
-        nickname : 'superbaby',
+        username : this.$route.params.username,
+        nickname : '',
         useremial : '',
         usermatadata : {},
       }
@@ -107,6 +107,11 @@ export default {
   mounted() {
     this.display_flag = (window.innerWidth > 992);
     this.isPhone = !(window.innerWidth > 992);
+    if(!this.$store.getters.isAuthenticated){
+      this.$router.push({path : '/'})
+    }
+    console.log("Load user data form backend")
+
   },
 }
 </script>
@@ -134,7 +139,6 @@ export default {
 
   .dynamic_content_container{
     width: 100%;
-    height: 100%;
     margin-top:1em
   }
   
@@ -168,7 +172,6 @@ export default {
     /* website content */
     .content_container {
       width: 100%;
-      height: 90%;
       margin-left: 0;
       margin-top: 2em;
     }
