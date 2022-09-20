@@ -22,8 +22,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         cookie.setHttpOnly(false);
         cookie.setSecure(false);
         response.addCookie(cookie);
-        response.addHeader("Set-Cookie","JSESSIONID="+request.getSession().getId());
-        response.addHeader("Access-Control-Expose-Headers","Set-Cookie");
+        response.addHeader("Cookie","JSESSIONID="+request.getSession().getId());
+        response.addHeader("Access-Control-Expose-Headers","Cookie");
         //Access-Control-Expose-Headers
         response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
         response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
