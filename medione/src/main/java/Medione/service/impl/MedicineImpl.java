@@ -101,5 +101,18 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
         return simpleMessages;
     }
 
+    @Override
+    public String getNote(Integer id) {
+        Medicine medicine = medicineDao.selectById(id);
+        return medicine.getNote();
+    }
+
+    @Override
+    public Boolean modifyNote(Integer id, String note) {
+        Medicine medicine = medicineDao.selectById(id);
+        medicine.setNote(note);
+        return medicineDao.updateById(medicine)>0;
+    }
+
 
 }

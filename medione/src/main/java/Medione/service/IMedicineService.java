@@ -22,4 +22,8 @@ public interface IMedicineService extends IService<Medicine> {
     List<Integer> getList(String brandname, String username);
 
     List<SimpleMessage> getSimpleMsgs(String username);
+
+    String getNote(Integer id);
+
+    Boolean modifyNote(Integer id, String note);
 }

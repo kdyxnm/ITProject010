@@ -1,8 +1,10 @@
 package Medione.controller;
 
 import Medione.pojo.Medicine;
+import Medione.pojo.Note;
 import Medione.service.IMedicineService;
 import Medione.utils.BaseContext;
+import Medione.utils.R;
 import Medione.utils.RMedicine;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -96,6 +98,29 @@ public class MedicineController {
         }
 
     }
+
+    @GetMapping("/note/{id}")
+    public RMedicine getNote(@PathVariable Integer id){
+        Note note = new Note();
+        note.setNote(service.getNote(id));
+        if(note!=null){
+            return new RMedicine(200, note, "success!");
+        }else {
+            return new RMedicine(404, null, "error.");
+        }
+    }
+
+    @PutMapping("/note/{id}")
+    public RMedicine modifyNote(@RequestBody Note note, @PathVariable Integer id){
+        String noteMsg = note.getNote();
+        if(service.modifyNote(id, noteMsg)){
+            return new RMedicine(200, null, "success!");
+        }else {
+            return new RMedicine(404, null, "error.");
+        }
+    }
+
+
 
 }
 
