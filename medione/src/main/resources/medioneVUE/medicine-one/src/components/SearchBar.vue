@@ -13,7 +13,7 @@
     </template>
     <template #default="{ item }">
       <div class="value">{{ item.value }}</div>
-      <span class="link">{{ item.link }}</span> -->
+      <span class="link">{{ item.link }}</span>
     </template> 
   </el-autocomplete>
 </template>
@@ -159,6 +159,31 @@ export default __sfc__
     color: #ddd;
   }
 
+  @media  screen and (max-width: 992px) {
+    .el-autocomplete.el-tooltip__trigger.el-tooltip__trigger {
+      width: 100%;
+      height: 100%;
+    }
+    .el-input.el-input--suffix {
+      width: 100%;
+      font-size: 1.2em;
+      height: 100%;
+      font-weight: 600;
+    }
+    .el-input__wrapper {
+      border-radius: 2em;
+    }
+    .el-input__wrapper:hover {
+      background-color:#eaeaea ;
+    }
+    span.el-input__suffix-inner {
+      margin-right: 1em;
+      color: #6E78F7;
+    }
+    span.el-input__suffix-inner :hover {
+      color: #545bc3;
+    }
+  }
 
 
   @media screen and (min-width: 992px) {

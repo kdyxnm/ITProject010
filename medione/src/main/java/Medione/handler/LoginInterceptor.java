@@ -19,10 +19,15 @@ public class LoginInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         Cookie cookie = new Cookie("JSESSIONID",request.getSession().getId());
+        cookie.setHttpOnly(false);
+        cookie.setSecure(false);
         response.addCookie(cookie);
+        response.addHeader("Cookie","JSESSIONID="+request.getSession().getId());
+        response.addHeader("Access-Control-Expose-Headers","Cookie");
+        //Access-Control-Expose-Headers
         response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
         response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
-        response.setHeader("Access-Control-Allow-Methods", "GET,POST");
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");//五种请求
         response.setHeader("Access-Control-Allow-Credentials", "true");//是否支持cookie跨域
         response.setHeader("Access-Control-Allow-Headers", "Set-Cookie,Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
         HttpSession session =request.getSession();

@@ -65,6 +65,7 @@
 import HeadBar from '../components/HeadBar.vue'
 import SideBar from '../components/SideBar.vue'
 import SearchBar from '../components/SearchBar.vue'
+import api from '../api/index'
 
 export default {
   name: 'DashboardView',
@@ -104,13 +105,19 @@ export default {
       }
     }
   },
+  beforeMount(){
+    this.isPhone = !(window.innerWidth > 992);
+  },
   mounted() {
     this.display_flag = (window.innerWidth > 992);
-    this.isPhone = !(window.innerWidth > 992);
     if(!this.$store.getters.isAuthenticated){
       this.$router.push({path : '/'})
     }
     console.log("Load user data form backend")
+    api.getUserData().then(res =>{
+      console.log(res.data)
+    })
+    
 
   },
 }
@@ -158,6 +165,19 @@ export default {
     aside.el-aside.aisde {
       width: 0;
     }
+
+    .el-input__wrapper {
+      align-items: center;
+      margin-top: 1em;
+      z-index: -1;
+    }
+
+    .serach_bar_container {
+      width: 100%;
+      height: 3em;
+      margin-top: 1em;
+    }
+
   }
 
 

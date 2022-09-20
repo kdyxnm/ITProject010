@@ -35,7 +35,7 @@ public class Medicine {
     private String overdosage;
     private String username;
     private Integer locationid;
-    //private String note;
+    private String note;
 
 
 
