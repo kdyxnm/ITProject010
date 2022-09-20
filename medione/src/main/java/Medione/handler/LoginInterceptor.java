@@ -22,7 +22,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         cookie.setHttpOnly(false);
         cookie.setSecure(false);
         response.addCookie(cookie);
-
+        response.addHeader("Set-Cookie","JSESSIONID="+request.getSession().getId());
         response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
         response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
         response.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");//五种请求
