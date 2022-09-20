@@ -45,7 +45,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             return false;
         }
         else {
-            BaseContext.setCurrentSession(session);
+//            BaseContext.setCurrentUser(session);
 //            request.getRequestDispatcher()
         }
         System.out.println("already login");

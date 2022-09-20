@@ -8,7 +8,8 @@ import javax.servlet.http.HttpSession;
 
 
 public interface ISendMailService  {
-    String sendMail(String account, HttpSession session);
+    String sendMail(String account);
 
+    String getCodeByAccount(String account);
 //    Boolean checkCode(String input, HttpSession session);
 }

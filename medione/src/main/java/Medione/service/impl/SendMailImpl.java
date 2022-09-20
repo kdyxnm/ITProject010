@@ -35,8 +35,8 @@ public class SendMailImpl implements ISendMailService {
     private final int EXCEED_TIME = 10;
 
     @Override
-    //@CachePut(value="mail",key="#account")
-    public String sendMail( String account, HttpSession session) {
+    @CachePut(value="mail",key="#account")
+    public String sendMail( String account) {
         code =  RandomCode.getRandom();
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setFrom(from+"(medione)");
@@ -44,7 +44,6 @@ public class SendMailImpl implements ISendMailService {
         mailMessage.setSubject(subject);
         mailMessage.setText(context+code+context2);
         //sending
-        session.setAttribute("code",code);
         try{
         javaMailSender.send(mailMessage);
         }
@@ -59,6 +58,11 @@ public class SendMailImpl implements ISendMailService {
 
         return code;
     }
+
+    @Cacheable(value = "mail",key="#account")
+    public String getCodeByAccount(String account){
+        return null;
+    }
 //
 //    @Override
 //    public Boolean checkCode(String input, HttpSession session) {
@@ -66,10 +70,8 @@ public class SendMailImpl implements ISendMailService {
 //      return (input.equals(code));
 //    }
 
-    @Cacheable(value = "mail",key = "#account" )
-    public String getCodeByAccount(String account){
-        return null;
-    }
+
+
 //    public String clearCache(){
 //        int count = 0;
 //        for (String account : timer.keySet()) {

@@ -6,6 +6,7 @@ import Medione.service.IUserService;
 import Medione.utils.BaseContext;
 import Medione.utils.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -27,13 +28,14 @@ public class MailController {
     public R<User> send(HttpSession session, @RequestBody User user){
 
 
-        if(mailService.sendMail(user.getEmail(), session)!=null ){
-            BaseContext.setCurrentSession(session);
+        if(mailService.sendMail(user.getEmail())!=null ){
             return new R(200);
         }
 
         return new R(404);
     }
+
+
 
 //    @PostMapping("check")
 //    public R<Object> checkValid(@RequestParam("code") String code,@RequestParam("account") String account ){

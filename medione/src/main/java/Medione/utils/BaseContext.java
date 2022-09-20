@@ -5,26 +5,19 @@ import Medione.pojo.User;
 import javax.servlet.http.HttpSession;
 
 public class BaseContext {
-    private static ThreadLocal<HttpSession> threadLocal = new ThreadLocal<>();
+    private static ThreadLocal<User> threadLocal = new ThreadLocal<>();
 
     /**
      * 设置值
      * @param session
      */
-    public static void setCurrentSession(HttpSession session){
-        threadLocal.set(session);
+    public static void setCurrentUser(User user){
+        threadLocal.set(user);
     }
 
-    /**
-     * 获取值
-     * @return
-     */
-    public static HttpSession getCurrentSession(){
-        return threadLocal.get();
-    }
+
 
     public static User getCurrentUser(){
-        User user = (User) threadLocal.get().getAttribute("user");
-        return user;
+        return threadLocal.get();
     }
 }

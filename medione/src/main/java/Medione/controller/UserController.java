@@ -33,16 +33,15 @@ public class UserController {
      */
     @PostMapping("register")
     public R createAccount(@RequestBody EmailHelper helper){
-        HttpSession session = BaseContext.getCurrentSession();
         String email = helper.getEmail();
         String username = helper.getUsername();
         QueryWrapper<User> qUsername = new QueryWrapper<>();
         qUsername.eq("username",username);
         QueryWrapper<User> qEmail = new QueryWrapper<>();
         qEmail.eq("email",email);
-        String codeInSession = (String)session.getAttribute("code");
+        String codeInSession = mailService.getCodeByAccount(email);
         System.out.println("===================================");
-        System.out.println(session.getId());
+//        System.out.println(session.getId());
         System.out.println("===================================");
         if (service.getOne(qUsername)!=null){
             return new R(CreateAccountError.USERNAME_EXIST);
@@ -60,12 +59,9 @@ public class UserController {
 
 
     @PostMapping("login")
-    public R<User> Login(HttpServletRequest request,@RequestBody User user){
+    public R<User> Login(@RequestBody User user){
         System.out.println("===================================");
-        System.out.println(request.getSession().getId());
-        System.out.println(request.getSession().getId());
-        System.out.println(request.getSession().getId());
-        System.out.println(request.getSession().getId());
+
         System.out.println("===================================");
         User target = service.getByName(user.getUsername());
         System.out.println("target: "+target);
@@ -76,9 +72,9 @@ public class UserController {
         if (target == null ||    ( !target.getPassword().equals(user.getPassword()) )){
             return new R(404);
         }
-        HttpSession session = request.getSession();
-        session.setAttribute("user",user);
-        BaseContext.setCurrentSession(session);    //set session in thread
+//        HttpSession session = request.getSession();
+//        session.setAttribute("user",user);
+        BaseContext.setCurrentUser(user);    //set session in thread
         return new R(target);
     }
 
