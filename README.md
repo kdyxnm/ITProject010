@@ -7,4 +7,12 @@ Client: 	Bai, Zhongyi		  zhongyib@student.unimelb.edu.au
 
 Team Member:
 
-SU, Zijie zisu1@student.unimelb.edu.au
+Su, Zijie zisu1@student.unimelb.edu.au
+
+Meng, Zhaolong
+
+Sun, Yingge
+
+Cao, Yuchen
+
+Zhao, Tianjin
