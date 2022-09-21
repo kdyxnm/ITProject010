@@ -41,23 +41,23 @@
 
 				<div class ="button_area">
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round="true" size="small">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
 						</el-button>
 						
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><Document /></el-icon> &nbsp;View  Notes
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><EditPen /></el-icon> &nbsp;Modify Drug Description
 						</el-button>
   				</el-row>

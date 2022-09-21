@@ -71,11 +71,19 @@
   </div>
 </template>
 <script>
+
 export default {
+  data() {
+    return {
+      activeName: ''
+      
+
+    }
+  },
+
 
 }
-import { ref } from 'vue'
-const activeName = ref('1')
+
 </script>
 
 <style>
