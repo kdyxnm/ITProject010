@@ -25,7 +25,9 @@ public class LoginInterceptor implements HandlerInterceptor {
         response.addCookie(cookie);
         response.addHeader("Cookie","JSESSIONID="+request.getSession().getId());
         response.addHeader("Access-Control-Expose-Headers","Cookie");
+        response.addHeader("Access-Control-Expose-Headers","Authorization");
         //Access-Control-Expose-Headers
+
         response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
         response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
         response.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");//五种请求
@@ -33,8 +35,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         response.setHeader("Access-Control-Allow-Headers", "Set-Cookie,Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
         HttpSession session =request.getSession();
 
-//        User user = (User) session.getAttribute("user");
-        if(false){
+        String username = (String) session.getAttribute("username");
+        if(username==null){
 //            response.sendRedirect("http://localhost:8080").;
             //未登陆，返回登陆页面
 //            request.setAttribute("msg","没有权限请先登陆");
