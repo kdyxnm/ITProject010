@@ -79,7 +79,7 @@
 
 
     <div class="page_select_bar">
-      <MedicineListPagination :total = 5 :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
+      <MedicineListPagination :total = total :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
     </div>
   </div>
 </template>
@@ -102,6 +102,7 @@ export default {
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
+        // listData:null,
         listData : [
           {
             id: 1,
@@ -159,7 +160,7 @@ export default {
     props:{
       total: {
         type: Number,
-        default: 30,
+        default: 0,
       },
     },
     components: { 

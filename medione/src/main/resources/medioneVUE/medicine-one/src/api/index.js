@@ -28,6 +28,9 @@ const api = {
   },
   getUserData(){
     return axios.get(path.baseUrl + path.dashboard)
+  },
+  getPageData(curpage, pagesize){
+    return axios.get(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
   }
 }
 export default api

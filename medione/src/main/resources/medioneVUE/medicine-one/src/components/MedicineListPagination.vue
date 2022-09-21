@@ -63,6 +63,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .my-pagination {
-  padding-top: 24px;   
+  padding-top: 2em;  
 }
 </style>
