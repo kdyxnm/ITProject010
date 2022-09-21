@@ -1,7 +1,7 @@
 <template>
   <div class="demo-collapse">
     <el-collapse v-model="activeName" accordion>
-      <el-collapse-item title="Consistency" name="1">
+      <el-collapse-item title="Description:" name="1">
         <div>
           Consistent with real life: in line with the process and logic of real
           life, and comply with languages and habits that the users are used to;
@@ -11,7 +11,7 @@
           as: design style, icons and texts, position of elements, etc.
         </div>
       </el-collapse-item>
-      <el-collapse-item title="Feedback" name="2">
+      <el-collapse-item title="Indications and Usage:" name="2">
         <div>
           Operation feedback: enable the users to clearly perceive their
           operations by style updates and interactive effects;
@@ -21,7 +21,7 @@
           elements of the page.
         </div>
       </el-collapse-item>
-      <el-collapse-item title="Efficiency" name="3">
+      <el-collapse-item title="Warnings:" name="3">
         <div>
           Simplify the process: keep operating process simple and intuitive;
         </div>
@@ -34,7 +34,29 @@
           the users to identify and frees them from memorizing and recalling.
         </div>
       </el-collapse-item>
-      <el-collapse-item title="Controllability" name="">
+      <el-collapse-item title="Contraindications:" name="4">
+        <div>
+          Decision making: giving advices about operations is acceptable, but do
+          not make decisions for the users;
+        </div>
+        <div>
+          Controlled consequences: users should be granted the freedom to
+          operate, including canceling, aborting or terminating current
+          operation.
+        </div>
+      </el-collapse-item>
+      <el-collapse-item title="Adverse Reactions:" name="5">
+        <div>
+          Decision making: giving advices about operations is acceptable, but do
+          not make decisions for the users;
+        </div>
+        <div>
+          Controlled consequences: users should be granted the freedom to
+          operate, including canceling, aborting or terminating current
+          operation.
+        </div>
+      </el-collapse-item>
+      <el-collapse-item title="Overdosage:" name="6">
         <div>
           Decision making: giving advices about operations is acceptable, but do
           not make decisions for the users;

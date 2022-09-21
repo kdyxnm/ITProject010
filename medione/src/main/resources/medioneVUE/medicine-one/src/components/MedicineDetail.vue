@@ -104,10 +104,13 @@ export default {
 
 	.detailed_description {
 		width: 50%;
+		margin-top: 2em;
 	}
 
 	.edit_note {
 		width: 50%;
+		margin-right: 2em;
+		margin-top: 2em;
 	}
 
 	.brief_description {
