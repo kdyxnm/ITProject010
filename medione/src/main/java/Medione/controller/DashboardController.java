@@ -3,15 +3,11 @@ package Medione.controller;
 
 import Medione.pojo.DashboardMessage;
 import Medione.pojo.Location;
-import Medione.pojo.Medicine;
 import Medione.pojo.SimpleMessage;
 import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
 import Medione.service.IUserService;
-import Medione.utils.BaseContext;
-import Medione.utils.RDashboard;
-import Medione.utils.RLocation;
-import Medione.utils.RMedicine;
+import Medione.utils.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,5 +44,14 @@ public class DashboardController {
         }
     }
 
+
+    @GetMapping("validate")
+    public R refreshValidate(HttpServletRequest request){
+        String username = (String) request.getSession().getAttribute("username");
+        if(username !=null){
+            return new R(200);
+        }
+        return new R(400);
+    }
 
 }
