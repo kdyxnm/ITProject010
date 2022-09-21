@@ -53,6 +53,7 @@
 <script>
 import SideBar from '../components/SideBar.vue';
 import api from '../api/index';
+// import store from '../store/index';
 
 
   export default {
@@ -61,7 +62,7 @@ import api from '../api/index';
       return {
         displayFlag : false,
         displayDeskOnly: true,
-        warningText : "Incorrect username or password, please try again",
+        warningText : "",
         userName : "",
         pwd : "",
 
@@ -88,10 +89,17 @@ import api from '../api/index';
         
         api.login(that.userName, that.pwd).then(function(response){
           console.log(response.data.data);
-          if(response.data.data.statu == 200){
-            
+          console.log(response)
+          if(response.data.status == 200){
+            that.$store.commit("authenticate");
+            that.$router.push({path : '/dashboard/' + response.data.data.username})
+          }
+          else{
+            that.warningText = "Incorrect username or password, please try again"
           }
         })
+
+        console.log("Auth flag " + that.$store.getters.isAuthenticated)
       }
     },
     mounted() {

@@ -15,18 +15,19 @@ module.exports = defineConfig({
         }),
     ],
   },
-  // devServer: {
-  //   proxy: {
-  //     '/api': {
-  //       target: 'http://localhost:8081',
-  //       ws: true,
-  //       changeOrigin: true,
-  //       pathRewrite: {
-  //         '/api': ''
-  //       }
-  //     }
-  //   }
-  // }
+  devServer: {
+    open : true,
+    // proxy: {
+    //   '/api': {
+    //     target: 'http://localhost:8081',
+    //     ws: true,
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '/api': ''
+    //     }
+    //   }
+    // }
+  }
   // publicPath:'./'
 })
 

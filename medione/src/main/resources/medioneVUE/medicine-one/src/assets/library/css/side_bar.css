@@ -23,6 +23,7 @@ This css document for side bar format:
     border-radius: 0 20px 20px 0;
     position: absolute;
     overflow-x: hidden;
+    z-index: 1;
   }
 
   .side_bar_title {

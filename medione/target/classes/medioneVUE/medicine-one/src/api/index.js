@@ -25,6 +25,9 @@ const api = {
       'password': pwd,
     };
     return axios.post(path.baseUrl + path.register, registerinfo)
+  },
+  getUserData(){
+    return axios.get(path.baseUrl + path.dashboard)
   }
 }
 export default api
