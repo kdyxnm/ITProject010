@@ -6,9 +6,9 @@ registerview.vue
 			<!--head bar phone only-->
 		<div class="center_bar content_container" style="margin-left: 0;">
 			<h3 class="desk_top_only">Register</h3>
-			<!-- <router-link v-if="displayDeskOnly" to="/">
-			<div class="return_button desktop_only" ></div>
-			</router-link> -->
+			<button @click="backToPrev" class="return_button desktop_only">
+				<el-icon :size=30 color="#6E78F7"><Back /></el-icon>
+			</button>
 			<table class="center_bar_content">
 				<tr class="center_bar_label">
 					<label class="center_bar_title">Username:</label>
@@ -111,7 +111,9 @@ import api from '../api/index';
 					console.log(response.data)  
 				})
 			},
-
+			backToPrev(){
+				this.$router.back(-1)
+			},
 			confirmButton(){
 				this.isEmpty()
 			},

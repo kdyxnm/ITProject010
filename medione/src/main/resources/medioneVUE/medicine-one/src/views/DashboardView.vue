@@ -27,7 +27,7 @@
 
 
             <div v-if="displayMode == 'default'" class="dynamic_content_container">
-              <h1> Medicine list component</h1>
+              <MedicineList></MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
@@ -66,6 +66,7 @@ import HeadBar from '../components/HeadBar.vue'
 import SideBar from '../components/SideBar.vue'
 import SearchBar from '../components/SearchBar.vue'
 import api from '../api/index'
+import MedicineList from '../components/MedicineList.vue'
 
 export default {
   name: 'DashboardView',
@@ -87,7 +88,9 @@ export default {
     HeadBar,
     SideBar,
     SearchBar,
-  },
+    //MedicineDetail,
+    MedicineList
+},
   methods: {
     openSideBar(){
       this.display_flag = true;
@@ -164,12 +167,6 @@ export default {
     }
     aside.el-aside.aisde {
       width: 0;
-    }
-
-    .el-input__wrapper {
-      align-items: center;
-      margin-top: 1em;
-      z-index: -1;
     }
 
     .serach_bar_container {

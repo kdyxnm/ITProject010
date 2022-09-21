@@ -4,10 +4,10 @@
 
 			<!--head bar phone only-->
 		<div class="center_bar content_container" style="margin-left: 0;">
-			<h3 class="desk_top_only">Reset Password</h3>
-			<!-- <router-link v-if="displayDeskOnly" to="/">
-			<div class="return_button desktop_only" ></div>
-			</router-link> -->
+			<h3 class="desk_top_only" style="font-size : 2em;">Reset Password</h3>
+			<button @click="backToPrev" class="return_button desktop_only">
+				<el-icon :size=30 color='#6E78F7'><Back /></el-icon>
+			</button>
 			<table class="center_bar_content">
 				<tr class="center_bar_label">
 					<label class="center_bar_title">Email:</label>
@@ -96,6 +96,9 @@ import api from '../api/index';
 				api.emailVerify(that.userName, that.email).then(function(response){
 					console.log(response.data)  
 				})
+			},
+			backToPrev(){
+				this.$router.back(-1)
 			},
 
 			confirmButton(){

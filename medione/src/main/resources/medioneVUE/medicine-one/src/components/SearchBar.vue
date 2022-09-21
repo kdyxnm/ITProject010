@@ -171,6 +171,8 @@ export default __sfc__
       font-weight: 600;
     }
     .el-input__wrapper {
+      align-items: center;
+      height: 100%;
       border-radius: 2em;
     }
     .el-input__wrapper:hover {

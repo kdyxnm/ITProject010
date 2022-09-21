@@ -3,6 +3,7 @@ const base = {
   login       : '/user/login',
   email       : '/mail/send',
   register    : '/user/register',
+  dashboard   : '/dashboard',
 
   addLocation : '',
   delLocation : '',
