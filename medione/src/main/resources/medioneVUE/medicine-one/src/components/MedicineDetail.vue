@@ -67,14 +67,14 @@
 		</div>
 
 		<div class = "components">
-			<div class = "detailed_description">
-				<h1>detailed_description</h1>
+			<div class = "edit_note">
+				<EditNote></EditNote>
 			</div>
 
-			<div class = "edit_note">
-				<h1>edit note</h1>
+			<div class = "detailed_description">
+				<DetailDescription></DetailDescription>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -82,8 +82,13 @@
 </template>
 
 <script>
+import EditNote from "./EditNote.vue";
+import  DetailDescription from "./EditNote.vue";
 export default {
-
+    components: {
+			 EditNote, 
+			 DetailDescription
+			}
 }
 </script>
 
