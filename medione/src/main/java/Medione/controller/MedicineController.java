@@ -80,7 +80,7 @@ public class MedicineController {
     public RMedicine SearchOne(@PathVariable String brandname, @PathVariable Integer locationid, HttpServletRequest request){
 
 
-        List<Integer> searchData = service.getOne(brandname, locationid,(String) request.getSession().getAttribute("username"));
+        List<Medicine> searchData = service.getOne(brandname, locationid,(String) request.getSession().getAttribute("username"));
         if(searchData != null){
             return new RMedicine(200,searchData,"success!");
         }else {
@@ -91,7 +91,7 @@ public class MedicineController {
 
     @GetMapping("/search/{brandname}")
     public RMedicine SearchList(@PathVariable String brandname, HttpServletRequest request){
-        List<Integer> searchData = service.getList(brandname, (String) request.getSession().getAttribute("username"));
+        List<Medicine> searchData = service.getList(brandname, (String) request.getSession().getAttribute("username"));
         if(searchData != null){
             return new RMedicine(200,searchData,"success!");
         }else {

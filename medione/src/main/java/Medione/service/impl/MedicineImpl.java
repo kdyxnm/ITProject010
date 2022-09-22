@@ -53,7 +53,7 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     }
 
     @Override
-    public List<Integer> getOne(String brandname, Integer locationid, String username) {
+    public List<Medicine> getOne(String brandname, Integer locationid, String username) {
         List<Medicine> list;
         List<Integer> ans  = new ArrayList<Integer>();
         QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
@@ -61,27 +61,22 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
         queryWrapper.eq("brandname", brandname);
         queryWrapper.eq("locationid", locationid);
         list = medicineDao.selectList(queryWrapper);
-        for(Medicine medicine : list){
-            ans.add(medicine.getId());
-        }
-        return ans;
+        return list;
     }
 
     @Override
-    public List<Integer> getList(String brandname, String username) {
+    public List<Medicine> getList(String brandname, String username) {
         List<Medicine> list;
         List<Integer> ans  = new ArrayList<Integer>();
         QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
         queryWrapper.eq("username", username);
         queryWrapper.like("brandname", brandname);
         list  = medicineDao.selectList(queryWrapper);
-        for(Medicine medicine : list){
-            ans.add(medicine.getId());
-        }
-        if(ans.size() <= 5) {
-            return ans;
+
+        if(list.size() <= 5) {
+            return list;
         }else{
-            return ans.subList(0,5);
+            return list.subList(0,5);
         }
     }
 
