@@ -46,6 +46,7 @@ const _hoisted_2 = { class: "link" }
 
 import { onMounted, ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+import store from '../store/index'
 
 const __sfc__ = /*#__PURE__*/_defineComponent({
   __name: 'Sidebar',
@@ -71,16 +72,18 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
     }
 
     const loadAll = () => {
-      console.log("I could do some request here, haha")
-      return [
-        { value: 'aa drug1', link: "home" },
-        { value: 'bb drug1', link: "office" },
-        { value: 'cc drug1', link: "parents" },
-        { value: 'dd drug1', link: "home" },
-        { value: 'ee drug1', link: "office" },
-        { value: 'ff drug1', link: "no location" },
-        { value: 'gg drug1', link: "nonono location" },
-      ]
+      console.log("Get Data for auto complete")
+      // console.log(store.getters.getAutoCompleteData)
+      return store.getters.getAutoCompleteData
+      // return [
+      //   { value: 'aa drug1', link: "home" },
+      //   { value: 'bb drug1', link: "office" },
+      //   { value: 'cc drug1', link: "parents" },
+      //   { value: 'dd drug1', link: "home" },
+      //   { value: 'ee drug1', link: "office" },
+      //   { value: 'ff drug1', link: "no location" },
+      //   { value: 'gg drug1', link: "nonono location" },
+      // ]
     }
 
 
@@ -145,8 +148,15 @@ export default __sfc__
 <style>
   .my-autocomplete li {
     line-height: normal;
-    padding: 7px;
+    padding: 1em;
+    display: flex;
+    font-size: 1.2em;
   }
+
+  .my-autocomplete li :hover{
+    margin-left: 15px;
+  }
+
   .my-autocomplete li .name {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -157,6 +167,21 @@ export default __sfc__
   }
   .my-autocomplete li .highlighted .addr {
     color: #ddd;
+  }
+
+  .value{
+    color: #6E78F7;
+    width: 50%;
+  }
+
+  .link{
+    color: #6E78F7;
+    width: 50%;
+    text-align: center;
+  }
+
+  .el-autocomplete-suggestion{
+    display: felx;
   }
 
   @media  screen and (max-width: 992px) {

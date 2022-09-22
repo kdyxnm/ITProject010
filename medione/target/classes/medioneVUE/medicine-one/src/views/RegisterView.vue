@@ -85,7 +85,7 @@ import api from '../api/index';
         // displayFlag : false,
         // displayDeskOnly: true,
 				iswarning: false,
-				errorMessage : "",
+				// errorMessage : "",
         warningText : "",
         email : "",
 				code : "",
@@ -134,6 +134,7 @@ import api from '../api/index';
 				}
 			},
       registerUser(){
+				var errorMessage
         var that=this;
 				console.log(that.code)
         // console.log(this.email);
@@ -141,6 +142,13 @@ import api from '../api/index';
 				api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
 					console.log(response.data)  
 					console.log(typeof that.code)
+					if(response.data.status == 200){
+            that.$router.push({path : '/'})
+          }
+          else{
+            errorMessage = response.data.msg
+						alert(errorMessage + ', please try again!')
+          }
 				})
    		}
     },

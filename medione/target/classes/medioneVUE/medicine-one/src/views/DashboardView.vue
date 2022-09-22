@@ -2,7 +2,7 @@
   <div class="common-layout" style="height:100%">
     <el-container style="height:100%">
       <el-header height="5em" v-if='isPhone'> 
-        <HeadBar :header="user.username" @open-side-bar-event="openSideBar"></HeadBar>
+        <HeadBar :header="user.userName" @open-side-bar-event="openSideBar"></HeadBar>
       </el-header>
       <el-container>
 
@@ -17,17 +17,17 @@
           ></SideBar>
         </el-aside>
         
-        <el-main class="main">
+        <el-main class="main" v-if="dataReady">
           <div class="content_container">
 
             <div class="serach_bar_container">
-              <SearchBar></SearchBar>
+              <SearchBar v-if="dataReady"></SearchBar>
             </div>
 
 
 
             <div v-if="displayMode == 'default'" class="dynamic_content_container">
-              <MedicineList></MedicineList>
+              <MedicineList :total="this.user.numMedicine"></MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
@@ -75,12 +75,15 @@ export default {
       display_flag : true,
       isPhone : true,
       displayMode : 'default',
+      dataReady : false,
       
       user : {
-        username : this.$route.params.username,
-        nickname : '',
-        useremial : '',
-        usermatadata : {},
+        userName : this.$route.params.username,
+        nickName : '',
+        userEmail : '',
+        numMedicine : null,
+        locations : null,
+        userMatadata : null,
       }
     }
   },
@@ -106,20 +109,38 @@ export default {
       else {
         this.displayMode = mode
       }
+    },
+    loadUserData(data){
+      this.user.nickName = data.nickname;
+      console.log(this.user.nickName);
+      this.user.userEmail = data.email;
+      console.log(this.user.userEmail);
+      this.user.locations = data.location;
+      console.log(this.user.locations);
+      this.user.userMatadata = data.simplemsg;
+      console.log(this.user.userMatadata);
+      this.user.numMedicine = data.simplemsg.length
+      console.log(this.user.numMedicine);
+      this.$store.commit("updateUser", data);
     }
   },
-  beforeMount(){
+  created(){
     this.isPhone = !(window.innerWidth > 992);
-  },
-  mounted() {
-    this.display_flag = (window.innerWidth > 992);
+    var that = this;
     if(!this.$store.getters.isAuthenticated){
       this.$router.push({path : '/'})
     }
     console.log("Load user data form backend")
     api.getUserData().then(res =>{
-      console.log(res.data)
+      console.log(res.data);
+      that.loadUserData(res.data.data);
+      that.dataReady = true;
     })
+  },
+  mounted() {
+    this.display_flag = (window.innerWidth > 992);
+
+    // processAutoCompleteData();
     
 
   },

@@ -17,7 +17,7 @@
           </div>
           <div class="medi_info">
             <div>
-              <img class="medi_photo" src="../assets/logo.png">
+              <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
           <div class="medi_info">
@@ -37,7 +37,7 @@
           <div class="medi_info" style="text-align=left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" src="../assets/logo.png">
+              <img class="medi_photo" :src="medi_info.image">
             </div>
           </div>
 
@@ -87,7 +87,7 @@
 
 <script>
 import MedicineListPagination from './MedicineListPagination.vue';
-// import api from '../api/index'
+import api from '../api/index'
 
 
 
@@ -107,7 +107,7 @@ export default {
           {
             id: 1,
             brandname: "Norvasc" + 1,
-            image: "../assets/logo.png",
+            image: require("../assets/logo.png"),
             quantity: 2,
             validity: "03/08/2022",
             dosage: 3,
@@ -117,7 +117,7 @@ export default {
           {
             id: 2,
             brandname: "Norvasc" + 2,
-            image: "../assets/logo.png",
+            image: require("../assets/logo.png"),
             quantity: 3,
             validity: "03/08/2022",
             dosage: 4,
@@ -127,7 +127,7 @@ export default {
           {
             id: 3,
             brandname: "Norvasc" + 3,
-            image: "../assets/logo.png",
+            image: require("../assets/logo.png"),
             quantity: 3,
             validity: "03/08/2022",
             dosage: 4,
@@ -137,7 +137,7 @@ export default {
           {
             id: 4,
             brandname: "Norvasc" + 4,
-            image: "../assets/logo.png",
+            image: require("../assets/logo.png"),
             quantity: 3,
             validity: "03/08/2022",
             dosage: 4,
@@ -147,7 +147,7 @@ export default {
           {
             id: 5,
             brandname: "Norvasc" + 5,
-            image: "../assets/logo.png",
+            image: require("../assets/logo.png"),
             quantity: 3,
             validity: "03/08/2022",
             dosage: 4,
@@ -155,7 +155,7 @@ export default {
             quantitytype: "packs",
           }
         ]
-        };
+        }
     },
     props:{
       total: {
@@ -165,6 +165,23 @@ export default {
     },
     components: { 
       MedicineListPagination 
+    },
+    methods : {
+      getPageData(curPage, pageSize){
+        api.getPageData(curPage, pageSize).then(res => {
+          console.log(res.data)
+
+        })
+      }
+    },
+    created(){
+      // getPageData(1, this.pagesize);
+      console.log("Getting pagination data")
+      api.getPageData(1, this.pagesize).then(res => {
+          console.log("Pagination data received")
+          console.log(res.data)
+
+        })
     },
     beforeMount(){
       this.isPhone = !(window.innerWidth > 992);

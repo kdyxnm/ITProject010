@@ -5,7 +5,7 @@ const base = {
   register    : '/user/register',
   dashboard   : '/dashboard',
 
-  pagination  : 'medicine/page/',
+  pagination  : '/medicine/page',
 
   addLocation : '',
   delLocation : '',

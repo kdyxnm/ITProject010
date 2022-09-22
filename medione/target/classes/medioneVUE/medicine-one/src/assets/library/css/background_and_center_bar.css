@@ -217,11 +217,18 @@ a {
     width: 100%;
     border-radius: 2em;
     border-style: none;
-    background: #5A7BEF;
+    background: #6E78F7;
     /* margin-bottom: 1em; */
     color: white;
     font-size: 1.25em;
     font-weight: 900;
+    -webkit-transition-duration: 0.5s; /* Safari */
+    transition-duration: 0.5s;
+  }
+
+  .purple_button:hover {
+    background-color: #89D3F5;
+    color: white;
   }
 
   /* The normal button*/
@@ -237,6 +244,7 @@ a {
     font-weight: 400;
     margin-top: 10px;
   }
+
 
   /* contexts in the normal button */
    p{
