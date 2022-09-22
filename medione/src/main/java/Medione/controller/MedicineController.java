@@ -10,6 +10,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 //@CrossOrigin(origins = "http://localhost:8080/")
@@ -76,10 +77,10 @@ public class MedicineController {
     }
 
     @GetMapping("/search/{brandname}/{locationid}")
-    public RMedicine SearchOne(@PathVariable String brandname, @PathVariable Integer locationid){
+    public RMedicine SearchOne(@PathVariable String brandname, @PathVariable Integer locationid, HttpServletRequest request){
 
 
-        List<Integer> searchData = service.getOne(brandname, locationid, BaseContext.getCurrentUser().getUsername());
+        List<Integer> searchData = service.getOne(brandname, locationid,(String) request.getSession().getAttribute("username"));
         if(searchData != null){
             return new RMedicine(200,searchData,"success!");
         }else {
@@ -89,8 +90,8 @@ public class MedicineController {
     }
 
     @GetMapping("/search/{brandname}")
-    public RMedicine SearchList(@PathVariable String brandname){
-        List<Integer> searchData = service.getList(brandname, BaseContext.getCurrentUser().getUsername());
+    public RMedicine SearchList(@PathVariable String brandname, HttpServletRequest request){
+        List<Integer> searchData = service.getList(brandname, (String) request.getSession().getAttribute("username"));
         if(searchData != null){
             return new RMedicine(200,searchData,"success!");
         }else {
