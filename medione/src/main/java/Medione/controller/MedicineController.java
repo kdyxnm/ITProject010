@@ -67,8 +67,8 @@ public class MedicineController {
     }
 
     @GetMapping("/page/{currentPage}/{pageSize}")
-    public RMedicine getAll(@PathVariable Integer currentPage, @PathVariable Integer pageSize){
-        IPage<Medicine> page = service.getPage(currentPage, pageSize, BaseContext.getCurrentUser().getUsername());
+    public RMedicine getAll(@PathVariable Integer currentPage, @PathVariable Integer pageSize, HttpServletRequest request){
+        IPage<Medicine> page = service.getPage(currentPage, pageSize, (String) request.getSession().getAttribute("username"));
         if(page != null){
             return new RMedicine(200,page,"success!");
         }else {
