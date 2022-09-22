@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+BUILD_DIR=${1:-}
+ENV_DIR=${3:-}
+
+URL=`cat ${ENV_DIR}/NEO_URL`
+USERNAME=`cat ${ENV_DIR}/NEO_USERNAME`
+PASSWORD=`cat ${ENV_DIR}/NEO_PASSWORD`
+
+mkdir ${BUILD_DIR}/src/main/resources
+
+echo "spring.neo4j.uri=${URL}" > ${BUILD_DIR}/src/main/resources/application.yml
+
+echo "spring.neo4j.authentication.username=${USERNAME}" >> ${BUILD_DIR}/src/main/resources/application.yml
+
+echo "spring.neo4j.authentication.password=${PASSWORD}" >> ${BUILD_DIR}/src/main/resources/application.yml
