@@ -21,6 +21,7 @@ public class RDashboard {
         }
     }
 
+
     public RDashboard(Integer status, Object data){
         this.status = status;
         this.data = data;

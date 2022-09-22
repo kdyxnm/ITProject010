@@ -90,9 +90,23 @@ public class UserController {
 
 
     @DeleteMapping("log out")
-    public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
+    public R<User> LogOut(HttpServletRequest request){
         request.getSession().invalidate();
-        String target = "custom";
+        return new R(200);
+    }
+
+    @PutMapping("reset")
+    public R<User> reset(@RequestBody EmailHelper helper){
+        User old = service.getByName(helper.getUsername());
+        if (old == null){
+            return new R(CreateAccountError.NOT_DETECTED_ERROR);
+        }
+        String code = mailService.getCodeByAccount(old.getEmail());
+        if (!helper.getCode().equals(code)){
+             return new R(CreateAccountError.CODE_MISMATCH);
+        }
+        old.setPassword(helper.getPassword());
+        service.saveOrUpdate(old);
         return new R(200);
     }
 

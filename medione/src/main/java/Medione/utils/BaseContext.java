@@ -9,12 +9,10 @@ public class BaseContext {
 
 
     public static void setCurrentUser(User user){
-        System.out.println(Thread.currentThread().getId());
         threadLocal.set(user);
     }
 
     public static User getCurrentUser(){
-        System.out.println(Thread.currentThread().getId());
         return threadLocal.get();
     }
 }
