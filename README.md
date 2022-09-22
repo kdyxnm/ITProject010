@@ -10,10 +10,10 @@ Team Member:
 
 Su, Zijie zisu1@student.unimelb.edu.au
 
-Meng, Zhaolong
+Meng, Zhaolong  zhaolongm@student.unimelb.edu.au
 
-Sun, Yingge
+Sun, Yingge yingges@student.unimelb.edu.au
 
-Cao, Yuchen
+Cao, Yuchen yuccao@student.unimelb.edu.au
 
-Zhao, Tianjin
+Zhao, Tianjin tianjinz@student.unimelb.edu.au

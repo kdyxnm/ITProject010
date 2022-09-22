@@ -41,23 +41,23 @@
 
 				<div class ="button_area">
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round="true" size="small">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
 						</el-button>
 						
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><Document /></el-icon> &nbsp;View  Notes
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
-						<el-button type="info" plain round = "true" size="small">
+						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><EditPen /></el-icon> &nbsp;Modify Drug Description
 						</el-button>
   				</el-row>
@@ -67,14 +67,14 @@
 		</div>
 
 		<div class = "components">
-			<div class = "detailed_description">
-				<h1>detailed_description</h1>
+			<div class = "edit_note">
+				<EditNote></EditNote>
 			</div>
 
-			<div class = "edit_note">
-				<h1>edit note</h1>
+			<div class = "detailed_description">
+				<DetailDescription></DetailDescription>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -82,8 +82,13 @@
 </template>
 
 <script>
+import EditNote from "./EditNote.vue";
+import  DetailDescription from "./EditNote.vue";
 export default {
-
+    components: {
+			 EditNote, 
+			 DetailDescription
+			}
 }
 </script>
 
@@ -99,10 +104,13 @@ export default {
 
 	.detailed_description {
 		width: 50%;
+		margin-top: 2em;
 	}
 
 	.edit_note {
 		width: 50%;
+		margin-right: 2em;
+		margin-top: 2em;
 	}
 
 	.brief_description {

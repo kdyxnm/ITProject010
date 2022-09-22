@@ -30,6 +30,7 @@ const api = {
     return axios.get(path.baseUrl + path.dashboard)
   },
   getPageData(curpage, pagesize){
+    console.log(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
     return axios.get(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
   }
 }
