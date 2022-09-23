@@ -29,9 +29,9 @@ export default {
   },
   props : {
     userNote : {
-      type : Object,
-      default : null,
-    }
+      type : String,
+      default : ''
+    },
   }
 
 
