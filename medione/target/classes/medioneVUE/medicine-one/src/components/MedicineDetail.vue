@@ -46,11 +46,11 @@
 						</el-button>
 						
   				</el-row>
-					<el-row class="button_setting">
+					<!-- <el-row class="button_setting">
 						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><Document /></el-icon> &nbsp;View  Notes
 						</el-button>
-  				</el-row>
+  				</el-row> -->
 					<el-row class="button_setting">
 						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
@@ -93,9 +93,78 @@ export default {
 </script>
 
 <style>
-	.overall_content {
+/* phone size */
+@media screen and (max-width: 992px){   
+  overall_content{
+    width: 100%;
+    padding: 2em;
+  }
+	h2 {
+		font-size: 1.5em;
+	}
+	.components {
 		width: 100%;
 	}
+
+	.detailed_description {
+		margin-top: 2em;
+	}
+	
+	.edit_note {
+		margin-top: 2em;
+	}
+
+	.brief_description {
+		height: 40%;
+		background-color: #E5E9FD;
+		border-radius: 1.5em;
+	}
+
+	.brief_description_content {
+		margin: 1em;
+		padding-bottom: 0.5em;
+		height: 100%;
+	}
+
+	#header {
+		font-weight: bold;
+	}
+
+	.medicineinfo_table {
+		font-size: 0.7em;
+		margin-top: -1em;
+		margin-bottom: 1em;
+	}
+
+	.static_text {
+		padding-right: 2em;
+		padding-bottom: 0.7em;
+	}
+
+	.button_area {
+		width: 100%;
+	}
+	
+	.button_setting {
+		margin: 0em 1em;
+		padding: 0.1em;
+	}
+
+	.el-button {
+		width: 18em;
+		font-size: 1em;
+		color: #626aef;
+	}
+}
+
+/* screen size */
+@media screen and (min-width: 992px){   
+  overall_content{
+    width: 100%;
+  }
+	/* .overall_content {
+		width: 100%;
+	} */
 
 	.components {
 		width: 100%;
@@ -156,13 +225,13 @@ export default {
 	.button_setting {
 		margin-top: 0.5em;
 		padding: 0.5em;
-
 	}
 
 	.el-button {
 		width: 15em;
 		font-size: 0.9em;
 	}
+}
 
 
 </style>
