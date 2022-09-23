@@ -92,7 +92,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 /* phone size */
 @media screen and (max-width: 992px){   
   overall_content{
