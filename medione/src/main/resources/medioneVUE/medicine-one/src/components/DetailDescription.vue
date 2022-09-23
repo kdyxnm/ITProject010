@@ -3,7 +3,7 @@
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item title="Description:" name="1">
         <div>
-          <!-- {{this.detailInfo.description}} -->
+          {{this.detailInfo.description}}
         </div>
       </el-collapse-item>
       <el-collapse-item title="Indications and Usage:" name="2">
@@ -66,12 +66,11 @@
   </div>
 </template>
 <script>
-import api from "../api/index"
+
 export default {
   data() {
     return {
       activeName : '',
-      detailInfo : null,
     }
   },
   props : {
@@ -81,7 +80,6 @@ export default {
 		}
 	},
   created(){
-		var that = this
 		console.log(this.detailInfo)
 		// api.getMediInfo(this.mediId).then(res=>{
 		// 	that.mediInfo = res.data.data

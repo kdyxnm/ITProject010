@@ -37,9 +37,9 @@ export default createStore({
       var nameLocMap = []
       for (var i = 0; i < state.user.numMedicine; i++) {
         var name = state.user.userMatadata[i].brandname;
-        console.log("Medicine : " + name);
+        // console.log("Medicine : " + name);
         var locationid = state.user.userMatadata[i].locationid;
-        console.log("loc id : " + locationid);
+        // console.log("loc id : " + locationid);
         var address = '';
 
         for (var j = 0; j < state.user.locations.length; j++){
@@ -49,7 +49,7 @@ export default createStore({
           }
         }
 
-        console.log('location : ' + address)
+        // console.log('location : ' + address)
 
 
         nameLocMap.push({

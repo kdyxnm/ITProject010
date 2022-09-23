@@ -2,6 +2,7 @@ const port = process.env.PORT || 8081
 
 const base = {
   baseUrl     : 'http://localhost:' + port,
+  // baseUrl     : "https://medione.herokuapp.com",
   login       : '/user/login',
   email       : '/mail/send',
   register    : '/user/register',

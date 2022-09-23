@@ -66,7 +66,7 @@
   </div>
 </template>
 <script>
-import api from "../api/index"
+  
 export default {
   data() {
     return {
@@ -81,7 +81,6 @@ export default {
 		}
 	},
   created(){
-		var that = this
 		console.log(this.detailInfo)
 		// api.getMediInfo(this.mediId).then(res=>{
 		// 	that.mediInfo = res.data.data

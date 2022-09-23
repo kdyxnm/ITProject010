@@ -90,13 +90,6 @@ export default {
 		return{
 			mediInfo : null,
 			isDataReady : false,
-			description: "",
-			usage: null,
-			warnings: null,
-			contraindications: null,
-			adversereaction: null,
-			overdosage: null,
-			
 		}
 	},
 	props : {
@@ -116,8 +109,6 @@ export default {
 			that.mediInfo = res.data.data
 			console.log(that.mediInfo)
 			that.isDataReady = true;
-			that.despcription = this.mediInfo.description
-			that.usage = this.mediInfo.usage
 		})
 	},
 

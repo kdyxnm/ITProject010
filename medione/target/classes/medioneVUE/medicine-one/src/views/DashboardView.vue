@@ -35,7 +35,8 @@
                 :total="this.blurResult.length" 
                 :isSearchResult="true" 
                 :searchResult="this.blurResult"
-                @switch-event="handleSwitch"></MedicineList>
+                @switch-event="handleSwitch">
+              </MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">

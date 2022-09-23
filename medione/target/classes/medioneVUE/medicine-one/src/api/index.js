@@ -38,6 +38,9 @@ const api = {
   },
   blurrySearch(mediname){
     return axios.get(path.baseUrl + path.search + mediname)
+  },
+  getMediInfo(id){
+    return axios.get(path.baseUrl + path.getMedicine + id )
   }
 }
 export default api
