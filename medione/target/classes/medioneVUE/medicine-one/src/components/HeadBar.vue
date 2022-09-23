@@ -61,22 +61,26 @@ export default {
       border: 0px;
       background-color: #6E78F7;
       border-radius: 0 0 27px 27px;
+      display: flex;
     }
   
     .website_title {
       font-size: 1.6em;
       font-weight: 600;
-      height: 60px;
+      width: 100%;
       color: #ffffff;
       font-family: "Poppins-SemiBold", sans-serif;
-      margin-top: -1em;
+      margin: 0;
       text-align: center;
+      padding-top: 1em;
+      position: relative;
+      right: 1em;
     }
   
     .open_button {
       font-size: 2em;
       color: #FFFFFF;
-      background-color: #6E78F7;
+      background-color: rgba(0,0,0,0);
       margin-left: 0.3em;
       border: none;
       margin-top: 0.3em;

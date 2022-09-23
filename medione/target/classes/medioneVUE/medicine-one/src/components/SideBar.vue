@@ -21,8 +21,8 @@
       <div style="padding-right:1.2em">
         <el-icon :size=sidebarIconSize><House /></el-icon>
         <span style="margin-left: 1em"> Dashboard </span>
-        <p class="user_name">{{user.username}}</p>
-        <p class="user_nick_name">{{user.nickname}}</p>
+        <p class="user_name">{{ user.userName }}</p>
+        <p class="user_nick_name">{{ user.nickName }}</p>
       </div>
     </div>
 
@@ -103,8 +103,8 @@ export default {
     user : {
       type : Object,
       default : {
-        username : "User Name",
-        nickname : "User Nick Name",
+        userName : "User Name",
+        nickName : "User Nick Name",
       }
     }
   },
@@ -113,7 +113,10 @@ export default {
       this.$emit("close-side-bar-event");
     },
     switchMode(mode){
-      this.$emit("switch-event", mode);
+      var data = {
+        view : mode,
+      }
+      this.$emit("switch-event", data);
     },
 
     

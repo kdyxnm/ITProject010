@@ -35,10 +35,12 @@
                 :total="this.blurResult.length" 
                 :isSearchResult="true" 
                 :searchResult="this.blurResult"
-                @switch-event="handleSwitch"></MedicineList>
+                @switch-event="handleSwitch">
+              </MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
+              <MedicineDetail :mediId="this.mediInfoId" ></MedicineDetail>
               <h1> Medicine Information {{ this.mediInfoId }}</h1>
             </div>
 
@@ -75,6 +77,7 @@ import SideBar from '../components/SideBar.vue'
 import SearchBar from '../components/SearchBar.vue'
 import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
+import MedicineDetail from '../components/MedicineDetail.vue'
 
 export default {
   name: 'DashboardView',
@@ -102,8 +105,9 @@ export default {
     HeadBar,
     SideBar,
     SearchBar,
-    //MedicineDetail,
-    MedicineList
+    MedicineDetail,
+    MedicineList,
+    MedicineDetail
 },
   methods: {
 

@@ -47,14 +47,14 @@ const _hoisted_2 = { class: "link" }
 import { onMounted, ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
 import store from '../store/index'
+import api from '../api/index'
 
 const __sfc__ = /*#__PURE__*/_defineComponent({
   __name: 'Sidebar',
 
-  setup(__props) {
+  setup(__props, __context) {
     const state = ref('')
     const links = ref([])
-    const self = this
 
     const querySearch = (queryString, cb) => {
       const results = queryString
@@ -110,22 +110,23 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
         }
       }
 
-      var mediId = null;
+      var id = null;
       var mediList = store.getters.getUserData
       for(var i=0 ; i < store.getters.getNumMedi ; i++){
-        console.log(mediList[i])
-        console.log(item)
         if(mediList[i].brandname == item.value
           && mediList[i].locationid == locId){
-            console.log('match')
-            mediId = mediList[i].id;
+            console.log('medicine match')
+            id = mediList[i].id;
             break;
           }
       }
 
-      if(mediId != null){
-        $emit("switch-event", id)
-        console.log("Search from backend")
+      if(id != null){
+        var mode = {
+          view : 'medi_info',
+          mediId : id
+        }
+        __context.emit("switch-event", mode)
       }
       else{
         console.log("user data corrucped")
@@ -134,9 +135,17 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
 
 
     const handleIconClick = (ev) => {
-      console.log(state._value)
+      console.log(state.value)
       console.log("Blurry Search Request")
-      console.log(ev)
+      api.blurrySearch(state.value).then(res => {
+        console.log("Blurry Request Success")
+        console.log(res.data)
+        var mode = {
+          view : 'search_result',
+          results : res.data.data
+        }
+        __context.emit("switch-event", mode)
+      })
     }
 
 

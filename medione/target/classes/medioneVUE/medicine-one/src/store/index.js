@@ -12,7 +12,10 @@ export default createStore({
       locations : null,
       userMatadata : null,
     },
-    sessionID : null,
+    search : {
+      isAccurate : null,
+      result : null
+    }
   },
 
   getters: {
@@ -28,7 +31,7 @@ export default createStore({
     getNumMedi(state){
       return state.user.numMedicine
     },
-    
+
     getAutoCompleteData(state){
       console.log("Processing auto complete data")
       var nameLocMap = []

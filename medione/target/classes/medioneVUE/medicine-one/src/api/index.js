@@ -34,10 +34,10 @@ const api = {
     return axios.get(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
   },
   accurateSearch(mediname, location){
-    return axios.get(path.baseUrl + path.search + '/' + mediname + '/' + location)
+    return axios.get(path.baseUrl + path.search + mediname + '/' + location)
   },
   blurrySearch(mediname){
-    return axios.get(path.baseUrl + path.serch + '/' + mediname)
+    return axios.get(path.baseUrl + path.search + mediname)
   }
 }
 export default api

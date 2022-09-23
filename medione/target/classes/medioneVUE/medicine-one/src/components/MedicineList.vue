@@ -1,6 +1,6 @@
 <template>
   <div class="list_containder">
-    <h1> My Medicine Kit</h1>
+    <h1> {{ this.title }}</h1>
     <div class="list_item_container">
     <!-- <img src="../assets/logo.png" alt=""> -->
       <div class="list_header_line" v-if="!isPhone">
@@ -43,14 +43,14 @@
           :key='medi_data.id' 
           @click="goToMediDetail(medi_data.id)"
         >
-          <div class="medi_info" style="text-align=left">
+          <div class="medi_info_left">
             {{medi_data.brandname}}
             <div>
               <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
 
-          <div class="medi_info">
+          <div class="medi_info_right">
             <table>
               <tr>
                 <td style="text-align=left">
@@ -87,8 +87,8 @@
 
 
 
-    <div class="page_select_bar">
-      <MedicineListPagination :total = total :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
+    <div class="page_select_bar" v-if="!isSearchResult">
+      <MedicineListPagination :total = "this.total" :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
     </div>
   </div>
 </template>
@@ -111,6 +111,7 @@ export default {
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
+        title : "My Medicines",
         // listData:null,
         listData : [
           {
@@ -172,23 +173,29 @@ export default {
         default: 0,
       },
       isSearchResult:{
-        type: Number,
+        type: Boolean,
+        default : false,
+      },
+      searchResult : {
+        type : Object,
+        default : null,
       }
     },
+    
     components: { 
       MedicineListPagination 
     },
     created(){
-      // getPageData(1, this.pagesize);
-      console.log("Getting pagination data")
-      // var that = this
-      // api.getPageData(1, this.pagesize).then(res => {
-      //     console.log("Pagination data received")
-      //     console.log(res.data)
-      //     that.listData = res.data.data.records
+      if(this.isSearchResult){
+        console.log("Display Search Result")
+        this.title = "Search Result"
+        this.listData = this.searchResult
+      }
+      else{
+        console.log("Getting pagination data")
+        this.getPageData(1, this.pagesize)
+      }
 
-      //   })
-      this.getPageData(1, this.pagesize)
     },
     beforeMount(){
       this.isPhone = !(window.innerWidth > 992);
@@ -217,7 +224,11 @@ export default {
 
 
       goToMediDetail(id){
-        this.$emit("switch-event", id)
+        var mode = {
+          view : 'medi_info',
+          mediId : id
+        }
+        this.$emit("switch-event", mode)
       },
 
 
@@ -230,11 +241,11 @@ export default {
 
 <style scoped>
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  * {
-    font-family: "Poppins", sans-serif;
-  }
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 @media screen and (max-width: 992px){   
   list_item_container{
@@ -266,11 +277,21 @@ export default {
     box-shadow: 5px 5px 5px #a9bfd3
   }
   
-  .medi_info{
+  .medi_info_left{
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    font-size: 1em;
+    color: #3082CC;
+    padding-left: 1em;
+    font-weight: 600;
+  }
+  .medi_info_right{
     width: 50%;
     height: 100%;
     text-align: center;
     font-size: 0.8em;
+    color : #3082CC;
   }
 
   .desktop_list_warpper{

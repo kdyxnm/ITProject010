@@ -1,5 +1,7 @@
+const port = process.env.PORT || 8081
+
 const base = {
-  baseUrl     : 'http://localhost:8081',
+  baseUrl     : 'http://localhost:' + port,
   login       : '/user/login',
   email       : '/mail/send',
   register    : '/user/register',
@@ -7,7 +9,10 @@ const base = {
 
   pagination  : '/medicine/page',
 
-  search   : '/medicine/search/',
+  search      : '/medicine/search/',
+
+  getMedicine : '/medicine/',
+
 
   addLocation : '',
   delLocation : '',

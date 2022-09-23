@@ -5,12 +5,12 @@
 				<div class = "name_picture">
 					<h2>Norvasc</h2>
 				</div>
-				<div class = "medicineinfo">
+				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
 						<tr><p id="header">Brief Discription</p></tr>
 						<tr>
 							<td class="static_text">Brand Name:</td>
-							<td class="db_text">Norvasc</td>
+							<td class="db_text">{{ this.mediInfo.brandname }}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Generic Name:</td>
@@ -84,11 +84,41 @@
 <script>
 import EditNote from "./EditNote.vue";
 import  DetailDescription from "./EditNote.vue";
+import api from "../api/index"
 export default {
-    components: {
-			 EditNote, 
-			 DetailDescription
-			}
+	data () {
+		return{
+			mediInfo : null,
+			isDataReady : false,
+		}
+	},
+	props : {
+		mediId : {
+			type : Number,
+			default : -1,
+		}
+	},
+	components: {
+		EditNote, 
+		DetailDescription
+	},
+	created(){
+		var that = this
+		console.log(this.mediId)
+		api.getMediInfo(this.mediId).then(res=>{
+			that.mediInfo = res.data.data
+			that.isDataReady = true;
+
+		})
+	},
+
+	mounted() {
+		// var that = this
+		// console.log(this.mediId)
+		// api.getMediInfo(this.mediId).then(res=>{
+		// 	that.mediInfo = res.data.data
+		// })
+	},
 }
 </script>
 

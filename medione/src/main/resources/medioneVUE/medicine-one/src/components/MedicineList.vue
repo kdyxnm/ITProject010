@@ -97,7 +97,6 @@
 <script>
 import MedicineListPagination from './MedicineListPagination.vue';
 import api from '../api/index'
-import { booleanLiteral } from '@babel/types';
 
 
 

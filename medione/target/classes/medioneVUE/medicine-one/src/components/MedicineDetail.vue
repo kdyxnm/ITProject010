@@ -85,10 +85,20 @@
 import EditNote from "./EditNote.vue";
 import  DetailDescription from "./EditNote.vue";
 export default {
-    components: {
-			 EditNote, 
-			 DetailDescription
-			}
+	props : {
+		mediId : {
+			type : Number,
+			default : -1,
+		}
+	},
+	components: {
+		EditNote, 
+		DetailDescription
+	},
+
+	mounted() {
+		console.log(this.mediId)
+	},
 }
 </script>
 
