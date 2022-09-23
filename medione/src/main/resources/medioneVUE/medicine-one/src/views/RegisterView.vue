@@ -85,7 +85,7 @@ import api from '../api/index';
         // displayFlag : false,
         // displayDeskOnly: true,
 				iswarning: false,
-				// errorMessage : "",
+				errorMessage : "",
         warningText : "",
         email : "",
 				code : "",
@@ -134,7 +134,7 @@ import api from '../api/index';
 				}
 			},
       registerUser(){
-				var errorMessage
+				
         var that=this;
 				console.log(that.code)
         // console.log(this.email);
@@ -146,8 +146,8 @@ import api from '../api/index';
             that.$router.push({path : '/'})
           }
           else{
-            errorMessage = response.data.msg
-						alert(errorMessage + ', please try again!')
+            that.errorMessage = response.data.msg
+						alert(that.errorMessage + ', please try again!')
           }
 				})
    		}

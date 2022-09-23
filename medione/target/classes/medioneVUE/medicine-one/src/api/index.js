@@ -32,6 +32,12 @@ const api = {
   getPageData(curpage, pagesize){
     console.log(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
     return axios.get(path.baseUrl + path.pagination + "/" + curpage + "/" + pagesize)
+  },
+  accurateSearch(mediname, location){
+    return axios.get(path.baseUrl + path.search + '/' + mediname + '/' + location)
+  },
+  blurrySearch(mediname){
+    return axios.get(path.baseUrl + path.serch + '/' + mediname)
   }
 }
 export default api

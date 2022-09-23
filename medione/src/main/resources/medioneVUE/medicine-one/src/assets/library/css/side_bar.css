@@ -91,13 +91,13 @@ This css document for side bar format:
 
 
   .user_name {
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: right;
     margin:0;
   }
 
   .user_nick_name {
-    font-size: 0.5em;
+    font-size: 0.6em;
     text-align: right;
     margin:0;
   }

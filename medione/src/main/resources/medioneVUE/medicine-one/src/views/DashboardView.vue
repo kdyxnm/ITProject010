@@ -10,9 +10,9 @@
           <SideBar 
             :displayVersion="'complex'" 
             @close-side-bar-event="closeSideBar" 
-            v-show="display_flag" 
+            v-show="displayFlag" 
             ref="ChildSideBar"
-            :user="{username : this.user.username, nickname : this.user.nickname}"
+            :user="{userName : this.user.userName, nickName : this.user.nickName}"
             @switch-event="handleSwitch"
           ></SideBar>
         </el-aside>
@@ -21,17 +21,25 @@
           <div class="content_container">
 
             <div class="serach_bar_container">
-              <SearchBar v-if="dataReady"></SearchBar>
+              <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
             </div>
 
 
 
-            <div v-if="displayMode == 'default'" class="dynamic_content_container">
-              <MedicineList :total="this.user.numMedicine"></MedicineList>
+            <div v-show="displayMode == 'default'" class="dynamic_content_container">
+              <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
+            </div>
+
+            <div v-if="displayMode == 'search_result'" class="dynamic_content_container">
+              <MedicineList 
+                :total="this.blurResult.length" 
+                :isSearchResult="true" 
+                :searchResult="this.blurResult"
+                @switch-event="handleSwitch"></MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
-              <h1> Medicine Description</h1>
+              <h1> Medicine Information {{ this.mediInfoId }}</h1>
             </div>
 
 
@@ -72,10 +80,13 @@ export default {
   name: 'DashboardView',
   data() {
     return {
-      display_flag : true,
+      displayFlag : false,
       isPhone : true,
       displayMode : 'default',
       dataReady : false,
+      mediInfoid : null,
+      blurResult : null,
+      
       
       user : {
         userName : this.$route.params.username,
@@ -95,21 +106,41 @@ export default {
     MedicineList
 },
   methods: {
+
+
     openSideBar(){
-      this.display_flag = true;
+      this.displayFlag = true;
     },
+
+
     closeSideBar(){
-      this.display_flag = false;
+      this.displayFlag = false;
     },
+
+
     handleSwitch(mode){
-      if (mode == 'log_off'){
+
+      console.log("switch to " + mode.view)
+      if (mode.view == 'log_off'){
         console.log("user log off");
         alert("User log off")
       }
       else {
-        this.displayMode = mode
+        if(mode.view == 'medi_info'){
+          this.mediInfoId = mode.mediId
+        }
+        if(mode.view == 'search_result'){
+          this.blurResult = mode.results
+        }
+        this.displayMode = mode.view;
+        console.log("switch to " + this.displayMode)
+        if(this.isPhone){
+          this.closeSideBar();
+        }
       }
     },
+
+
     loadUserData(data){
       this.user.nickName = data.nickname;
       console.log(this.user.nickName);
@@ -126,6 +157,7 @@ export default {
   },
   created(){
     this.isPhone = !(window.innerWidth > 992);
+    this.displayFlag = (window.innerWidth > 992);
     var that = this;
     if(!this.$store.getters.isAuthenticated){
       this.$router.push({path : '/'})
@@ -138,8 +170,7 @@ export default {
     })
   },
   mounted() {
-    this.display_flag = (window.innerWidth > 992);
-
+    // this.display_flag = (window.innerWidth > 992);
     // processAutoCompleteData();
     
 

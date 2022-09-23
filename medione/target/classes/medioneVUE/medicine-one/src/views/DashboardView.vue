@@ -10,7 +10,7 @@
           <SideBar 
             :displayVersion="'complex'" 
             @close-side-bar-event="closeSideBar" 
-            v-show="display_flag" 
+            v-show="displayFlag" 
             ref="ChildSideBar"
             :user="{username : this.user.username, nickname : this.user.nickname}"
             @switch-event="handleSwitch"
@@ -26,12 +26,16 @@
 
 
 
-            <div v-if="displayMode == 'default'" class="dynamic_content_container">
-              <MedicineList :total="this.user.numMedicine"></MedicineList>
+            <div v-show="displayMode == 'default'" class="dynamic_content_container">
+              <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
+            </div>
+
+            <div v-if="displayMode == 'blur_search'" class="dynamic_content_container">
+              <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
-              <h1> Medicine Description</h1>
+              <h1> Medicine Information {{ this.medi_info_id }}</h1>
             </div>
 
 
@@ -72,10 +76,12 @@ export default {
   name: 'DashboardView',
   data() {
     return {
-      display_flag : true,
+      displayFlag : true,
       isPhone : true,
       displayMode : 'default',
       dataReady : false,
+      medi_info_id : null,
+      
       
       user : {
         userName : this.$route.params.username,
@@ -96,18 +102,28 @@ export default {
 },
   methods: {
     openSideBar(){
-      this.display_flag = true;
+      this.displayFlag = true;
     },
     closeSideBar(){
-      this.display_flag = false;
+      this.displayFlag = false;
     },
     handleSwitch(mode){
-      if (mode == 'log_off'){
+      console.log("switch to " + mode)
+      console.log(typeof(mode) == 'number')
+      if(typeof(mode) == 'number'){
+        // Medicine info
+        this.displayMode = 'medi_info';
+        this.medi_info_id = mode;
+      }
+      else if (mode == 'log_off'){
         console.log("user log off");
         alert("User log off")
       }
       else {
-        this.displayMode = mode
+        this.displayMode = mode;
+        if(this.isPhone){
+          this.closeSideBar();
+        }
       }
     },
     loadUserData(data){

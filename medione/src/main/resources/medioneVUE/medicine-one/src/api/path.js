@@ -7,6 +7,8 @@ const base = {
 
   pagination  : '/medicine/page',
 
+  search   : '/medicine/search/',
+
   addLocation : '',
   delLocation : '',
 

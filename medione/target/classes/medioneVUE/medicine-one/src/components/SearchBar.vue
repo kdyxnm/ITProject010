@@ -54,6 +54,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
   setup(__props) {
     const state = ref('')
     const links = ref([])
+    const self = this
 
     const querySearch = (queryString, cb) => {
       const results = queryString
@@ -88,13 +89,53 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
 
 
     const handleSelect = (item) => {
+      console.log("Accurate Search")
       console.log(item)
+      var location = item.link;
+      if(location === ''){
+        location = null
+      }
+
+      var locId = null;
+
+      // get location id
+      var locationmap = store.getters.getLocationMap;
+      console.log(locationmap.length)
+      for(var i=0 ; i < locationmap.length; i++){
+        console.log(locationmap[i].address)
+        if(locationmap[i].address === location){
+          console.log('loc match ' + locationmap[i].locationid)
+          locId = locationmap[i].locationid
+          break;
+        }
+      }
+
+      var mediId = null;
+      var mediList = store.getters.getUserData
+      for(var i=0 ; i < store.getters.getNumMedi ; i++){
+        console.log(mediList[i])
+        console.log(item)
+        if(mediList[i].brandname == item.value
+          && mediList[i].locationid == locId){
+            console.log('match')
+            mediId = mediList[i].id;
+            break;
+          }
+      }
+
+      if(mediId != null){
+        $emit("switch-event", id)
+        console.log("Search from backend")
+      }
+      else{
+        console.log("user data corrucped")
+      }
     }
 
 
     const handleIconClick = (ev) => {
       console.log(state._value)
-      console.log("SearchRequest could do here")
+      console.log("Blurry Search Request")
       console.log(ev)
     }
 

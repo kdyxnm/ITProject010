@@ -2,11 +2,12 @@
   <div class = " flex all-center">
     <template v-if="total > 0">
       <el-pagination
+        :hide-on-single-page="true" 
         :page-size="pagesize"
         :total="total"
         :current-page="page"
         background
-        layout="prev, pager, next, jumper, total"
+        layout="prev, pager, next"
         class="my-pagination"
         @current-change="changePage" />
     </template>

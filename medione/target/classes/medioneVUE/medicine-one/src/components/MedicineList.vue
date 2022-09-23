@@ -11,7 +11,11 @@
         <div class="list_header">Dosage</div>
       </div>
       <div class="desktop_list_warpper" v-if="!isPhone">
-        <div class="medi_row" v-for="medi_data in this.listData" :key='medi_data.id'>
+        <div class="medi_row" 
+          v-for="medi_data in this.listData" 
+          :key='medi_data.id'
+          @click="goToMediDetail(medi_data.id)"  
+        >
           <div class="medi_info">
             {{medi_data.brandname}}
           </div>
@@ -33,11 +37,16 @@
       </div>
 
       <div class="phone_list_warpper" v-if="isPhone">
-        <div class="medi_row" v-for="medi_data in this.listData" :key='medi_data.id'>
+        <div 
+          class="medi_row" 
+          v-for="medi_data in this.listData" 
+          :key='medi_data.id' 
+          @click="goToMediDetail(medi_data.id)"
+        >
           <div class="medi_info" style="text-align=left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" :src="medi_info.image">
+              <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
 
@@ -162,26 +171,24 @@ export default {
         type: Number,
         default: 0,
       },
+      isSearchResult:{
+        type: Number,
+      }
     },
     components: { 
       MedicineListPagination 
     },
-    methods : {
-      getPageData(curPage, pageSize){
-        api.getPageData(curPage, pageSize).then(res => {
-          console.log(res.data)
-
-        })
-      }
-    },
     created(){
       // getPageData(1, this.pagesize);
       console.log("Getting pagination data")
-      api.getPageData(1, this.pagesize).then(res => {
-          console.log("Pagination data received")
-          console.log(res.data)
+      // var that = this
+      // api.getPageData(1, this.pagesize).then(res => {
+      //     console.log("Pagination data received")
+      //     console.log(res.data)
+      //     that.listData = res.data.data.records
 
-        })
+      //   })
+      this.getPageData(1, this.pagesize)
     },
     beforeMount(){
       this.isPhone = !(window.innerWidth > 992);
@@ -194,11 +201,26 @@ export default {
         this.pagesize = pagesize;
         if (page !== _page && pagesize || _pagesize !== pagesize){
           console.log("get list data")
-          // for(var i = 0; i < this.listData.length; i++){
-          //   this.listData[i] += i;
-          // }
-        } // 非首次进入页面时再获取分页数据，因为在created钩子中已经获取过一次了。
+          this.getPageData(page, pagesize)
+        } 
       },
+
+      getPageData(curPage, pageSize){
+        console.log("Getting page " + curPage + " data")
+        var that = this
+        api.getPageData(curPage, pageSize).then(res => {
+          console.log("Pagination data received")
+          console.log(res.data)
+          that.listData = res.data.data.records
+        })
+      },
+
+
+      goToMediDetail(id){
+        this.$emit("switch-event", id)
+      },
+
+
   }
 
 

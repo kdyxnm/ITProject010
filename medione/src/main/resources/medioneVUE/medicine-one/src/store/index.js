@@ -12,7 +12,10 @@ export default createStore({
       locations : null,
       userMatadata : null,
     },
-    sessionID : null,
+    search : {
+      isAccurate : null,
+      result : null
+    }
   },
 
   getters: {
@@ -20,16 +23,15 @@ export default createStore({
       return state.user.authenticationFlag
     },
     getLocationMap(state){
-      return state.user.userData.locationMap
+      return state.user.locations
     },
-    getLocationName(state, id){
-      for(i=0; i < state.user.userData.locationMap.length; i++){
-        if (state.user.userData.locationMap[i].id == id){
-          return state.user.userData.locationMap[i].address
-        }
-        return "INVALID_ID"
-      }
+    getUserData(state){
+      return state.user.userMatadata
     },
+    getNumMedi(state){
+      return state.user.numMedicine
+    },
+
     getAutoCompleteData(state){
       console.log("Processing auto complete data")
       var nameLocMap = []

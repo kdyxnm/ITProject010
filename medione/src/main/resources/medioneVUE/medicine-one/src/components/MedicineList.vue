@@ -1,6 +1,6 @@
 <template>
   <div class="list_containder">
-    <h1> My Medicine Kit</h1>
+    <h1> {{ this.title }}</h1>
     <div class="list_item_container">
     <!-- <img src="../assets/logo.png" alt=""> -->
       <div class="list_header_line" v-if="!isPhone">
@@ -11,7 +11,11 @@
         <div class="list_header">Dosage</div>
       </div>
       <div class="desktop_list_warpper" v-if="!isPhone">
-        <div class="medi_row" v-for="medi_data in this.listData" :key='medi_data.id'>
+        <div class="medi_row" 
+          v-for="medi_data in this.listData" 
+          :key='medi_data.id'
+          @click="goToMediDetail(medi_data.id)"  
+        >
           <div class="medi_info">
             {{medi_data.brandname}}
           </div>
@@ -33,15 +37,20 @@
       </div>
 
       <div class="phone_list_warpper" v-if="isPhone">
-        <div class="medi_row" v-for="medi_data in this.listData" :key='medi_data.id'>
-          <div class="medi_info" style="text-align=left">
+        <div 
+          class="medi_row" 
+          v-for="medi_data in this.listData" 
+          :key='medi_data.id' 
+          @click="goToMediDetail(medi_data.id)"
+        >
+          <div class="medi_info_left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" :src="medi_info.image">
+              <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
 
-          <div class="medi_info">
+          <div class="medi_info_right">
             <table>
               <tr>
                 <td style="text-align=left">
@@ -78,8 +87,8 @@
 
 
 
-    <div class="page_select_bar">
-      <MedicineListPagination :total = total :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
+    <div class="page_select_bar" v-if="!isSearchResult">
+      <MedicineListPagination :total = "this.total" :pagesize = "pagesize" :page="this.page" :totalPages = "this.totalPages" @change = "changePage" />
     </div>
   </div>
 </template>
@@ -88,6 +97,7 @@
 <script>
 import MedicineListPagination from './MedicineListPagination.vue';
 import api from '../api/index'
+import { booleanLiteral } from '@babel/types';
 
 
 
@@ -102,6 +112,7 @@ export default {
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
+        title : "My Medicines",
         // listData:null,
         listData : [
           {
@@ -162,26 +173,30 @@ export default {
         type: Number,
         default: 0,
       },
+      isSearchResult:{
+        type: Boolean,
+        default : false,
+      },
+      searchResult : {
+        type : Object,
+        default : null,
+      }
     },
+    
     components: { 
       MedicineListPagination 
     },
-    methods : {
-      getPageData(curPage, pageSize){
-        api.getPageData(curPage, pageSize).then(res => {
-          console.log(res.data)
-
-        })
-      }
-    },
     created(){
-      // getPageData(1, this.pagesize);
-      console.log("Getting pagination data")
-      api.getPageData(1, this.pagesize).then(res => {
-          console.log("Pagination data received")
-          console.log(res.data)
+      if(this.isSearchResult){
+        console.log("Display Search Result")
+        this.title = "Search Result"
+        this.listData = this.searchResult
+      }
+      else{
+        console.log("Getting pagination data")
+        this.getPageData(1, this.pagesize)
+      }
 
-        })
     },
     beforeMount(){
       this.isPhone = !(window.innerWidth > 992);
@@ -194,11 +209,30 @@ export default {
         this.pagesize = pagesize;
         if (page !== _page && pagesize || _pagesize !== pagesize){
           console.log("get list data")
-          // for(var i = 0; i < this.listData.length; i++){
-          //   this.listData[i] += i;
-          // }
-        } // 非首次进入页面时再获取分页数据，因为在created钩子中已经获取过一次了。
+          this.getPageData(page, pagesize)
+        } 
       },
+
+      getPageData(curPage, pageSize){
+        console.log("Getting page " + curPage + " data")
+        var that = this
+        api.getPageData(curPage, pageSize).then(res => {
+          console.log("Pagination data received")
+          console.log(res.data)
+          that.listData = res.data.data.records
+        })
+      },
+
+
+      goToMediDetail(id){
+        var mode = {
+          view : 'medi_info',
+          mediId : id
+        }
+        this.$emit("switch-event", mode)
+      },
+
+
   }
 
 
@@ -208,11 +242,11 @@ export default {
 
 <style scoped>
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-  * {
-    font-family: "Poppins", sans-serif;
-  }
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 @media screen and (max-width: 992px){   
   list_item_container{
@@ -244,11 +278,21 @@ export default {
     box-shadow: 5px 5px 5px #a9bfd3
   }
   
-  .medi_info{
+  .medi_info_left{
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    font-size: 1em;
+    color: #3082CC;
+    padding-left: 1em;
+    font-weight: 600;
+  }
+  .medi_info_right{
     width: 50%;
     height: 100%;
     text-align: center;
     font-size: 0.8em;
+    color : #3082CC;
   }
 
   .desktop_list_warpper{
