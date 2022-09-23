@@ -3,7 +3,7 @@
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item title="Description:" name="1">
         <div>
-          <!-- {{this.detailInfo.description}} -->
+          {{this.detailInfo.description}}
         </div>
       </el-collapse-item>
       <el-collapse-item title="Indications and Usage:" name="2">
@@ -66,12 +66,11 @@
   </div>
 </template>
 <script>
-  
+
 export default {
   data() {
     return {
       activeName : '',
-      detailInfo : null,
     }
   },
   props : {

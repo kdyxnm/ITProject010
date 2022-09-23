@@ -1,10 +1,10 @@
 <template>
   <div class="overall_content">
-    <el-skeleton :rows="3" animated />
+    <!-- <el-skeleton :rows="3" animated /> -->
 
     <div style="margin: 20px 0">
       <el-input
-        v-model="textarea"
+        v-model="userNote"
         maxlength="50"
         placeholder="Please input"
         show-word-limit
@@ -23,11 +23,16 @@
 export default {
   data() {
     return {
-      textarea: ''
       
 
     }
   },
+  props : {
+    userNote : {
+      type : String,
+      default : ''
+    },
+  }
 
 
 }

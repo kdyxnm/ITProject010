@@ -68,7 +68,7 @@
 
 		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
-				<EditNote></EditNote>
+				<EditNote :userNote="Hahahaha"></EditNote>
 			</div>
 
 			<div class = "detailed_description">
