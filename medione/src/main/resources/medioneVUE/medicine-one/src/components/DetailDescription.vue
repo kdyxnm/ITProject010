@@ -3,12 +3,7 @@
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item title="Description:" name="1">
         <div>
-          Consistent with real life: in line with the process and logic of real
-          life, and comply with languages and habits that the users are used to;
-        </div>
-        <div>
-          Consistent within interface: all elements should be consistent, such
-          as: design style, icons and texts, position of elements, etc.
+          <!-- {{this.detailInfo.description}} -->
         </div>
       </el-collapse-item>
       <el-collapse-item title="Indications and Usage:" name="2">
@@ -71,13 +66,29 @@
   </div>
 </template>
 <script>
-
+import api from "../api/index"
 export default {
   data() {
     return {
-      activeName: ''  
+      activeName : '',
+      detailInfo : null,
     }
   },
+  props : {
+		detailInfo : {
+			type : Object,
+			default : null,
+		}
+	},
+  created(){
+		var that = this
+		console.log(this.detailInfo)
+		// api.getMediInfo(this.mediId).then(res=>{
+		// 	that.mediInfo = res.data.data
+		// 	console.log(that.mediInfo)
+		// 	that.isDataReady = true;
+		// })
+	},
 
 
 }

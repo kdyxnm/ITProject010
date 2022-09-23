@@ -14,27 +14,27 @@
 						</tr>
 						<tr>
 							<td class="static_text">Generic Name:</td>
-							<td class="db_text">Amlodipine Besylate</td>
+							<td class="db_text">{{ this.mediInfo.genericname}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Manufacturer Name:</td>
-							<td class="db_text"> Pfizer Laboratories Div Pfizer Inc</td>
+							<td class="db_text"> {{ this.mediInfo.manufacturername}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Product Type:</td>
-							<td class="db_text">Human Prescription Drug</td>
+							<td class="db_text">{{this.mediInfo.producttype}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Route:</td>
-							<td class="db_text">Oral</td>
+							<td class="db_text">{{ this.mediInfo.route}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Quantity:</td>
-							<td class="db_text">3 package</td>
+							<td class="db_text">{{ this.mediInfo.quantity}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Validity:</td>
-							<td class="db_text">03/08/2022</td>
+							<td class="db_text">{{ this.mediInfo.validity}}</td>
 						</tr>
 					</table>
 				</div>
@@ -66,15 +66,15 @@
 			</div>
 		</div>
 
-		<div class = "components">
+		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
 				<EditNote></EditNote>
 			</div>
 
 			<div class = "detailed_description">
-				<DetailDescription></DetailDescription>
+				<DetailDescription :detailInfo="this.mediInfo"></DetailDescription>
+				<!-- <MedicineDetail :mediId="this.mediInfoId" ></MedicineDetail> -->
 			</div>
-
 		</div>
 	</div>
 
@@ -83,13 +83,20 @@
 
 <script>
 import EditNote from "./EditNote.vue";
-import  DetailDescription from "./EditNote.vue";
+import DetailDescription from "./DetailDescription.vue";
 import api from "../api/index"
 export default {
 	data () {
 		return{
 			mediInfo : null,
 			isDataReady : false,
+			description: "",
+			usage: null,
+			warnings: null,
+			contraindications: null,
+			adversereaction: null,
+			overdosage: null,
+			
 		}
 	},
 	props : {
@@ -107,8 +114,10 @@ export default {
 		console.log(this.mediId)
 		api.getMediInfo(this.mediId).then(res=>{
 			that.mediInfo = res.data.data
+			console.log(that.mediInfo)
 			that.isDataReady = true;
-
+			that.despcription = this.mediInfo.description
+			that.usage = this.mediInfo.usage
 		})
 	},
 
