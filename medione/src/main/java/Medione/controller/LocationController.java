@@ -6,6 +6,10 @@ import Medione.utils.RLocation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @ClassName
+ * @Description
+ **/
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/location")

@@ -6,7 +6,10 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 
-
+/**
+ * @ClassName ISendMailService
+ * @Description service for sending email
+ **/
 public interface ISendMailService  {
     String sendMail(String account);
 

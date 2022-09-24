@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+
+/**
+ * @ClassName
+ * @Description
+ **/
 //@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/medicine")

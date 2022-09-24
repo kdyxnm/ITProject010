@@ -9,7 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+/**
+ * @ClassName
+ * @Description
+ **/
 @Service
 public class LocationImpl extends ServiceImpl<LocationDao, Location> implements ILocationService {
     @Autowired

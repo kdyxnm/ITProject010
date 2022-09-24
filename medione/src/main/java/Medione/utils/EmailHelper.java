@@ -2,7 +2,10 @@ package Medione.utils;
 
 import Medione.pojo.User;
 import lombok.Data;
-
+/**
+ * @ClassName EmailHelper
+ * @Description User class + verification code. Intend to simplify front end's works
+ **/
 @Data
 public class EmailHelper {
     private String password;

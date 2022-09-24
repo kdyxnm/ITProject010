@@ -2,7 +2,10 @@ package Medione.utils;
 
 
 import lombok.Data;
-
+/**
+ * @ClassName
+ * @Description
+ **/
 @Data
 public class RLocation {
     private Integer status;

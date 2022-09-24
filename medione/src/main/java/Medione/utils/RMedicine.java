@@ -1,7 +1,10 @@
 package Medione.utils;
 
 import lombok.Data;
-
+/**
+ * @ClassName
+ * @Description
+ **/
 @Data
 public class RMedicine {
     private Integer status;

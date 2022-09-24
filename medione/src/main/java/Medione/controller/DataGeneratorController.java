@@ -12,6 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Random;
 
+/**
+ * @ClassName
+ * @Description
+ **/
 @RestController
 @RequestMapping("/generator")
 public class DataGeneratorController {

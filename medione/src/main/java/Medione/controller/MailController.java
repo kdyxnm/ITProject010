@@ -13,7 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.prefs.BackingStoreException;
 
-//@CrossOrigin(origins = "http://localhost:8080/")
+
+/**
+ * @ClassName MailController
+ * @Description API regarding mail define here
+ **/
 @RestController
 @RequestMapping("/mail")
 public class MailController {

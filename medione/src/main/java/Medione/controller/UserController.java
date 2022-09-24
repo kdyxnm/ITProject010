@@ -18,6 +18,10 @@ import javax.servlet.http.HttpSession;
 import java.time.LocalTime;
 import java.util.Arrays;
 
+/**
+ * @ClassName UserController
+ * @Description API regarding user define here
+ **/
 //@CrossOrigin(origins = "http://localhost:8080/")
 @RestController
 @RequestMapping("/user")

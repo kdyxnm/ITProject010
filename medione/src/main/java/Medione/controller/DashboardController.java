@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
+/**
+ * @ClassName
+ * @Description
+ **/
 @RestController
 @RequestMapping("/dashboard")
 public class DashboardController {

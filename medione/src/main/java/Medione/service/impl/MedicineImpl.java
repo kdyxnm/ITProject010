@@ -15,7 +15,10 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
-
+/**
+ * @ClassName
+ * @Description
+ **/
 @Service
 public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements IMedicineService {
     @Autowired

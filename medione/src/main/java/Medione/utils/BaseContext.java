@@ -3,7 +3,10 @@ package Medione.utils;
 import Medione.pojo.User;
 
 import javax.servlet.http.HttpSession;
-
+/**
+ * @ClassName BaseContext
+ * @Description get username by thread
+ **/
 public class BaseContext {
     private static ThreadLocal<User> threadLocal = new ThreadLocal<>();
 

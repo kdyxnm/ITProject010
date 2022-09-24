@@ -1,7 +1,10 @@
 package Medione.utils;
 
 import lombok.Data;
-
+/**
+ * @ClassName R<T>
+ * @Description generate response in standard form
+ **/
 @Data
 public class R<T> {
     private static final int CREATE_ACCOUNT_ERROR = 800;

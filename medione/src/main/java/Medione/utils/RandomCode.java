@@ -1,6 +1,10 @@
 package Medione.utils;
 
 import java.util.Random;
+/**
+ * @ClassName RandomCode
+ * @Description generate 6 digit random code for email verification
+ **/
 public class RandomCode {
     private static Random random  = new Random();
     private static final int SIX = 6;

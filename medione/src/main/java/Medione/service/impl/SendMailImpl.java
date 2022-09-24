@@ -15,7 +15,10 @@ import javax.servlet.http.HttpSession;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Objects;
-
+/**
+ * @ClassName SendMailImpl
+ * @Description implementation for sending mail
+ **/
 @Service
 public class SendMailImpl implements ISendMailService {
     @Resource

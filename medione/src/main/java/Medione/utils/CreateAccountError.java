@@ -1,5 +1,10 @@
 package Medione.utils;
 
+
+/**
+ * @ClassName CreateAccountError
+ * @Description reason for fail to create account
+ **/
 public enum CreateAccountError {
     USERNAME_EXIST,
     EMAIL_EXIST,

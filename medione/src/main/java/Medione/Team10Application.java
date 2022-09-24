@@ -3,6 +3,10 @@ package Medione;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
+/**
+ * @ClassName Team10Application
+ * @Description start application/ entry for the project
+ **/
 
 @SpringBootApplication
 @EnableCaching

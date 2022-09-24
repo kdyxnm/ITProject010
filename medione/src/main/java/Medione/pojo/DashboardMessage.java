@@ -3,7 +3,10 @@ package Medione.pojo;
 import lombok.Data;
 
 import java.util.List;
-
+/**
+ * @ClassName
+ * @Description
+ **/
 @Data
 public class DashboardMessage {
     private String username;

@@ -9,7 +9,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+/**
+ * @ClassName LoginInterceptor
+ * @Description Interceptor for login. Define cookie and behaviours.
+ **/
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
 
@@ -27,17 +30,16 @@ public class LoginInterceptor implements HandlerInterceptor {
         //Access-Control-Expose-Headers
 
         response.setHeader("Access-Control-Expose-Headers","Set-Cookie");
-        response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//支持跨域请求
-        response.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");//五种请求
-        response.setHeader("Access-Control-Allow-Credentials", "true");//是否支持cookie跨域
+        response.setHeader("Access-Control-Allow-Origin",request.getHeader("Origin"));//allow crossing origin
+        response.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");//5 request methods
+        response.setHeader("Access-Control-Allow-Credentials", "true");//allow cookie crossing origin
         response.setHeader("Access-Control-Allow-Headers", "Set-Cookie,Authorization,Origin, X-Requested-With, Content-Type, Accept,Access-Token");//Origin, X-Requested-With, Content-Type, Accept,Access-Token
         HttpSession session =request.getSession();
 
         String username = (String) session.getAttribute("username");
         if(username==null){
 //            response.sendRedirect("http://localhost:8080").;
-            //未登陆，返回登陆页面
-//            request.setAttribute("msg","没有权限请先登陆");
+
 //            request.getRequestDispatcher("http://localhost:8080")
 //                    .forward(request,response)
             ;
@@ -45,10 +47,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
             return false;
         }
-        else {
-//            BaseContext.setCurrentUser(user);
-//            request.getRequestDispatcher()
-        }
+
         System.out.println("already login");
         return true;
     }
