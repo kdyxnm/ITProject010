@@ -58,7 +58,10 @@ public class UserController {
         else if (!helper.getCode().equals(codeInSession)){
             return new R(CreateAccountError.CODE_MISMATCH);
         }
-        return new R(service.save(helper.getUser()));
+        service.save(helper.getUser());
+        helper.getUser().setPassword(null);
+
+        return new R(helper.getUser());
     }
 
 
@@ -82,7 +85,8 @@ public class UserController {
 //        session.setAttribute("user",user);
         request.getSession().setAttribute("username",user.getUsername());
         BaseContext.setCurrentUser(user);    //set session in thread
-        return new R(target);
+
+        return new R(service.blockPassword(target));
     }
 
 

@@ -6,4 +6,6 @@ import Medione.pojo.User;
 
 public interface IUserService extends IService<User> {
     User getByName(String name);
+
+    User blockPassword(User user);
 }

@@ -19,4 +19,14 @@ public class UserImpl extends ServiceImpl<UserDao, User> implements IUserService
         userWrapper.eq("username",name);
         return userDao.selectOne(userWrapper);
     }
+
+    public User blockPassword(User user){
+        User noPassword = new User();
+        noPassword.setEmail(user.getEmail());
+        noPassword.setNickname(user.getNickname());
+        noPassword.setUsername(user.getUsername());
+        return noPassword;
+    }
+
 }
+
