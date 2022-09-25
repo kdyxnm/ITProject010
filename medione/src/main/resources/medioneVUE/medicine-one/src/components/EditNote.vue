@@ -2,11 +2,11 @@
   <div class="overall_content">
     <!-- <el-skeleton :rows="3" animated /> -->
 
-    <div style="margin: 20px 0">
+    <div style="margin: 20px 0" class="input_area">
       <el-input
         v-model="userNote"
-        maxlength="50"
-        placeholder="Please input"
+        maxlength="80"
+        placeholder="You can leave a message here"
         show-word-limit
         type="textarea"
       />
@@ -45,6 +45,10 @@ export default {
   overall_content{
     width: 100%;
     padding: 2em;
+  }
+
+  .el-id-4110-2 {
+    min-height: 100px;
   }
 
   .submit_button {

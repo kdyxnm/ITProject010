@@ -4,6 +4,7 @@
 			<div class = "brief_description_content">
 				<div class = "name_picture" v-if="isDataReady">
 					<h2>{{ this.mediInfo.brandname }} </h2>
+          <img class="medi_photo" :src="mediInfo.image">
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
@@ -68,7 +69,7 @@
 
 		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
-				<EditNote :userNote="'Some user notes'"></EditNote>
+				<EditNote :userNote="'Have taken this medicine. 2022/9/25'"></EditNote>
 			</div>
 
 			<div class = "detailed_description">
