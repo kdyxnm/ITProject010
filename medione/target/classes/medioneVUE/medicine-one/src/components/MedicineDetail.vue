@@ -2,8 +2,8 @@
 	<div class="overall_content">
 		<div class = "brief_description">
 			<div class = "brief_description_content">
-				<div class = "name_picture">
-					<h2>Norvasc</h2>
+				<div class = "name_picture" v-if="isDataReady">
+					<h2>{{ this.mediInfo.brandname }} </h2>
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
@@ -39,7 +39,7 @@
 					</table>
 				</div>
 
-				<div class ="button_area">
+				<div class ="button_area" v-if="isDataReady">
 					<el-row class="button_setting">
 						<el-button type="info" plain :round="true" size="small">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
