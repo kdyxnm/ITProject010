@@ -8,8 +8,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import java.util.List;
 
 /**
- * @ClassName
- * @Description
+ * @ClassName IMedicineService
+ * @Description service for medicine
  **/
 public interface IMedicineService extends IService<Medicine> {
     Boolean saveMedicine(Medicine medicine);

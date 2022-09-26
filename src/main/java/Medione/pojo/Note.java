@@ -2,8 +2,8 @@ package Medione.pojo;
 
 import lombok.Data;
 /**
- * @ClassName
- * @Description
+ * @ClassName Note
+ * @Description simple java class for note
  **/
 @Data
 public class Note{

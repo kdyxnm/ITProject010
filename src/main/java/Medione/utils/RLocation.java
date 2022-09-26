@@ -3,8 +3,8 @@ package Medione.utils;
 
 import lombok.Data;
 /**
- * @ClassName
- * @Description
+ * @ClassName RLocation<T>
+ * @Description generate response in the form of location
  **/
 @Data
 public class RLocation {

@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 /**
- * @ClassName
- * @Description
+ * @ClassName LocationImpl
+ * @Description implementation for location's service
  **/
 @Service
 public class LocationImpl extends ServiceImpl<LocationDao, Location> implements ILocationService {

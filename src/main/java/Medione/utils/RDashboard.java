@@ -3,8 +3,8 @@ package Medione.utils;
 
 import lombok.Data;
 /**
- * @ClassName
- * @Description
+ * @ClassName RDashboard<T>
+ * @Description generate response in the form of dashboard
  **/
 @Data
 public class RDashboard {

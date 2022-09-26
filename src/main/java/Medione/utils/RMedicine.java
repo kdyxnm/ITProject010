@@ -2,8 +2,8 @@ package Medione.utils;
 
 import lombok.Data;
 /**
- * @ClassName
- * @Description
+ * @ClassName RMedicine<T>
+ * @Description generate response in the form of medicine
  **/
 @Data
 public class RMedicine {

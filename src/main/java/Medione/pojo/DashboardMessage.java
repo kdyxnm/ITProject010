@@ -4,8 +4,8 @@ import lombok.Data;
 
 import java.util.List;
 /**
- * @ClassName
- * @Description
+ * @ClassName DashboardMessage
+ * @Description simple java class for dashboard message
  **/
 @Data
 public class DashboardMessage {

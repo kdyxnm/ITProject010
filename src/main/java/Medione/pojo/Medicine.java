@@ -10,6 +10,11 @@ import java.io.ByteArrayInputStream;
 import java.sql.Blob;
 import java.sql.Date;
 
+
+/**
+ * @ClassName Medicine
+ * @Description simple java class for medicine
+ **/
 @Data
 @TableName("medicine")
 public class Medicine {

@@ -5,8 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 /**
- * @ClassName
- * @Description
+ * @ClassName Location
+ * @Description simple java class for location
  **/
 @Data
 @TableName("location")

@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.SortedMap;
 /**
- * @ClassName
- * @Description
+ * @ClassName MedicineImpl
+ * @Description implementation for medicine's service
  **/
 @Service
 public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements IMedicineService {

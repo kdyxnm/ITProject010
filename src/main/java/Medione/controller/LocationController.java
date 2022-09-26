@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @ClassName
- * @Description
+ * @ClassName LocationController
+ * @Description API regarding location define here
  **/
 @CrossOrigin(origins = "*")
 @RestController

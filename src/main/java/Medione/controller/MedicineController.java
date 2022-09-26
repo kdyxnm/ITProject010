@@ -15,8 +15,8 @@ import java.util.List;
 
 
 /**
- * @ClassName
- * @Description
+ * @ClassName MedicineController
+ * @Description API regarding medicine define here
  **/
 //@CrossOrigin(origins = "http://localhost:8080/")
 @RestController

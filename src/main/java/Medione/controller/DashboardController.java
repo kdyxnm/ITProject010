@@ -15,8 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * @ClassName
- * @Description
+ * @ClassName DashboardController
+ * @Description API to get all simple message of current logged in user
  **/
 @RestController
 @RequestMapping("/dashboard")
