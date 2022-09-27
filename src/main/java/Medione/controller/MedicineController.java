@@ -126,7 +126,14 @@ public class MedicineController {
         }
     }
 
-
+    @GetMapping("/take/{id}/{amount}")
+    public RMedicine takeMedicine(@PathVariable Integer id, @PathVariable Integer amount){
+        if(service.takeMedicine(id, amount)){
+            return new RMedicine(200, null, "success!");
+        }else{
+            return new RMedicine(404, null, "cannot take that much.");
+        }
+    }
 
 }
 

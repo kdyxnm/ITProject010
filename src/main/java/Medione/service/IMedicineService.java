@@ -29,4 +29,6 @@ public interface IMedicineService extends IService<Medicine> {
     String getNote(Integer id);
 
     Boolean modifyNote(Integer id, String note);
+
+    Boolean takeMedicine(Integer id, Integer amount);
 }

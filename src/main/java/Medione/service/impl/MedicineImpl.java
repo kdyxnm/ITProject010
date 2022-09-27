@@ -112,5 +112,19 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
         return medicineDao.updateById(medicine)>0;
     }
 
+    @Override
+    public Boolean takeMedicine(Integer id, Integer amount) {
+        Medicine medicine = medicineDao.selectById(id);
+        Integer remain = medicine.getQuantity() - amount;
+        if(remain >= 0){
+            medicine.setQuantity(remain);
+            medicineDao.updateById(medicine);
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+
 
 }
