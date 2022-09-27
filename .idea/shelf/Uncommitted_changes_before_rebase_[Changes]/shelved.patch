@@ -1,0 +1,180 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"78593477-d99d-44df-9685-8a0700f1501c\" name=\"Changes\" comment=\"[feat] login by email\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/Team10.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Team10.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package-lock.json\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/assets/library/css/side_bar.css\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/HeadBar.vue\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue\" beforeDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitSEFilterConfiguration\">\r\n    <file-type-list>\r\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\r\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\r\n      <filtered-out-file-type name=\"TAG\" />\r\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\r\n    </file-type-list>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/encodings.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/uiDesigner.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/jarRepositories.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/workspace.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.gitattributes\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/misc.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/modules.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/.idea/compiler.xml\" root0=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"mavenHome\" value=\"D:/cs_path/apache-maven-3.8.4-bin/apache-maven-3.8.4\" />\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n        <option name=\"usePluginRegistry\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2FCfRVRNhDFZym7jvCKMQxh9HyR\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"Downloaded.Files.Path.Enabled\" value=\"false\" />\r\n    <property name=\"Repository.Attach.Annotations\" value=\"false\" />\r\n    <property name=\"Repository.Attach.JavaDocs\" value=\"false\" />\r\n    <property name=\"Repository.Attach.Sources\" value=\"false\" />\r\n    <property name=\"RequestMappingsPanelOrder0\" value=\"0\" />\r\n    <property name=\"RequestMappingsPanelOrder1\" value=\"1\" />\r\n    <property name=\"RequestMappingsPanelWidth0\" value=\"75\" />\r\n    <property name=\"RequestMappingsPanelWidth1\" value=\"75\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.17\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.2\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.fileTypes\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\su\\Desktop\\IT\\Team10\\ITProject010\\src\\main\\resources\\static\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Team10Application\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"Team10\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"Medione.Team10Application\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"78593477-d99d-44df-9685-8a0700f1501c\" name=\"Changes\" comment=\"\" />\r\n      <created>1664000995323</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1664000995323</updated>\r\n      <workItem from=\"1664000997310\" duration=\"4503000\" />\r\n      <workItem from=\"1664087413687\" duration=\"2013000\" />\r\n      <workItem from=\"1664102806273\" duration=\"309000\" />\r\n      <workItem from=\"1664103177377\" duration=\"2784000\" />\r\n      <workItem from=\"1664250858454\" duration=\"3292000\" />\r\n      <workItem from=\"1664284743193\" duration=\"1496000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"[fix] password in the login response\">\r\n      <created>1664001680217</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664001680217</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"[doc] documents for Zijie's part\">\r\n      <created>1664006571188</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664006571188</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"[chore] reconstruct project for simplifying deployment\">\r\n      <created>1664104797352</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664104797352</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"[feat] login by email\">\r\n      <created>1664262783981</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1664262783981</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"[fix] password in the login response\" />\r\n    <MESSAGE value=\"[doc] documents for Zijie's part\" />\r\n    <MESSAGE value=\"[chore] reconstruct project for simplifying deployment\" />\r\n    <MESSAGE value=\"[feat] login by email\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"[feat] login by email\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 355389d8c5f83f239f4d20b39a94bd8a152b8108)
++++ b/.idea/workspace.xml	(date 1664287088337)
+@@ -4,17 +4,91 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] login by email">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Team10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Team10.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package-lock.json" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/assets/library/css/side_bar.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/HeadBar.vue" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" />
++    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[chore] dist files">
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/about.1ea4e375.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/app.359876c4.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/dashboard.80dbc113.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/register.5b7c93d7.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/resetPassword.4e837651.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/favicon.ico" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/background.17fc1e83.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-192x192.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-512x512.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-192x192.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-512x512.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-120x120.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-152x152.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-180x180.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-60x60.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-76x76.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-16x16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-32x32.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/msapplication-icon-144x144.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/mstile-150x150.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/safari-pinned-tab.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/phone_background.b5e47b7e.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.823380b4.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.823380b4.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/manifest.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/robots.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/about.1ea4e375.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/app.359876c4.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/dashboard.80dbc113.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/register.5b7c93d7.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/resetPassword.4e837651.css" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/favicon.ico" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/background.17fc1e83.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-192x192.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-512x512.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-maskable-192x192.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-maskable-512x512.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-120x120.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-152x152.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-180x180.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-60x60.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-76x76.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/favicon-16x16.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/favicon-32x32.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/msapplication-icon-144x144.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/mstile-150x150.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/safari-pinned-tab.svg" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/phone_background.b5e47b7e.png" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/index.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/register.9a5c6dce.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/register.9a5c6dce.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/resetPassword.68950653.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/resetPassword.68950653.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/manifest.json" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/robots.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/workbox-79ffe3e0.js" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/workbox-79ffe3e0.js.map" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -33,16 +107,26 @@
+     </file-type-list>
+   </component>
+   <component name="HighlightingSettingsPerFile">
+-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/Team10.iml" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.gitattributes" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.idea/misc.xml" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.idea/modules.xml" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/.idea/compiler.xml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js.map" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js.map" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -109,7 +193,7 @@
+       <workItem from="1664102806273" duration="309000" />
+       <workItem from="1664103177377" duration="2784000" />
+       <workItem from="1664250858454" duration="3292000" />
+-      <workItem from="1664284743193" duration="1496000" />
++      <workItem from="1664284743193" duration="2128000" />
+     </task>
+     <task id="LOCAL-00001" summary="[fix] password in the login response">
+       <created>1664001680217</created>
+@@ -139,7 +223,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1664262783981</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="[fix] reset password with invalid '}'">
++      <created>1664286636075</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1664286636075</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -161,7 +252,9 @@
+     <MESSAGE value="[doc] documents for Zijie's part" />
+     <MESSAGE value="[chore] reconstruct project for simplifying deployment" />
+     <MESSAGE value="[feat] login by email" />
+-    <option name="LAST_COMMIT_MESSAGE" value="[feat] login by email" />
++    <MESSAGE value="[fix] reset password with invalid '}'" />
++    <MESSAGE value="[chore] dist files" />
++    <option name="LAST_COMMIT_MESSAGE" value="[chore] dist files" />
+   </component>
+   <component name="XSLT-Support.FileAssociations.UIState">
+     <expand />

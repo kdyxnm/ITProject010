@@ -4,17 +4,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] login by email">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Team10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Team10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/assets/library/css/side_bar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/HeadBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[chore] dist files">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/about.1ea4e375.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/app.359876c4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/dashboard.80dbc113.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/register.5b7c93d7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/css/resetPassword.4e837651.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/background.17fc1e83.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-76x76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/msapplication-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/img/phone_background.b5e47b7e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.823380b4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.823380b4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/about.1ea4e375.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/app.359876c4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/dashboard.80dbc113.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/register.5b7c93d7.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/css/resetPassword.4e837651.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/background.17fc1e83.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-maskable-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/android-chrome-maskable-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-120x120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-152x152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-180x180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon-76x76.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/msapplication-icon-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/img/phone_background.b5e47b7e.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/register.9a5c6dce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/register.9a5c6dce.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/resetPassword.68950653.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/js/resetPassword.68950653.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/workbox-79ffe3e0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/static/dist/workbox-79ffe3e0.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,16 +107,26 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Team10.iml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitattributes" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/misc.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/modules.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/compiler.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -109,7 +193,7 @@
       <workItem from="1664102806273" duration="309000" />
       <workItem from="1664103177377" duration="2784000" />
       <workItem from="1664250858454" duration="3292000" />
-      <workItem from="1664284743193" duration="1496000" />
+      <workItem from="1664284743193" duration="2128000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -139,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664262783981</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="[fix] reset password with invalid '}'">
+      <created>1664286636075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664286636075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +252,9 @@
     <MESSAGE value="[doc] documents for Zijie's part" />
     <MESSAGE value="[chore] reconstruct project for simplifying deployment" />
     <MESSAGE value="[feat] login by email" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] login by email" />
+    <MESSAGE value="[fix] reset password with invalid '}'" />
+    <MESSAGE value="[chore] dist files" />
+    <option name="LAST_COMMIT_MESSAGE" value="[chore] dist files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
