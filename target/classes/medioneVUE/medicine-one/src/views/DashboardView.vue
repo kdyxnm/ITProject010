@@ -24,9 +24,9 @@
               <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
             </div>
 
-            <!-- <div v-show="displayMode == 'refresh'" class="dynamic_content_container">
+            <div v-show="displayMode == 'loading'" class="dynamic_content_container">
               <h1>Loading ......</h1>
-            </div> -->
+            </div>
 
             <div v-show="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
@@ -88,7 +88,7 @@ export default {
     return {
       displayFlag : false,
       isPhone : true,
-      displayMode : 'default',
+      displayMode : 'loading',
       dataReady : false,
       mediInfoId : null,
       blurResult : null,
@@ -185,8 +185,6 @@ export default {
   mounted() {
     // this.display_flag = (window.innerWidth > 992);
     // processAutoCompleteData();
-    
-
   },
 }
 </script>

@@ -21,7 +21,7 @@
           </div>
           <div class="medi_info">
             <div>
-              <img class="medi_photo" :src="medi_data.image">
+              <img class="medi_photo" :src="imageBasePath + medi_data.image">
             </div>
           </div>
           <div class="medi_info">
@@ -118,7 +118,7 @@ export default {
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
         title : "My Medicines",
-        // listData:null,
+        imageBasePath : "https://medione.herokuapp.com/",
         listData : [
           {
             id: 1,
