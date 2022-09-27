@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] medicine image update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[chore] dist files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,15 +37,8 @@
     <setting file="file://$PROJECT_DIR$/.idea/compiler.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/encodings.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/uiDesigner.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/about.8e6dc6e8.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/Medione/Team10Application.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/jarRepositories.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.c00bbf53.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js.map" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.f74dd3f5.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -162,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664287323053</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[feat] medicine image update">
+      <created>1664293460930</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293460930</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +184,8 @@
     <MESSAGE value="[feat] login by email" />
     <MESSAGE value="[fix] reset password with invalid '}'" />
     <MESSAGE value="[chore] dist files" />
-    <option name="LAST_COMMIT_MESSAGE" value="[chore] dist files" />
+    <MESSAGE value="[feat] medicine image update" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] medicine image update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
