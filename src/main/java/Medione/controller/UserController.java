@@ -104,7 +104,7 @@ public class UserController {
     }
 
 
-    @PostMapping("reset}")
+    @PostMapping("reset")
     public R<User> resetPassword(HttpServletRequest request,EmailHelper helper){
 
         return new R(200);
