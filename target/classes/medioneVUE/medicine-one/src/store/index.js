@@ -15,7 +15,8 @@ export default createStore({
     search : {
       isAccurate : null,
       result : null
-    }
+    },
+    refreshFlag : false,
   },
 
   getters: {
@@ -30,6 +31,9 @@ export default createStore({
     },
     getNumMedi(state){
       return state.user.numMedicine
+    },
+    getRefreshFlag(state){
+      return state.refreshFlag
     },
 
     getAutoCompleteData(state){
@@ -71,6 +75,10 @@ export default createStore({
       console.log("Authentication flag changed")
       state.user.authenticationFlag = true
       console.log("Auth flag " + state.user.authenticationFlag)
+    },
+    setRefreshFlag(state, flag){
+      console.log("Set refresh flag to " + flag)
+      state.refreshFlag = flag
     },
 
     updateUser(state, data){

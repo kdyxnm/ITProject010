@@ -7,7 +7,7 @@
         <div class="list_header">Medicine Name</div>
         <div class="list_header">Photo</div>
         <div class="list_header">quantity</div>
-        <div class="list_header">Validity</div>
+        <div class="list_header">Validity &nbsp; DD/MM/YYYY</div>
         <div class="list_header">Dosage</div>
       </div>
       <div class="desktop_list_warpper" v-if="!isPhone">
@@ -27,7 +27,10 @@
           <div class="medi_info">
             {{medi_data.quantity}} {{medi_data.quantitytype}}
           </div>
-          <div class="medi_info">
+          <div class="medi_info valid" v-if="this.isValid(medi_data.validity)">
+            {{medi_data.validity}}
+          </div>
+          <div class="medi_info invalid_medicine" v-if="!this.isValid(medi_data.validity)">
             {{medi_data.validity}}
           </div>
           <div class="medi_info">
@@ -54,7 +57,7 @@
             <table>
               <tr>
                 <td style="text-align=left">
-                  Quantity : 
+                  Quantity: 
                 </td>
                 <td style="text-align=right">
                   {{medi_data.quantity}} {{medi_data.quantitytype}}
@@ -62,15 +65,18 @@
               </tr>
               <tr>
                 <td style="text-align=left">
-                  Validity : 
+                  Validity: 
                 </td>
-                <td style="text-align=right">
-                  {{medi_data.validity}}
+                <td style="text-align=right" v-if="this.isValid(medi_data.validity)">
+                  {{medi_data.validity}}  DD/MM/YYYY
+                </td>
+                <td style="text-align=right" class="invalid_medicine" v-if="!this.isValid(medi_data.validity)">
+                  {{medi_data.validity}}  DD/MM/YYYY
                 </td>
               </tr>
               <tr>
                 <td style="text-align=left">
-                  Dosage : 
+                  Dosage: 
                 </td>
                 <td style="text-align=right">
                   {{medi_data.dosage}} {{medi_data.dosagetype}}
@@ -230,9 +236,25 @@ export default {
         }
         this.$emit("switch-event", mode)
       },
+      convertDate(date){
+        var dateList = date.split('/')
+        var day = dateList[0]
+        var month = dateList[1]
+        var year = dateList[2]
+        return year + "-" + month + "-" + day
+      },
+      isValid(date) {    //sDate1和sDate2是2006-12-18格式
+        var sDate1 = this.convertDate(date)
+        let dateSpan,iDays
+        sDate1 = Date.parse(sDate1)
+        var sDate2 = new Date()
+        dateSpan = sDate2 - sDate1
+        dateSpan = Math.abs(dateSpan)
+        iDays = Math.floor(dateSpan / (24 * 3600 * 1000))
+        return iDays >= 15
+      },
 
-
-  }
+}
 
 
 
@@ -274,7 +296,7 @@ export default {
 
   .medi_row:hover{
     background-color: #dfe8fc;
-    box-shadow: 5px 5px 5px #a9bfd3
+    box-shadow: 12px 12px 12px #a9bfd3
   }
   
   .medi_info_left{
@@ -299,6 +321,13 @@ export default {
     padding: 0;
     border: 0;
     width: 100%;
+  }
+  
+  .invalid_medicine{
+    color: #000000;
+    background-color: #FF4D4D;
+    border-radius: 2em;
+
   }
 }
 
@@ -345,13 +374,23 @@ export default {
 
   .medi_row:hover{
     background-color: #dfe8fc;
-    box-shadow: 5px 5px 5px #a9bfd3
+    box-shadow: 12px 12px 12px #a9bfd3
   }
   
   .medi_info{
     width: 20%;
     height: 100%;
     text-align: center;
+  }
+
+  .invalid_medicine{
+    color: #ffffff;
+    background-color: #FF4D4D;
+    border-radius: 2em;
+    padding: 1em;
+  }
+  .valid{
+    padding: 1em
   }
 }
 
