@@ -7,6 +7,7 @@ package Medione.utils;
  **/
 public enum CreateAccountError {
     USERNAME_EXIST,
+    USERNAME_INVALID,
     EMAIL_EXIST,
     CODE_MISMATCH,
     PASSWORD_INVALID,
