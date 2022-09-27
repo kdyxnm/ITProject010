@@ -51,6 +51,9 @@ public class UserController {
         System.out.println("===================================");
 //        System.out.println(session.getId());
         System.out.println("===================================");
+        if(helper.getUsername().contains("@")){
+            return new R(CreateAccountError.USERNAME_INVALID);
+        }
         if (service.getOne(qUsername)!=null){
             return new R(CreateAccountError.USERNAME_EXIST);
         }
@@ -71,16 +74,23 @@ public class UserController {
 
     @PostMapping("login")
     public R<User> Login(@RequestBody User user, HttpServletRequest request){
+        //log
         System.out.println("===================================");
         System.out.println(request.getSession());
-
         System.out.println("login: " + Thread.currentThread().getId());
         System.out.println("===================================");
-        User target = service.getByName(user.getUsername());
+
+        User target;
+        if(!user.getUsername().contains("@")){
+            target = service.getByName(user.getUsername());
+        }
+        else{
+            target = service.getByEmail(user.getUsername());
+        }
+
         System.out.println("target: "+target);
         System.out.println("input: "+user);
 
-        System.out.println("time used: "+ LocalTime.now());
 
         if (target == null ||    ( !target.getPassword().equals(user.getPassword()) )){
             return new R(404);
@@ -94,7 +104,11 @@ public class UserController {
     }
 
 
+    @PostMapping("reset}")
+    public R<User> resetPassword(HttpServletRequest request,EmailHelper helper){
 
+        return new R(200);
+    }
 
 
     @DeleteMapping("log out")

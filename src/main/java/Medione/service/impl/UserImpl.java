@@ -23,6 +23,13 @@ public class UserImpl extends ServiceImpl<UserDao, User> implements IUserService
         return userDao.selectOne(userWrapper);
     }
 
+    @Override
+    public User getByEmail(String email) {
+        QueryWrapper<User>  userWrapper = new QueryWrapper<>();
+        userWrapper.eq("username",email);
+        return userDao.selectOne(userWrapper);
+    }
+
     public User blockPassword(User user){
         User noPassword = new User();
         noPassword.setEmail(user.getEmail());
