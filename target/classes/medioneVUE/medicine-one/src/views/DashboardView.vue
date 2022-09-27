@@ -2,7 +2,7 @@
   <div class="common-layout" style="height:100%">
     <el-container style="height:100%">
       <el-header height="5em" v-if='isPhone'> 
-        <HeadBar :header="user.userName" @open-side-bar-event="openSideBar"></HeadBar>
+        <HeadBar :header="user.nickName" @open-side-bar-event="openSideBar"></HeadBar>
       </el-header>
       <el-container>
 
@@ -81,7 +81,6 @@ import SearchBar from '../components/SearchBar.vue'
 import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
-import { RefreshLeft } from '@element-plus/icons-vue'
 
 export default {
   name: 'DashboardView',

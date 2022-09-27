@@ -21,8 +21,8 @@
       <div style="padding-right:1.2em">
         <el-icon :size=sidebarIconSize><House /></el-icon>
         <span style="margin-left: 1em"> Dashboard </span>
-        <p class="user_name">{{ user.userName }}</p>
-        <p class="user_nick_name">{{ user.nickName }}</p>
+        <p class="user_name">{{ user.nickName}}</p>
+        <p class="user_nick_name">{{ user.userName }}</p>
       </div>
     </div>
 
