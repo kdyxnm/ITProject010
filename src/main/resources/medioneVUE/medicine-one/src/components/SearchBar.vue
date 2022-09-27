@@ -122,6 +122,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
       }
 
       if(id != null){
+        //__context.emit("refresh")
         var mode = {
           view : 'medi_info',
           mediId : id
@@ -140,6 +141,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
       api.blurrySearch(state.value).then(res => {
         console.log("Blurry Request Success")
         console.log(res.data)
+        //__context.emit("refresh")
         var mode = {
           view : 'search_result',
           results : res.data.data
@@ -192,14 +194,17 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
 __sfc__.__file = "SideBar.vue"
 export default __sfc__
 </script>
-
+<style scoped>
+  *{
+    font-family: "Gill Sans", sans-serif;
+  }
+</style>
 
 
 <style>
   .my-autocomplete li {
     line-height: normal;
     padding: 1em;
-    display: flex;
     font-size: 1.2em;
   }
 
@@ -220,14 +225,14 @@ export default __sfc__
   }
 
   .value{
+    font-size: 1.15em;
+    font-weight: 500;
     color: #6E78F7;
-    width: 50%;
   }
 
   .link{
-    color: #6E78F7;
-    width: 50%;
-    text-align: center;
+    font-size: 0.8em;
+    color: #752bb5;
   }
 
   .el-autocomplete-suggestion{
@@ -249,6 +254,7 @@ export default __sfc__
       align-items: center;
       height: 100%;
       border-radius: 2em;
+      box-shadow: 2px 2px 2px #b8cbdd;
     }
     .el-input__wrapper:hover {
       background-color:#eaeaea ;
@@ -278,9 +284,11 @@ export default __sfc__
     }
     .el-input__wrapper {
       border-radius: 2em;
+      box-shadow: 3px 3px 3px #b8cbdd;
     }
     .el-input__wrapper:hover {
       background-color:#eaeaea ;
+      box-shadow: 10px 10px 10px #b8cbdd;
     }
     span.el-input__suffix-inner {
       margin-right: 1em;

@@ -84,6 +84,7 @@ export default {
       margin-left: 0.3em;
       border: none;
       margin-top: 0.3em;
+      z-index: 1;
     }
 
     .return_button {

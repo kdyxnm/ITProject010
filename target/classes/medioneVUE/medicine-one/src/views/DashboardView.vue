@@ -24,7 +24,9 @@
               <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
             </div>
 
-
+            <!-- <div v-show="displayMode == 'refresh'" class="dynamic_content_container">
+              <h1>Loading ......</h1>
+            </div> -->
 
             <div v-show="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
@@ -35,13 +37,14 @@
                 :total="this.blurResult.length" 
                 :isSearchResult="true" 
                 :searchResult="this.blurResult"
+                :key="this.blurResult"
                 @switch-event="handleSwitch">
               </MedicineList>
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
-              <MedicineDetail :mediId="this.mediInfoId" ></MedicineDetail>
-              <h1> Medicine Information {{ this.mediInfoId }}</h1>
+              <MedicineDetail :mediId="this.mediInfoId" :key="this.mediInfoId"></MedicineDetail>
+              <!-- <h1> Medicine Information {{ this.mediInfoId }}</h1> -->
             </div>
 
 
@@ -78,6 +81,7 @@ import SearchBar from '../components/SearchBar.vue'
 import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
+import { RefreshLeft } from '@element-plus/icons-vue'
 
 export default {
   name: 'DashboardView',
@@ -87,7 +91,7 @@ export default {
       isPhone : true,
       displayMode : 'default',
       dataReady : false,
-      mediInfoid : null,
+      mediInfoId : null,
       blurResult : null,
       
       
@@ -120,7 +124,10 @@ export default {
     closeSideBar(){
       this.displayFlag = false;
     },
-
+    // handleRefresh(){
+    //   console.log("Refresh Component")
+    //   this.displayMode = 'refresh'
+    // },
 
     handleSwitch(mode){
 
@@ -131,7 +138,10 @@ export default {
       }
       else {
         if(mode.view == 'medi_info'){
+          console.log("Medicine info of : " + this.mediInfoId)
           this.mediInfoId = mode.mediId
+          console.log("Medicine info of : " + mode.mediId)
+          console.log("Medicine info of : " + this.mediInfoId)
         }
         if(mode.view == 'search_result'){
           this.blurResult = mode.results
