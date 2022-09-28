@@ -6,67 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[build] refactor dist folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/about.1ea4e375.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/app.c6d779a1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/dashboard.525d013e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/dashboard.e8a0e6e0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/register.5b7c93d7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/css/resetPassword.4e837651.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/background.17fc1e83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/icons/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/img/phone_background.b5e47b7e.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.2211ee35.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.2211ee35.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.a4d132e4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/app.a4d132e4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.0f651533.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.0f651533.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.a667d317.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/dashboard.a667d317.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/workbox-79ffe3e0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/css/app.359876c4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/css/dashboard.80dbc113.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/about.8e6dc6e8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/app.823380b4.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/chunk-vendors.c00bbf53.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.f74dd3f5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664340393085</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[build] refactor dist folder">
+      <created>1664341703799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664341703799</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
