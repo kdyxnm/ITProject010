@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalTime;
 
 /**
  * @ClassName UserController
@@ -74,6 +75,7 @@ public class UserController {
         System.out.println("===================================");
         System.out.println(request.getSession());
         System.out.println("login: " + Thread.currentThread().getId());
+        System.out.println(LocalTime.now());
         System.out.println("===================================");
 
         User target;
