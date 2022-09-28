@@ -5,25 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[build] refactor dist folder">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.7f22092b.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/register.eced6b00.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/resetPassword.d43efe9c.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.59c9f5f1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.59c9f5f1.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.db751c1b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/register.c3fbd6a1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/resetPassword.cd93e916.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.7f22092b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/register.eced6b00.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/resetPassword.d43efe9c.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.04f651ba.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.04f651ba.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.31d4fae2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.31d4fae2.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.59c9f5f1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.59c9f5f1.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.7f22092b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/register.eced6b00.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/resetPassword.d43efe9c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.59c9f5f1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.59c9f5f1.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664349762534</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="[build] refactor dist folder">
+      <created>1664351766035</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664351766035</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
