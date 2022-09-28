@@ -6,6 +6,57 @@
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[build] refactor dist folder">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Medione/ENUMTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Medione/ENUMTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Medione/SessionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Medione/SessionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/Medione/Team10ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/Medione/Team10ApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/DashboardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/DataGeneratorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/DataGeneratorController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/handler/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/handler/LoginInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/DashboardMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/DashboardMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Location.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Medicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Medicine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Note.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/SimpleMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/SimpleMessage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/ILocationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/ILocationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/ISendMailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/ISendMailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/SendMailImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/SendMailImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/BaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/BaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/CreateAccountError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/CreateAccountError.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/EmailHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/EmailHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/R.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RDashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RLocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RMedicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RMedicine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/css/dashboard.525d013e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/img/icons/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/img/icons/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/app.2211ee35.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/app.2211ee35.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/app.a4d132e4.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/app.a4d132e4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.0f651533.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.0f651533.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.a667d317.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/js/dashboard.a667d317.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/dist/service-worker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/ENUMTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Medione/ENUMTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/SessionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Medione/SessionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/Team10ApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/example/Medione/Team10ApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664341703799</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="[build] refactor dist folder">
+      <created>1664344173521</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664344173521</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

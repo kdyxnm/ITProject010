@@ -11,10 +11,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.SortedMap;
+
 /**
  * @ClassName MedicineImpl
  * @Description implementation for medicine's service
@@ -45,7 +44,7 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
 
     @Override
     public IPage<Medicine> getPage(int currentPage, int pageSize, String username) {
-        IPage page = new Page(currentPage,pageSize);
+        IPage<Medicine> page = new Page<>(currentPage,pageSize);
         medicineDao.selectPage(page,new QueryWrapper<Medicine>().eq("username", username));
         return page;
     }

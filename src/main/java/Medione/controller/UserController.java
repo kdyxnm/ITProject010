@@ -10,13 +10,9 @@ import Medione.utils.EmailHelper;
 import Medione.utils.R;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.time.LocalTime;
-import java.util.Arrays;
 
 /**
  * @ClassName UserController
@@ -38,7 +34,7 @@ public class UserController {
      * @return creation result
      */
     @PostMapping("register")
-    public R createAccount(@RequestBody EmailHelper helper,HttpServletRequest request){
+    public R createAccount(@RequestBody EmailHelper helper, HttpServletRequest request){
         System.out.println(request.getSession());
         System.out.println("register: " + Thread.currentThread().getId());
         String email = helper.getEmail();
@@ -52,23 +48,23 @@ public class UserController {
 //        System.out.println(session.getId());
         System.out.println("===================================");
         if(helper.getUsername().contains("@")){
-            return new R(CreateAccountError.USERNAME_INVALID);
+            return new R<>(CreateAccountError.USERNAME_INVALID);
         }
         if (service.getOne(qUsername)!=null){
-            return new R(CreateAccountError.USERNAME_EXIST);
+            return new R<>(CreateAccountError.USERNAME_EXIST);
         }
 
         else if (service.getOne(qEmail)!=null){
-            return new R(CreateAccountError.EMAIL_EXIST);
+            return new R<>(CreateAccountError.EMAIL_EXIST);
         }
 
         else if (!helper.getCode().equals(codeInSession)){
-            return new R(CreateAccountError.CODE_MISMATCH);
+            return new R<>(CreateAccountError.CODE_MISMATCH);
         }
         service.save(helper.getUser());
         helper.getUser().setPassword(null);
 
-        return new R(helper.getUser());
+        return new R<>(helper.getUser());
     }
 
 
@@ -93,21 +89,21 @@ public class UserController {
 
 
         if (target == null ||    ( !target.getPassword().equals(user.getPassword()) )){
-            return new R(404);
+            return new R<>(404);
         }
 //        HttpSession session = request.getSession();
 //        session.setAttribute("user",user);
         request.getSession().setAttribute("username",user.getUsername());
         BaseContext.setCurrentUser(user);    //set session in thread
 
-        return new R(service.blockPassword(target));
+        return new R<>(service.blockPassword(target));
     }
 
 
     @PostMapping("reset")
     public R<User> resetPassword(HttpServletRequest request,EmailHelper helper){
 
-        return new R(200);
+        return new R<>(200);
     }
 
 
@@ -115,7 +111,7 @@ public class UserController {
     public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
         request.getSession().invalidate();
         String target = "custom";
-        return new R(200);
+        return new R<>(200);
     }
 
 

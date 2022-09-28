@@ -7,18 +7,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class Team10ApplicationTests {
-
-    @Test
-    void contextLoads() {
-    }
-
-    @Test
-    void RTest(){
-        User user = new User();
-        user.setNickname("adam");
-        R r = new R<>(user);
-        System.out.println(r);
-    }
-
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//    @Test
+//    void RTest(){
+//        User user = new User();
+//        user.setNickname("adam");
+//        R r = new R<>(user);
+//        System.out.println(r);
+//    }
+//
 
 }
