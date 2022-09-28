@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[chore] dist files" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] medicine image update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,7 +34,10 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Team10.iml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitattributes" root0="FORCE_HIGHLIGHTING" />
@@ -71,7 +81,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/userImage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17" />
@@ -80,9 +90,6 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static\userImage" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static" />
     </key>
@@ -110,6 +117,7 @@
       <workItem from="1664103177377" duration="2784000" />
       <workItem from="1664250858454" duration="3292000" />
       <workItem from="1664284743193" duration="2128000" />
+      <workItem from="1664338942466" duration="588000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -146,21 +154,7 @@
       <option name="project" value="LOCAL" />
       <updated>1664286636075</updated>
     </task>
-    <task id="LOCAL-00006" summary="[chore] dist files">
-      <created>1664287323052</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1664287323053</updated>
-    </task>
-    <task id="LOCAL-00007" summary="[feat] medicine image update">
-      <created>1664293460930</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1664293460930</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,8 +178,8 @@
     <MESSAGE value="[feat] login by email" />
     <MESSAGE value="[fix] reset password with invalid '}'" />
     <MESSAGE value="[chore] dist files" />
-    <MESSAGE value="[feat] medicine image update" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] medicine image update" />
+    <MESSAGE value="[build] refactor dist folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="[build] refactor dist folder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
