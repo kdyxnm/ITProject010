@@ -60,6 +60,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns("/generator/**")
                 .excludePathPatterns("/reset_password")
                 .excludePathPatterns("")
+                .excludePathPatterns("/")
         ;
 
 
