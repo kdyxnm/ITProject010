@@ -88,7 +88,7 @@ export default {
     return {
       displayFlag : false,
       isPhone : true,
-      displayMode : 'loading',
+      displayMode : 'default',
       dataReady : false,
       mediInfoId : null,
       blurResult : null,
