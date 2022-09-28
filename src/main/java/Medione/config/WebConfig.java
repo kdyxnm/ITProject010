@@ -31,7 +31,7 @@ public class WebConfig implements WebMvcConfigurer {
             // allow path
             registry.addMapping("/**")
 //                    .allowedOrigins("http://localhost:8080")
-                    .allowedOrigins("https://medione.herokuapp.com/")
+                    .allowedOrigins("https://medione.herokuapp.com")
                     .allowCredentials(true)
                     .allowedMethods("*")
                     .maxAge(3600);
@@ -47,18 +47,18 @@ public class WebConfig implements WebMvcConfigurer {
 //        block exclude/login  /register.....
 //        block register for testing!
         registry.addInterceptor(loginInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/login")
-                .excludePathPatterns("/user/**")
-                .excludePathPatterns("/medicine/**")
-                .excludePathPatterns("/dashboard/**")
-                .excludePathPatterns("/dashboard")
-                .excludePathPatterns("/register")
-                .excludePathPatterns("/about")
-                .excludePathPatterns("/mail")
-                .excludePathPatterns("/mail/**")
-                .excludePathPatterns("/generator/**")
-                .excludePathPatterns("/reset_password")
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/login")
+//                .excludePathPatterns("/user/**")
+//                .excludePathPatterns("/medicine/**")
+//                .excludePathPatterns("/dashboard/**")
+//                .excludePathPatterns("/dashboard")
+//                .excludePathPatterns("/register")
+//                .excludePathPatterns("/about")
+//                .excludePathPatterns("/mail")
+//                .excludePathPatterns("/mail/**")
+//                .excludePathPatterns("/generator/**")
+//                .excludePathPatterns("/reset_password")
         ;
 
 
