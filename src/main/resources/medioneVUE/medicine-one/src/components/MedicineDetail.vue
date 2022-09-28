@@ -3,7 +3,7 @@
 		<div class = "brief_description">
 			<div class = "brief_description_content">
 				<div class = "name_picture" v-if="isDataReady">
-					<!-- <h2>{{ this.mediInfo.brandname }} </h2> -->
+					<h3>{{ this.mediInfo.brandname }} </h3>
           <img class="medi_photo" :src="imageBasePath + mediInfo.image">
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
@@ -166,6 +166,10 @@ export default {
 		width: 100%;
 	}
 
+	h3 {
+		margin-bottom: 0em;
+	}
+
 	.medi_photo{
     width: 7em;
     height: 7em;
@@ -240,9 +244,10 @@ export default {
 		width: 25%;
 	}
 
-	h2 {
+	h3 {
 		margin-left: 2em;
 		margin-bottom: 0em;
+		margin-right: 1em;
 	}
 
 	.medi_photo {

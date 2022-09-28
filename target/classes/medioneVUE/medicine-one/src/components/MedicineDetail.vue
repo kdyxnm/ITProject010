@@ -3,8 +3,8 @@
 		<div class = "brief_description">
 			<div class = "brief_description_content">
 				<div class = "name_picture" v-if="isDataReady">
-					<h2>{{ this.mediInfo.brandname }} </h2>
-          <img class="medi_photo" :src="mediInfo.image">
+					<!-- <h2>{{ this.mediInfo.brandname }} </h2> -->
+          <img class="medi_photo" :src="imageBasePath + mediInfo.image">
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
@@ -91,6 +91,7 @@ export default {
 		return{
 			mediInfo : null,
 			isDataReady : false,
+			imageBasePath : "https://medione.herokuapp.com/",
 		}
 	},
 	props : {
@@ -161,6 +162,16 @@ export default {
 		font-weight: bold;
 	}
 
+	.name_picture {
+		width: 100%;
+	}
+
+	.medi_photo{
+    width: 7em;
+    height: 7em;
+		margin: 1em 6.5em;
+  }
+
 	.medicineinfo_table {
 		font-size: 0.7em;
 		margin-top: -1em;
@@ -227,8 +238,18 @@ export default {
 
 	.name_picture {
 		width: 25%;
-		margin: 0%;
 	}
+
+	h2 {
+		margin-left: 2em;
+		margin-bottom: 0em;
+	}
+
+	.medi_photo {
+		width: 8em;
+		height: 8em;
+		margin: 1em 2em;
+  }
 
 	.medicineinfo {
 		width: 50%;
@@ -237,16 +258,16 @@ export default {
 	.button_area{
 		width: 25%;
 	}
+	
+	#header {
+		font-size: large;
+		margin: 1em 0em;
+	}
 
 	.medicineinfo_table {
 		font-size: 0.7em;
 		margin-top: -0.3em;
 		margin-bottom: 1.5em;
-	}
-
-	#header {
-		font-size: large;
-		margin: 0.2em 0em;
 	}
 
 	.static_text {
