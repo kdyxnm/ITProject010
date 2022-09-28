@@ -1,4 +1,4 @@
-# database, mail, server config
+# database, mail, server config.
 spring:
   thymeleaf:
     prefix: /static
