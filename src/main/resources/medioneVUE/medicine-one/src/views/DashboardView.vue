@@ -24,9 +24,9 @@
               <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
             </div>
 
-            <div v-show="displayMode == 'loading'" class="dynamic_content_container">
+            <!-- <div v-show="displayMode == 'loading'" class="dynamic_content_container">
               <h1>Loading ......</h1>
-            </div>
+            </div> -->
 
             <div v-show="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
