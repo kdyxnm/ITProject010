@@ -18,49 +18,48 @@
 </template>
 
 <script>
-  import { defineComponent, onMounted, onBeforeUnmount, ref, reactive } from 'vue'
-  import {useRouter} from 'vue-router';
-  import store from '../store/index';
-  export default defineComponent ({
-      name: 'Page404',
-      setup() {
-          const router = useRouter();
-          const timer = ref(0);
-          const jumpTime = ref(10);
-          const oops = ref('Sorry!');
-          const headline = ref('Current Page Not Found...');
-          const info = ref('Please check the URL, or click the button to return to the login page');
-          const btn = ref('retrun to login');
-          const timeChange = () => {
-              let timer = null;
-              timer = setInterval(() => {
-                  if (jumpTime.value > 0) {
-                      jumpTime.value --;
-                  } else {
-                    console.log("404 check authentication")
-                    console.log(store.getters.isAuthenticated)
-                      // router.push("/");
-                      // router.push({path:'/home', query:{id:'12' }})
-                      clearInterval(timer);
-                  }
-              }, 1000)
-          };
-          onMounted(() => {
-              timeChange();
-          });
-          onBeforeUnmount(() => {
-              clearInterval(timer);
-          });
-          return {
-              jumpTime,
-              oops,
-              headline,
-              info,
-              btn,
-              timer,
-          }
-      },
-  })
+    import { defineComponent, onMounted, onBeforeUnmount, ref, reactive } from 'vue'
+    import {useRouter} from 'vue-router';
+    import store from '../store/index';
+    export default defineComponent ({
+        name: 'Page404',
+        setup() {
+            const router = useRouter();
+            const timer = ref(0);
+            const jumpTime = ref(10);
+            const oops = ref('Sorry!');
+            const headline = ref('Current Page Not Found...');
+            const info = ref('Please check the URL, or click the button to return to the login page');
+            const btn = ref('retrun to login');
+            const timeChange = () => {
+                let timer = null;
+                timer = setInterval(() => {
+                    if (jumpTime.value > 0) {
+                        jumpTime.value --;
+                    } 
+                    else {
+                        router.push("/");
+                        // router.push({path:'/home', query:{id:'12' }})
+                        clearInterval(timer);
+                    }
+                }, 1000)
+            };
+            onMounted(() => {
+                timeChange();
+            });
+            onBeforeUnmount(() => {
+                clearInterval(timer);
+            });
+            return {
+                jumpTime,
+                oops,
+                headline,
+                info,
+                btn,
+                timer,
+            }
+        },
+    })
 </script>
 
 <style>

@@ -2,7 +2,7 @@
 
 const base = {
   // baseUrl     : "https://medione.herokuapp.com",
-  baseUrl     : "https://localhost:8081",
+  baseUrl     : "http://localhost:8081",
 
   login       : '/user/login',
   email       : '/mail/send',

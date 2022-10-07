@@ -21,7 +21,7 @@
           </div>
           <div class="medi_info">
             <div>
-              <img class="medi_photo" :src="imageBasePath + medi_data.image">
+              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
             </div>
           </div>
           <div class="medi_info">
@@ -49,7 +49,7 @@
           <div class="medi_info_left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" :src="medi_data.image">
+              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
             </div>
           </div>
 
