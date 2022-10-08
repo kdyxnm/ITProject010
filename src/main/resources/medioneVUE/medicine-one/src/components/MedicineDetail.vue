@@ -57,11 +57,11 @@
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
-					<el-row class="button_setting">
+					<!-- <el-row class="button_setting">
 						<el-button type="info" plain :round = "true" size="small">
 						<el-icon><EditPen /></el-icon> &nbsp;Modify Drug Description
 						</el-button>
-  				</el-row>
+  				</el-row> -->
 				</div>
 
 			</div>
@@ -340,16 +340,20 @@ export default {
 		padding-right: 10em;
 	}
 
+	.button_area {
+		margin-top: 3em;
+	}
+
 	.button_setting {
 		margin-top: 0.5em;
-		padding: 0.5em;
+		padding: 1em;
 	}
 
 	.el-button {
 		width: 15em;
+		height: 2.5em;
 		font-size: 0.9em;
 	}
-
 
 	.submit_button {
 		margin-left: 0em;
