@@ -69,7 +69,24 @@
 
 		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
-				<EditNote :userNote="'Have taken this medicine. 2022/9/25'"></EditNote>
+				<!-- <EditNote :userNote="'Have taken this medicine. 2022/9/25'"></EditNote> -->
+				<div class="overall_notepart">
+					<div style="margin: 20px 0" class="input_area">
+						<el-input
+							v-model="userNote"
+							:rows="11"
+							maxlength="200"
+							placeholder="You can leave a message here"
+							show-word-limit
+							type="textarea"
+						/>
+		
+					<div class="submit_button">
+						<input type="button" class="submitNote_button" value="Update Note" @click="noteButton">
+						<!-- <el-button type="button" plain @click="submit_note">Update</el-button> -->
+					</div>
+				</div>
+				</div>
 			</div>
 
 			<div class = "detailed_description">
@@ -92,6 +109,7 @@ export default {
 			mediInfo : null,
 			isDataReady : false,
 			imageBasePath : "https://medione.herokuapp.com/",
+			userNote : "",
 		}
 	},
 	props : {
@@ -104,6 +122,21 @@ export default {
 		EditNote, 
 		DetailDescription
 	},
+	methods: {
+		noteButton(){
+			var that=this;
+			this.addNote()
+			console.log(that.userNote)
+		},
+		addNote() {
+			var that=this;
+			api.addMediNote(this.mediId, that.userNote).then(res=>{
+			// console.log(that.userNote)
+			console.log(res.data)
+		})
+		},
+	},
+
 	created(){
 		var that = this
 		console.log(this.mediId)
@@ -111,6 +144,10 @@ export default {
 			that.mediInfo = res.data.data
 			console.log(that.mediInfo)
 			that.isDataReady = true;
+		})
+		api.getMediNote(this.mediId).then(res=>{
+			that.userNote = res.data.data.note
+			console.log(res.data)
 		})
 	},
 
@@ -139,7 +176,7 @@ export default {
 	}
 
 	.detailed_description {
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 	
 	.edit_note {
@@ -201,6 +238,30 @@ export default {
 		font-size: 1em;
 		color: #626aef;
 	}
+
+	overall_content{
+    width: 100%;
+    padding: 2em;
+  }
+
+  .el-id-4110-2 {
+    min-height: 100px;
+  }
+
+  .submitNote_button {
+		height: 1.5em;
+		width: 7em;
+		border-radius:0.5em;
+		border-style: none;
+		background: #5A7BEF;
+    color: white;
+		font-size: 16px;
+    font-weight: 400;
+		margin-top: 0.7em;
+    /* margin-bottom: 1em; */
+    margin-left: 14em;
+  }
+
 }
 
 /* screen size */
@@ -225,7 +286,7 @@ export default {
 	.edit_note {
 		width: 50%;
 		margin-right: 2em;
-		margin-top: 2em;
+		margin-top: 1em;
 	}
 
 	.brief_description {
@@ -288,6 +349,24 @@ export default {
 		width: 15em;
 		font-size: 0.9em;
 	}
+
+
+	.submit_button {
+		margin-left: 0em;
+	}
+  .submitNote_button {
+		height: 2em;
+		width: 8em;
+		border-radius:0.5em;
+		border-style: none;
+		background: #5A7BEF;
+    color: white;
+		font-size: 16px;
+    font-weight: 400;
+		margin-top: 0.7em;
+    /* margin-bottom: 1em; */
+    /* margin-left: 1em; */
+  }
 }
 
 
