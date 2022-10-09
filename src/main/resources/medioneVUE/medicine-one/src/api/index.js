@@ -41,6 +41,16 @@ const api = {
   },
   getMediInfo(id){
     return axios.get(path.baseUrl + path.getMedicine + id )
+  },
+  getMediNote(id){
+    return axios.get(path.baseUrl + path.getNote + id )
+  },
+  addMediNote(id, mediNote){
+    var noteinfo = {
+      'note' : mediNote
+    }
+    return axios.put(path.baseUrl + path.addNote + id, noteinfo)
   }
+
 }
 export default api

@@ -5,15 +5,18 @@
     <div style="margin: 20px 0" class="input_area">
       <el-input
         v-model="userNote"
-        maxlength="80"
+        :rows="11"
+        maxlength="200"
         placeholder="You can leave a message here"
         show-word-limit
         type="textarea"
       />
       
       <div class="submit_button">
-        <input type="button" class="submitNote_button" value="submit" @click="submit_note">
+        <!-- <input type="button" class="submitNote_button" value="submit" @click="submit_note"> -->
+        <el-button type="button" plain @click="submit_note">Update</el-button>
       </div>
+
   </div>
 
   </div>
@@ -52,19 +55,22 @@ export default {
   }
 
   .submit_button {
-    margin-left: 15em;
+    margin-left: 17em;
+    margin-top: 0.5em;
   }
 
-  .submitNote_button {
-    width: 7em;
-    height: 1.5em;
-    background: #E5E9FD;
-    color: #6E78F7;
-    border-style: none;
-    border-radius: 0.2em;
-    -webkit-transition-duration: 0.5s; /* Safari */
-    transition-duration: 0.5s;
+
+}
+
+/* screen size */
+@media screen and (min-width: 992px){  
+
+
+  .submit_button {
+    margin-left: 28em;
+    margin-top: 1em;
   }
+
 }
 
 </style>

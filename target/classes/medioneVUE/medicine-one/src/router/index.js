@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 // import RegisterView from '../views/RegisterView.vue'
 
 const routes = [
@@ -27,6 +28,11 @@ const routes = [
     path: '/resetPassword',
     name: 'resetPassword',
     component: () => import(/* webpackChunkName: "resetPassword" */ '../views/ResetPasswordView.vue')
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'pageNotFound',
+    component: NotFoundView
   }
 ]
 

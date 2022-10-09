@@ -21,7 +21,7 @@
           </div>
           <div class="medi_info">
             <div>
-              <img class="medi_photo" :src="imageBasePath + medi_data.image">
+              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
             </div>
           </div>
           <div class="medi_info">
@@ -49,7 +49,7 @@
           <div class="medi_info_left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" :src="medi_data.image">
+              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
             </div>
           </div>
 
@@ -243,13 +243,14 @@ export default {
         var year = dateList[2]
         return year + "-" + month + "-" + day
       },
-      isValid(date) {    //sDate1和sDate2是2006-12-18格式
+      
+      isValid(date) {
         var sDate1 = this.convertDate(date)
         let dateSpan,iDays
         sDate1 = Date.parse(sDate1)
         var sDate2 = new Date()
-        dateSpan = sDate2 - sDate1
-        dateSpan = Math.abs(dateSpan)
+        dateSpan = sDate1 - sDate2
+        //dateSpan = Math.abs(dateSpan)
         iDays = Math.floor(dateSpan / (24 * 3600 * 1000))
         return iDays >= 15
       },
