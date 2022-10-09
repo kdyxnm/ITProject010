@@ -42,26 +42,15 @@
 
 				<div class ="button_area" v-if="isDataReady">
 					<el-row class="button_setting">
-						<el-button type="info" plain :round="true" size="small">
+						<el-button class="medi_button" type="info" plain :round="true" size="small" @click="openDialog">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
 						</el-button>
-						
   				</el-row>
-					<!-- <el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
-						<el-icon><Document /></el-icon> &nbsp;View  Notes
-						</el-button>
-  				</el-row> -->
 					<el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
+						<el-button class="medi_button" type="info" plain :round = "true" size="small">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
-					<!-- <el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
-						<el-icon><EditPen /></el-icon> &nbsp;Modify Drug Description
-						</el-button>
-  				</el-row> -->
 				</div>
 
 			</div>
@@ -69,7 +58,6 @@
 
 		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
-				<!-- <EditNote :userNote="'Have taken this medicine. 2022/9/25'"></EditNote> -->
 				<div class="overall_notepart">
 					<div style="margin: 20px 0" class="input_area">
 						<el-input
@@ -91,18 +79,38 @@
 
 			<div class = "detailed_description">
 				<DetailDescription :detailInfo="this.mediInfo"></DetailDescription>
-				<!-- <MedicineDetail :mediId="this.mediInfoId" ></MedicineDetail> -->
 			</div>
 		</div>
+		
+		<div class="dialog_area">
+			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center>
+				<el-form :model="tableForm">
+					<el-form-item label="Amount" :label-width="formLabelWidth">
+						<el-input v-model="tableForm.amount" autocomplete="off" />&nbsp&nbsp pills
+					</el-form-item>
+				</el-form>
+				<template #footer>
+					<span class="dialog-footer">
+						<el-button @click="dialogFormVisible = false">Cancel</el-button>
+						<el-button type="primary" @click="dialogFormVisible = false"
+							>Confirm</el-button
+						>
+					</span>
+				</template>
+			</el-dialog>
+		</div>
+
 	</div>
 
 
 </template>
 
 <script>
-import EditNote from "./EditNote.vue";
 import DetailDescription from "./DetailDescription.vue";
-import api from "../api/index"
+import api from "../api/index";
+
+
+
 export default {
 	data () {
 		return{
@@ -110,6 +118,10 @@ export default {
 			isDataReady : false,
 			imageBasePath : "https://medione.herokuapp.com/",
 			userNote : "",
+      dialogFormVisible: false,
+			tableForm :{
+				amount : "",
+			}
 		}
 	},
 	props : {
@@ -119,9 +131,8 @@ export default {
 		}
 	},
 	components: {
-		EditNote, 
-		DetailDescription
-	},
+    DetailDescription,
+},
 	methods: {
 		noteButton(){
 			var that=this;
@@ -135,6 +146,10 @@ export default {
 			console.log(res.data)
 		})
 		},
+		openDialog(){
+			this.dialogFormVisible = true
+			console.log(this.dialogFormVisible)
+		}
 	},
 
 	created(){
@@ -151,6 +166,7 @@ export default {
 		})
 	},
 
+
 	mounted() {
 		// var that = this
 		// console.log(this.mediId)
@@ -164,9 +180,8 @@ export default {
 <style scoped>
 /* phone size */
 @media screen and (max-width: 992px){   
-  overall_content{
+  .overall_content{
     width: 100%;
-    padding: 2em;
   }
 	h2 {
 		font-size: 1.5em;
@@ -233,16 +248,12 @@ export default {
 		padding: 0.1em;
 	}
 
-	.el-button {
+	.medi_button {
 		width: 18em;
 		font-size: 1em;
 		color: #626aef;
 	}
 
-	overall_content{
-    width: 100%;
-    padding: 2em;
-  }
 
   .el-id-4110-2 {
     min-height: 100px;
@@ -262,16 +273,17 @@ export default {
     margin-left: 14em;
   }
 
+	.el-input {
+		width: 5em;
+	}
+
 }
 
 /* screen size */
 @media screen and (min-width: 992px){   
-  overall_content{
+  .overall_content{
     width: 100%;
   }
-	/* .overall_content {
-		width: 100%;
-	} */
 
 	.components {
 		width: 100%;
@@ -371,6 +383,36 @@ export default {
     /* margin-bottom: 1em; */
     /* margin-left: 1em; */
   }
+
+
+	.el-dialog{
+  display: flex;
+  display: -ms-flex; /* 兼容IE */
+  flex-direction: column;
+  -ms-flex-direction: column; /* 兼容IE */
+  margin:0 !important;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  max-height:calc(100% - 30px);
+  max-width:calc(100% - 30px);
+	}
+	.el-dialog .el-dialog__body{
+		max-height: 100%;
+		flex: 1;
+		-ms-flex: 1 1 auto; /* 兼容IE */
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	.el-dialog__wrapper {
+		/*隐藏ie和edge中遮罩的滚动条*/
+		overflow: hidden;
+	}
+	.el-input {
+		width: 5em;
+	}
 }
 
 
