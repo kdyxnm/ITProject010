@@ -24,8 +24,8 @@ const base = {
 
 
 
-  addLocation : '',
-  delLocation : '',
+  addLocation : '/location',
+  delLocation : '/location',
 
   addMedicine : '',
   delMedicine : '',
