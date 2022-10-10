@@ -83,10 +83,10 @@
 		</div>
 		
 		<div class="dialog_area">
-			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center>
+			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center width="70">
 				<el-form :model="tableForm">
 					<el-form-item label="Amount" :label-width="formLabelWidth">
-						<el-input v-model="tableForm.amount" autocomplete="off" />&nbsp&nbsp pills
+						<el-input v-model="tableForm.amount" autocomplete="off" /> &nbsp; &nbsp; pills
 					</el-form-item>
 				</el-form>
 				<template #footer>
@@ -275,6 +275,10 @@ export default {
 
 	.el-input {
 		width: 5em;
+	}
+
+	.el-dialog.is-align-center.el-dialog--center {
+    width: 70%;
 	}
 
 }

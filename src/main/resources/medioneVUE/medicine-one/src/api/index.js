@@ -50,6 +50,9 @@ const api = {
       'note' : mediNote
     }
     return axios.put(path.baseUrl + path.addNote + id, noteinfo)
+  },
+  getLocations(){
+
   }
 
 }
