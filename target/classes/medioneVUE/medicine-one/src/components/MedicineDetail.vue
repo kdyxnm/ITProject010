@@ -83,10 +83,10 @@
 		</div>
 		
 		<div class="dialog_area">
-			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center>
+			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center width="70">
 				<el-form :model="tableForm">
 					<el-form-item label="Amount" :label-width="formLabelWidth">
-						<el-input v-model="tableForm.amount" autocomplete="off" />&nbsp&nbsp pills
+						<el-input v-model="tableForm.amount" autocomplete="off" /> &nbsp; &nbsp; pills
 					</el-form-item>
 				</el-form>
 				<template #footer>
@@ -106,7 +106,6 @@
 </template>
 
 <script>
-import EditNote from "./EditNote.vue";
 import DetailDescription from "./DetailDescription.vue";
 import api from "../api/index";
 
@@ -132,7 +131,6 @@ export default {
 		}
 	},
 	components: {
-    EditNote,
     DetailDescription,
 },
 	methods: {
@@ -279,6 +277,10 @@ export default {
 		width: 5em;
 	}
 
+	.el-dialog.is-align-center.el-dialog--center {
+    width: 70%;
+	}
+
 }
 
 /* screen size */
@@ -372,6 +374,7 @@ export default {
 	.submit_button {
 		margin-left: 0em;
 	}
+	
   .submitNote_button {
 		height: 2em;
 		width: 8em;
@@ -386,32 +389,6 @@ export default {
     /* margin-left: 1em; */
   }
 
-
-	.el-dialog{
-  display: flex;
-  display: -ms-flex; /* 兼容IE */
-  flex-direction: column;
-  -ms-flex-direction: column; /* 兼容IE */
-  margin:0 !important;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  max-height:calc(100% - 30px);
-  max-width:calc(100% - 30px);
-	}
-	.el-dialog .el-dialog__body{
-		max-height: 100%;
-		flex: 1;
-		-ms-flex: 1 1 auto; /* 兼容IE */
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
-
-	.el-dialog__wrapper {
-		/*隐藏ie和edge中遮罩的滚动条*/
-		overflow: hidden;
-	}
 	.el-input {
 		width: 5em;
 	}

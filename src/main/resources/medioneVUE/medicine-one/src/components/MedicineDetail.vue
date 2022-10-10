@@ -42,12 +42,12 @@
 
 				<div class ="button_area" v-if="isDataReady">
 					<el-row class="button_setting">
-						<el-button class="medi_button" type="info" plain :round="true" size="small" @click="openDialog">
+						<el-button class="medi_button" type="info" plain :round="true" size="small" @click="openDialog1">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
-						<el-button class="medi_button" type="info" plain :round = "true" size="small">
+						<el-button class="medi_button" type="info" plain :round = "true" size="small" @click="openDialog2">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
@@ -83,16 +83,36 @@
 		</div>
 		
 		<div class="dialog_area">
-			<el-dialog v-model="dialogFormVisible" title="Take Medicine" center="true" align-center width="70">
-				<el-form :model="tableForm">
-					<el-form-item label="Amount" :label-width="formLabelWidth">
-						<el-input v-model="tableForm.amount" autocomplete="off" /> &nbsp; &nbsp; pills
+			<!-- take medicine dialog -->
+			<el-dialog v-model="dialogFormVisible1" title="Take Medicine" align-center center width="100">
+				<el-form :model="tableForm1">
+					<el-form-item label="Amount:&nbsp;" :label-width="formLabelWidth">
+						<el-input 
+						v-model="tableForm1.amount" 
+						onkeyup="value=value.replace(/[^\d]/g,'')" 
+						autocomplete="off" 
+						/> &nbsp; &nbsp; pills
 					</el-form-item>
 				</el-form>
 				<template #footer>
 					<span class="dialog-footer">
-						<el-button @click="dialogFormVisible = false">Cancel</el-button>
-						<el-button type="primary" @click="dialogFormVisible = false"
+						<el-button @click="dialogFormVisible1 = false">Cancel</el-button>
+						<el-button type="primary" @click="takeConfirmButon"
+							>Confirm</el-button
+						>
+					</span>
+				</template>
+			</el-dialog>
+			<!-- delete medicine dialog-->
+			<el-dialog v-model="dialogFormVisible2" title="Delete Medicine" center align-center width="80">
+					<el-form-item label="Warning: This will delete all data about this drug! Please  consider carefully!" :label-width="290" >
+					</el-form-item>
+					<!-- <lable v-show="desktopOnly" class="warning_text"> Warning: This will delete all data about this drug! Please consider carefully!
+					</lable> -->
+				<template #footer>
+					<span class="dialog-footer">
+						<el-button @click="dialogFormVisible2 = false">Cancel</el-button>
+						<el-button type="primary" @click="deleteConfirmButon"
 							>Confirm</el-button
 						>
 					</span>
@@ -118,10 +138,11 @@ export default {
 			isDataReady : false,
 			imageBasePath : "https://medione.herokuapp.com/",
 			userNote : "",
-      dialogFormVisible: false,
-			tableForm :{
+      dialogFormVisible1: false,
+			dialogFormVisible2: false,
+			tableForm1 :{
 				amount : "",
-			}
+			},
 		}
 	},
 	props : {
@@ -143,13 +164,46 @@ export default {
 			var that=this;
 			api.addMediNote(this.mediId, that.userNote).then(res=>{
 			// console.log(that.userNote)
-			console.log(res.data)
+			console.log(res.data);
 		})
 		},
-		openDialog(){
-			this.dialogFormVisible = true
-			console.log(this.dialogFormVisible)
-		}
+		openDialog1() {
+			var that=this;
+			this.dialogFormVisible1 = true;
+			console.log(that.tableForm1.amount);
+		},
+		openDialog2() {
+			this.dialogFormVisible2 = true
+			console.log(this.dialogFormVisible2)
+		},
+		takeConfirmButon() {
+			var that=this;
+			api.takeMedicine(that.mediId, that.tableForm1.amount).then(res=>{
+				console.log(res.data);
+				that.dialogFormVisible1 = false;
+				if(res.data.status == 200) {
+					console.log(res.data.status)
+					alert('Update successful, please refresh!')
+					console.log(res.data.status)
+				} else if(res.data.status == 404) {
+					alert('Update failed, the quantity of medicines entered exceeds the remaining quantity, please verify and try again.')
+					}
+			})
+		},
+		deleteConfirmButon() {
+			var that=this;
+			api.deleteMedicine(that.mediId).then(res=>{
+				console.log(res.data);
+				that.dialogFormVisible1 = false;
+				if(res.data.status == 200){
+					this.backToPrev()
+        }
+		})
+		},
+		backToPrev(){
+				this.$router.back(-1)
+			},
+
 	},
 
 	created(){
@@ -277,9 +331,9 @@ export default {
 		width: 5em;
 	}
 
-	.el-dialog.is-align-center.el-dialog--center {
-    width: 70%;
-	}
+	/* .warning_text {
+		color: red;
+	} */
 
 }
 
@@ -374,6 +428,7 @@ export default {
 	.submit_button {
 		margin-left: 0em;
 	}
+	
   .submitNote_button {
 		height: 2em;
 		width: 8em;
@@ -388,35 +443,14 @@ export default {
     /* margin-left: 1em; */
   }
 
-
-	.el-dialog{
-  display: flex;
-  display: -ms-flex; /* 兼容IE */
-  flex-direction: column;
-  -ms-flex-direction: column; /* 兼容IE */
-  margin:0 !important;
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  max-height:calc(100% - 30px);
-  max-width:calc(100% - 30px);
-	}
-	.el-dialog .el-dialog__body{
-		max-height: 100%;
-		flex: 1;
-		-ms-flex: 1 1 auto; /* 兼容IE */
-		overflow-y: auto;
-		overflow-x: hidden;
-	}
-
-	.el-dialog__wrapper {
-		/*隐藏ie和edge中遮罩的滚动条*/
-		overflow: hidden;
-	}
 	.el-input {
 		width: 5em;
 	}
+	
+	/* .warning_text {
+		color: red;
+	} */
+
 }
 
 
