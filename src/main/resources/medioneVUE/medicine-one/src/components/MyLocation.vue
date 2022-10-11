@@ -60,15 +60,15 @@
         "address" : this.newLocstring
       }
       var that = this
-      api.addLocation(locInfo).then(res => {
-        console.log(res.data)
-        // that.locations.push(locInfo)
-        that.clsoeNewLocBar()
-        // that.newLocstring = ''
-      })
-      // this.clsoeNewLocBar()
-      // this.locations.push(locInfo)
-      // this.newLocstring = ''
+      // api.addLocation(locInfo).then(res => {
+      //   console.log(res.data)
+      //   // that.locations.push(locInfo)
+      //   that.clsoeNewLocBar()
+      //   // that.newLocstring = ''
+      // })
+      this.clsoeNewLocBar()
+      this.locations.push(locInfo)
+      this.newLocstring = ''
     },
 
     clsoeNewLocBar(){
@@ -185,7 +185,8 @@
 
   .input_bar {
     width: 90%;
-    font-size: 1.5em;
+    height: 1.7em;
+    font-size: 1em;
     margin-top: 1em;
     border-radius: 1em;
     padding: 0 5%;
@@ -224,10 +225,21 @@
 
   .close_icon{
     position: relative;
-    left: 55em;
+    left: 82%;
     color: #FFF;
     background-color: #6E78F7;
     border-radius: 1em;
+  }
+
+  .input_bar {
+    width: 90%;
+    height: 3em;
+    font-size: 1.5em;
+    margin-top: 2em;
+    border-radius: 1em;
+    padding: 0 5%;
+    border-width: 0;
+    box-shadow: 2px 2px 2px #b8cbdd;
   }
 }
 
