@@ -4,61 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] image size of medicine">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.67980eb1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/css/dashboard.67980eb1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/about.aab11d16.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/about.aab11d16.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/app.e49c052b.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/app.e49c052b.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/dashboard.d5211fb8.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/dashboard.d5211fb8.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/register.28e6f16f.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/register.28e6f16f.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/resetPassword.c2726369.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/static/js/resetPassword.c2726369.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.8007f812.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.1b0a5e15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.1b0a5e15.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.1943dec8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.1943dec8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.dcb2b662.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.dcb2b662.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.8151a287.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.8151a287.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c395348d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c395348d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dashboard.8007f812.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.1b0a5e15.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.1b0a5e15.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1943dec8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.1943dec8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dashboard.dcb2b662.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dashboard.dcb2b662.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.8151a287.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.8151a287.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/resetPassword.c395348d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/resetPassword.c395348d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" afterDir="false" />
-    </list>
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] storage size" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -333,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664356832555</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="[fix] storage size">
+      <created>1665497458543</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665497458543</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -365,6 +318,11 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+        <entry key="576992de-faac-4cd4-92ba-935c9a48d69c">
+          <value>
+            <State />
           </value>
         </entry>
         <entry key="89ce73dc-4e33-4cff-8bb2-598d00fea99d">
@@ -443,7 +401,8 @@
     <MESSAGE value="[build] refactor dist folder" />
     <MESSAGE value="[fix] theme colour #6E78F7" />
     <MESSAGE value="[fix] image size of medicine" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] image size of medicine" />
+    <MESSAGE value="[fix] storage size" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] storage size" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
