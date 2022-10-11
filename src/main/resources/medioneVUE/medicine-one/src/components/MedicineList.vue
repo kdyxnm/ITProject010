@@ -293,6 +293,7 @@ export default {
     background-color: #f2f6ff;
     box-shadow: 2px 2px 2px #b8cbdd;
     font-size: 1em;
+    transition-duration: 0.3s;
   }
 
   .medi_row:hover{
@@ -370,7 +371,8 @@ export default {
     border: 1px solid #dadcf4;
     border-radius: 1.5em;
     background-color: #f2f6ff;
-    box-shadow: 2px 2px 2px #b8cbdd
+    box-shadow: 2px 2px 2px #b8cbdd;
+    transition-duration: 0.3s;
   }
 
   .medi_row:hover{

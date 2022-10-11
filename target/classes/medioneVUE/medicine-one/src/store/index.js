@@ -35,6 +35,12 @@ export default createStore({
     getRefreshFlag(state){
       return state.refreshFlag
     },
+    getEmail(state){
+      return state.user.userEmail
+    },
+    getLocations(state){
+      return state.user.locations
+    },
 
     getAutoCompleteData(state){
       console.log("Processing auto complete data")
@@ -64,7 +70,7 @@ export default createStore({
       console.log("Finish precessing data")
       console.log(nameLocMap)
       return nameLocMap
-    }
+    },
   },
 
 

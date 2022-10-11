@@ -42,26 +42,15 @@
 
 				<div class ="button_area" v-if="isDataReady">
 					<el-row class="button_setting">
-						<el-button type="info" plain :round="true" size="small">
+						<el-button class="medi_button" type="info" plain :round="true" size="small" @click="openDialog1">
 						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
 						</el-button>
-						
   				</el-row>
-					<!-- <el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
-						<el-icon><Document /></el-icon> &nbsp;View  Notes
-						</el-button>
-  				</el-row> -->
 					<el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
+						<el-button class="medi_button" type="info" plain :round = "true" size="small" @click="openDialog2">
 						<el-icon><DeleteFilled /></el-icon> &nbsp;Delete Medicine
 						</el-button>
   				</el-row>
-					<!-- <el-row class="button_setting">
-						<el-button type="info" plain :round = "true" size="small">
-						<el-icon><EditPen /></el-icon> &nbsp;Modify Drug Description
-						</el-button>
-  				</el-row> -->
 				</div>
 
 			</div>
@@ -69,7 +58,6 @@
 
 		<div class = "components" v-if="isDataReady" >
 			<div class = "edit_note">
-				<!-- <EditNote :userNote="'Have taken this medicine. 2022/9/25'"></EditNote> -->
 				<div class="overall_notepart">
 					<div style="margin: 20px 0" class="input_area">
 						<el-input
@@ -91,18 +79,58 @@
 
 			<div class = "detailed_description">
 				<DetailDescription :detailInfo="this.mediInfo"></DetailDescription>
-				<!-- <MedicineDetail :mediId="this.mediInfoId" ></MedicineDetail> -->
 			</div>
 		</div>
+		
+		<div class="dialog_area">
+			<!-- take medicine dialog -->
+			<el-dialog v-model="dialogFormVisible1" title="Take Medicine" align-center center width="100">
+				<el-form :model="tableForm1">
+					<el-form-item label="Amount:&nbsp;" :label-width="formLabelWidth">
+						<el-input 
+						v-model="tableForm1.amount" 
+						onkeyup="value=value.replace(/[^\d]/g,'')" 
+						autocomplete="off" 
+						/> &nbsp; &nbsp; pills
+					</el-form-item>
+				</el-form>
+				<template #footer>
+					<span class="dialog-footer">
+						<el-button @click="dialogFormVisible1 = false">Cancel</el-button>
+						<el-button type="primary" @click="takeConfirmButon"
+							>Confirm</el-button
+						>
+					</span>
+				</template>
+			</el-dialog>
+			<!-- delete medicine dialog-->
+			<el-dialog v-model="dialogFormVisible2" title="Delete Medicine" center align-center width="80">
+					<el-form-item label="Warning: This will delete all data about this drug! Please  consider carefully!" :label-width="290" >
+					</el-form-item>
+					<!-- <lable v-show="desktopOnly" class="warning_text"> Warning: This will delete all data about this drug! Please consider carefully!
+					</lable> -->
+				<template #footer>
+					<span class="dialog-footer">
+						<el-button @click="dialogFormVisible2 = false">Cancel</el-button>
+						<el-button type="primary" @click="deleteConfirmButon"
+							>Confirm</el-button
+						>
+					</span>
+				</template>
+			</el-dialog>
+		</div>
+
 	</div>
 
 
 </template>
 
 <script>
-import EditNote from "./EditNote.vue";
 import DetailDescription from "./DetailDescription.vue";
-import api from "../api/index"
+import api from "../api/index";
+
+
+
 export default {
 	data () {
 		return{
@@ -110,6 +138,11 @@ export default {
 			isDataReady : false,
 			imageBasePath : "https://medione.herokuapp.com/",
 			userNote : "",
+      dialogFormVisible1: false,
+			dialogFormVisible2: false,
+			tableForm1 :{
+				amount : "",
+			},
 		}
 	},
 	props : {
@@ -119,9 +152,8 @@ export default {
 		}
 	},
 	components: {
-		EditNote, 
-		DetailDescription
-	},
+    DetailDescription,
+},
 	methods: {
 		noteButton(){
 			var that=this;
@@ -132,9 +164,46 @@ export default {
 			var that=this;
 			api.addMediNote(this.mediId, that.userNote).then(res=>{
 			// console.log(that.userNote)
-			console.log(res.data)
+			console.log(res.data);
 		})
 		},
+		openDialog1() {
+			var that=this;
+			this.dialogFormVisible1 = true;
+			console.log(that.tableForm1.amount);
+		},
+		openDialog2() {
+			this.dialogFormVisible2 = true
+			console.log(this.dialogFormVisible2)
+		},
+		takeConfirmButon() {
+			var that=this;
+			api.takeMedicine(that.mediId, that.tableForm1.amount).then(res=>{
+				console.log(res.data);
+				that.dialogFormVisible1 = false;
+				if(res.data.status == 200) {
+					console.log(res.data.status)
+					alert('Update successful, please refresh!')
+					console.log(res.data.status)
+				} else if(res.data.status == 404) {
+					alert('Update failed, the quantity of medicines entered exceeds the remaining quantity, please verify and try again.')
+					}
+			})
+		},
+		deleteConfirmButon() {
+			var that=this;
+			api.deleteMedicine(that.mediId).then(res=>{
+				console.log(res.data);
+				that.dialogFormVisible1 = false;
+				if(res.data.status == 200){
+					this.backToPrev()
+        }
+		})
+		},
+		backToPrev(){
+				this.$router.back(-1)
+			},
+
 	},
 
 	created(){
@@ -151,6 +220,7 @@ export default {
 		})
 	},
 
+
 	mounted() {
 		// var that = this
 		// console.log(this.mediId)
@@ -164,9 +234,8 @@ export default {
 <style scoped>
 /* phone size */
 @media screen and (max-width: 992px){   
-  overall_content{
+  .overall_content{
     width: 100%;
-    padding: 2em;
   }
 	h2 {
 		font-size: 1.5em;
@@ -233,16 +302,12 @@ export default {
 		padding: 0.1em;
 	}
 
-	.el-button {
+	.medi_button {
 		width: 18em;
 		font-size: 1em;
 		color: #626aef;
 	}
 
-	overall_content{
-    width: 100%;
-    padding: 2em;
-  }
 
   .el-id-4110-2 {
     min-height: 100px;
@@ -262,16 +327,21 @@ export default {
     margin-left: 14em;
   }
 
+	.el-input {
+		width: 5em;
+	}
+
+	/* .warning_text {
+		color: red;
+	} */
+
 }
 
 /* screen size */
 @media screen and (min-width: 992px){   
-  overall_content{
+  .overall_content{
     width: 100%;
   }
-	/* .overall_content {
-		width: 100%;
-	} */
 
 	.components {
 		width: 100%;
@@ -358,6 +428,7 @@ export default {
 	.submit_button {
 		margin-left: 0em;
 	}
+	
   .submitNote_button {
 		height: 2em;
 		width: 8em;
@@ -371,6 +442,15 @@ export default {
     /* margin-bottom: 1em; */
     /* margin-left: 1em; */
   }
+
+	.el-input {
+		width: 5em;
+	}
+	
+	/* .warning_text {
+		color: red;
+	} */
+
 }
 
 

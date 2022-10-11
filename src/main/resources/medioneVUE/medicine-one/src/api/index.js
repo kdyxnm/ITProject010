@@ -47,9 +47,23 @@ const api = {
   },
   addMediNote(id, mediNote){
     var noteinfo = {
-      'note' : mediNote
+      'note' : mediNote,
     }
     return axios.put(path.baseUrl + path.addNote + id, noteinfo)
+  },
+  takeMedicine(id, amount){
+    return axios.get(path.baseUrl + path.takeMedicine + id + '/' + amount)
+  },
+  deleteMedicine(id) {
+    return axios.delete(path.baseUrl + path.deleteMedicine + id)
+  },
+  addLocation(locInfo){
+    console.log(locInfo)
+    return axios.post(path.baseUrl + path.addLocation, locInfo)
+  },
+  deleteLocation(locInfo){
+    console.log(locInfo)
+    return axios.delete(path.baseUrl + path.delLocation + '/' + locInfo.locationid )
   }
 
 }

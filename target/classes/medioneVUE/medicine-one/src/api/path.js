@@ -14,6 +14,10 @@ const base = {
 
   getMedicine : '/medicine/',
 
+  getNote     : '/medicine/note/',
+
+  addNote     : '/medicine/note/',
+
 
   addLocation : '',
   delLocation : '',

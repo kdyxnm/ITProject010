@@ -54,7 +54,8 @@
 
 
             <div  v-if="displayMode == 'my_loca'" class="dynamic_content_container">
-              <h1> Add location component</h1>
+              <!-- <h1> Add location component</h1> -->
+              <MyLocation></MyLocation>
             </div>
 
 
@@ -81,6 +82,7 @@ import SearchBar from '../components/SearchBar.vue'
 import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
+import MyLocation from '../components/MyLocation.vue'
 
 export default {
   name: 'DashboardView',
@@ -110,6 +112,7 @@ export default {
     SearchBar,
     MedicineDetail,
     MedicineList,
+    MyLocation,
     MedicineDetail
 },
   methods: {
