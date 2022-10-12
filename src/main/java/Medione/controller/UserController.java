@@ -104,8 +104,17 @@ public class UserController {
 
     @PostMapping("reset")
     public R<User> resetPassword(HttpServletRequest request,EmailHelper helper){
+        String email = helper.getEmail();
+        String codeInSession = mailService.getCodeByAccount(email);
+        String password = helper.getPassword();
+        if (codeInSession.equals(helper.getCode())){
+            User user = helper.getUser();
+            user.setPassword(password);
+            service.saveOrUpdate(user);
+            return new R<>(200);
+        }
+        return new R<>(CreateAccountError.CODE_MISMATCH);
 
-        return new R<>(200);
     }
 
 
