@@ -30,7 +30,7 @@ public class WebConfig implements WebMvcConfigurer {
         public void addCorsMappings(CorsRegistry registry) {
             // allow path
             registry.addMapping("/**")
-                    .allowedOrigins("http://localhost:8080")
+                    .allowedOrigins("http://localhost:8080/")
 //                    .allowedOrigins("https://medione.herokuapp.com/")
                     .allowCredentials(true)
                     .allowedMethods("*")

@@ -118,7 +118,7 @@ public class UserController {
     }
 
 
-    @DeleteMapping("logout")
+    @DeleteMapping("log_out")
     public R<User> LogOut(HttpServletRequest request,@RequestParam String username){
         request.getSession().invalidate();
         String target = "custom";
