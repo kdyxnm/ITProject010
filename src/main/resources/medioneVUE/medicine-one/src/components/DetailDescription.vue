@@ -68,6 +68,7 @@ export default {
   background-color: #ffffff00;
 }
 
+
 .el-collapse {
   --el-collapse-content-bg-color: #ffffff00;
 }

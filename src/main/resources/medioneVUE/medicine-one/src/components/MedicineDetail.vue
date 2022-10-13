@@ -446,7 +446,7 @@ export default {
 	.el-input {
 		width: 5em;
 	}
-	
+
 	/* .warning_text {
 		color: red;
 	} */
