@@ -57,8 +57,13 @@ const api = {
   deleteMedicine(id) {
     return axios.delete(path.baseUrl + path.deleteMedicine + id)
   },
-  getLocations(){
-
+  addLocation(locInfo){
+    console.log(locInfo)
+    return axios.post(path.baseUrl + path.addLocation, locInfo)
+  },
+  deleteLocation(locInfo){
+    console.log(locInfo)
+    return axios.delete(path.baseUrl + path.delLocation + '/' + locInfo.locationid )
   }
 
 }

@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]3" date="1665497313567" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Medione/config/WebConfig.class" />
+    <option name="AFTER_PATH" value="target/classes/Medione/config/WebConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]3/WebConfig.class" />
+  </binary>
+</changelist>

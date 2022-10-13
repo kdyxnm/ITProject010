@@ -33,10 +33,10 @@ public class MailController {
 
 
         if(mailService.sendMail(user.getEmail())!=null ){
-            return new R(200);
+            return new R<>(200);
         }
 
-        return new R(404);
+        return new R<>(404);
     }
 
 

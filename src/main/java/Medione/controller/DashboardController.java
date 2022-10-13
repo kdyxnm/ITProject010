@@ -4,6 +4,7 @@ package Medione.controller;
 import Medione.pojo.DashboardMessage;
 import Medione.pojo.Location;
 import Medione.pojo.SimpleMessage;
+import Medione.pojo.User;
 import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
 import Medione.service.IUserService;
@@ -50,12 +51,12 @@ public class DashboardController {
 
 
     @GetMapping("validate")
-    public R refreshValidate(HttpServletRequest request){
+    public R<User> refreshValidate(HttpServletRequest request){
         String username = (String) request.getSession().getAttribute("username");
         if(username !=null){
-            return new R(200);
+            return new R<>(200);
         }
-        return new R(400);
+        return new R<>(400);
     }
 
 }

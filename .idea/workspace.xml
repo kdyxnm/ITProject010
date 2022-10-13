@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] medicine image update">
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] upload image">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/about.df99dc8f.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/js/chunk-vendors.5bf2914b.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/dist/service-worker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/UserImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="deployment_branch" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -34,10 +31,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/application.yml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/resetPassword.68950653.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/static/dist/js/register.9a5c6dce.js.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Team10.iml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.idea/workspace.xml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/.gitattributes" root0="FORCE_HIGHLIGHTING" />
@@ -81,7 +75,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/userImage" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17" />
@@ -90,6 +84,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static\userImage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static" />
     </key>
@@ -117,7 +114,7 @@
       <workItem from="1664103177377" duration="2784000" />
       <workItem from="1664250858454" duration="3292000" />
       <workItem from="1664284743193" duration="2128000" />
-      <workItem from="1664338942466" duration="588000" />
+      <workItem from="1665556259651" duration="3833000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -154,7 +151,161 @@
       <option name="project" value="LOCAL" />
       <updated>1664286636075</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[chore] dist files">
+      <created>1664287323052</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664287323053</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[feat] medicine image update">
+      <created>1664293460930</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664293460930</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[build] refactor dist folder">
+      <created>1664340393085</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664340393085</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[build] refactor dist folder">
+      <created>1664341703799</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664341703799</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[build] refactor dist folder">
+      <created>1664344173521</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664344173521</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[build] refactor dist folder">
+      <created>1664345959450</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664345959450</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[build] refactor dist folder">
+      <created>1664347094652</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664347094652</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[build] refactor dist folder">
+      <created>1664347795666</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664347795666</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[build] refactor dist folder">
+      <created>1664348332366</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664348332366</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[build] refactor dist folder">
+      <created>1664349359509</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1664349359509</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[build] refactor dist folder">
+      <created>1664349762534</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1664349762534</updated>
+    </task>
+    <task id="LOCAL-00017" summary="[build] refactor dist folder">
+      <created>1664351766035</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1664351766035</updated>
+    </task>
+    <task id="LOCAL-00018" summary="[build] refactor dist folder">
+      <created>1664351988152</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1664351988152</updated>
+    </task>
+    <task id="LOCAL-00019" summary="[build] refactor dist folder">
+      <created>1664352809350</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1664352809350</updated>
+    </task>
+    <task id="LOCAL-00020" summary="[build] refactor dist folder">
+      <created>1664353207549</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1664353207549</updated>
+    </task>
+    <task id="LOCAL-00021" summary="[build] refactor dist folder">
+      <created>1664353805187</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1664353805187</updated>
+    </task>
+    <task id="LOCAL-00022" summary="[build] refactor dist folder">
+      <created>1664355358442</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1664355358442</updated>
+    </task>
+    <task id="LOCAL-00023" summary="[build] refactor dist folder">
+      <created>1664356176129</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1664356176129</updated>
+    </task>
+    <task id="LOCAL-00024" summary="[fix] theme colour #6E78F7">
+      <created>1664356832555</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1664356832555</updated>
+    </task>
+    <task id="LOCAL-00025" summary="[fix] storage size">
+      <created>1665497458543</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1665497458543</updated>
+    </task>
+    <task id="LOCAL-00026" summary="[fix] storage size">
+      <created>1665497489074</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1665497489074</updated>
+    </task>
+    <task id="LOCAL-00027" summary="[feat] upload image">
+      <created>1665560085116</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1665560085116</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,11 +314,98 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="3647eeb0-1833-4aee-8dcd-6cd6fef3f068">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/su/Desktop/IT/Team10/ITProject010/src/main/resources/medioneVUE/medicine-one" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="576992de-faac-4cd4-92ba-935c9a48d69c">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="89ce73dc-4e33-4cff-8bb2-598d00fea99d">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/su/Desktop/IT/Team10/ITProject010/src/main/resources/static" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+        <entry key="a80fa334-bbd6-487f-9fcf-bc717d0a9619">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="3647eeb0-1833-4aee-8dcd-6cd6fef3f068" value="TOOL_WINDOW" />
+        <entry key="89ce73dc-4e33-4cff-8bb2-598d00fea99d" value="TOOL_WINDOW" />
+        <entry key="a80fa334-bbd6-487f-9fcf-bc717d0a9619" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -178,8 +416,13 @@
     <MESSAGE value="[feat] login by email" />
     <MESSAGE value="[fix] reset password with invalid '}'" />
     <MESSAGE value="[chore] dist files" />
+    <MESSAGE value="[feat] medicine image update" />
     <MESSAGE value="[build] refactor dist folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="[build] refactor dist folder" />
+    <MESSAGE value="[fix] theme colour #6E78F7" />
+    <MESSAGE value="[fix] image size of medicine" />
+    <MESSAGE value="[fix] storage size" />
+    <MESSAGE value="[feat] upload image" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat] upload image" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
