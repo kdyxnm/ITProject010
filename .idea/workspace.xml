@@ -4,20 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[feat] reset password">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/DetailDescription.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/DetailDescription.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" afterDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] logout underscore">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_13_15_37__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_13_15_37__Changes_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +19,8 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -323,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665561336953</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="[fix] logout underscore">
+      <created>1665648957889</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1665648957889</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +438,8 @@
     <MESSAGE value="[fix] storage size" />
     <MESSAGE value="[feat] upload image" />
     <MESSAGE value="[feat] reset password" />
-    <option name="LAST_COMMIT_MESSAGE" value="[feat] reset password" />
+    <MESSAGE value="[fix] logout underscore" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] logout underscore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
