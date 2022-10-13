@@ -4,13 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] logout underscore">
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[config] new icon and template">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.ecac9a3f.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.8b6388f9.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Error-404.a2e319fc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/capsules.f2550c46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/pills.f10b408a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.76028ca7.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.76028ca7.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.aeb2affd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.aeb2affd.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.e2dfa98a.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.e2dfa98a.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.75935f75.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.75935f75.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.24762fe0.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.24762fe0.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.5a0a8604.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.5a0a8604.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/DetailDescription.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/DetailDescription.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/Tester_32.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.db751c1b.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.67980eb1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icons/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icons/safari-pinned-tab.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/robots.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/workbox-79ffe3e0.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/workbox-79ffe3e0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +116,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/userImage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17" />
@@ -90,6 +126,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static" />
       <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static\userImage" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -121,6 +158,7 @@
       <workItem from="1664284743193" duration="2128000" />
       <workItem from="1665556259651" duration="5085000" />
       <workItem from="1665642129782" duration="1034000" />
+      <workItem from="1665663105130" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -332,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665649139159</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="[fix] cros origin">
+      <created>1665649643982</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1665649643982</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +507,10 @@
     <MESSAGE value="[feat] upload image" />
     <MESSAGE value="[feat] reset password" />
     <MESSAGE value="[fix] logout underscore" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] logout underscore" />
+    <MESSAGE value="[fix] cros" />
+    <MESSAGE value="[fix] cros origin" />
+    <MESSAGE value="[config] new icon and template" />
+    <option name="LAST_COMMIT_MESSAGE" value="[config] new icon and template" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
