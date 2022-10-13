@@ -63,6 +63,12 @@ export default {
 </script>
 
 <style>
-  
-  
+
+.el-collapse-item__header {
+  background-color: #ffffff00;
+}
+
+.el-collapse {
+  --el-collapse-content-bg-color: #ffffff00;
+}
 </style>
