@@ -64,6 +64,9 @@ const api = {
   deleteLocation(locInfo){
     console.log(locInfo)
     return axios.delete(path.baseUrl + path.delLocation + '/' + locInfo.locationid )
+  },
+  getFDAData(brandname){
+    return axios.get("https://api.fda.gov/drug/label.json?search=openfda.brand_name:\"" + brandname + "\"&limit=1", {withCredentials: false})
   }
 
 }

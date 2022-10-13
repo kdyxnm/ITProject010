@@ -50,6 +50,7 @@
 
             <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
               <h1> Add medicine component</h1>
+              <AddMedicine></AddMedicine>
             </div>
 
 
@@ -83,6 +84,7 @@ import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
 import MyLocation from '../components/MyLocation.vue'
+import AddMedicine from '@/components/AddMedicine.vue'
 
 export default {
   name: 'DashboardView',
@@ -113,7 +115,8 @@ export default {
     MedicineDetail,
     MedicineList,
     MyLocation,
-    MedicineDetail
+    MedicineDetail,
+    AddMedicine
 },
   methods: {
 
