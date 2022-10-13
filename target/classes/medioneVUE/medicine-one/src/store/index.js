@@ -41,6 +41,9 @@ export default createStore({
     getLocations(state){
       return state.user.locations
     },
+    getUserName(state){
+      return state.user.userName
+    },
 
     getAutoCompleteData(state){
       console.log("Processing auto complete data")

@@ -55,17 +55,17 @@
       console.log('new location is ' + this.newLocstring)
       var emial = store.getters.getEmail
       var locInfo = {
-        "locationid" : -1,
-        "email" : emial,
-        "address" : this.newLocstring
+        locationid : -1,
+        email : emial,
+        address : this.newLocstring
       }
       var that = this
-      // api.addLocation(locInfo).then(res => {
-      //   console.log(res.data)
-      //   // that.locations.push(locInfo)
-      //   that.clsoeNewLocBar()
-      //   // that.newLocstring = ''
-      // })
+      api.addLocation(locInfo).then(res => {
+        console.log(res.data)
+        // that.locations.push(locInfo)
+        that.clsoeNewLocBar()
+        // that.newLocstring = ''
+      })
       this.clsoeNewLocBar()
       this.locations.push(locInfo)
       this.newLocstring = ''
