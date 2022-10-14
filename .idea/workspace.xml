@@ -4,50 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[config] new icon and template">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.ecac9a3f.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.8b6388f9.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/Error-404.a2e319fc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/capsules.f2550c46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/pills.f10b408a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.76028ca7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/about.76028ca7.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.aeb2affd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/app.aeb2affd.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.e2dfa98a.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.e2dfa98a.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.75935f75.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.75935f75.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.24762fe0.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/register.24762fe0.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.5a0a8604.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.5a0a8604.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.db751c1b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.67980eb1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icons/apple-touch-icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/icons/safari-pinned-tab.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/img/icons/safari-pinned-tab.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/about.aab11d16.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/app.e49c052b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/chunk-vendors.5bf2914b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/dashboard.d5211fb8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/register.28e6f16f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/resetPassword.c2726369.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/workbox-79ffe3e0.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/workbox-79ffe3e0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" />
-    </list>
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] upload image function rolls back to no id required" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="deployment_branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -377,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665649643982</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="[fix] upload image function rolls back to no id required">
+      <created>1665751206546</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1665751206546</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -488,7 +452,6 @@
       <map>
         <entry key="3647eeb0-1833-4aee-8dcd-6cd6fef3f068" value="TOOL_WINDOW" />
         <entry key="89ce73dc-4e33-4cff-8bb2-598d00fea99d" value="TOOL_WINDOW" />
-        <entry key="a80fa334-bbd6-487f-9fcf-bc717d0a9619" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -510,7 +473,8 @@
     <MESSAGE value="[fix] cros" />
     <MESSAGE value="[fix] cros origin" />
     <MESSAGE value="[config] new icon and template" />
-    <option name="LAST_COMMIT_MESSAGE" value="[config] new icon and template" />
+    <MESSAGE value="[fix] upload image function rolls back to no id required" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] upload image function rolls back to no id required" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
