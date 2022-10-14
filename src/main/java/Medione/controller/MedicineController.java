@@ -141,27 +141,25 @@ public class MedicineController {
     }
 
     @PostMapping("/uploadImage")
-    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request,
-                              @RequestParam("id") Integer id) throws IOException {
+    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
         String path = "src/main/resources/static/userImage/";
         String type = image.getContentType();
         assert type != null;
-        Medicine medicine = service.getMedicine(id);
+
         if (!type.contains("image")) {
             return new RMedicine(404, null, "file type error");
         }
         String username = (String) request.getSession().getAttribute("username");
         type = type.replace("image/","");
-        String imagePath = username+"_"+medicine.getBrandname() + "." + type;
+        Integer id = service.list().size() + 1;
+        String imagePath = username+"_"+ id + "." + type;
 
         File output = new File(path+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
-
-        medicine.setImage("userImage/"+imagePath);
-        service.modifyMedicine(medicine);
-        return new RMedicine(200, medicine, "success!");
+        System.out.println("upload success");
+        return new RMedicine(200, "userImage/"+imagePath, "success!");
     }
 
 }
