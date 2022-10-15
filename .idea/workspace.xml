@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] upload image function rolls back to no id required">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] location api were blocked">
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +118,7 @@
       <workItem from="1665556259651" duration="5085000" />
       <workItem from="1665642129782" duration="1034000" />
       <workItem from="1665663105130" duration="618000" />
-      <workItem from="1665832143524" duration="658000" />
+      <workItem from="1665832143524" duration="698000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -352,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665751253030</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[fix] location api were blocked">
+      <created>1665832838592</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1665832838592</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +491,8 @@
     <MESSAGE value="[fix] cros origin" />
     <MESSAGE value="[config] new icon and template" />
     <MESSAGE value="[fix] upload image function rolls back to no id required" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] upload image function rolls back to no id required" />
+    <MESSAGE value="[fix] location api were blocked" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] location api were blocked" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * @ClassName LocationController
  * @Description API regarding location define here
  **/
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/location")
 public class LocationController {
