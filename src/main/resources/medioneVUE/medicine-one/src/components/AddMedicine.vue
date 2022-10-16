@@ -50,13 +50,11 @@
       <el-form-item label="Note">
         <el-input v-model="mediNote" type="textarea" class="note_text_area"/>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="addPhoto()">Add Photo</el-button>
-        <el-button>Cancel</el-button>
+      <el-form-item style="display=block" label="Photo">
+        <UploadImage @uploaded="handleImageUpload" @removed="handleImageRemoved(file)"></UploadImage>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit()">Add Medicine</el-button>
-        <el-button>Cancel</el-button>
       </el-form-item>
     </el-form>
     <div class="FDA_info">
@@ -70,8 +68,8 @@
 import store from '../store/index'
 import api from '../api/index'
 import DetailDescription from './DetailDescription.vue'
-import { nil } from 'ajv';
-import { thisTypeAnnotation } from '@babel/types';
+import { ref } from 'vue'
+import UploadImage from './UploadImage.vue'
 
 export default {
     name: "AddMedicine",
@@ -136,6 +134,14 @@ export default {
                 console.log("No input");
             }
         },
+        handleImageUpload(url){
+          console.log("Image URL is " + url)
+          this.form.image = url
+        },
+        handleImageRemoved(file){
+          console.log("Image deleted")
+          this.form.image = ""
+        }
     },
     created() {
         this.isPhone = !(window.innerWidth > 992);
@@ -145,7 +151,7 @@ export default {
         }
         this.form.username = store.getters.getUserName
     },
-    components: { DetailDescription }
+    components: { DetailDescription, UploadImage }
 }
 
 </script>
@@ -179,6 +185,10 @@ export default {
       border-radius: 1em;
       box-shadow: 2px 2px 2px #b8cbdd;
       height: 5em;
+    }
+
+    .FDA_info{
+      margin-top: 2em;
     }
   }
 

@@ -67,6 +67,22 @@ const api = {
   },
   getFDAData(brandname){
     return axios.get("https://api.fda.gov/drug/label.json?search=openfda.brand_name:\"" + brandname + "\"&limit=1", {withCredentials: false})
+  },
+  uploadImage(file, progress){
+    let formData = new FormData();
+    formData.append("file", file)
+    return axios({
+        url: path.baseUrl + path.addMedicine + path.uploadImage,
+        method: "post",
+        data: {image : file},
+        onUploadProgress(event) {
+            let v = Math.round(event.loaded / event.total * 100)
+            progress.value = v == 100 ? 80 : v
+        },
+        
+        headers : {'Content-Type' : 'multipart/form-data'}
+  
+    })
   }
 
 }

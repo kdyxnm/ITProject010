@@ -80,10 +80,10 @@
       console.log("Delete location " + this.locations[index].address)
       var locInfo = this.locations[index]
       var that = this
-      // api.deleteLocation(locInfo).then(res => {
-      //   console.log(res.data)
-      //   that.locations.splice(index, 1)
-      // })
+      api.deleteLocation(locInfo).then(res => {
+        console.log(res.data)
+        that.locations.splice(index, 1)
+      })
       this.locations.splice(index, 1)
     },
 
