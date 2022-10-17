@@ -62,13 +62,15 @@
       var that = this
       api.addLocation(locInfo).then(res => {
         console.log(res.data)
-        // that.locations.push(locInfo)
+        that.locations.push(locInfo)
         that.clsoeNewLocBar()
-        // that.newLocstring = ''
+        that.newLocstring = ''
+        that.triggerUpdate()
+        
       })
-      this.clsoeNewLocBar()
-      this.locations.push(locInfo)
-      this.newLocstring = ''
+      // this.clsoeNewLocBar()
+      // this.locations.push(locInfo)
+      // this.newLocstring = ''
     },
 
     clsoeNewLocBar(){
@@ -83,9 +85,16 @@
       api.deleteLocation(locInfo).then(res => {
         console.log(res.data)
         that.locations.splice(index, 1)
+        that.triggerUpdate()
       })
-      this.locations.splice(index, 1)
+      // this.locations.splice(index, 1)
     },
+    triggerUpdate(){
+      this.$emit("location-update")
+    },
+    removeLocation(){
+      this.locations.splice(index, 1)
+    }
 
     
     

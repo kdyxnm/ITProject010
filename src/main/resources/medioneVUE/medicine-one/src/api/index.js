@@ -83,6 +83,9 @@ const api = {
         headers : {'Content-Type' : 'multipart/form-data'}
   
     })
+  },
+  addMedicine(form){
+    return axios.post(path.baseUrl + path.addMedicine, form)
   }
 
 }

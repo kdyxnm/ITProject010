@@ -31,9 +31,7 @@ const base = {
   addMedicine : '/medicine',
   uploadImage : '/uploadImage',
   delMedicine : '',
-  modMedicine : '',
   
-  serch : ''
 }
 
 export default base;

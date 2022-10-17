@@ -17,7 +17,7 @@
           ></SideBar>
         </el-aside>
         
-        <el-main class="main" v-if="dataReady">
+        <el-main class="main" v-if="dataReady" :key="this.user">
           <div class="content_container">
 
             <div class="serach_bar_container">
@@ -28,7 +28,7 @@
               <h1>Loading ......</h1>
             </div> -->
 
-            <div v-show="displayMode == 'default'" class="dynamic_content_container">
+            <div v-if="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
             </div>
 
@@ -50,13 +50,13 @@
 
             <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
               <h1> Add medicine component</h1>
-              <AddMedicine></AddMedicine>
+              <AddMedicine @medicine-updated="updateUserData"></AddMedicine>
             </div>
 
 
             <div  v-if="displayMode == 'my_loca'" class="dynamic_content_container">
               <!-- <h1> Add location component</h1> -->
-              <MyLocation></MyLocation>
+              <MyLocation @location-update="updateUserData"></MyLocation>
             </div>
 
 
@@ -161,6 +161,7 @@ export default {
 
 
     loadUserData(data){
+      console.log("loading data ...")
       this.user.nickName = data.nickname;
       console.log(this.user.nickName);
       this.user.userEmail = data.email;
@@ -172,6 +173,22 @@ export default {
       this.user.numMedicine = data.simplemsg.length
       console.log(this.user.numMedicine);
       this.$store.commit("updateUser", data);
+      console.log("finished")
+    },
+
+    getUserData(){
+      var that = this;
+      console.log("getting data ...")
+      api.getUserData().then(res =>{
+        console.log(res.data);
+        that.loadUserData(res.data.data);
+        that.dataReady = true;
+      })
+    },
+
+    updateUserData(){
+      console.log("updating user data")
+      this.getUserData()
     }
   },
   created(){
@@ -182,11 +199,8 @@ export default {
       this.$router.push({path : '/'})
     }
     console.log("Load user data form backend")
-    api.getUserData().then(res =>{
-      console.log(res.data);
-      that.loadUserData(res.data.data);
-      that.dataReady = true;
-    })
+    this.getUserData()
+    console.log("load finished")
   },
   mounted() {
     // this.display_flag = (window.innerWidth > 992);

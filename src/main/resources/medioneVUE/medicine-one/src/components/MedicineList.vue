@@ -1,6 +1,6 @@
 <template>
   <div class="list_containder">
-    <h1> {{ this.title }}</h1>
+    <!-- <h1> {{ this.title }}</h1> -->
     <div class="list_item_container">
     <!-- <img src="../assets/logo.png" alt=""> -->
       <div class="list_header_line" v-if="!isPhone">
@@ -345,8 +345,8 @@ export default {
   }
 
   .medi_photo{
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 100%;
   }
   
   .list_header_line{
@@ -364,6 +364,7 @@ export default {
 
   .medi_row{
     width: 100%;
+    height: 8em;
     display: flex;
     align-items: center;
     margin-top: 1em;
@@ -382,7 +383,7 @@ export default {
   
   .medi_info{
     width: 20%;
-    height: 100%;
+    /*height: 100%;*/
     text-align: center;
   }
 

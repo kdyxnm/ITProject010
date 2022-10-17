@@ -28,7 +28,7 @@
                 ></path>
             </svg>
         </div>
-        <el-button type="primary" @click="addImage()" style="margin-top : 4em; margin-left : 1em">Add Photo</el-button>
+        <!-- <el-button type="primary" @click="addImage()" style="margin-top : 4em; margin-left : 1em">Add Photo</el-button> -->
 
         <div class="card thumbnail-card" v-show="isThumbnailVisible">
             <img src="" alt="thumbnail" id="thumbnail" />
@@ -90,6 +90,8 @@
                 :width="110"
                 id="progress"
             />
+
+            <el-button type="primary" @click="addImage()" style="margin-top : 4em; margin-left : 1em">Add Photo</el-button>
         </div>
 
         <vue-easy-lightbox
@@ -179,14 +181,17 @@ export default {
                     console.log("upload success the url is " + requiredUrl)
                     // document.getElementById("thumbnail").src = requiredUrl;
                     context.emit("uploaded", baseUrl + '/' + res.data.data);
-
                     setTimeout(() => {
                         isProgressVisible.value = false;
                         isSuccessLabelVisible.value = true;
                     }, 200);
+                    ElMessage({
+                        message: 'Image uploaded',
+                        type: 'success',
+                    })
                 },
                 () => {
-                    console.log(res)
+                    // console.log(res)
                     isProgressVisible.value = false;
                     localImageUrl.value = "";
                     context.emit("uploaded", "");
