@@ -18,10 +18,6 @@
 							<td class="db_text">{{ this.mediInfo.genericname}}</td>
 						</tr>
 						<tr>
-							<td class="static_text">Manufacturer Name:</td>
-							<td class="db_text"> {{ this.mediInfo.manufacturername}}</td>
-						</tr>
-						<tr>
 							<td class="static_text">Product Type:</td>
 							<td class="db_text">{{this.mediInfo.producttype}}</td>
 						</tr>
@@ -31,7 +27,7 @@
 						</tr>
 						<tr>
 							<td class="static_text">Quantity:</td>
-							<td class="db_text">{{ this.mediInfo.quantity}}</td>
+							<td class="db_text">{{ this.mediInfo.quantity}} {{this.mediInfo.quantitytype}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Validity:</td>
@@ -205,7 +201,6 @@ export default {
 			},
 
 	},
-
 	created(){
 		var that = this
 		console.log(this.mediId)
