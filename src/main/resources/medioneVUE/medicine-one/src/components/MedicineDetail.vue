@@ -32,6 +32,9 @@
 						<tr>
 							<td class="static_text">Validity:</td>
 							<td class="db_text">{{ this.mediInfo.validity}}</td>
+						</tr>						<tr>
+							<td class="static_text">Location:</td>
+							<td class="db_text">{{ this.mediInfo.location}}</td>
 						</tr>
 					</table>
 				</div>

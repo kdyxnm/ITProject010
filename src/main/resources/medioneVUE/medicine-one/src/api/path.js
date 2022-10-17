@@ -14,7 +14,7 @@ const base = {
 
   search        : '/medicine/search/',
 
-  getMedicine   : '/medicine/',
+  getMedicine   : '/medicine/detail/',
 
   getNote       : '/medicine/note/',
 
