@@ -31,4 +31,6 @@ public interface IMedicineService extends IService<Medicine> {
     Boolean modifyNote(Integer id, String note);
 
     Boolean takeMedicine(Integer id, Integer amount);
+
+    void changeLocation(Integer locationid);
 }

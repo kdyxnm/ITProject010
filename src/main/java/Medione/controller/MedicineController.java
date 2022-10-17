@@ -1,10 +1,13 @@
 package Medione.controller;
 
+import Medione.pojo.DetailMessage;
 import Medione.pojo.Medicine;
 import Medione.pojo.Note;
+import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
 import Medione.utils.BaseContext;
 import Medione.utils.R;
+import Medione.utils.RDashboard;
 import Medione.utils.RMedicine;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +33,8 @@ public class MedicineController {
 
     @Autowired
     private IMedicineService service;
+    @Autowired
+    private ILocationService locationService;
 
     /**create a new medicine
      * @param medicine a medicine object
@@ -160,6 +165,43 @@ public class MedicineController {
         outputStream.close();
         System.out.println("upload success");
         return new RMedicine(200, "userImage/"+imagePath, "success!");
+    }
+
+    @GetMapping("/detail/{id}")
+    public RDashboard getDetail(@PathVariable Integer id){
+        Medicine medicine = service.getById(id);
+        String brandname = medicine.getBrandname();
+        String image = medicine.getImage();
+        Integer quantity = medicine.getQuantity();
+        String validity  = medicine.getValidity();
+        Integer dosage = medicine.getDosage();
+        String dosagetype = medicine.getDosagetype();
+        String quantitytype = medicine.getQuantitytype();
+        String manufacturername = medicine.getManufacturername();
+        String genericname = medicine.getGenericname();
+        String producttype = medicine.getProducttype();
+        String route = medicine.getRoute();
+        String description = medicine.getDescription();
+        String usage = medicine.getUsage();
+        String warnings = medicine.getWarnings();
+        String contraindications = medicine.getContraindications();
+        String adversereaction = medicine.getAdversereaction();
+        String overdosage = medicine.getOverdosage();
+        String username = medicine.getUsername();
+        Integer locationid = medicine.getLocationid();
+        String note = medicine.getNote();
+        String location = locationService.getLocation(locationid).getAddress();
+        DetailMessage detailMessage = new DetailMessage(id,brandname,image,quantity,validity,dosage,
+                dosagetype,quantitytype,manufacturername,genericname,producttype,route,description,
+                usage,warnings,contraindications,adversereaction,overdosage,username,locationid,note,
+                location);
+        if(detailMessage != null){
+            return new RDashboard(200, detailMessage, "success!");
+        }
+        else {
+            return new RDashboard(404, null, "error.");
+        }
+
     }
 
 }
