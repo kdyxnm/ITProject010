@@ -26,6 +26,14 @@ const api = {
     };
     return axios.post(path.baseUrl + path.register, registerinfo)
   },
+  resetPassward(email, code, pwd){
+    var passwordinfo = {
+      'email': email,
+      'code': code,
+      'password': pwd,
+    };
+    return axios.post(path.baseUrl + path.resetPassword, passwordinfo)
+  },
   getUserData(){
     return axios.get(path.baseUrl + path.dashboard)
   },

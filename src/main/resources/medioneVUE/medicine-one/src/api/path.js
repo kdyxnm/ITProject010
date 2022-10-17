@@ -7,6 +7,7 @@ const base = {
   login         : '/user/login',
   email         : '/mail/send',
   register      : '/user/register',
+  resetPassword : '/user/reset',
   dashboard     : '/dashboard',
 
   pagination    : '/medicine/page',

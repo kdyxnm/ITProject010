@@ -42,13 +42,8 @@ registerview.vue
 					<label class="center_bar_title">Email:</label>
 				</tr>
 				<tr>
-					<input type="text" v-model.trim ="email" class="input_area">
+					<p><input type="text" v-model.trim ="email" class="input_area"></p>
 				</tr>
-				
-				<!-- <tr>
-					<p><input type="button" class="purple_button phone_only" value= "Verify Email" @click="verifyButton"></p>
-				</tr> -->
-
 				<tr class="center_bar_label">
 					<label class="center_bar_title">Verification Code:</label>
 				</tr>
@@ -58,9 +53,6 @@ registerview.vue
 				<tr>
 					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
 				</tr>
-				<!-- <tr>
-					<el-icon id='tick'><Select /></el-icon>
-				</tr> -->
 				<tr>
 					<p><input type="submit" value="Confirm" class="purple_button" @click= "confirmButton"></p>
 				</tr>
@@ -93,7 +85,6 @@ import api from '../api/index';
 				nickName : "",
         pwd : "",
 				pwdRepeat : "",
-				headerTitle : "Register",
 				headerStyle : "Return",
       }
     },
@@ -160,7 +151,29 @@ import api from '../api/index';
 </script>
 
 <style scoped src="../assets/library/css/background_and_center_bar.css"></style>
-
 <style scoped src="../assets/library/css/desktop_base_format.css"></style>
-
 <style scoped src="../assets/library/css/phone_base_format.css"></style>
+<style scoped>
+@media screen and (min-width: 992px) {
+	.center_bar {
+		width: 30%;
+	}
+	.input_area {
+		height: 1.5em;
+		margin-bottom: -1em;
+	}
+	.center_bar_title {
+		font-size: 1em;
+	}
+	.desk_top_only {
+		font-size: 2em;
+		margin-bottom: -0.7em;
+	}
+	.return_button {
+		top: -1em;
+	}
+
+}
+
+
+</style>
