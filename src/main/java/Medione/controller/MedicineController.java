@@ -9,6 +9,7 @@ import Medione.utils.BaseContext;
 import Medione.utils.R;
 import Medione.utils.RDashboard;
 import Medione.utils.RMedicine;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -42,7 +43,9 @@ public class MedicineController {
      */
     @PostMapping
     public RMedicine create(@RequestBody Medicine medicine){
-        return new RMedicine(200,service.saveMedicine(medicine));
+        service.saveMedicine(medicine);
+
+        return new RMedicine(200, medicine.getId());
     }
     @GetMapping
     public RMedicine getAll (){
