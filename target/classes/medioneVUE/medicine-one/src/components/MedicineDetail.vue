@@ -4,7 +4,7 @@
 			<div class = "brief_description_content">
 				<div class = "name_picture" v-if="isDataReady">
 					<h3>{{ this.mediInfo.brandname }} </h3>
-          <img class="medi_photo" :src="imageBasePath + mediInfo.image">
+          <img class="medi_photo" :src="mediInfo.image">
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
@@ -18,10 +18,6 @@
 							<td class="db_text">{{ this.mediInfo.genericname}}</td>
 						</tr>
 						<tr>
-							<td class="static_text">Manufacturer Name:</td>
-							<td class="db_text"> {{ this.mediInfo.manufacturername}}</td>
-						</tr>
-						<tr>
 							<td class="static_text">Product Type:</td>
 							<td class="db_text">{{this.mediInfo.producttype}}</td>
 						</tr>
@@ -31,11 +27,14 @@
 						</tr>
 						<tr>
 							<td class="static_text">Quantity:</td>
-							<td class="db_text">{{ this.mediInfo.quantity}}</td>
+							<td class="db_text">{{ this.mediInfo.quantity}} {{this.mediInfo.quantitytype}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Validity:</td>
 							<td class="db_text">{{ this.mediInfo.validity}}</td>
+						</tr>						<tr>
+							<td class="static_text">Location:</td>
+							<td class="db_text">{{ this.mediInfo.location}}</td>
 						</tr>
 					</table>
 				</div>
@@ -128,6 +127,7 @@
 <script>
 import DetailDescription from "./DetailDescription.vue";
 import api from "../api/index";
+import { nextTick } from '@vue/runtime-core';
 
 
 
@@ -196,16 +196,22 @@ export default {
 				console.log(res.data);
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200){
-					this.backToPrev()
+					this.triggerUpdate()
         }
 		})
 		},
+		triggerUpdate(){
+			console.log("Update medidata")
+			this.$emit("medicine-updated")
+			this.backToPrev()
+		},
 		backToPrev(){
-				this.$router.back(-1)
-			},
-
+			var mode = {
+				view : 'default',
+			}
+			this.$emit("switch-event", mode)
+		}
 	},
-
 	created(){
 		var that = this
 		console.log(this.mediId)

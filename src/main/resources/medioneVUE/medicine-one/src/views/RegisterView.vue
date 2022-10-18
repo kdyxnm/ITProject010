@@ -110,7 +110,7 @@ import api from '../api/index';
 			},
 			isEmpty(){
 				var that=this;
-				if(that.email.length < 1||that.code.length < 1||that.userName < 1||that.nickName < 1||that.pwd < 1||that.pwdRepeat < 1){
+				if(that.email.length < 1||that.code.length < 1||that.userName.length < 1||that.nickName.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
 					that.iswarning = true
 					that.warningText = "You must complete all information!"
 					console.log(that.warningText)

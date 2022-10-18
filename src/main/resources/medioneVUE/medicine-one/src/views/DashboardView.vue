@@ -17,11 +17,11 @@
           ></SideBar>
         </el-aside>
         
-        <el-main class="main" v-if="dataReady" :key="this.user">
+        <el-main class="main" :key="this.user">
           <div class="content_container">
 
             <div class="serach_bar_container">
-              <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
+              <SearchBar :key="this.user.numMedicine" @switch-event="handleSwitch"></SearchBar>
             </div>
 
             <!-- <div v-show="displayMode == 'loading'" class="dynamic_content_container">
@@ -43,14 +43,19 @@
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
-              <MedicineDetail :mediId="this.mediInfoId" :key="this.mediInfoId"></MedicineDetail>
+              <MedicineDetail 
+                :mediId="this.mediInfoId" 
+                :key="this.mediInfoId" 
+                @switch-event="handleSwitch"
+                @medicine-updated="updateUserData"
+                ></MedicineDetail>
               <!-- <h1> Medicine Information {{ this.mediInfoId }}</h1> -->
             </div>
 
 
             <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
               <h1> Add medicine component</h1>
-              <AddMedicine @medicine-updated="updateUserData"></AddMedicine>
+              <AddMedicine @medicine-updated="updateUserData" @switch-event="handleSwitch"></AddMedicine>
             </div>
 
 
@@ -85,6 +90,7 @@ import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
 import MyLocation from '../components/MyLocation.vue'
 import AddMedicine from '@/components/AddMedicine.vue'
+import router from '@/router'
 
 export default {
   name: 'DashboardView',
@@ -139,7 +145,11 @@ export default {
       console.log("switch to " + mode.view)
       if (mode.view == 'log_off'){
         console.log("user log off");
-        alert("User log off")
+        ElMessage({
+                      message: "user log off",
+                      type: 'warning',
+                  })
+        this.$router.back(-1)
       }
       else {
         if(mode.view == 'medi_info'){

@@ -41,6 +41,9 @@ export default createStore({
     getLocations(state){
       return state.user.locations
     },
+    getUserName(state){
+      return state.user.userName
+    },
 
     getAutoCompleteData(state){
       console.log("Processing auto complete data")
@@ -49,7 +52,7 @@ export default createStore({
         var name = state.user.userMatadata[i].brandname;
 
         var locationid = state.user.userMatadata[i].locationid;
-        var address = '';
+        var address = 'NO Location';
 
         for (var j = 0; j < state.user.locations.length; j++){
           var locName = state.user.locations[j].address;

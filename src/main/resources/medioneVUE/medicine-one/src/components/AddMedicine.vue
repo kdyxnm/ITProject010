@@ -2,7 +2,7 @@
   <div class="add_medi">
     <el-form :model="form" :label-width="this.formWidth" class="add_medi_form">
       <el-form-item label="Name">
-        <el-input v-model.trim="form.brandname" @blur="getFDAInfo(form.brandname)"/>
+        <el-input v-model="form.brandname" @blur="getFDAInfo(form.brandname)"/>
       </el-form-item>
       <el-form-item label="Location">
         <el-select v-model="form.locationid" placeholder="select storage locations">
@@ -21,32 +21,30 @@
       <el-form-item label="Quantitiy">
         <el-input v-model="form.quantity" class="quant_dosage_item" />
         <el-select v-model="form.quantitytype" placeholder="select unit">
-          <el-option label="Pills" value="Pills" />
-          <el-option label="Capsules" value="Capsules" />
-          <el-option label="Drops" value="Drops" />
-          <el-option label="Patches" value="Patches" />
-          <el-option label="Bags" value="Bags" />
-          <el-option label="Bottles" value="Bottles" />
-          <el-option label="Tubes" value="Tubes" />
-          <el-option label="g" value="g" />
-          <el-option label="ml" value="ml" />
+          <el-option label="Unit" value="Unit " />
+          <el-option label="Boxes" value="Boxes " />
+          <el-option label="Bags" value="Bags " />
+          <el-option label="Bottles" value="Bottles " />
+          <el-option label="Tubes" value="Tubes " />
+          <el-option label="Packages" value="Packages " />
 
         </el-select>
       </el-form-item>
       <el-form-item label="Dosage" class="doage_item">
         <el-input v-model="form.dosage" class="quant_dosage_item" />
         <el-select v-model="form.dosagetype" placeholder="select unit">
-          <el-option label="Pills" value="Pills" />
-          <el-option label="Capsules" value="Capsules" />
-          <el-option label="Drops" value="Drops" />
-          <el-option label="Patches" value="Patches" />
-          <el-option label="Bags" value="Bags" />
-          <el-option label="Bottles" value="Bottles" />
-          <el-option label="Tubes" value="Tubes" />
-          <el-option label="g" value="g" />
-          <el-option label="ml" value="ml" />
+          <el-option label="Pills" value="Pills " />
+          <el-option label="Capsules" value="Capsules " />
+          <el-option label="Drops" value="Drops " />
+          <el-option label="Patches" value="Patches " />
+          <el-option label="Bags" value="Bags " />
+          <el-option label="Bottles" value="Bottles " />
+          <el-option label="Tubes" value="Tubes " />
+          <el-option label="g" value="g " />
+          <el-option label="ml" value="ml " />
         </el-select>
         <el-select v-model="dosageFreq" placeholder="select frequency">
+          <el-option label="1 times per day" value="1 times per day" />
           <el-option label="2 times per day" value="2 times per day" />
           <el-option label="3 times per day" value="3 times per day" />
           <el-option label="4 times per day" value="4 times per day" />
@@ -141,6 +139,10 @@ export default {
         api.addMedicine(this.form).then(res => {
           console.log(res)
           if(res.data.status === 200){
+            if(that.mediNote !== ""){
+              that.addNote(res.data.data)
+            }
+
             ElMessage({
                       message: 'SUCCESS',
                       type: 'success',
@@ -150,9 +152,24 @@ export default {
         })
       },
 
+      addNote(id){
+        console.log("id : " + id)
+        console.log(this.mediNote)
+        api.addMediNote(id, this.mediNote)
+      },
+
       triggerUpdate(){
         this.$emit("medicine-updated")
+        this.backtoDashboard()
       },
+
+      backtoDashboard(){
+        console.log("back to dashboard triggered")
+        var mode = {
+          view : 'default',
+        }
+        this.$emit("switch-event", mode)
+		  },
 
       isFormValid(form){
         var results = {

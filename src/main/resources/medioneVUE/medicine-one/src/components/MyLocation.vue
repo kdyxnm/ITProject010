@@ -15,7 +15,7 @@
         <input type="text" class="input_bar" v-model="this.newLocstring">
       </div>
        <div class="confirm_button" @click="confirmAdd()">
-        Confirm Button
+        Confirm
       </div>
       <div class="confirm_button" @click="clsoeNewLocBar()">
         Cancle
