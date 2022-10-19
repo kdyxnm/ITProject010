@@ -86,6 +86,7 @@ import api from '../api/index';
         pwd : "",
 				pwdRepeat : "",
 				headerStyle : "Return",
+				headerTitle : "Register",
       }
     },
     components: {
