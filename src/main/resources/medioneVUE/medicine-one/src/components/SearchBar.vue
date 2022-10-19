@@ -132,6 +132,8 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
       else{
         console.log("user data corrucped")
       }
+
+      state.value = ""
     }
 
 
@@ -148,6 +150,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
         }
         __context.emit("switch-event", mode)
       })
+      state.value = ""
     }
 
 
