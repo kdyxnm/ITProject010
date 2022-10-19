@@ -11,7 +11,7 @@
       </el-form-item>
       <el-form-item label="Used by">
           <el-date-picker
-            v-model="form.expire"
+            v-model="form.validity"
             type="date"
             placeholder="DD/MM/YYYY"
             format="DD/MM/YYYY"
@@ -21,42 +21,52 @@
       <el-form-item label="Quantitiy">
         <el-input v-model="form.quantity" class="quant_dosage_item" />
         <el-select v-model="form.quantitytype" placeholder="select unit">
-          <el-option label="Pills" value="Pills" />
-          <el-option label="Capsules" value="Capsules" />
-          <el-option label="Drops" value="Drops" />
-          <el-option label="Patches" value="Patches" />
-          <el-option label="Bags" value="Bags" />
-          <el-option label="Bottles" value="Bottles" />
-          <el-option label="Tubes" value="Tubes" />
-          <el-option label="g" value="g" />
-          <el-option label="ml" value="ml" />
+          <el-option label="Unit" value="Unit " />
+          <el-option label="Boxes" value="Boxes " />
+          <el-option label="Bags" value="Bags " />
+          <el-option label="Bottles" value="Bottles " />
+          <el-option label="Tubes" value="Tubes " />
+          <el-option label="Packages" value="Packages " />
 
         </el-select>
       </el-form-item>
-      <el-form-item label="Dosage">
+      <el-form-item label="Dosage" class="doage_item">
         <el-input v-model="form.dosage" class="quant_dosage_item" />
         <el-select v-model="form.dosagetype" placeholder="select unit">
-          <el-option label="Pills" value="Pills" />
-          <el-option label="Capsules" value="Capsules" />
-          <el-option label="Drops" value="Drops" />
-          <el-option label="Patches" value="Patches" />
-          <el-option label="Bags" value="Bags" />
-          <el-option label="Bottles" value="Bottles" />
-          <el-option label="Tubes" value="Tubes" />
-          <el-option label="g" value="g" />
-          <el-option label="ml" value="ml" />
+          <el-option label="Pills" value="Pills " />
+          <el-option label="Capsules" value="Capsules " />
+          <el-option label="Drops" value="Drops " />
+          <el-option label="Patches" value="Patches " />
+          <el-option label="Bags" value="Bags " />
+          <el-option label="Bottles" value="Bottles " />
+          <el-option label="Tubes" value="Tubes " />
+          <el-option label="g" value="g " />
+          <el-option label="ml" value="ml " />
+        </el-select>
+        <el-select v-model="dosageFreq" placeholder="select frequency">
+          <el-option label="1 times per day" value="1 times per day" />
+          <el-option label="2 times per day" value="2 times per day" />
+          <el-option label="3 times per day" value="3 times per day" />
+          <el-option label="4 times per day" value="4 times per day" />
+          <el-option label="When needed" value="When needed" />
+          <el-option label="Emergency" value="Emergency" />
+          <el-option label="Every 12 hour" value="Every 12 hour" />
+          <el-option label="Every 2 hour" value="Every 2 hour" />
+          <el-option label="Every 4 hour" value="Every 4 hour" />
+          <el-option label="Every 6 hour" value="Every 6 hour" />
+          <el-option label="Every 8 hour" value="Every 8 hour" />
+          <el-option label="Every 10 hour" value="Every 10 hour" />
+          <el-option label="Every 12 hour" value="Every 12 hour" />
         </el-select>
       </el-form-item>
       <el-form-item label="Note">
         <el-input v-model="mediNote" type="textarea" class="note_text_area"/>
       </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="addPhoto()">Add Photo</el-button>
-        <el-button>Cancel</el-button>
+      <el-form-item style="display=block" label="Photo">
+        <UploadImage @uploaded="handleImageUpload" @removed="handleImageRemoved(file)"></UploadImage>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="onSubmit()">Add Medicine</el-button>
-        <el-button>Cancel</el-button>
       </el-form-item>
     </el-form>
     <div class="FDA_info">
@@ -70,82 +80,290 @@
 import store from '../store/index'
 import api from '../api/index'
 import DetailDescription from './DetailDescription.vue'
-import { nil } from 'ajv';
-import { thisTypeAnnotation } from '@babel/types';
+import { ref } from 'vue'
+import UploadImage from './UploadImage.vue'
 
 export default {
-    name: "AddMedicine",
-    data() {
-        return {
-            isPhone: false,
-            formWidth: "13%",
-            locations: [],
-            form: {
-                id: -1,
-                brandname: "",
-                image: "",
-                quantity: "",
-                validity: "",
-                dosage: "",
-                dosagetype: "",
-                quantitytype: "",
-                manufacturername: "",
-                genericname: "",
-                producttype: "",
-                route: "",
-                description: "",
-                usage: "",
-                warnings: "",
-                contraindications: "",
-                adversereaction: "",
-                overdosage: "",
-                username: "",
-                locationid: ""
-            },
-            mediNote: "",
-            FDAResult: null,
-        };
-    },
-    props: {},
-    methods: {
-        onSubmit() {
-            console.log(this.form);
-        },
-        getFDAInfo(brandname) {
-            console.log("User entered " + brandname);
-            var name = brandname.toUpperCase();
-            var that = this
-            if (name !== "") {
-                api.getFDAData(name).then(res => {
-                    console.log(res.data);
-                    that.FDAResult = res.data.results[0]
-                    that.form.manufacturername = that.FDAResult.openfda.manufacturer_name[0]
-                    that.form.genericname = that.FDAResult.openfda.generic_name[0]
-                    that.form.producttype = that.FDAResult.openfda.product_type[0]
-                    that.form.route = that.FDAResult.openfda.route[0]
-                    that.form.description = that.FDAResult.description[0]
-                    that.form.usage = that.FDAResult.indications_and_usage[0]
-                    that.form.warnings = that.FDAResult.warnings_and_cautions[0]
-                    that.form.contraindications = that.FDAResult.contraindications[0]
-                    that.form.adversereaction = that.FDAResult.adverse_reactions[0]
-                    that.form.overdosage = that.FDAResult.overdosage[0]
-
-                });
-            }
-            else {
-                console.log("No input");
-            }
-        },
-    },
-    created() {
-        this.isPhone = !(window.innerWidth > 992);
-        this.locations = store.getters.getLocations;
-        if (this.isPhone) {
-            this.formWidth = "22%";
+  name: "AddMedicine",
+  data() {
+      return {
+          isPhone: false,
+          formWidth: "13%",
+          locations: [],
+          form: {
+              id: -1,
+              brandname: "",
+              image: "",
+              quantity: "",
+              validity: "",
+              dosage: "",
+              dosagetype: "",
+              quantitytype: "",
+              manufacturername: "",
+              genericname: "",
+              producttype: "",
+              route: "",
+              description: "",
+              usage: "",
+              warnings: "",
+              contraindications: "",
+              adversereaction: "",
+              overdosage: "",
+              username: "",
+              locationid: ""
+          },
+          mediNote: "",
+          FDAResult: null,
+          dosageFreq : "",
+      };
+  },
+  props: {},
+  methods: {
+      onSubmit() {
+        var validFlag = this.isFormValid(this.form)
+        if(validFlag.type === "error"){
+          ElMessage.error(validFlag.msg)
+          return null
+        } else if(validFlag.type === "warning"){
+          ElMessage({
+                      message: validFlag.msg,
+                      type: 'warning',
+          })
         }
-        this.form.username = store.getters.getUserName
-    },
-    components: { DetailDescription }
+
+        this.form.dosagetype = this.form.dosagetype + this.dosageFreq
+        this.form.validity = this.form.validity.toLocaleDateString('en-GB')
+        console.log("Medicine Information")
+        console.log(this.form);
+        var that = this
+        api.addMedicine(this.form).then(res => {
+          console.log(res)
+          if(res.data.status === 200){
+            if(that.mediNote !== ""){
+              that.addNote(res.data.data)
+            }
+
+            ElMessage({
+                      message: 'SUCCESS',
+                      type: 'success',
+            })
+            that.triggerUpdate()
+          }
+        })
+      },
+
+      addNote(id){
+        console.log("id : " + id)
+        console.log(this.mediNote)
+        api.addMediNote(id, this.mediNote)
+      },
+
+      triggerUpdate(){
+        this.$emit("medicine-updated")
+        this.backtoDashboard()
+      },
+
+      backtoDashboard(){
+        console.log("back to dashboard triggered")
+        var mode = {
+          view : 'default',
+        }
+        this.$emit("switch-event", mode)
+		  },
+
+      isFormValid(form){
+        var results = {
+          state : true,
+          msg : "Valid form",
+          type : "success"
+        }
+        if(form.brandname.length <= 0){
+          results.state = false,
+          results.msg = "Brand name missing"
+          results.type = "error"
+          return results
+        }
+        if(form.validity === ""){
+          results.state = false,
+          results.msg = "Expiration date missing"
+          results.type = "error"
+          return results
+        }
+        if(form.quantity === ""){
+          results.state = false,
+          results.msg = "Quantity missing"
+          results.type = "error"
+          return results
+        }
+        if(form.quantitytype === ""){
+          results.state = false,
+          results.msg = "Quantity Unit missing"
+          results.type = "error"
+          return results
+        }
+        if(form.dosage === ""){
+          results.state = false,
+          results.msg = "Dosage missing"
+          results.type = "error"
+          return results
+        }
+        if(form.dosagetype === ""){
+          results.state = false,
+          results.msg = "Dosage Unit missing"
+          results.type = "error"
+          return results
+        }
+        if(this.dosageFreq === ""){
+          results.state = false,
+          results.msg = "Dosage frequency missing"
+          results.type = "error"
+          return results
+        }          
+        if(form.locations === ""){
+          results.state = false,
+          results.msg = "Location missing"
+          results.type = "warning"
+          return results
+        }
+        if(form.image === ""){
+          results.state = false,
+          results.msg = "Image missing"
+          results.type = "warning"
+          return results
+        }
+        return results
+      },
+
+      getFDAInfo(brandname) {
+          console.log("User entered " + brandname);
+          var name = brandname.toUpperCase();
+          var that = this
+          if (name !== "") {
+              api.getFDAData(name).then((res) => {
+                  console.log(res.data);
+
+
+                  try{
+                    that.FDAResult = res.data.results[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  // that.FDAResult = res.data.results[0]
+
+
+                  try{
+                    that.form.manufacturername = that.FDAResult.openfda.manufacturer_name[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.manufacturername = that.FDAResult.openfda.manufacturer_name[0]
+
+
+                  try{
+                    that.form.genericname = that.FDAResult.openfda.generic_name[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.genericname = that.FDAResult.openfda.generic_name[0]
+
+
+                  try{
+                    that.form.producttype = that.FDAResult.openfda.product_type[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.producttype = that.FDAResult.openfda.product_type[0]
+
+
+                  try{
+                    that.form.route = that.FDAResult.openfda.route[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.route = that.FDAResult.openfda.route[0]
+
+
+                  try{
+                    that.form.description = that.FDAResult.description[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.description = that.FDAResult.description[0]
+
+
+                  try{
+                    that.form.usage = that.FDAResult.indications_and_usage[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.usage = that.FDAResult.indications_and_usage[0]
+
+
+                  try{
+                    that.form.warnings = that.FDAResult.warnings_and_cautions[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.warnings = that.FDAResult.warnings_and_cautions[0]
+
+
+                  try{
+                    that.form.contraindications = that.FDAResult.contraindications[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.contraindications = that.FDAResult.contraindications[0]
+
+
+                  try{
+                    that.form.adversereaction = that.FDAResult.adverse_reactions[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.adversereaction = that.FDAResult.adverse_reactions[0]
+
+
+                  try{
+                    that.form.overdosage = that.FDAResult.overdosage[0]
+                  } catch (e){
+                    console.error(e)
+                  }
+                  //that.form.overdosage = that.FDAResult.overdosage[0]
+                  ElMessage({
+                            message: "FDA data is ready",
+                            type: 'success',
+                          })
+              },
+              ()=>{
+                console.log("Medicine Name Not Found")
+                ElMessage({
+                            message: "No FDA data found",
+                            type: 'warning',
+                          })
+              });
+          }
+          else {
+              console.log("No input");
+          }
+      },
+      handleImageUpload(url){
+        console.log("Image URL is " + url)
+        this.form.image = url
+      },
+      handleImageRemoved(file){
+        console.log("Image deleted")
+        this.form.image = ""
+      }
+  },
+  created() {
+      this.isPhone = !(window.innerWidth > 992);
+      this.locations = store.getters.getLocations;
+      if (this.isPhone) {
+          this.formWidth = "22%";
+      }
+      this.form.username = store.getters.getUserName
+  },
+  components: { DetailDescription, UploadImage }
 }
 
 </script>
@@ -179,6 +397,14 @@ export default {
       border-radius: 1em;
       box-shadow: 2px 2px 2px #b8cbdd;
       height: 5em;
+    }
+
+    .FDA_info{
+      margin-top: 2em;
+    }
+    
+    .doage_item :deep(.el-form-item__content){
+      display: block;
     }
   }
 

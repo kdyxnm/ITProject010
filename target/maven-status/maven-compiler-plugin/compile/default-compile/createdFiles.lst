@@ -13,6 +13,7 @@ Medione\handler\LoginInterceptor.class
 Medione\pojo\Note.class
 Medione\utils\RLocation.class
 Medione\config\MpConfig.class
+Medione\pojo\DetailMessage.class
 Medione\dao\LocationDao.class
 Medione\utils\R.class
 Medione\dao\UserDao.class

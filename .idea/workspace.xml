@@ -4,8 +4,88 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] login by email">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[config] v4 deployment">
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/favicon-32x32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/mstile-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/public/img/icons/safari-pinned-tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/utils/request.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/dashboard.8b6388f9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/register.c3fbd6a1.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/resetPassword.cd93e916.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/favicon-16x16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/mstile-150x150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/safari-pinned-tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.76028ca7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.76028ca7.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.aeb2affd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/app.aeb2affd.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.e2dfa98a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/chunk-vendors.e2dfa98a.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dashboard.75935f75.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/dashboard.75935f75.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.24762fe0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/register.24762fe0.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/resetPassword.5a0a8604.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/resetPassword.5a0a8604.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/service-worker.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_43.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_44.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_45.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_46.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_47.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/userImage/DemoAccountClark_48.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -382,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666158079586</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="[config] v4 deployment">
+      <created>1666179326065</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1666179326065</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +604,8 @@
     <MESSAGE value="[fix] upload image function rolls back to no id required" />
     <MESSAGE value="[fix] location api were blocked" />
     <MESSAGE value="[fix] login by email" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] login by email" />
+    <MESSAGE value="[config] v4 deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="[config] v4 deployment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
