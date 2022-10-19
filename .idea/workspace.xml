@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] location api were blocked">
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] login by email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/UserImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/UserImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +20,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -128,7 +121,7 @@
       <workItem from="1665993359451" duration="162000" />
       <workItem from="1665998696955" duration="4056000" />
       <workItem from="1666069178363" duration="831000" />
-      <workItem from="1666157043234" duration="890000" />
+      <workItem from="1666157043234" duration="3059000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -382,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665832916520</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="[fix] login by email">
+      <created>1666158079586</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1666158079586</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,7 +516,8 @@
     <MESSAGE value="[config] new icon and template" />
     <MESSAGE value="[fix] upload image function rolls back to no id required" />
     <MESSAGE value="[fix] location api were blocked" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] location api were blocked" />
+    <MESSAGE value="[fix] login by email" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] login by email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
