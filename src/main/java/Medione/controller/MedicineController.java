@@ -12,6 +12,7 @@ import Medione.utils.RMedicine;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.system.ApplicationHome;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -150,10 +151,15 @@ public class MedicineController {
 
     @PostMapping("/uploadImage")
     public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
-        String path = "target/classes/static/userImage/";   //server
+        //String path = "target/classes/static/userImage/";   //server
         //String path = ""; //local
         String type = image.getContentType();
         assert type != null;
+
+        ApplicationHome h = new ApplicationHome(getClass());
+        File jarF = h.getSource();
+        String dirPath = jarF.getParentFile().toString()+"/userImage/";
+        System.out.println(dirPath);
 
         if (!type.contains("image")) {
             return new RMedicine(404, null, "file type error");
@@ -163,7 +169,7 @@ public class MedicineController {
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
 
-        File output = new File(path+imagePath);
+        File output = new File(dirPath+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
