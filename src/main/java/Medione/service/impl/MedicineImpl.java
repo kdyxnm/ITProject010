@@ -24,6 +24,7 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
     private MedicineDao medicineDao;
     @Override
     public Boolean saveMedicine(Medicine medicine) {
+
         return medicineDao.insert(medicine) > 0;
     }
 
@@ -123,6 +124,19 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
             return false;
         }
 
+    }
+
+    @Override
+    public void changeLocation(Integer locationid) {
+        List<Medicine> list;
+        QueryWrapper<Medicine> queryWrapper = new QueryWrapper<Medicine>();
+        queryWrapper.eq("locationid", locationid);
+        list = medicineDao.selectList(queryWrapper);
+
+        for(Medicine medicine: list){
+            medicine.setLocationid(-2);
+            medicineDao.updateById(medicine);
+        }
     }
 
 

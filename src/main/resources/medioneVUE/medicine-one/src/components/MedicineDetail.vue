@@ -4,7 +4,7 @@
 			<div class = "brief_description_content">
 				<div class = "name_picture" v-if="isDataReady">
 					<h3>{{ this.mediInfo.brandname }} </h3>
-          <img class="medi_photo" :src="imageBasePath + mediInfo.image">
+          <img class="medi_photo" :src="mediInfo.image">
 				</div>
 				<div class = "medicineinfo" v-if="isDataReady">
 					<table class ="medicineinfo_table">
@@ -18,10 +18,6 @@
 							<td class="db_text">{{ this.mediInfo.genericname}}</td>
 						</tr>
 						<tr>
-							<td class="static_text">Manufacturer Name:</td>
-							<td class="db_text"> {{ this.mediInfo.manufacturername}}</td>
-						</tr>
-						<tr>
 							<td class="static_text">Product Type:</td>
 							<td class="db_text">{{this.mediInfo.producttype}}</td>
 						</tr>
@@ -31,11 +27,14 @@
 						</tr>
 						<tr>
 							<td class="static_text">Quantity:</td>
-							<td class="db_text">{{ this.mediInfo.quantity}}</td>
+							<td class="db_text">{{ this.mediInfo.quantity}} {{this.mediInfo.quantitytype}}</td>
 						</tr>
 						<tr>
 							<td class="static_text">Validity:</td>
 							<td class="db_text">{{ this.mediInfo.validity}}</td>
+						</tr>						<tr>
+							<td class="static_text">Location:</td>
+							<td class="db_text">{{ this.mediInfo.location}}</td>
 						</tr>
 					</table>
 				</div>
@@ -43,7 +42,7 @@
 				<div class ="button_area" v-if="isDataReady">
 					<el-row class="button_setting">
 						<el-button class="medi_button" type="info" plain :round="true" size="small" @click="openDialog1">
-						<el-icon><Bell /></el-icon> &nbsp;Take Medicine
+						<el-icon><Bell /></el-icon> &nbsp;Finish Medicine
 						</el-button>
   				</el-row>
 					<el-row class="button_setting">
@@ -81,19 +80,16 @@
 				<DetailDescription :detailInfo="this.mediInfo"></DetailDescription>
 			</div>
 		</div>
-		
+		<!-- take medicine dialog -->
 		<div class="dialog_area">
-			<!-- take medicine dialog -->
-			<el-dialog v-model="dialogFormVisible1" title="Take Medicine" align-center center width="100">
-				<el-form :model="tableForm1">
-					<el-form-item label="Amount:&nbsp;" :label-width="formLabelWidth">
-						<el-input 
-						v-model="tableForm1.amount" 
-						onkeyup="value=value.replace(/[^\d]/g,'')" 
-						autocomplete="off" 
-						/> &nbsp; &nbsp; pills
-					</el-form-item>
-				</el-form>
+			<el-dialog
+				v-model="dialogFormVisible1"
+				title="Warning"
+				width="80%"
+				align-center
+				center
+			>
+				<span class="warning_text">Are you sure you have finished this medicine?</span>
 				<template #footer>
 					<span class="dialog-footer">
 						<el-button @click="dialogFormVisible1 = false">Cancel</el-button>
@@ -104,11 +100,14 @@
 				</template>
 			</el-dialog>
 			<!-- delete medicine dialog-->
-			<el-dialog v-model="dialogFormVisible2" title="Delete Medicine" center align-center width="80">
-					<el-form-item label="Warning: This will delete all data about this drug! Please  consider carefully!" :label-width="290" >
-					</el-form-item>
-					<!-- <lable v-show="desktopOnly" class="warning_text"> Warning: This will delete all data about this drug! Please consider carefully!
-					</lable> -->
+			<el-dialog
+				v-model="dialogFormVisible2"
+				title="Warning"
+				width="80%"
+				align-center
+				center
+			>
+				<span class="warning_text">This will delete all data about this kind of drug! Please  consider carefully!</span>
 				<template #footer>
 					<span class="dialog-footer">
 						<el-button @click="dialogFormVisible2 = false">Cancel</el-button>
@@ -128,6 +127,7 @@
 <script>
 import DetailDescription from "./DetailDescription.vue";
 import api from "../api/index";
+import { nextTick } from '@vue/runtime-core';
 
 
 
@@ -140,9 +140,7 @@ export default {
 			userNote : "",
       dialogFormVisible1: false,
 			dialogFormVisible2: false,
-			tableForm1 :{
-				amount : "",
-			},
+			amount: "1",
 		}
 	},
 	props : {
@@ -178,7 +176,7 @@ export default {
 		},
 		takeConfirmButon() {
 			var that=this;
-			api.takeMedicine(that.mediId, that.tableForm1.amount).then(res=>{
+			api.takeMedicine(that.mediId, that.amount).then(res=>{
 				console.log(res.data);
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200) {
@@ -196,16 +194,22 @@ export default {
 				console.log(res.data);
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200){
-					this.backToPrev()
+					this.triggerUpdate()
         }
 		})
 		},
+		triggerUpdate(){
+			console.log("Update medidata")
+			this.$emit("medicine-updated")
+			this.backToPrev()
+		},
 		backToPrev(){
-				this.$router.back(-1)
-			},
-
+			var mode = {
+				view : 'default',
+			}
+			this.$emit("switch-event", mode)
+		}
 	},
-
 	created(){
 		var that = this
 		console.log(this.mediId)
@@ -331,9 +335,9 @@ export default {
 		width: 5em;
 	}
 
-	/* .warning_text {
-		color: red;
-	} */
+	.warning_text {
+		word-break: normal;
+	}
 
 }
 
@@ -446,10 +450,9 @@ export default {
 	.el-input {
 		width: 5em;
 	}
-
-	/* .warning_text {
-		color: red;
-	} */
+	.warning_text {
+		word-break: normal;
+	}
 
 }
 

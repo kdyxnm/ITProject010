@@ -43,5 +43,4 @@ public class Medicine {
     private String note;
 
 
-
 }

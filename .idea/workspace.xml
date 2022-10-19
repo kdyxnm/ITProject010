@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[config] new icon and template" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] login by email">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +15,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="deployment_branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -116,6 +117,11 @@
       <workItem from="1665556259651" duration="5085000" />
       <workItem from="1665642129782" duration="1034000" />
       <workItem from="1665663105130" duration="618000" />
+      <workItem from="1665832143524" duration="2191000" />
+      <workItem from="1665993359451" duration="162000" />
+      <workItem from="1665998696955" duration="4056000" />
+      <workItem from="1666069178363" duration="831000" />
+      <workItem from="1666157043234" duration="3059000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -334,21 +340,49 @@
       <option name="project" value="LOCAL" />
       <updated>1665649643982</updated>
     </task>
-    <task id="LOCAL-00032" summary="[config] new icon and template">
-      <created>1665664512732</created>
+    <task id="LOCAL-00032" summary="[fix] upload image function rolls back to no id required">
+      <created>1665751206546</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1665664512732</updated>
+      <updated>1665751206546</updated>
     </task>
-    <task id="LOCAL-00033" summary="[config] new icon and template">
-      <created>1665664687938</created>
+    <task id="LOCAL-00033" summary="[fix] upload image function rolls back to no id required">
+      <created>1665751253030</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1665664687938</updated>
+      <updated>1665751253030</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="[fix] location api were blocked">
+      <created>1665832838592</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1665832838592</updated>
+    </task>
+    <task id="LOCAL-00035" summary="[fix] location api were blocked">
+      <created>1665832855639</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1665832855639</updated>
+    </task>
+    <task id="LOCAL-00036" summary="[fix] location api were blocked">
+      <created>1665832916520</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1665832916520</updated>
+    </task>
+    <task id="LOCAL-00037" summary="[fix] login by email">
+      <created>1666158079586</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1666158079586</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +493,6 @@
       <map>
         <entry key="3647eeb0-1833-4aee-8dcd-6cd6fef3f068" value="TOOL_WINDOW" />
         <entry key="89ce73dc-4e33-4cff-8bb2-598d00fea99d" value="TOOL_WINDOW" />
-        <entry key="a80fa334-bbd6-487f-9fcf-bc717d0a9619" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -481,7 +514,10 @@
     <MESSAGE value="[fix] cros" />
     <MESSAGE value="[fix] cros origin" />
     <MESSAGE value="[config] new icon and template" />
-    <option name="LAST_COMMIT_MESSAGE" value="[config] new icon and template" />
+    <MESSAGE value="[fix] upload image function rolls back to no id required" />
+    <MESSAGE value="[fix] location api were blocked" />
+    <MESSAGE value="[fix] login by email" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] login by email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

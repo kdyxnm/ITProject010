@@ -1,11 +1,15 @@
 package Medione.controller;
 
+import Medione.pojo.DetailMessage;
 import Medione.pojo.Medicine;
 import Medione.pojo.Note;
+import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
 import Medione.utils.BaseContext;
 import Medione.utils.R;
+import Medione.utils.RDashboard;
 import Medione.utils.RMedicine;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +34,8 @@ public class MedicineController {
 
     @Autowired
     private IMedicineService service;
+    @Autowired
+    private ILocationService locationService;
 
     /**create a new medicine
      * @param medicine a medicine object
@@ -37,7 +43,9 @@ public class MedicineController {
      */
     @PostMapping
     public RMedicine create(@RequestBody Medicine medicine){
-        return new RMedicine(200,service.saveMedicine(medicine));
+        service.saveMedicine(medicine);
+
+        return new RMedicine(200, medicine.getId());
     }
     @GetMapping
     public RMedicine getAll (){
@@ -141,27 +149,62 @@ public class MedicineController {
     }
 
     @PostMapping("/uploadImage")
-    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request,
-                              @RequestParam("id") Integer id) throws IOException {
+    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
         String path = "src/main/resources/static/userImage/";
         String type = image.getContentType();
         assert type != null;
-        Medicine medicine = service.getMedicine(id);
+
         if (!type.contains("image")) {
             return new RMedicine(404, null, "file type error");
         }
         String username = (String) request.getSession().getAttribute("username");
         type = type.replace("image/","");
-        String imagePath = username+"_"+medicine.getBrandname() + "." + type;
+        Integer id = service.list().size() + 1;
+        String imagePath = username+"_"+ id + "." + type;
 
         File output = new File(path+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
+        System.out.println("upload success");
+        return new RMedicine(200, "userImage/"+imagePath, "success!");
+    }
 
-        medicine.setImage("userImage/"+imagePath);
-        service.modifyMedicine(medicine);
-        return new RMedicine(200, medicine, "success!");
+    @GetMapping("/detail/{id}")
+    public RDashboard getDetail(@PathVariable Integer id){
+        Medicine medicine = service.getById(id);
+        String brandname = medicine.getBrandname();
+        String image = medicine.getImage();
+        Integer quantity = medicine.getQuantity();
+        String validity  = medicine.getValidity();
+        Integer dosage = medicine.getDosage();
+        String dosagetype = medicine.getDosagetype();
+        String quantitytype = medicine.getQuantitytype();
+        String manufacturername = medicine.getManufacturername();
+        String genericname = medicine.getGenericname();
+        String producttype = medicine.getProducttype();
+        String route = medicine.getRoute();
+        String description = medicine.getDescription();
+        String usage = medicine.getUsage();
+        String warnings = medicine.getWarnings();
+        String contraindications = medicine.getContraindications();
+        String adversereaction = medicine.getAdversereaction();
+        String overdosage = medicine.getOverdosage();
+        String username = medicine.getUsername();
+        Integer locationid = medicine.getLocationid();
+        String note = medicine.getNote();
+        String location = locationService.getLocation(locationid).getAddress();
+        DetailMessage detailMessage = new DetailMessage(id,brandname,image,quantity,validity,dosage,
+                dosagetype,quantitytype,manufacturername,genericname,producttype,route,description,
+                usage,warnings,contraindications,adversereaction,overdosage,username,locationid,note,
+                location);
+        if(detailMessage != null){
+            return new RDashboard(200, detailMessage, "success!");
+        }
+        else {
+            return new RDashboard(404, null, "error.");
+        }
+
     }
 
 }

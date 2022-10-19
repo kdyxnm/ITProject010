@@ -1,6 +1,6 @@
 <template>
   <div class="list_containder">
-    <h1> {{ this.title }}</h1>
+    <!-- <h1> {{ this.title }}</h1> -->
     <div class="list_item_container">
     <!-- <img src="../assets/logo.png" alt=""> -->
       <div class="list_header_line" v-if="!isPhone">
@@ -21,7 +21,7 @@
           </div>
           <div class="medi_info">
             <div>
-              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
+              <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
           <div class="medi_info">
@@ -49,7 +49,7 @@
           <div class="medi_info_left">
             {{medi_data.brandname}}
             <div>
-              <img class="medi_photo" :src="'https://medione.herokuapp.com/userImage/panadol.jpg'">
+              <img class="medi_photo" :src="medi_data.image">
             </div>
           </div>
 
@@ -119,58 +119,59 @@ export default {
         totalPages : Math.ceil(this.total/this.pagesize),
         title : "My Medicines",
         imageBasePath : "https://medione.herokuapp.com/",
-        listData : [
-          {
-            id: 1,
-            brandname: "Norvasc" + 1,
-            image: require("../assets/logo.png"),
-            quantity: 2,
-            validity: "03/08/2022",
-            dosage: 3,
-            dosagetype: "pills",
-            quantitytype: "bottles",
-          },
-          {
-            id: 2,
-            brandname: "Norvasc" + 2,
-            image: require("../assets/logo.png"),
-            quantity: 3,
-            validity: "03/08/2022",
-            dosage: 4,
-            dosagetype: "pills",
-            quantitytype: "bottles",
-          },
-          {
-            id: 3,
-            brandname: "Norvasc" + 3,
-            image: require("../assets/logo.png"),
-            quantity: 3,
-            validity: "03/08/2022",
-            dosage: 4,
-            dosagetype: "drops",
-            quantitytype: "boxes",
-          },
-          {
-            id: 4,
-            brandname: "Norvasc" + 4,
-            image: require("../assets/logo.png"),
-            quantity: 3,
-            validity: "03/08/2022",
-            dosage: 4,
-            dosagetype: "capsules",
-            quantitytype: "packs",
-          },
-          {
-            id: 5,
-            brandname: "Norvasc" + 5,
-            image: require("../assets/logo.png"),
-            quantity: 3,
-            validity: "03/08/2022",
-            dosage: 4,
-            dosagetype: "capsules",
-            quantitytype: "packs",
-          }
-        ]
+        listData : [],
+        // [
+        //   {
+        //     id: 1,
+        //     brandname: "Norvasc" + 1,
+        //     image: require("../assets/logo.png"),
+        //     quantity: 2,
+        //     validity: "03/08/2022",
+        //     dosage: 3,
+        //     dosagetype: "pills",
+        //     quantitytype: "bottles",
+        //   },
+        //   {
+        //     id: 2,
+        //     brandname: "Norvasc" + 2,
+        //     image: require("../assets/logo.png"),
+        //     quantity: 3,
+        //     validity: "03/08/2022",
+        //     dosage: 4,
+        //     dosagetype: "pills",
+        //     quantitytype: "bottles",
+        //   },
+        //   {
+        //     id: 3,
+        //     brandname: "Norvasc" + 3,
+        //     image: require("../assets/logo.png"),
+        //     quantity: 3,
+        //     validity: "03/08/2022",
+        //     dosage: 4,
+        //     dosagetype: "drops",
+        //     quantitytype: "boxes",
+        //   },
+        //   {
+        //     id: 4,
+        //     brandname: "Norvasc" + 4,
+        //     image: require("../assets/logo.png"),
+        //     quantity: 3,
+        //     validity: "03/08/2022",
+        //     dosage: 4,
+        //     dosagetype: "capsules",
+        //     quantitytype: "packs",
+        //   },
+        //   {
+        //     id: 5,
+        //     brandname: "Norvasc" + 5,
+        //     image: require("../assets/logo.png"),
+        //     quantity: 3,
+        //     validity: "03/08/2022",
+        //     dosage: 4,
+        //     dosagetype: "capsules",
+        //     quantitytype: "packs",
+        //   }
+        // ]
         }
     },
     props:{
@@ -345,8 +346,8 @@ export default {
   }
 
   .medi_photo{
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 100%;
   }
   
   .list_header_line{
@@ -364,6 +365,7 @@ export default {
 
   .medi_row{
     width: 100%;
+    height: 8em;
     display: flex;
     align-items: center;
     margin-top: 1em;
@@ -382,7 +384,7 @@ export default {
   
   .medi_info{
     width: 20%;
-    height: 100%;
+    /*height: 100%;*/
     text-align: center;
   }
 
