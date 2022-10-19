@@ -150,7 +150,7 @@ public class MedicineController {
 
     @PostMapping("/uploadImage")
     public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
-        String path = "src/main/resources/static/userImage/";
+        String path = "target/classes/static/userImage/";
         String type = image.getContentType();
         assert type != null;
 
