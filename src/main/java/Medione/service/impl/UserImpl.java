@@ -26,7 +26,7 @@ public class UserImpl extends ServiceImpl<UserDao, User> implements IUserService
     @Override
     public User getByEmail(String email) {
         QueryWrapper<User>  userWrapper = new QueryWrapper<>();
-        userWrapper.eq("username",email);
+        userWrapper.eq("email",email);
         return userDao.selectOne(userWrapper);
     }
 

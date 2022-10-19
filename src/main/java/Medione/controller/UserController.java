@@ -79,6 +79,7 @@ public class UserController {
         System.out.println("===================================");
 
         User target;
+        System.out.println("is email? "+ user.getUsername().contains("@"));
         if(!user.getUsername().contains("@")){
             target = service.getByName(user.getUsername());
         }
@@ -95,8 +96,8 @@ public class UserController {
         }
 //        HttpSession session = request.getSession();
 //        session.setAttribute("user",user);
-        request.getSession().setAttribute("username",user.getUsername());
-        BaseContext.setCurrentUser(user);    //set session in thread
+        request.getSession().setAttribute("username",target.getUsername());
+        BaseContext.setCurrentUser(target);    //set session in thread
 
         return new R<>(service.blockPassword(target));
     }
