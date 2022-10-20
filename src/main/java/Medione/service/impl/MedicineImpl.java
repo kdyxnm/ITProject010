@@ -67,13 +67,29 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
         return list;
     }
 
+//    @Override
+//    public List<Medicine> getList(String brandname, String username) {
+//        List<Medicine> list;
+//        List<Integer> ans  = new ArrayList<Integer>();
+//        QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
+//        queryWrapper.eq("username", username);
+//        queryWrapper.like("brandname", "%" + brandname + "%");
+//        list  = medicineDao.selectList(queryWrapper);
+//
+//        if(list.size() <= 5) {
+//            return list;
+//        }else{
+//            return list.subList(0,5);
+//        }
+//    }
+
     @Override
     public List<Medicine> getList(String brandname, String username) {
         List<Medicine> list;
         List<Integer> ans  = new ArrayList<Integer>();
         QueryWrapper<Medicine> queryWrapper  = new QueryWrapper<Medicine>();
         queryWrapper.eq("username", username);
-        queryWrapper.like("brandname", brandname);
+        queryWrapper.like("brandname", "%" + brandname + "%");
         list  = medicineDao.selectList(queryWrapper);
 
         if(list.size() <= 5) {
