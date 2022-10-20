@@ -156,10 +156,21 @@ public class MedicineController {
         String type = image.getContentType();
         assert type != null;
 
+        //find path
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
+
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
         System.out.println(dirPath);
+        File directory = new File(dirPath+"/userImage/");
+        boolean res = directory.mkdir();
+
+        if(res) {
+            System.out.println("The directory has been created.");
+        }
+        else {
+            System.out.println("The directory already exists.");
+        }
 
         if (!type.contains("image")) {
             return new RMedicine(404, null, "file type error");

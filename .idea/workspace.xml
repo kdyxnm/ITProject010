@@ -7,7 +7,6 @@
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] image uploading">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +123,7 @@
       <workItem from="1665998696955" duration="4056000" />
       <workItem from="1666069178363" duration="831000" />
       <workItem from="1666157043234" duration="3059000" />
+      <workItem from="1666240609623" duration="550000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] password in the login response">
       <created>1664001680217</created>
@@ -426,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666184817508</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="[fix] image uploading">
+      <created>1666185800215</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1666185800216</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
