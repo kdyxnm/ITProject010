@@ -179,7 +179,7 @@ public class MedicineController {
         type = type.replace("image/","");
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
-
+        System.out.println("size: " + image.getSize());
         File output = new File(dirPath+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
