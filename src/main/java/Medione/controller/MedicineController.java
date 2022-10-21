@@ -169,7 +169,7 @@ public class MedicineController {
         File jarF = h.getSource();
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
-        File userImage = new File("/app/target/classes/static/userImage");
+        File userImage = new File("/app/target/classes/static/userImage/");
         System.out.println("================================================");
         System.out.println("targetPath: "+userImage);
         System.out.println("targetPath can write? " + userImage.canWrite());
@@ -208,6 +208,7 @@ public class MedicineController {
         System.out.println("size: " + image.getSize());
 
         //put in
+        System.out.println("image path: "+ userImage+imagePath);
         File output = new File(userImage+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
