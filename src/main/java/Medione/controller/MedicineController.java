@@ -221,7 +221,7 @@ public class MedicineController {
             System.out.println(f);
         }
 
-        return new RMedicine(200, "userImage/"+imagePath, "success!");
+        return new RMedicine(200, "userImage"+imagePath, "success!");
     }
 
     @GetMapping("/detail/{id}")
