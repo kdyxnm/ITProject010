@@ -169,6 +169,11 @@ public class MedicineController {
         File jarF = h.getSource();
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
+        System.out.println("================================================");
+        System.out.println("jarF: "+jarF);
+        System.out.println("jarF can write? " + jarF.canWrite());
+        System.out.println("jarF all file: " + jarF.listFiles());
+        System.out.println("================================================");
 
         File directory = new File(dirPath);
         System.out.println("================================================");
