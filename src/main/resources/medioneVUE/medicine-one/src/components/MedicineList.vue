@@ -68,10 +68,10 @@
                   Validity: 
                 </td>
                 <td style="text-align=right" v-if="this.isValid(medi_data.validity)">
-                  {{medi_data.validity}}  DD/MM/YYYY
+                  {{medi_data.validity}}
                 </td>
                 <td style="text-align=right" class="invalid_medicine" v-if="!this.isValid(medi_data.validity)">
-                  {{medi_data.validity}}  DD/MM/YYYY
+                  {{medi_data.validity}}
                 </td>
               </tr>
               <tr>
@@ -303,7 +303,7 @@ export default {
   }
   
   .medi_info_left{
-    width: 50%;
+    width: 35%;
     height: 100%;
     text-align: left;
     font-size: 1em;
@@ -312,7 +312,7 @@ export default {
     font-weight: 600;
   }
   .medi_info_right{
-    width: 50%;
+    width: 65%;
     height: 100%;
     text-align: center;
     font-size: 0.8em;

@@ -77,6 +77,21 @@ const api = {
     return axios.get("https://api.fda.gov/drug/label.json?search=openfda.brand_name:\"" + brandname + "\"&limit=1", {withCredentials: false})
   },
   uploadImage(file, progress){
+    // const config = {
+    //   onUploadProgress(event) {
+    //     let v = Math.round(event.loaded / event.total * 100)
+    //     progress.value = v == 100 ? 80 : v
+    //   },
+    
+    //   headers : {
+    //     'Content-Type' : 'multipart/form-data',
+    //     Authorization  : 'dqOfd2mnoSAKmByqw73K1hVlya5JhpcT' 
+    //   }
+    // }
+    // const forms = new FormData()
+    // forms.append('smfile', file)
+    // return axios.post('/proxy/api/v2/upload', forms, config)
+
     let formData = new FormData();
     formData.append("file", file)
     return axios({
@@ -91,6 +106,9 @@ const api = {
         headers : {'Content-Type' : 'multipart/form-data'}
   
     })
+
+
+
   },
   addMedicine(form){
     return axios.post(path.baseUrl + path.addMedicine, form)
