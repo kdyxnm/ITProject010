@@ -169,9 +169,9 @@ public class MedicineController {
         File jarF = h.getSource();
 
         //String dirPath = jarF.getParentFile().toString()+"/userImage/";
-        File userImage = new File("/app/target/classes/static/userImage/");
+//        File userImage = new File("/app/target/classes/static/userImage/");
         File targetDir = new File("/app/target/");
-//        File userImage = new File("/app/target/userImage/");
+        File userImage = new File("/app/target/userImage/");
 
         boolean res = userImage.mkdir();
         System.out.println("================================================");
@@ -233,6 +233,7 @@ public class MedicineController {
         System.out.println("absolute :"+newFile.getAbsolutePath());
         System.out.println("length: "+ newFile.length());
         System.out.println("hidden? " + newFile.isHidden());
+        newFile.getAbsolutePath();
         System.out.println("================================================");
         return new RMedicine(200, "userImage"+imagePath, "success!");
     }
