@@ -169,49 +169,47 @@ public class MedicineController {
         File jarF = h.getSource();
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
-        File targetPath  = jarF.getParentFile();
         File userImage = new File("/app/target/classes/static/userImage");
         System.out.println("================================================");
         System.out.println("targetPath: "+userImage);
         System.out.println("targetPath can write? " + userImage.canWrite());
         System.out.println("targetPath all file: " + userImage.listFiles());
         System.out.println("================================================");
-        System.out.println("================================================");
-        System.out.println("targetPath: "+targetPath);
-        System.out.println("targetPath can write? " + targetPath.canWrite());
-        System.out.println("targetPath all file: " + targetPath.listFiles());
-        System.out.println("================================================");
-
-        File directory = new File(dirPath);
-        boolean res = directory.mkdir();
-        System.out.println("================================================");
-        System.out.println("directory: "+directory);
-        System.out.println("userImage can write? " + directory.canWrite());
-        System.out.println("userImage all file: " + directory.listFiles());
-        System.out.println("================================================");
 
 
-        if(res) {
-            System.out.println("The directory has been created.");
-        }
-        else {
-            System.out.println("The directory already exists.");
-        }
+//        File directory = new File(dirPath);
+//        boolean res = directory.mkdir();
+//        System.out.println("================================================");
+//        System.out.println("directory: "+directory);
+//        System.out.println("userImage can write? " + directory.canWrite());
+//        System.out.println("userImage all file: " + directory.listFiles());
+//        System.out.println("================================================");
+//
+//
+//        if(res) {
+//            System.out.println("The directory has been created.");
+//        }
+//        else {
+//            System.out.println("The directory already exists.");
+//        }
 
         if (!type.contains("image")) {
             return new RMedicine(404, null, "file type error");
         }
+        //naming
         String username = (String) request.getSession().getAttribute("username");
         type = type.replace("image/","");
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
         System.out.println("size: " + image.getSize());
-        File output = new File(targetPath+imagePath);
+
+        //put in
+        File output = new File(userImage+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
         System.out.println("upload success");
-        return new RMedicine(200, targetPath+imagePath, "success!");
+        return new RMedicine(200, "userImage/"+imagePath, "success!");
     }
 
     @GetMapping("/detail/{id}")
