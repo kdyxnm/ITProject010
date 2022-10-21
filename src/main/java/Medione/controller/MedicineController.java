@@ -169,6 +169,13 @@ public class MedicineController {
         File jarF = h.getSource();
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
+        File targetPath  = jarF.getParentFile();
+
+        System.out.println("================================================");
+        System.out.println("targetPath: "+targetPath);
+        System.out.println("targetPath can write? " + targetPath.canWrite());
+        System.out.println("targetPath all file: " + targetPath.listFiles());
+        System.out.println("================================================");
         System.out.println("================================================");
         System.out.println("jarF: "+jarF);
         System.out.println("jarF can write? " + jarF.canWrite());
@@ -198,12 +205,12 @@ public class MedicineController {
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
         System.out.println("size: " + image.getSize());
-        File output = new File(dirPath+imagePath);
+        File output = new File(targetPath+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
         System.out.println("upload success");
-        return new RMedicine(200, "userImage/"+imagePath, "success!");
+        return new RMedicine(200, targetPath+imagePath, "success!");
     }
 
     @GetMapping("/detail/{id}")
