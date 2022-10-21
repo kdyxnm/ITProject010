@@ -222,7 +222,14 @@ public class MedicineController {
              ) {
             System.out.println(f);
         }
-
+        System.out.println("================================================");
+        File newFile = new File(userImage+imagePath);
+        System.out.println("new file: "+newFile);
+        System.out.println("can read? "+newFile.canRead());
+        System.out.println("absolute :"+newFile.getAbsolutePath());
+        System.out.println("length: "+ newFile.length());
+        System.out.println("hidden? " + newFile.isHidden());
+        System.out.println("================================================");
         return new RMedicine(200, "userImage"+imagePath, "success!");
     }
 
