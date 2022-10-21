@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] image uploading">
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/ENUMTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/SessionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/example/Medione/Team10ApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,21 +128,7 @@
       <workItem from="1666240609623" duration="2208000" />
       <workItem from="1666266383793" duration="3425000" />
       <workItem from="1666270771587" duration="317000" />
-      <workItem from="1666349155106" duration="2724000" />
-    </task>
-    <task id="LOCAL-00004" summary="[feat] login by email">
-      <created>1664262783981</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1664262783981</updated>
-    </task>
-    <task id="LOCAL-00005" summary="[fix] reset password with invalid '}'">
-      <created>1664286636075</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1664286636075</updated>
+      <workItem from="1666349155106" duration="3061000" />
     </task>
     <task id="LOCAL-00006" summary="[chore] dist files">
       <created>1664287323052</created>
@@ -479,7 +459,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666358829154</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="[fix] image uploading">
+      <created>1666359150840</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1666359150840</updated>
+    </task>
+    <task id="LOCAL-00054" summary="[fix] image uploading">
+      <created>1666359171684</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1666359171684</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

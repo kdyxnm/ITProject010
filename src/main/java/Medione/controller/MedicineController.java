@@ -170,25 +170,26 @@ public class MedicineController {
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
         File targetPath  = jarF.getParentFile();
-
+        File userImage = new File("/app/target/classes/static/userImage");
+        System.out.println("================================================");
+        System.out.println("targetPath: "+userImage);
+        System.out.println("targetPath can write? " + userImage.canWrite());
+        System.out.println("targetPath all file: " + userImage.listFiles());
+        System.out.println("================================================");
         System.out.println("================================================");
         System.out.println("targetPath: "+targetPath);
         System.out.println("targetPath can write? " + targetPath.canWrite());
         System.out.println("targetPath all file: " + targetPath.listFiles());
         System.out.println("================================================");
-        System.out.println("================================================");
-        System.out.println("jarF: "+jarF);
-        System.out.println("jarF can write? " + jarF.canWrite());
-        System.out.println("jarF all file: " + jarF.listFiles());
-        System.out.println("================================================");
 
         File directory = new File(dirPath);
+        boolean res = directory.mkdir();
         System.out.println("================================================");
         System.out.println("directory: "+directory);
         System.out.println("userImage can write? " + directory.canWrite());
         System.out.println("userImage all file: " + directory.listFiles());
         System.out.println("================================================");
-        boolean res = directory.mkdir();
+
 
         if(res) {
             System.out.println("The directory has been created.");
