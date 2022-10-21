@@ -173,7 +173,11 @@ public class MedicineController {
         System.out.println("================================================");
         System.out.println("targetPath: "+userImage);
         System.out.println("targetPath can write? " + userImage.canWrite());
-        System.out.println("targetPath all file: " + userImage.listFiles());
+        System.out.println("targetPath all file: " );
+        for (File f:userImage.listFiles()
+        ) {
+            System.out.println(f);
+        }
         System.out.println("================================================");
 
 
@@ -208,7 +212,14 @@ public class MedicineController {
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
+
+        
         System.out.println("upload success");
+        for (File f:userImage.listFiles()
+             ) {
+            System.out.println(f);
+        }
+
         return new RMedicine(200, "userImage/"+imagePath, "success!");
     }
 
