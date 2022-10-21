@@ -167,11 +167,12 @@ public class MedicineController {
         //find path
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
-        System.out.println("can write? " + jarF.canWrite());
-        System.out.println("all file: " + jarF.listFiles());
+
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
         System.out.println(dirPath);
         File directory = new File(dirPath+"/userImage/");
+        System.out.println("userImage can write? " + directory.canWrite());
+        System.out.println("userImage all file: " + directory.listFiles());
         boolean res = directory.mkdir();
 
         if(res) {
