@@ -149,94 +149,128 @@ public class MedicineController {
         }
     }
 
-//    @PostMapping("/uploadImage")
-//    public RMedicine setImage(@RequestParam("url") String url,HttpServletRequest request) throws IOException {
-//
-//
-//
-//
-//    }
-
     @PostMapping("/uploadImage")
-    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
-//        String path = "target/classes/static/userImage/";   //server
-        //String path = ""; //local
-        String type = image.getContentType();
+    public RMedicine setImage(@RequestParam("image") MultipartFile file,HttpServletRequest request) throws Exception {
+        if (file.isEmpty()) {
+
+            throw new Exception();
+        }
+        String filePath = System.getProperty("user.dir");
+        String type = file.getContentType();
         assert type != null;
+        String username = (String) request.getSession().getAttribute("username");
+        type = type.replace("image/","");
+        Integer id = service.list().size() + 1;
+        String imagePath = "/"+username+"_"+ id + "." + type;
+        System.out.println("size: " + file.getSize());
 
-        //find path
-        ApplicationHome h = new ApplicationHome(getClass());
-        File jarF = h.getSource();
+        File upload = new File(filePath + File.separator + "view" + File.separator);
+        if (!upload.exists()) {
+            upload.mkdirs();
+        }
+        File dest = new File(filePath + File.separator +  "view" +  File.separator + imagePath);
+        try {
+            file.transferTo(dest);
 
-        String dirPath = jarF.getParentFile().toString()+"/medicine/";
-//        File userImage = new File("/app/target/classes/static/userImage/");
-        File targetDir = new File(dirPath);
-        File baseUrl = new File("/app/");
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
 
-        boolean res = targetDir.mkdir();
         System.out.println("================================================");
-        System.out.println("baseUrl: "+baseUrl);
-        System.out.println("baseUrl can write? " + baseUrl.canWrite());
-        System.out.println("baseUrl all file: " );
-        for (File f:baseUrl.listFiles()
+        System.out.println("directory: "+dest);
+        System.out.println("userImage can write? " + dest.canWrite());
+        System.out.println("userImage all file: " );
+        for (File f:dest.listFiles()
         ) {
             System.out.println(f);
         }
         System.out.println("================================================");
 
 
-//        File directory = new File(dirPath);
-//        boolean res = directory.mkdir();
-//        System.out.println("================================================");
-//        System.out.println("directory: "+directory);
-//        System.out.println("userImage can write? " + directory.canWrite());
-//        System.out.println("userImage all file: " + directory.listFiles());
-//        System.out.println("================================================");
-//
-//
-//        if(res) {
-//            System.out.println("The directory has been created.");
-//        }
-//        else {
-//            System.out.println("The directory already exists.");
-//        }
 
-        if (!type.contains("image")) {
-            return new RMedicine(404, null, "file type error");
-        }
-        //naming
-        String username = (String) request.getSession().getAttribute("username");
-        type = type.replace("image/","");
-        Integer id = service.list().size() + 1;
-        String imagePath = "/"+username+"_"+ id + "." + type;
-        System.out.println("size: " + image.getSize());
-
-        //put in
-        System.out.println("image path: "+ targetDir+imagePath);
-        //===
-        File output = new File(targetDir+imagePath);
-        OutputStream outputStream = new FileOutputStream(output);
-        outputStream.write(image.getBytes());
-        outputStream.close();
-        //==
-
-        
-        System.out.println("upload success");
-        for (File f:targetDir.listFiles()
-             ) {
-            System.out.println(f);
-        }
-        System.out.println("================================================");
-        File newFile = new File(targetDir+imagePath);
-        System.out.println("new file: "+newFile);
-        System.out.println("can read? "+newFile.canRead());
-        System.out.println("absolute :"+newFile.getAbsolutePath());
-        System.out.println("length: "+ newFile.length());
-        System.out.println("hidden? " + newFile.isHidden());
-        newFile.getAbsolutePath();
-        System.out.println("================================================");
-        return new RMedicine(200, "medicine"+imagePath, "success!");
+        return new RMedicine(200, dest.getAbsolutePath(), "success!");
     }
+
+//    @PostMapping("/uploadImage")
+//    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
+////        String path = "target/classes/static/userImage/";   //server
+//        //String path = ""; //local
+//        String type = image.getContentType();
+//        assert type != null;
+//
+//        //find path
+//        ApplicationHome h = new ApplicationHome(getClass());
+//        File jarF = h.getSource();
+//
+//        String dirPath = jarF.getParentFile().toString()+"/medicine/";
+////        File userImage = new File("/app/target/classes/static/userImage/");
+//        File targetDir = new File(dirPath);
+//        File baseUrl = new File("/app/");
+//
+//        boolean res = targetDir.mkdir();
+//        System.out.println("================================================");
+//        System.out.println("baseUrl: "+baseUrl);
+//        System.out.println("baseUrl can write? " + baseUrl.canWrite());
+//        System.out.println("baseUrl all file: " );
+//        for (File f:baseUrl.listFiles()
+//        ) {
+//            System.out.println(f);
+//        }
+//        System.out.println("================================================");
+//
+//
+////        File directory = new File(dirPath);
+////        boolean res = directory.mkdir();
+////        System.out.println("================================================");
+////        System.out.println("directory: "+directory);
+////        System.out.println("userImage can write? " + directory.canWrite());
+////        System.out.println("userImage all file: " + directory.listFiles());
+////        System.out.println("================================================");
+////
+////
+////        if(res) {
+////            System.out.println("The directory has been created.");
+////        }
+////        else {
+////            System.out.println("The directory already exists.");
+////        }
+//
+//        if (!type.contains("image")) {
+//            return new RMedicine(404, null, "file type error");
+//        }
+//        //naming
+//        String username = (String) request.getSession().getAttribute("username");
+//        type = type.replace("image/","");
+//        Integer id = service.list().size() + 1;
+//        String imagePath = "/"+username+"_"+ id + "." + type;
+//        System.out.println("size: " + image.getSize());
+//
+//        //put in
+//        System.out.println("image path: "+ targetDir+imagePath);
+//        //===
+//        File output = new File(targetDir+imagePath);
+//        OutputStream outputStream = new FileOutputStream(output);
+//        outputStream.write(image.getBytes());
+//        outputStream.close();
+//        //==
+//
+//
+//        System.out.println("upload success");
+//        for (File f:targetDir.listFiles()
+//             ) {
+//            System.out.println(f);
+//        }
+//        System.out.println("================================================");
+//        File newFile = new File(targetDir+imagePath);
+//        System.out.println("new file: "+newFile);
+//        System.out.println("can read? "+newFile.canRead());
+//        System.out.println("absolute :"+newFile.getAbsolutePath());
+//        System.out.println("length: "+ newFile.length());
+//        System.out.println("hidden? " + newFile.isHidden());
+//        newFile.getAbsolutePath();
+//        System.out.println("================================================");
+//        return new RMedicine(200, "medicine"+imagePath, "success!");
+//    }
 
     @GetMapping("/detail/{id}")
     public RDashboard getDetail(@PathVariable Integer id){

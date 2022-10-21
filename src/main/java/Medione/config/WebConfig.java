@@ -82,13 +82,19 @@ public class WebConfig implements WebMvcConfigurer {
 
 
     }
-        @Override
-        public void addResourceHandlers(ResourceHandlerRegistry registry) {
-//
-            registry.addResourceHandler("/medicine/**")
-                    .addResourceLocations("classpath:/medicine/","file:medicine/")
-            ;
-        }
+//        @Override
+//        public void addResourceHandlers(ResourceHandlerRegistry registry) {
+////
+//            registry.addResourceHandler("/medicine/**")
+//                    .addResourceLocations("classpath:/medicine/","file:medicine/")
+//            ;
+//        }
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)  {
+        registry.addResourceHandler("/view/**").addResourceLocations("file:"+System.getProperty("user.dir")+"/view/");
+
+    }
+
 
 
 }

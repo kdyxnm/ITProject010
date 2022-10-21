@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] image uploading">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/Team10-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,21 +132,7 @@
       <workItem from="1666240609623" duration="2208000" />
       <workItem from="1666266383793" duration="3425000" />
       <workItem from="1666270771587" duration="317000" />
-      <workItem from="1666349155106" duration="9231000" />
-    </task>
-    <task id="LOCAL-00018" summary="[build] refactor dist folder">
-      <created>1664351988152</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1664351988152</updated>
-    </task>
-    <task id="LOCAL-00019" summary="[build] refactor dist folder">
-      <created>1664352809350</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1664352809350</updated>
+      <workItem from="1666349155106" duration="10713000" />
     </task>
     <task id="LOCAL-00020" summary="[build] refactor dist folder">
       <created>1664353207549</created>
@@ -471,7 +463,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666365463889</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="[fix] image uploading">
+      <created>1666365986966</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1666365986966</updated>
+    </task>
+    <task id="LOCAL-00068" summary="[fix] image uploading">
+      <created>1666366030936</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1666366030936</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
