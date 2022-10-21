@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] image uploading">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/userImage" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17" />
@@ -86,6 +84,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\target\userImage" />
       <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static" />
       <recent name="C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\resources\static\userImage" />
     </key>
@@ -127,14 +126,7 @@
       <workItem from="1666240609623" duration="2208000" />
       <workItem from="1666266383793" duration="3425000" />
       <workItem from="1666270771587" duration="317000" />
-      <workItem from="1666349155106" duration="8826000" />
-    </task>
-    <task id="LOCAL-00017" summary="[build] refactor dist folder">
-      <created>1664351766035</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1664351766035</updated>
+      <workItem from="1666349155106" duration="9231000" />
     </task>
     <task id="LOCAL-00018" summary="[build] refactor dist folder">
       <created>1664351988152</created>
@@ -472,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666364669258</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="[fix] image uploading">
+      <created>1666365463889</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1666365463889</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -168,17 +168,17 @@ public class MedicineController {
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
 
-        //String dirPath = jarF.getParentFile().toString()+"/userImage/";
+        String dirPath = jarF.getParentFile().toString()+"/medicine/";
 //        File userImage = new File("/app/target/classes/static/userImage/");
-        File targetDir = new File("/app/target/");
-        File userImage = new File("/app/target/userImage/");
+        File targetDir = new File(dirPath);
+        File baseUrl = new File("/app/");
 
-        boolean res = userImage.mkdir();
+        boolean res = targetDir.mkdir();
         System.out.println("================================================");
-        System.out.println("userImage: "+userImage);
-        System.out.println("userImage can write? " + userImage.canWrite());
-        System.out.println("targetPath all file: " );
-        for (File f:targetDir.listFiles()
+        System.out.println("baseUrl: "+baseUrl);
+        System.out.println("baseUrl can write? " + baseUrl.canWrite());
+        System.out.println("baseUrl all file: " );
+        for (File f:baseUrl.listFiles()
         ) {
             System.out.println(f);
         }
@@ -212,9 +212,9 @@ public class MedicineController {
         System.out.println("size: " + image.getSize());
 
         //put in
-        System.out.println("image path: "+ userImage+imagePath);
+        System.out.println("image path: "+ targetDir+imagePath);
         //===
-        File output = new File(userImage+imagePath);
+        File output = new File(targetDir+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
@@ -222,12 +222,12 @@ public class MedicineController {
 
         
         System.out.println("upload success");
-        for (File f:userImage.listFiles()
+        for (File f:targetDir.listFiles()
              ) {
             System.out.println(f);
         }
         System.out.println("================================================");
-        File newFile = new File(userImage+imagePath);
+        File newFile = new File(targetDir+imagePath);
         System.out.println("new file: "+newFile);
         System.out.println("can read? "+newFile.canRead());
         System.out.println("absolute :"+newFile.getAbsolutePath());
@@ -235,7 +235,7 @@ public class MedicineController {
         System.out.println("hidden? " + newFile.isHidden());
         newFile.getAbsolutePath();
         System.out.println("================================================");
-        return new RMedicine(200, "userImage"+imagePath, "success!");
+        return new RMedicine(200, "medicine"+imagePath, "success!");
     }
 
     @GetMapping("/detail/{id}")
