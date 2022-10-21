@@ -169,10 +169,13 @@ public class MedicineController {
         File jarF = h.getSource();
 
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
-        System.out.println(dirPath);
-        File directory = new File(dirPath+"/userImage");
+
+        File directory = new File(dirPath);
+        System.out.println("================================================");
+        System.out.println("directory: "+directory);
         System.out.println("userImage can write? " + directory.canWrite());
         System.out.println("userImage all file: " + directory.listFiles());
+        System.out.println("================================================");
         boolean res = directory.mkdir();
 
         if(res) {
@@ -186,7 +189,7 @@ public class MedicineController {
             return new RMedicine(404, null, "file type error");
         }
         String username = (String) request.getSession().getAttribute("username");
-        type = type.replace("image","");
+        type = type.replace("image/","");
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
         System.out.println("size: " + image.getSize());
