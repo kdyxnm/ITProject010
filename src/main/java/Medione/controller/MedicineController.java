@@ -168,14 +168,17 @@ public class MedicineController {
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
 
-        String dirPath = jarF.getParentFile().toString()+"/userImage/";
+        //String dirPath = jarF.getParentFile().toString()+"/userImage/";
         //File userImage = new File("/app/target/classes/static/userImage/");
+        File targetDir = new File("/app/target/");
         File userImage = new File("/app/target/userImage/");
+
+        boolean res = userImage.mkdir();
         System.out.println("================================================");
-        System.out.println("targetPath: "+userImage);
-        System.out.println("targetPath can write? " + userImage.canWrite());
+        System.out.println("userImage: "+userImage);
+        System.out.println("userImage can write? " + userImage.canWrite());
         System.out.println("targetPath all file: " );
-        for (File f:userImage.listFiles()
+        for (File f:targetDir.listFiles()
         ) {
             System.out.println(f);
         }
