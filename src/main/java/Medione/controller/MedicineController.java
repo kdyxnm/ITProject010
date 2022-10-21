@@ -188,7 +188,7 @@ public class MedicineController {
 
 
 
-        return new RMedicine(200, dest.getAbsolutePath(), "success!");
+        return new RMedicine(200, "view/"+imagePath, "success!");
     }
 
 //    @PostMapping("/uploadImage")
