@@ -7,8 +7,8 @@
     <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] login by email">
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_13_15_37_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_13_15_37__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/components/MedicineList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/components/MedicineList.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/components/UploadImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/src/components/UploadImage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/medioneVUE/medicine-one/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" afterDir="false" />
@@ -67,23 +67,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/app.db751c1b.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/dashboard.67980eb1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/register.c3fbd6a1.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/resetPassword.cd93e916.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-maskable-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/android-chrome-maskable-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-120x120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-152x152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-180x180.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-60x60.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon-76x76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/favicon-16x16.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/msapplication-icon-144x144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/img/icons/safari-pinned-tab.svg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.aab11d16.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/about.aab11d16.js.map" beforeDir="false" />

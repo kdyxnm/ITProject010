@@ -1,5 +1,6 @@
 import axios from '../utils/request'
 import path from './path'
+import axios2 from "../utils/request2"
 
 const api = {
   login(username, pwd){
@@ -77,37 +78,35 @@ const api = {
     return axios.get("https://api.fda.gov/drug/label.json?search=openfda.brand_name:\"" + brandname + "\"&limit=1", {withCredentials: false})
   },
   uploadImage(file, progress){
-    // const config = {
-    //   onUploadProgress(event) {
-    //     let v = Math.round(event.loaded / event.total * 100)
-    //     progress.value = v == 100 ? 80 : v
-    //   },
+    const config = {
+      onUploadProgress(event) {
+        let v = Math.round(event.loaded / event.total * 100)
+        progress.value = v == 100 ? 80 : v
+      },
     
-    //   headers : {
-    //     'Content-Type' : 'multipart/form-data',
-    //     Authorization  : 'dqOfd2mnoSAKmByqw73K1hVlya5JhpcT' 
-    //   }
-    // }
-    // const forms = new FormData()
-    // forms.append('smfile', file)
-    // return axios.post('/proxy/api/v2/upload', forms, config)
+      headers : {
+        'Content-Type' : 'multipart/form-data',
+        Authorization  : 'dqOfd2mnoSAKmByqw73K1hVlya5JhpcT' 
+      }
+    }
+    const forms = new FormData()
+    forms.append('smfile', file)
+    return axios2.post('/proxy/api/v2/upload', forms, config)
 
-    let formData = new FormData();
-    formData.append("file", file)
-    return axios({
-        url: path.baseUrl + path.addMedicine + path.uploadImage,
-        method: "post",
-        data: {image : file},
-        onUploadProgress(event) {
-            let v = Math.round(event.loaded / event.total * 100)
-            progress.value = v == 100 ? 80 : v
-        },
+    // let formData = new FormData();
+    // formData.append("file", file)
+    // return axios({
+    //     url: path.baseUrl + path.addMedicine + path.uploadImage,
+    //     method: "post",
+    //     data: {image : file},
+    //     onUploadProgress(event) {
+    //         let v = Math.round(event.loaded / event.total * 100)
+    //         progress.value = v == 100 ? 80 : v
+    //     },
         
-        headers : {'Content-Type' : 'multipart/form-data'}
+    //     headers : {'Content-Type' : 'multipart/form-data'}
   
-    })
-
-
+    // })
 
   },
   addMedicine(form){
