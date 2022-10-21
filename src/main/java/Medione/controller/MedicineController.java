@@ -209,10 +209,12 @@ public class MedicineController {
 
         //put in
         System.out.println("image path: "+ userImage+imagePath);
+        //===
         File output = new File(userImage+imagePath);
         OutputStream outputStream = new FileOutputStream(output);
         outputStream.write(image.getBytes());
         outputStream.close();
+        //==
 
         
         System.out.println("upload success");
