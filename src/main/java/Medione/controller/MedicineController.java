@@ -177,10 +177,10 @@ public class MedicineController {
         }
 
         System.out.println("================================================");
-        System.out.println("directory: "+dest);
-        System.out.println("userImage can write? " + dest.canWrite());
+        System.out.println("directory: "+upload);
+        System.out.println("userImage can write? " + upload.canWrite());
         System.out.println("userImage all file: " );
-        for (File f:dest.listFiles()
+        for (File f:upload.listFiles()
         ) {
             System.out.println(f);
         }
