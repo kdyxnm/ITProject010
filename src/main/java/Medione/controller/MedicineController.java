@@ -204,7 +204,7 @@ public class MedicineController {
         String username = (String) request.getSession().getAttribute("username");
         type = type.replace("image/","");
         Integer id = service.list().size() + 1;
-        String imagePath = username+"_"+ id + "." + type;
+        String imagePath = "/"+username+"_"+ id + "." + type;
         System.out.println("size: " + image.getSize());
 
         //put in
