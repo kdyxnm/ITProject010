@@ -149,9 +149,17 @@ public class MedicineController {
         }
     }
 
+//    @PostMapping("/uploadImage")
+//    public RMedicine setImage(@RequestParam("url") String url,HttpServletRequest request) throws IOException {
+//
+//
+//
+//
+//    }
+
     @PostMapping("/uploadImage")
     public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {
-        //String path = "target/classes/static/userImage/";   //server
+//        String path = "target/classes/static/userImage/";   //server
         //String path = ""; //local
         String type = image.getContentType();
         assert type != null;
@@ -159,7 +167,8 @@ public class MedicineController {
         //find path
         ApplicationHome h = new ApplicationHome(getClass());
         File jarF = h.getSource();
-
+        System.out.println("can write? " + jarF.canWrite());
+        System.out.println("all file: " + jarF.listFiles());
         String dirPath = jarF.getParentFile().toString()+"/userImage/";
         System.out.println(dirPath);
         File directory = new File(dirPath+"/userImage/");
