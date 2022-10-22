@@ -91,7 +91,8 @@ const api = {
     }
     const forms = new FormData()
     forms.append('smfile', file)
-    return axios2.post('/proxy/api/v2/upload', forms, config)
+    // return axios2.post('/proxy/api/v2/upload', forms, config)
+    return axios2.post('https://sm.ms/api/v2/upload', forms, config)
 
     // let formData = new FormData();
     // formData.append("file", file)

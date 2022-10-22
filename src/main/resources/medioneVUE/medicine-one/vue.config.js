@@ -4,25 +4,25 @@ const Components = require('unplugin-vue-components/webpack')
 const { ElementPlusResolver } = require('unplugin-vue-components/resolvers')
 
 module.exports = defineConfig({
-  devServer: {
-    historyApiFallback: true,
-    allowedHosts: 'all',
-    proxy: {
-      '/proxy': {
-          target: 'https://sm.ms/',
-          secure: false,
-          ws: true,
-          changeOrigin: true,
-          pathRewrite: {
-              '^/proxy': ''
-          },
-          // headers: {
-          //     Referer: 'https://sm.ms/'
-          // }
-      },
+  // devServer: {
+  //   historyApiFallback: true,
+  //   allowedHosts: 'all',
+  //   proxy: {
+  //     '/proxy': {
+  //         target: 'https://sm.ms/',
+  //         secure: false,
+  //         ws: true,
+  //         changeOrigin: true,
+  //         pathRewrite: {
+  //             '^/proxy': ''
+  //         },
+  //         // headers: {
+  //         //     Referer: 'https://sm.ms/'
+  //         // }
+  //     },
       
-    },
-  },
+  //   },
+  // },
   transpileDependencies: true,
   configureWebpack: {
     plugins: [
