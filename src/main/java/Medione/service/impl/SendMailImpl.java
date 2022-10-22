@@ -39,7 +39,7 @@ public class SendMailImpl implements ISendMailService {
 
     @Override
     @CachePut(value="mail",key="#account")
-    public String sendMail( String account) {
+    public String sendMail(String account) {
         code =  RandomCode.getRandom();
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setFrom(from+"(medione)");
@@ -58,7 +58,7 @@ public class SendMailImpl implements ISendMailService {
         System.out.println("sent out!");
         System.out.println("sent out!");
         System.out.println(code);
-
+        System.out.println(account);
         return code;
     }
 
