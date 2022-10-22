@@ -161,14 +161,21 @@ export default {
 		addNote() {
 			var that=this;
 			api.addMediNote(this.mediId, that.userNote).then(res=>{
-			// console.log(that.userNote)
-			console.log(res.data);
+			if(res.data.status == 200) {
+					ElMessage({
+            message: 'Update successful!',
+            type: 'success',
+          })
+				} else if(res.data.status == 404) {
+					ElMessage({
+            message: 'Update failed',
+            type: 'error',
+          })
+					}
 		})
 		},
 		openDialog1() {
-			var that=this;
 			this.dialogFormVisible1 = true;
-			console.log(that.tableForm1.amount);
 		},
 		openDialog2() {
 			this.dialogFormVisible2 = true
@@ -181,10 +188,16 @@ export default {
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200) {
 					console.log(res.data.status)
-					alert('Update successful, please refresh!')
+					ElMessage({
+            message: 'Update successful, please refresh!',
+            type: 'success',
+          })
 					console.log(res.data.status)
 				} else if(res.data.status == 404) {
-					alert('Update failed, the quantity of medicines entered exceeds the remaining quantity, please verify and try again.')
+					ElMessage({
+            message: 'Update failed, the quantity was 0 already',
+            type: 'error',
+          })
 					}
 			})
 		},
@@ -195,7 +208,16 @@ export default {
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200){
 					this.triggerUpdate()
-        }
+					ElMessage({
+            message: 'Update successful',
+            type: 'success',
+          }) 
+				} else if(res.data.status == 404) {
+						ElMessage({
+            message: 'Update failed, please try again',
+            type: 'error',
+          })
+					}
 		})
 		},
 		triggerUpdate(){

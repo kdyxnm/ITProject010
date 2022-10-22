@@ -23,7 +23,11 @@
 
         <tr class="center_bar_label"><label class="center_bar_title">Password</label></tr>
         <tr><input v-model.trim="pwd" type="password" class="input_area"></tr>
-        <tr style="text-align:right"><a id="forget_pwd" href="">Forget Password?</a></tr>
+        <tr style="text-align:right">
+          <router-link to="/resetPassword">
+            <a id="forget_pwd" >Forget Password?</a>
+          </router-link>
+        </tr>
         <tr><p class = "warning">{{ warningText }}</p></tr>
         <tr><input type="submit" name="login" 
             value="Login" class="purple_button" @click="handleLogin"></tr>
