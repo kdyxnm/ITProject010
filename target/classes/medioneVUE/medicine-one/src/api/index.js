@@ -26,6 +26,14 @@ const api = {
     };
     return axios.post(path.baseUrl + path.register, registerinfo)
   },
+  resetPassward(email, code, pwd){
+    var passwordinfo = {
+      'email': email,
+      'code': code,
+      'password': pwd,
+    };
+    return axios.post(path.baseUrl + path.resetPassword, passwordinfo)
+  },
   getUserData(){
     return axios.get(path.baseUrl + path.dashboard)
   },
@@ -64,6 +72,28 @@ const api = {
   deleteLocation(locInfo){
     console.log(locInfo)
     return axios.delete(path.baseUrl + path.delLocation + '/' + locInfo.locationid )
+  },
+  getFDAData(brandname){
+    return axios.get("https://api.fda.gov/drug/label.json?search=openfda.brand_name:\"" + brandname + "\"&limit=1", {withCredentials: false})
+  },
+  uploadImage(file, progress){
+    let formData = new FormData();
+    formData.append("file", file)
+    return axios({
+        url: path.baseUrl + path.addMedicine + path.uploadImage,
+        method: "post",
+        data: {image : file},
+        onUploadProgress(event) {
+            let v = Math.round(event.loaded / event.total * 100)
+            progress.value = v == 100 ? 80 : v
+        },
+        
+        headers : {'Content-Type' : 'multipart/form-data'}
+  
+    })
+  },
+  addMedicine(form){
+    return axios.post(path.baseUrl + path.addMedicine, form)
   }
 
 }

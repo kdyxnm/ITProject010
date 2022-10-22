@@ -15,7 +15,7 @@
         <input type="text" class="input_bar" v-model="this.newLocstring">
       </div>
        <div class="confirm_button" @click="confirmAdd()">
-        Confirm Button
+        Confirm
       </div>
       <div class="confirm_button" @click="clsoeNewLocBar()">
         Cancle
@@ -55,20 +55,22 @@
       console.log('new location is ' + this.newLocstring)
       var emial = store.getters.getEmail
       var locInfo = {
-        "locationid" : -1,
-        "email" : emial,
-        "address" : this.newLocstring
+        locationid : -1,
+        email : emial,
+        address : this.newLocstring
       }
       var that = this
-      // api.addLocation(locInfo).then(res => {
-      //   console.log(res.data)
-      //   // that.locations.push(locInfo)
-      //   that.clsoeNewLocBar()
-      //   // that.newLocstring = ''
-      // })
-      this.clsoeNewLocBar()
-      this.locations.push(locInfo)
-      this.newLocstring = ''
+      api.addLocation(locInfo).then(res => {
+        console.log(res.data)
+        that.locations.push(locInfo)
+        that.clsoeNewLocBar()
+        that.newLocstring = ''
+        that.triggerUpdate()
+        
+      })
+      // this.clsoeNewLocBar()
+      // this.locations.push(locInfo)
+      // this.newLocstring = ''
     },
 
     clsoeNewLocBar(){
@@ -80,12 +82,19 @@
       console.log("Delete location " + this.locations[index].address)
       var locInfo = this.locations[index]
       var that = this
-      // api.deleteLocation(locInfo).then(res => {
-      //   console.log(res.data)
-      //   that.locations.splice(index, 1)
-      // })
-      this.locations.splice(index, 1)
+      api.deleteLocation(locInfo).then(res => {
+        console.log(res.data)
+        that.locations.splice(index, 1)
+        that.triggerUpdate()
+      })
+      // this.locations.splice(index, 1)
     },
+    triggerUpdate(){
+      this.$emit("location-update")
+    },
+    removeLocation(){
+      this.locations.splice(index, 1)
+    }
 
     
     

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 /**
@@ -30,9 +31,9 @@ public class WebConfig implements WebMvcConfigurer {
         public void addCorsMappings(CorsRegistry registry) {
             // allow path
             registry.addMapping("/**")
-                    .allowedOrigins("http://localhost:8080/")   //local server
+//                    .allowedOrigins("http://localhost:8080/")   //local server
 //                    .allowedOrigins("https://medione-dev.herokuapp.com/")     /developing website
-//                    .allowedOrigins("https://medione.herokuapp.com/")     //release website
+                    .allowedOrigins("https://medione.herokuapp.com/")     //release website
                     .allowCredentials(true)
                     .allowedMethods("*")
                     .maxAge(3600);
@@ -43,7 +44,7 @@ public class WebConfig implements WebMvcConfigurer {
      * @param registry login interceptor
      */
     @Override
-    public void addInterceptors(InterceptorRegistry registry){
+    public void addInterceptors(InterceptorRegistry registry) {
 //        block exclude/login  /register.....
 //        block register for testing!
         registry.addInterceptor(loginInterceptor)
@@ -81,5 +82,19 @@ public class WebConfig implements WebMvcConfigurer {
 
 
     }
+//        @Override
+//        public void addResourceHandlers(ResourceHandlerRegistry registry) {
+////
+//            registry.addResourceHandler("/medicine/**")
+//                    .addResourceLocations("classpath:/medicine/","file:medicine/")
+//            ;
+//        }
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry)  {
+        registry.addResourceHandler("/view/**").addResourceLocations("file:"+System.getProperty("user.dir")+"/view/");
+
+    }
+
+
 
 }

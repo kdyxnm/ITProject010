@@ -87,7 +87,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
       // ]
     }
 
-
+    
     const handleSelect = (item) => {
       console.log("Accurate Search")
       console.log(item)
@@ -132,6 +132,8 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
       else{
         console.log("user data corrucped")
       }
+
+      state.value = ""
     }
 
 
@@ -148,6 +150,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
         }
         __context.emit("switch-event", mode)
       })
+      state.value = ""
     }
 
 
@@ -229,7 +232,7 @@ export default __sfc__
     font-weight: 500;
     color: #6E78F7;
   }
-
+  
   .link{
     font-size: 0.8em;
     color: #752bb5;
@@ -267,8 +270,8 @@ export default __sfc__
       color: #545bc3;
     }
   }
-
-
+ 
+  
   @media screen and (min-width: 992px) {
     .el-autocomplete.el-tooltip__trigger.el-tooltip__trigger {
       width: 100%;

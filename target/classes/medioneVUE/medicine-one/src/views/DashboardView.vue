@@ -17,18 +17,18 @@
           ></SideBar>
         </el-aside>
         
-        <el-main class="main" v-if="dataReady">
+        <el-main class="main" :key="this.user">
           <div class="content_container">
 
             <div class="serach_bar_container">
-              <SearchBar v-if="dataReady" @switch-event="handleSwitch"></SearchBar>
+              <SearchBar :key="this.user.numMedicine" @switch-event="handleSwitch"></SearchBar>
             </div>
 
             <!-- <div v-show="displayMode == 'loading'" class="dynamic_content_container">
               <h1>Loading ......</h1>
             </div> -->
 
-            <div v-show="displayMode == 'default'" class="dynamic_content_container">
+            <div v-if="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
             </div>
 
@@ -43,19 +43,25 @@
             </div>
 
             <div v-if="displayMode == 'medi_info'" class="dynamic_content_container">
-              <MedicineDetail :mediId="this.mediInfoId" :key="this.mediInfoId"></MedicineDetail>
+              <MedicineDetail 
+                :mediId="this.mediInfoId" 
+                :key="this.mediInfoId" 
+                @switch-event="handleSwitch"
+                @medicine-updated="updateUserData"
+                ></MedicineDetail>
               <!-- <h1> Medicine Information {{ this.mediInfoId }}</h1> -->
             </div>
 
 
             <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
               <h1> Add medicine component</h1>
+              <AddMedicine @medicine-updated="updateUserData" @switch-event="handleSwitch"></AddMedicine>
             </div>
 
 
             <div  v-if="displayMode == 'my_loca'" class="dynamic_content_container">
               <!-- <h1> Add location component</h1> -->
-              <MyLocation></MyLocation>
+              <MyLocation @location-update="updateUserData"></MyLocation>
             </div>
 
 
@@ -83,6 +89,8 @@ import api from '../api/index'
 import MedicineList from '../components/MedicineList.vue'
 import MedicineDetail from '../components/MedicineDetail.vue'
 import MyLocation from '../components/MyLocation.vue'
+import AddMedicine from '@/components/AddMedicine.vue'
+import router from '@/router'
 
 export default {
   name: 'DashboardView',
@@ -113,7 +121,8 @@ export default {
     MedicineDetail,
     MedicineList,
     MyLocation,
-    MedicineDetail
+    MedicineDetail,
+    AddMedicine
 },
   methods: {
 
@@ -136,7 +145,11 @@ export default {
       console.log("switch to " + mode.view)
       if (mode.view == 'log_off'){
         console.log("user log off");
-        alert("User log off")
+        ElMessage({
+                      message: "user log off",
+                      type: 'warning',
+                  })
+        this.$router.back(-1)
       }
       else {
         if(mode.view == 'medi_info'){
@@ -158,6 +171,7 @@ export default {
 
 
     loadUserData(data){
+      console.log("loading data ...")
       this.user.nickName = data.nickname;
       console.log(this.user.nickName);
       this.user.userEmail = data.email;
@@ -169,6 +183,22 @@ export default {
       this.user.numMedicine = data.simplemsg.length
       console.log(this.user.numMedicine);
       this.$store.commit("updateUser", data);
+      console.log("finished")
+    },
+
+    getUserData(){
+      var that = this;
+      console.log("getting data ...")
+      api.getUserData().then(res =>{
+        console.log(res.data);
+        that.loadUserData(res.data.data);
+        that.dataReady = true;
+      })
+    },
+
+    updateUserData(){
+      console.log("updating user data")
+      this.getUserData()
     }
   },
   created(){
@@ -179,11 +209,8 @@ export default {
       this.$router.push({path : '/'})
     }
     console.log("Load user data form backend")
-    api.getUserData().then(res =>{
-      console.log(res.data);
-      that.loadUserData(res.data.data);
-      that.dataReady = true;
-    })
+    this.getUserData()
+    console.log("load finished")
   },
   mounted() {
     // this.display_flag = (window.innerWidth > 992);

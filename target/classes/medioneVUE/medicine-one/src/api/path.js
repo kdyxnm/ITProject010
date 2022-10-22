@@ -2,17 +2,19 @@
 
 const base = {
   baseUrl       : 'http://localhost:8081',
-  // baseUrl    : "https://medione.herokuapp.com",
+  //baseUrl       : "https://medione.herokuapp.com",
+  //baseUrl       : "https://medione-dev.herokuapp.com",
   login         : '/user/login',
   email         : '/mail/send',
   register      : '/user/register',
+  resetPassword : '/user/reset',
   dashboard     : '/dashboard',
 
   pagination    : '/medicine/page',
 
   search        : '/medicine/search/',
 
-  getMedicine   : '/medicine/',
+  getMedicine   : '/medicine/detail/',
 
   getNote       : '/medicine/note/',
 
@@ -27,11 +29,10 @@ const base = {
   addLocation : '/location',
   delLocation : '/location',
 
-  addMedicine : '',
+  addMedicine : '/medicine',
+  uploadImage : '/uploadImage',
   delMedicine : '',
-  modMedicine : '',
   
-  serch : ''
 }
 
 export default base;

@@ -49,18 +49,18 @@ public class UserController {
 //        System.out.println(session.getId());
         System.out.println("===================================");
         if(helper.getUsername().contains("@")){
-            return new R<>(CreateAccountError.USERNAME_INVALID);
+            return new R<>("username must not contain '@'");
         }
         if (service.getOne(qUsername)!=null){
-            return new R<>(CreateAccountError.USERNAME_EXIST);
+            return new R<>("username exist, please try others");
         }
 
         else if (service.getOne(qEmail)!=null){
-            return new R<>(CreateAccountError.EMAIL_EXIST);
+            return new R<>("email exist, please try others");
         }
 
         else if (!helper.getCode().equals(codeInSession)){
-            return new R<>(CreateAccountError.CODE_MISMATCH);
+            return new R<>("verification code mismatch");
         }
         service.save(helper.getUser());
         helper.getUser().setPassword(null);
@@ -104,14 +104,20 @@ public class UserController {
 
 
     @PostMapping("reset")
-    public R<User> resetPassword(HttpServletRequest request,EmailHelper helper){
-        String email = helper.getEmail();
+    public R resetPassword(HttpServletRequest request, @RequestBody EmailHelper helper){
+        System.out.println(request.getSession());
+        String email = helper.getUser().getEmail();
+        System.out.println("email: " + email);
         String codeInSession = mailService.getCodeByAccount(email);
         String password = helper.getPassword();
+        User target;
         if (codeInSession.equals(helper.getCode())){
-            User user = helper.getUser();
-            user.setPassword(password);
-            service.saveOrUpdate(user);
+            target = service.getByEmail(email);
+            if (target==null){
+                return new R("email error or not register ");
+            }
+            target.setPassword(password);
+            service.saveOrUpdate(target);
             return new R<>(200);
         }
         return new R<>(CreateAccountError.CODE_MISMATCH);
