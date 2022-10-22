@@ -49,18 +49,18 @@ public class UserController {
 //        System.out.println(session.getId());
         System.out.println("===================================");
         if(helper.getUsername().contains("@")){
-            return new R<>("username must not contain '@'");
+            return new R<>(404,"username must not contain '@'");
         }
         if (service.getOne(qUsername)!=null){
-            return new R<>("username exist, please try others");
+            return new R<>(404,"username exist, please try others");
         }
 
         else if (service.getOne(qEmail)!=null){
-            return new R<>("email exist, please try others");
+            return new R<>(404,"email exist, please try others");
         }
 
         else if (!helper.getCode().equals(codeInSession)){
-            return new R<>("verification code mismatch");
+            return new R<>(404,"verification code mismatch");
         }
         service.save(helper.getUser());
         helper.getUser().setPassword(null);
@@ -114,7 +114,7 @@ public class UserController {
         if (codeInSession.equals(helper.getCode())){
             target = service.getByEmail(email);
             if (target==null){
-                return new R("email error or not register ");
+                return new R(404,"email error or not register ");
             }
             target.setPassword(password);
             service.saveOrUpdate(target);

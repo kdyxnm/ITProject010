@@ -1,0 +1,9 @@
+<changelist name="Uncommitted_changes_before_Update_at_2022_10_22_16_48_[Changes]" date="1666428544204" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_22_16_48_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2022/10/22 16:48 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/Medione/config/WebConfig.class" />
+    <option name="AFTER_PATH" value="target/classes/Medione/config/WebConfig.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_22_16_48_[Changes]/WebConfig.class" />
+  </binary>
+</changelist>

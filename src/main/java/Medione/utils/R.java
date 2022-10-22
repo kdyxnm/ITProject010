@@ -18,6 +18,12 @@ public class R<T> {
             this.msg = "error";
         }
     }
+    public R(int status,String msg){
+        this.status = status;
+
+        this.msg = msg;
+
+    }
 
     public R(T data){
         this.data = data;
