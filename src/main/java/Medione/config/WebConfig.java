@@ -31,9 +31,9 @@ public class WebConfig implements WebMvcConfigurer {
         public void addCorsMappings(CorsRegistry registry) {
             // allow path
             registry.addMapping("/**")
-//                    .allowedOrigins("http://localhost:8080/")   //local server
+                    .allowedOrigins("http://localhost:8080/")   //local server
 //                    .allowedOrigins("https://medione-dev.herokuapp.com/")     /developing website
-                    .allowedOrigins("https://medione.herokuapp.com/")     //release website
+//                    .allowedOrigins("https://medione.herokuapp.com/")     //release website
                     .allowCredentials(true)
                     .allowedMethods("*")
                     .maxAge(3600);
