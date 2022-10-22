@@ -121,7 +121,6 @@ public class UserController {
             return new R<>(200);
         }
         return new R<>(CreateAccountError.CODE_MISMATCH);
-
     }
 
 
