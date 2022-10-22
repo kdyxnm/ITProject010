@@ -1,0 +1,195 @@
+/***
+This css document for side bar format:
+***/
+
+/* import the Poppins font family */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (max-width: 992px) {
+
+  .side_bar{
+    height: 100%;
+    width: 12em;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    margin-left: 0;
+    /*Stays in place */
+    background-color: #5c66ee;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    overflow-x: hidden;
+    z-index: 2;
+  }
+
+  .side_bar_title {
+    display: block;
+    color: #FFFFFF;
+    margin-left: 1em;
+
+  }
+
+  .close_button {
+    margin-left: 0em;
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    border: none;
+    top: 3em;
+  }
+  
+  .close_button_icon{
+    height: 18px;
+    width: 18px;
+  }
+
+  .side_bar_medicine_one{
+    display: block;
+    font-size: 1.3em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-top: 1em;
+    font-weight: bold;
+  }
+
+  .side_bar_team_010 {
+    font-size: 12px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+
+  .side_bar_item {
+    margin-top: 1em;
+    padding-left: 1em;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 900;
+    transition-duration: 0.5s;
+
+  }
+
+  .side_bar_icon {
+    width: 18px;
+    height: 20px;
+    display: none;
+  }
+
+  .side_bar_item:hover {
+    background-color: #505bf5;
+    margin-left: 3%;
+  }
+
+  .el-icon svg {
+    color : #FFFFFF;
+    padding-top : 0.3em;
+  }
+
+
+  .user_name {
+    font-size: 1.15em;
+    text-align: right;
+    margin:0;
+  }
+
+  .user_nick_name {
+    font-size: 0.6em;
+    text-align: right;
+    margin:0;
+  }
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 992px) {
+  .side_bar {
+    height: 90%;
+    width: 90%;
+    margin-left: 1em;
+    background-color: #F5F5F5;
+    border-radius: 1em;
+    padding-right: 1em;
+  }
+
+  .side_bar_title {
+    display: block;
+    color: #6E78F7;
+    margin-left: 1.2em;
+  }
+
+  .side_bar_medicine_one{
+    display: block;
+    font-size: 1.7em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-top: 1em;
+    font-weight: bold;
+  }
+  
+  .side_bar_item {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    padding-left: 1em;
+    font-weight: 900;
+    color:#3037a1;
+    transition-duration: 0.5s;
+
+  }
+  
+  .side_bar_icon {
+    width: 18px;
+    height: 20px;
+  }
+  
+  .side_bar_text {
+    color: #505bf5;
+  }
+
+  .side_bar_item:hover {
+    background-color: #DFE0E2;
+    color:#6E78F7;
+    margin-left: 3%;
+  }
+  
+  .side_bar_line {
+    border: 1px solid #D3D3D3;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .close_button {
+    display: none;
+  }
+
+  .el-icon svg {
+    color : #6E78F7;
+    padding-top : 0.3em;
+  }
+
+
+
+  .user_name {
+    font-size: 1.3em;
+    text-align: right;
+    margin:0;
+  }
+
+  .user_nick_name {
+    font-size: 0.7em;
+    text-align: right;
+    margin:0;
+  }
+}
