@@ -1,4 +1,3 @@
-registerview.vue
 <template>
 	<div class="container">
 		<HeadBar :header="headerTitle" :btnStyle="headerStyle" class="phone_only" @open-side-bar-event="openSideBar"></HeadBar>

@@ -54,7 +54,7 @@ registerview.vue
 					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
 				</tr>
 				<tr>
-					<p><input type="submit" value="Confirm" class="purple_button" @click= "confirmButton"></p>
+					<p><input type="submit" value="Confirm" class="purple_button" @click= "registerUser"></p>
 				</tr>
 				
 
@@ -74,8 +74,6 @@ import api from '../api/index';
     name: 'RegisterView',
     data() {
       return {
-        // displayFlag : false,
-        // displayDeskOnly: true,
 				iswarning: false,
 				errorMessage : "",
         warningText : "",
@@ -87,6 +85,7 @@ import api from '../api/index';
 				pwdRepeat : "",
 				headerStyle : "Return",
 				headerTitle : "Register",
+				keyWord : "",
       }
     },
     components: {
@@ -98,51 +97,66 @@ import api from '../api/index';
       },
 			verifyCode(){
 				var that=this;
-				console.log(this.code)
 				api.emailVerify(that.userName, that.email).then(function(response){
-					console.log(response.data)  
 				})
 			},
 			backToPrev(){
 				this.$router.back(-1)
 			},
 			confirmButton(){
-				this.isEmpty()
-			},
-			isEmpty(){
 				var that=this;
-				if(that.email.length < 1||that.code.length < 1||that.userName.length < 1||that.nickName.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
-					that.iswarning = true
-					that.warningText = "You must complete all information!"
-					console.log(that.warningText)
-				}
-				else if(that.pwd != that.pwdRepeat){
-					that.iswarning = true
-					that.warningText = "The two password entries are inconsistent, please enter again"
-				}
-				else{
-					that.iswarning = false
+				console.log(this.iswarning)
+				if (that.iswarning == false) {
+					console.log(1)
 					this.registerUser()
+				} else {
+					ElMessage({
+            message: 'Input does not meet requirements',
+            type: 'warning',
+          })
 				}
 			},
       registerUser(){
-				
         var that=this;
-				console.log(that.code)
-        // console.log(this.email);
-				console.log(that.pwd.length > 0 ? "password entered" : "Password is empty");
-				api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
-					console.log(response.data)  
-					console.log(typeof that.code)
+				if(that.email.length < 1||that.code.length < 1||that.userName.length < 1||that.nickName.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
+					ElMessage({
+            message: 'You must complete all information!',
+            type: 'warning',
+						duration: 5000,
+          })
+				} else if (that.pwd.length <= 7) {
+					ElMessage({
+						message: 'The password must be at least 8 characters!',
+						type: 'warning',
+						duration: 5000,
+					})
+				} else if (that.pwd != that.pwdRepeat) {
+					ElMessage({
+						message: 'The two password entries are inconsistent, please enter again',
+						type: 'warning',
+						duration: 5000,
+					})
+				} else {
+					api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
 					if(response.data.status == 200){
             that.$router.push({path : '/'})
+						ElMessage({
+							message: 'Success!',
+							type: 'success',
+							duration: 5000,
+						})
           }
           else{
             that.errorMessage = response.data.msg
-						alert(that.errorMessage + ', please try again!')
+						ElMessage({
+							message: that.errorMessage,
+							type: 'error',
+							duration: 5000,
+						})
           }
 				})
-   		}
+				}
+   		},
     },
     mounted() {
       this.displayDeskOnly = (window.innerWidth > 992)
