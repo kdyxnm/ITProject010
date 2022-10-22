@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  register error info" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  upload image for deployment">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/service-worker.js.map" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,13 +129,7 @@
       <workItem from="1666270771587" duration="317000" />
       <workItem from="1666349155106" duration="11987000" />
       <workItem from="1666400094257" duration="6313000" />
-    </task>
-    <task id="LOCAL-00027" summary="[feat] upload image">
-      <created>1665560085116</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1665560085116</updated>
+      <workItem from="1666448223683" duration="810000" />
     </task>
     <task id="LOCAL-00028" summary="[feat] reset password">
       <created>1665561336953</created>
@@ -470,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666429458193</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="[fix]  upload image for deployment">
+      <created>1666448401345</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1666448401346</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[doc] documents for Zijie's part" />
     <MESSAGE value="[chore] reconstruct project for simplifying deployment" />
     <MESSAGE value="[feat] login by email" />
     <MESSAGE value="[fix] reset password with invalid '}'" />
@@ -610,7 +613,8 @@
     <MESSAGE value="[config] deployment 4.0" />
     <MESSAGE value="[config] deployment 5.0" />
     <MESSAGE value="[fix]  register error info" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]  register error info" />
+    <MESSAGE value="[fix]  upload image for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix]  upload image for deployment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
