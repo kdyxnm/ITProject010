@@ -1,4 +1,6 @@
-# ITProject010
+# Medicine One
+![plot](./favicon.ico)
+
 This is a project from team10 COMP30022 IT-project_2022.
 
 Supervisor: Atie Asadikia
@@ -6,7 +8,9 @@ Supervisor: Atie Asadikia
 Client: 	Bai, Zhongyi
 
 
-# Team Member:
+### Team Member:
+
+![plot](./team_members.jpeg)
 
 | Name  | Email |
 |---|---|
@@ -17,6 +21,7 @@ Client: 	Bai, Zhongyi
 | Tianjin Zhao  | tianjinz@student.unimelb.edu.au |
 
 # Project Description
+![plot](./favicon.ico)
 1. Product Overview:
 
     Medicine One is a website that helps users manage their medicines(or health supplements) by storing basic information about the medication.
