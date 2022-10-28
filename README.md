@@ -39,7 +39,7 @@ Client: 	Bai, Zhongyi
 
 # Code Structure
 ### Front End Code Structure
-* The root path of front end project is `./scr/main/resources/medioneVUE/medicine-one/`
+* The root path of front end project is [here](./scr/main/resources/medioneVUE/medicine-one/)
 ![plot](./frontend_code_structure.jpg)
 
 ### Back End Code Structure
