@@ -83,10 +83,18 @@ export default createStore({
       state.user.authenticationFlag = true
       console.log("Auth flag " + state.user.authenticationFlag)
     },
+
     setRefreshFlag(state, flag){
       console.log("Set refresh flag to " + flag)
       state.refreshFlag = flag
     },
+
+    userLogOff(state){
+      console.log("Authentication flag changed")
+      state.user.authenticationFlag = false
+      console.log("Auth flag " + state.user.authenticationFlag)
+    },
+
 
     updateUser(state, data){
 

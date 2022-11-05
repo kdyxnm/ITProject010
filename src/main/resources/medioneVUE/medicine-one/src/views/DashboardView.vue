@@ -145,11 +145,17 @@ export default {
       console.log("switch to " + mode.view)
       if (mode.view == 'log_off'){
         console.log("user log off");
-        ElMessage({
-                      message: "user log off",
-                      type: 'warning',
-                  })
-        this.$router.back(-1)
+        // ElMessage({
+        //               message: "user log off",
+        //               type: 'warning',
+        //           })
+        ElNotification.success({
+          title: 'Success',
+          message: 'User Log Off',
+          offset: 50,
+        })
+        this.$router.push("/")
+        this.$store.commit("userLogOff")
       }
       else {
         if(mode.view == 'medi_info'){

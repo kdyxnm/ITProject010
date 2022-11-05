@@ -90,10 +90,12 @@ import api from '../api/index';
         var that=this;
         console.log(that.userName);
         console.log(that.pwd.length > 0 ? "password entered" : "Password is empty");
+        const loading = this.openFullScreen2();
         
         api.login(that.userName, that.pwd).then(function(response){
           console.log(response.data.data);
           console.log(response)
+          loading.close()
           if(response.data.status == 200){
             that.$store.commit("authenticate");
             that.$router.push({path : '/dashboard/' + response.data.data.username})
@@ -104,6 +106,18 @@ import api from '../api/index';
         })
 
         console.log("Auth flag " + that.$store.getters.isAuthenticated)
+      },
+
+      openFullScreen2(){
+        const loading = ElLoading.service({
+          lock: true,
+          text: 'Loading',
+          background: 'rgba(0, 0, 0, 0.7)',
+        })
+        // setTimeout(() => {
+        //   loading.close()
+        // }, 10000)
+        return loading
       }
     },
     mounted() {

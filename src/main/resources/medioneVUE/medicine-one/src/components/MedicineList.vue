@@ -112,8 +112,8 @@ export default {
     name: "MedicineList",
     data() {
         return {
-        // display_flag : true,
-        // isPhone : true,
+        display_flag : true,
+        isPhone : true,
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
@@ -220,9 +220,11 @@ export default {
       },
 
       getPageData(curPage, pageSize){
+        const loading = this.openFullScreen2()
         console.log("Getting page " + curPage + " data")
         var that = this
         api.getPageData(curPage, pageSize).then(res => {
+          loading.close()
           console.log("Pagination data received")
           console.log(res.data)
           that.listData = res.data.data.records
@@ -256,10 +258,19 @@ export default {
         return iDays >= 15
       },
 
-}
+      openFullScreen2(){
+        const loading = ElLoading.service({
+          lock: true,
+          text: 'Loading',
+          background: 'rgba(0, 0, 0, 0.7)',
+        })
+        // setTimeout(() => {
+        //   loading.close()
+        // }, 10000)
+        return loading
+      }
 
-
-
+  }
 }
 </script>
 

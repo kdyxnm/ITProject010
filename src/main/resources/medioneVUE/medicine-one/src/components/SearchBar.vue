@@ -168,7 +168,7 @@ const __sfc__ = /*#__PURE__*/_defineComponent({
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => ((state).value = $event)),
         "fetch-suggestions": querySearch,
         "popper-class": "my-autocomplete",
-        placeholder: "Please input",
+        placeholder: "Search For Medicine",
         onSelect: handleSelect
       }, 
       {
