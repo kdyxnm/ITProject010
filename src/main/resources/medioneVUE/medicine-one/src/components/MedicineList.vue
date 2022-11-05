@@ -112,8 +112,8 @@ export default {
     name: "MedicineList",
     data() {
         return {
-        display_flag : true,
-        isPhone : true,
+        //display_flag : true,
+        isPhone : null,
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
@@ -202,11 +202,12 @@ export default {
         console.log("Getting pagination data")
         this.getPageData(1, this.pagesize)
       }
+      this.isPhone = !(window.innerWidth > 992);
 
     },
-    beforeMount(){
-      this.isPhone = !(window.innerWidth > 992);
-    },
+    // beforeMount(){
+    //   this.isPhone = !(window.innerWidth > 992);
+    // },
     methods: {
       changePage(page, pagesize) {
          var _page = this.page,
