@@ -85,7 +85,7 @@
 			<el-dialog
 				v-model="dialogFormVisible1"
 				title="Warning"
-				width="80%"
+				width="60%"
 				align-center
 				center
 			>
@@ -103,7 +103,7 @@
 			<el-dialog
 				v-model="dialogFormVisible2"
 				title="Warning"
-				width="80%"
+				width="60%"
 				align-center
 				center
 			>
@@ -188,14 +188,14 @@ export default {
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200) {
 					console.log(res.data.status)
-					ElMessage({
+					ElNotification({
             message: 'Update successful, please refresh!',
             type: 'success',
           })
 					console.log(res.data.status)
 				} else if(res.data.status == 404) {
-					ElMessage({
-            message: 'Update failed, the quantity was 0 already',
+					ElNotification({
+            message: 'Update failed! Quantity: 0',
             type: 'error',
           })
 					}
@@ -208,13 +208,13 @@ export default {
 				that.dialogFormVisible1 = false;
 				if(res.data.status == 200){
 					this.triggerUpdate()
-					ElMessage({
-            message: 'Update successful',
+					ElNotification({
+            message: 'Update successful!',
             type: 'success',
           }) 
 				} else if(res.data.status == 404) {
-						ElMessage({
-            message: 'Update failed, please try again',
+					ElNotification({
+            message: 'Update failed!',
             type: 'error',
           })
 					}

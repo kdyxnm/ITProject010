@@ -125,7 +125,7 @@ export default {
           ElMessage.error(validFlag.msg)
           return null
         } else if(validFlag.type === "warning"){
-          ElMessage({
+          ElNotification({
                       message: validFlag.msg,
                       type: 'warning',
           })
@@ -143,7 +143,7 @@ export default {
               that.addNote(res.data.data)
             }
 
-            ElMessage({
+            ElNotification({
                       message: 'SUCCESS',
                       type: 'success',
             })
@@ -329,15 +329,15 @@ export default {
                     console.error(e)
                   }
                   //that.form.overdosage = that.FDAResult.overdosage[0]
-                  ElMessage({
-                            message: "FDA data is ready",
+                  ElNotification({
+                            message: "Extra information is ready",
                             type: 'success',
                           })
               },
               ()=>{
                 console.log("Medicine Name Not Found")
-                ElMessage({
-                            message: "No FDA data found",
+                ElNotification({
+                            message: "No extra information found",
                             type: 'warning',
                           })
               });
