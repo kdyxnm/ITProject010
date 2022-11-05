@@ -2,7 +2,7 @@
   <div class="common-layout" style="height:100%">
     <el-container style="height:100%">
       <el-header height="5em" v-if='isPhone'> 
-        <HeadBar :header="user.nickName" @open-side-bar-event="openSideBar"></HeadBar>
+        <HeadBar :header="this.user.nickName" @open-side-bar-event="openSideBar"></HeadBar>
       </el-header>
       <el-container>
 
@@ -54,7 +54,7 @@
 
 
             <div  v-if="displayMode == 'add_medi'" class="dynamic_content_container">
-              <h1> Add medicine component</h1>
+              <!-- <h1> Add medicine component</h1> -->
               <AddMedicine @medicine-updated="updateUserData" @switch-event="handleSwitch"></AddMedicine>
             </div>
 
@@ -172,6 +172,7 @@ export default {
 
     loadUserData(data){
       console.log("loading data ...")
+      console.log(data)
       this.user.nickName = data.nickname;
       console.log(this.user.nickName);
       this.user.userEmail = data.email;
@@ -190,6 +191,7 @@ export default {
       var that = this;
       console.log("getting data ...")
       api.getUserData().then(res =>{
+        console.log("returned user data ...")
         console.log(res.data);
         that.loadUserData(res.data.data);
         that.dataReady = true;
