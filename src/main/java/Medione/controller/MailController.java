@@ -35,7 +35,7 @@ public class MailController {
         }
 
         if(mailService.sendMail(user.getEmail())!=null ){
-            return new R<>(200);
+            return new R<>(200,"email is sent!");
         }
 
         return new R<>(404);
