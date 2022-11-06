@@ -4,70 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  upload image for deployment">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_28.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_client5_httpclient5_5_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_5_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_core5_httpcore5_h2_5_1_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022_10_22_16_58_[Changes]/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022_10_22_16_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022_10_22_16_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_10_22_16_58_[Changes]/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_10_22_16_58_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022_10_22_16_58__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_22_16_48_[Changes]/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_22_16_48_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_10_22_16_48__Changes_.xml" beforeDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  uploadImage2 for deployment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Team10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Team10.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/handler/LoginInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/handler/LoginInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/IMedicineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/IMedicineService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/Team10Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/LocationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/utils/HttpUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/handler/LoginInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/handler/LoginInterceptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/DashboardMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/DashboardMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/DetailMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/DetailMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Location.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Medicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Medicine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/Note.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/Note.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/SimpleMessage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/SimpleMessage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/pojo/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/ILocationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/ILocationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/ISendMailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/ISendMailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/SendMailImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/SendMailImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/UserImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/BaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/BaseContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/CreateAccountError.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/CreateAccountError.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/EmailHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/EmailHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/R.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/R.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RDashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RDashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RLocation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/RMedicine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/RMedicine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/api/path.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineList.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MyLocation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/SearchBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/UploadImage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/UploadImage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/utils/request2.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/utils/request2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/AboutView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/AboutView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/HomeView.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/HttpUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/HttpUtils.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,14 +141,7 @@
       <workItem from="1666400094257" duration="6313000" />
       <workItem from="1666448223683" duration="6497000" />
       <workItem from="1667631886629" duration="17405000" />
-      <workItem from="1667736213769" duration="543000" />
-    </task>
-    <task id="LOCAL-00032" summary="[fix] upload image function rolls back to no id required">
-      <created>1665751206546</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1665751206546</updated>
+      <workItem from="1667736213769" duration="1967000" />
     </task>
     <task id="LOCAL-00033" summary="[fix] upload image function rolls back to no id required">
       <created>1665751253030</created>
@@ -544,7 +479,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666454420678</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="[fix]  uploadImage2 for deployment">
+      <created>1667736803052</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1667736803053</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -659,7 +601,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[chore] reconstruct project for simplifying deployment" />
     <MESSAGE value="[feat] login by email" />
     <MESSAGE value="[fix] reset password with invalid '}'" />
     <MESSAGE value="[chore] dist files" />
@@ -684,7 +625,8 @@
     <MESSAGE value="[config] deployment 5.0" />
     <MESSAGE value="[fix]  register error info" />
     <MESSAGE value="[fix]  upload image for deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]  upload image for deployment" />
+    <MESSAGE value="[fix]  uploadImage2 for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix]  uploadImage2 for deployment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

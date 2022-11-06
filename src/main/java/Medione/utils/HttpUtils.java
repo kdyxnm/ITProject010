@@ -1,9 +1,5 @@
 package Medione.utils;
 
-
-
-//import org.apache.hc.client5.http.classic.HttpClient;
-
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -14,14 +10,11 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.net.http.HttpClient;
 
-import java.net.http.HttpRequest;
-import java.util.HashMap;
-
+/**
+ * @ClassName HttpUtils
+ * @Description utils for sending
+ **/
 public class HttpUtils {
     public static String apiSendPostFile(String url, File files) {
 
@@ -41,7 +34,7 @@ public class HttpUtils {
         }
         HttpEntity<MultiValueMap<String, Object>> params = new HttpEntity<>(form, headers);
 
-        //服务端返回的json格式："
+
         RestTemplate restTemplate= new RestTemplate();
 
         return restTemplate.postForObject(url, params, String.class);

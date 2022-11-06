@@ -200,13 +200,21 @@ public class MedicineController {
         String imagePath = username+"_"+ id + "." + type;
         System.out.println("size: " + file.getSize());
         File f =HttpUtils.multipartFileToFile(file,imagePath);
-        String result = HttpUtils.apiSendPostFile("https://sm.ms/api/v2/upload",f);
 
-        String s = result.split( "\",\"images\":\"")[1].split("\",\"RequestId")[0].
-                replace("\\","");
+        String result = HttpUtils.apiSendPostFile("https://sm.ms/api/v2/upload",f);
+        String s ;
+        if (result.contains( "\"success\":true,\"")){
+            s = result.split("url\":\"")[1].split("\",\"delete")[0].
+                    replace("\\","");
+        }
+        else{
+            s = result.split( "\",\"images\":\"")[1].split("\",\"RequestId")[0].
+                    replace("\\","");
+        }
+
         System.out.println(s);
 
-        System.out.println(result);
+
         return new RMedicine(200,s);
     }
 
