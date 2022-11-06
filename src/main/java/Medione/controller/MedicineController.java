@@ -5,15 +5,14 @@ import Medione.pojo.Medicine;
 import Medione.pojo.Note;
 import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
-import Medione.utils.BaseContext;
-import Medione.utils.R;
-import Medione.utils.RDashboard;
-import Medione.utils.RMedicine;
+import Medione.utils.*;
+import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.system.ApplicationHome;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -149,6 +148,7 @@ public class MedicineController {
         }
     }
 
+
     @PostMapping("/uploadImage")
     public RMedicine setImage(@RequestParam("image") MultipartFile file,HttpServletRequest request) throws Exception {
         if (file.isEmpty()) {
@@ -190,6 +190,39 @@ public class MedicineController {
 
         return new RMedicine(200, "view"+imagePath, "success!");
     }
+    @PostMapping("/uploadImage2")
+    public RMedicine setImage2(@RequestParam("image") MultipartFile file,HttpServletRequest request) throws Exception {
+        String type = file.getContentType();
+        assert type != null;
+        String username = (String) request.getSession().getAttribute("username");
+        type = type.replace("image/","");
+        Integer id = service.list().size() + 1;
+        String imagePath = username+"_"+ id + "." + type;
+        System.out.println("size: " + file.getSize());
+        File f =HttpUtils.multipartFileToFile(file,imagePath);
+
+        String result = HttpUtils.apiSendPostFile("https://sm.ms/api/v2/upload",f);
+        String s ;
+        if (result.contains( "\"success\":true,\"")){
+            s = result.split("url\":\"")[1].split("\",\"delete")[0].
+                    replace("\\","");
+        }
+        else{
+            s = result.split( "\",\"images\":\"")[1].split("\",\"RequestId")[0].
+                    replace("\\","");
+        }
+
+        System.out.println(s);
+
+
+        return new RMedicine(200,s);
+    }
+
+    @Autowired
+    RestTemplate restTemplate;
+
+
+
 
 //    @PostMapping("/uploadImage")
 //    public RMedicine setImage(@RequestParam("image") MultipartFile image,HttpServletRequest request) throws IOException {

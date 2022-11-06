@@ -9,6 +9,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.net.http.HttpRequest;
+
 /**
  * @ClassName LoginInterceptor
  * @Description Interceptor for login. Define cookie and behaviours.
@@ -38,11 +40,8 @@ public class LoginInterceptor implements HandlerInterceptor {
 
         String username = (String) session.getAttribute("username");
         if(username==null){
-//            response.sendRedirect("http://localhost:8080").;
 
-//            request.getRequestDispatcher("http://localhost:8080")
-//                    .forward(request,response)
-            ;
+
             System.out.println("not yet login");
 
             return false;

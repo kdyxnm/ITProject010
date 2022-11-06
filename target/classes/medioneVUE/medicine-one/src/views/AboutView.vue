@@ -14,37 +14,10 @@
               What we do
             </h2>
             <p>
-              asdlfjnalksjd asdkfnl  asdf asdf a asdf asgq sadf qwe dfsvad fsdfg wE SF
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
-              bababababababababababbababab
-              babababbababbabababbabababba
-              babababbababbabababbabababba
-              bababababababababababbababab
-              babababbababbabababbabababbb
+              This is the official website of Medicine One. <br>
+              We are building a website to better help everyone manage their medicines. <br>
+              Our aim is to make it easier for you to browse your medicines, see their details and where they are stored.
+
 
             </p>
           </div>

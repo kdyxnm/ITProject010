@@ -11,6 +11,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -153,6 +156,15 @@ public class MedicineImpl extends ServiceImpl<MedicineDao, Medicine> implements 
             medicine.setLocationid(-2);
             medicineDao.updateById(medicine);
         }
+    }
+    public Boolean sendImage(File image){
+        HttpServletRequest request ;
+        HttpServletResponse response = null;
+        //   headers : {
+        //     'Content-Type' : 'multipart/form-data',
+        //     Authorization  : 'dqOfd2mnoSAKmByqw73K1hVlya5JhpcT'
+        //   }
+        return true;
     }
 
 
