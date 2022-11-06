@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  uploadImage2 for success">
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix]  register with invalid email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MailController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/AddMedicine.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/components/MedicineDetail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/AboutView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/AboutView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/DashboardView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/RegisterView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/medioneVUE/medicine-one/src/views/RegisterView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,13 +139,6 @@
       <workItem from="1666448223683" duration="6497000" />
       <workItem from="1667631886629" duration="17405000" />
       <workItem from="1667736213769" duration="1967000" />
-    </task>
-    <task id="LOCAL-00034" summary="[fix] location api were blocked">
-      <created>1665832838592</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1665832838592</updated>
     </task>
     <task id="LOCAL-00035" summary="[fix] location api were blocked">
       <created>1665832855639</created>
@@ -488,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667739347054</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="[fix]  register with invalid email">
+      <created>1667741944661</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1667741944661</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[fix] reset password with invalid '}'" />
     <MESSAGE value="[chore] dist files" />
     <MESSAGE value="[feat] medicine image update" />
     <MESSAGE value="[build] refactor dist folder" />
@@ -628,7 +622,8 @@
     <MESSAGE value="[fix]  upload image for deployment" />
     <MESSAGE value="[fix]  uploadImage2 for deployment" />
     <MESSAGE value="[fix]  uploadImage2 for success" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix]  uploadImage2 for success" />
+    <MESSAGE value="[fix]  register with invalid email" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix]  register with invalid email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
