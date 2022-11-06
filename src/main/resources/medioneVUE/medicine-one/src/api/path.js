@@ -30,7 +30,7 @@ const base = {
   delLocation : '/location',
 
   addMedicine : '/medicine',
-  uploadImage : '/uploadImage',
+  uploadImage : '/uploadImage2',
   delMedicine : '',
   
 }
