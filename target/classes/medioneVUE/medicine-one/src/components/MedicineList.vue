@@ -68,10 +68,10 @@
                   Validity: 
                 </td>
                 <td style="text-align=right" v-if="this.isValid(medi_data.validity)">
-                  {{medi_data.validity}}  DD/MM/YYYY
+                  {{medi_data.validity}}
                 </td>
                 <td style="text-align=right" class="invalid_medicine" v-if="!this.isValid(medi_data.validity)">
-                  {{medi_data.validity}}  DD/MM/YYYY
+                  {{medi_data.validity}}
                 </td>
               </tr>
               <tr>
@@ -112,8 +112,8 @@ export default {
     name: "MedicineList",
     data() {
         return {
-        // display_flag : true,
-        // isPhone : true,
+        //display_flag : true,
+        isPhone : null,
         pagesize : 5,
         page : 1,
         totalPages : Math.ceil(this.total/this.pagesize),
@@ -202,11 +202,12 @@ export default {
         console.log("Getting pagination data")
         this.getPageData(1, this.pagesize)
       }
+      this.isPhone = !(window.innerWidth > 992);
 
     },
-    beforeMount(){
-      this.isPhone = !(window.innerWidth > 992);
-    },
+    // beforeMount(){
+    //   this.isPhone = !(window.innerWidth > 992);
+    // },
     methods: {
       changePage(page, pagesize) {
          var _page = this.page,
@@ -220,9 +221,11 @@ export default {
       },
 
       getPageData(curPage, pageSize){
+        const loading = this.openFullScreen2()
         console.log("Getting page " + curPage + " data")
         var that = this
         api.getPageData(curPage, pageSize).then(res => {
+          loading.close()
           console.log("Pagination data received")
           console.log(res.data)
           that.listData = res.data.data.records
@@ -256,10 +259,19 @@ export default {
         return iDays >= 15
       },
 
-}
+      openFullScreen2(){
+        const loading = ElLoading.service({
+          lock: true,
+          text: 'Loading',
+          background: 'rgba(0, 0, 0, 0.7)',
+        })
+        // setTimeout(() => {
+        //   loading.close()
+        // }, 10000)
+        return loading
+      }
 
-
-
+  }
 }
 </script>
 
@@ -303,7 +315,7 @@ export default {
   }
   
   .medi_info_left{
-    width: 50%;
+    width: 35%;
     height: 100%;
     text-align: left;
     font-size: 1em;
@@ -312,7 +324,7 @@ export default {
     font-weight: 600;
   }
   .medi_info_right{
-    width: 50%;
+    width: 65%;
     height: 100%;
     text-align: center;
     font-size: 0.8em;

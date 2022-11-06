@@ -1,4 +1,3 @@
-registerview.vue
 <template>
 	<div class="container">
 		<HeadBar :header="headerTitle" :btnStyle="headerStyle" class="phone_only" @open-side-bar-event="openSideBar"></HeadBar>
@@ -41,7 +40,7 @@ registerview.vue
 					<p><input type="button" class="purple_button" value = "Send Verify Code" @click="verifyButton"></p>
 				</tr>
 				<tr>
-					<p><input type="submit" value="Confirm" class="purple_button" @click= "confirmButton"></p>
+					<p><input type="submit" value="Confirm" class="purple_button" @click= "resetPassword"></p>
 				</tr>
 				
 
@@ -93,37 +92,64 @@ import api from '../api/index';
 			confirmButton(){
 				this.isEmpty()
 			},
-			isEmpty(){
-				var that=this;
-				if(that.email.length < 1||that.code.length < 1||that.pwd < 1||that.pwdRepeat < 1){
-					that.iswarning = true
-					that.warningText = "You must complete all information!"
-					console.log(that.warningText)
-				}
-				else if(that.pwd != that.pwdRepeat){
-					that.iswarning = true
-					that.warningText = "The two password entries are inconsistent, please enter again"
-				}
-				else{
-					that.iswarning = false
-					this.registerUser()
-				}
-			},
-      resetPassword(){			
+
+      // resetPassword(){			
+      //   var that=this;
+			// 	api.resetPassward(that.email, that.code, that.pwd).then(function(response){
+			// 		console.log(response.data)  
+			// 		console.log(typeof that.code)
+			// 		if(response.data.status == 200){
+      //       that.$router.push({path : '/'})
+      //     }
+      //     else{
+      //       that.errorMessage = response.data.msg
+			// 			alert(that.errorMessage + ', please try again!')
+      //     }
+			// 	})
+   		// },
+			resetPassword(){		
         var that=this;
-				api.resetPassward(that.email, that.code, that.pwd).then(function(response){
-					console.log(response.data)  
-					console.log(typeof that.code)
+				if(that.email.length < 1||that.code.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
+					ElMessage({
+            message: 'You must complete all information!',
+            type: 'warning',
+						duration: 5000,
+          })
+				} else if (that.pwd.length <= 7) {
+					ElMessage({
+						message: 'The password must be at least 8 characters!',
+						type: 'warning',
+						duration: 5000,
+					})
+				} else if (that.pwd != that.pwdRepeat) {
+					ElMessage({
+						message: 'The two password entries are inconsistent, please enter again',
+						type: 'warning',
+						duration: 5000,
+					})
+				} else {
+					api.resetPassward(that.email, that.code, that.pwd).then(function(response){
 					if(response.data.status == 200){
             that.$router.push({path : '/'})
+						ElMessage({
+							message: 'Success!',
+							type: 'success',
+							duration: 5000,
+						})
           }
           else{
             that.errorMessage = response.data.msg
-						alert(that.errorMessage + ', please try again!')
+						ElMessage({
+							message: that.errorMessage,
+							type: 'error',
+							duration: 5000,
+						})
           }
 				})
-   		}
+				}
+   		},
     },
+
     mounted() {
       this.displayDeskOnly = (window.innerWidth > 992)
     }

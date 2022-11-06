@@ -4,11 +4,21 @@
       <el-form-item label="Name">
         <el-input v-model="form.brandname" @blur="getFDAInfo(form.brandname)"/>
       </el-form-item>
-      <el-form-item label="Location">
-        <el-select v-model="form.locationid" placeholder="select storage locations">
-          <el-option v-for="loc in this.locations" :key="loc" :label=loc.address :value=loc.locationid />
-        </el-select>
-      </el-form-item>
+      <el-popover
+        placement="top-start"
+        title="Location not on the list?"
+        :width="280"
+        trigger="hover"
+        content="Adding a location in My Location."
+      >
+        <template #reference>
+          <el-form-item label="Location">
+            <el-select v-model="form.locationid" placeholder="select storage locations">
+              <el-option v-for="loc in this.locations" :key="loc" :label=loc.address :value=loc.locationid />
+            </el-select>
+          </el-form-item>
+        </template>
+      </el-popover>
       <el-form-item label="Used by">
           <el-date-picker
             v-model="form.validity"

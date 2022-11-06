@@ -1,7 +1,7 @@
 <template>
   <div class="common-layout" style="height:100%">
     <el-container style="height:100%">
-      <el-header height="8em"> <HeadBar :header= '"About us"' @open-side-bar-event="openSideBar"></HeadBar></el-header>
+      <el-header height="8em"> <HeadBar :header= '"About Medicine One"' @open-side-bar-event="openSideBar"></HeadBar></el-header>
       <el-container>
         <el-aside class="aisde">
           <SideBar @close-side-bar-event="closeSideBar" v-show="display_flag" ref="ChildSideBar">

@@ -76,7 +76,7 @@ import api from '../api/index';
       return {
 				iswarning: false,
 				errorMessage : "",
-        warningText : "",
+        emailMessage : "",
         email : "",
 				code : "",
 				userName : "",
@@ -97,7 +97,24 @@ import api from '../api/index';
       },
 			verifyCode(){
 				var that=this;
+				const loading = this.openFullScreen2();
 				api.emailVerify(that.userName, that.email).then(function(response){
+					// that.emailMessage = response.data.msg
+					loading.close()
+					if (response.data.status == 200) {
+						console.log(response.data)
+						ElNotification({
+							message: 'Verify code send out',
+							type: 'success',
+							duration: 5000,
+						}) 
+					} else {
+						ElNotification({
+							message: 'Invalid email',
+							type: 'error',
+							duration: 5000,
+						})
+					}
 				})
 			},
 			backToPrev(){
@@ -121,7 +138,7 @@ import api from '../api/index';
         var that=this;
 				if(that.email.length < 1||that.code.length < 1||that.userName.length < 1||that.nickName.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
 					ElNotification({
-            message: 'You must complete all information!',
+            message: 'Please complete all information!',
             type: 'warning',
 						duration: 5000,
           })
@@ -138,6 +155,8 @@ import api from '../api/index';
 						duration: 5000,
 					})
 				} else {
+					const loading = this.openFullScreen2();
+					loading.close()
 					api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
 					if(response.data.status == 200){
             that.$router.push({path : '/'})
@@ -158,6 +177,17 @@ import api from '../api/index';
 				})
 				}
    		},
+			openFullScreen2(){
+			const loading = ElLoading.service({
+				lock: true,
+				text: 'Loading',
+				background: 'rgba(0, 0, 0, 0.7)',
+			})
+			// setTimeout(() => {
+			//   loading.close()
+			// }, 10000)
+			return loading
+		},
     },
     mounted() {
       this.displayDeskOnly = (window.innerWidth > 992)

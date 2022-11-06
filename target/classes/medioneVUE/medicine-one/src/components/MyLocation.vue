@@ -103,6 +103,9 @@
   },
   created(){
     this.locations = store.getters.getLocations
+    if(this.locations == null){
+      this.locations = []
+    }
   }
 }
 </script>

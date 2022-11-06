@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios2 from "axios";
 
 
-const instance = axios.create({
+const instance2 = axios2.create({
   timeout:15000,
 })
 
@@ -21,4 +21,4 @@ const instance = axios.create({
 
 
 
-export default instance;
+export default instance2;

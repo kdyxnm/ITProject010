@@ -174,6 +174,22 @@ export default {
 
             api.uploadImage(file, progress).then(
                 (res) => {
+                    // console.log(res)
+                    // progress.value = 100;
+                    // imageUrl.value = res.data.data.url;
+                    // var requiredUrl = res.data.data.url
+                    // console.log("upload success the url is " + requiredUrl)
+                    // // document.getElementById("thumbnail").src = requiredUrl;
+                    // context.emit("uploaded", res.data.data.url);
+                    // setTimeout(() => {
+                    //     isProgressVisible.value = false;
+                    //     isSuccessLabelVisible.value = true;
+                    // }, 200);
+                    // ElMessage({
+                    //     message: 'Image uploaded',
+                    //     type: 'success',
+                    // })
+
                     console.log(res)
                     progress.value = 100;
                     imageUrl.value = res.data.data;

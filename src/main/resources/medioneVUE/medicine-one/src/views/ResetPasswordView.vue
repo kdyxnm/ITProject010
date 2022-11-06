@@ -81,9 +81,23 @@ import api from '../api/index';
       },
 			verifyCode(){
 				var that=this;
-				console.log(this.code)
+				const loading = this.openFullScreen2();
 				api.emailVerify(that.userName, that.email).then(function(response){
-					console.log(response.data)  
+					loading.close()
+					if (response.data.status == 200) {
+						console.log(response.data)
+						ElNotification({
+							message: 'Verify code send out',
+							type: 'success',
+							duration: 5000,
+						}) 
+					} else {
+						ElNotification({
+							message: 'Invalid email',
+							type: 'error',
+							duration: 5000,
+						})
+					}  
 				})
 			},
 			backToPrev(){
@@ -92,46 +106,33 @@ import api from '../api/index';
 			confirmButton(){
 				this.isEmpty()
 			},
-
-      // resetPassword(){			
-      //   var that=this;
-			// 	api.resetPassward(that.email, that.code, that.pwd).then(function(response){
-			// 		console.log(response.data)  
-			// 		console.log(typeof that.code)
-			// 		if(response.data.status == 200){
-      //       that.$router.push({path : '/'})
-      //     }
-      //     else{
-      //       that.errorMessage = response.data.msg
-			// 			alert(that.errorMessage + ', please try again!')
-      //     }
-			// 	})
-   		// },
 			resetPassword(){		
         var that=this;
 				if(that.email.length < 1||that.code.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
-					ElMessage({
+					ElNotification({
             message: 'You must complete all information!',
             type: 'warning',
 						duration: 5000,
           })
 				} else if (that.pwd.length <= 7) {
-					ElMessage({
+					ElNotification({
 						message: 'The password must be at least 8 characters!',
 						type: 'warning',
 						duration: 5000,
 					})
 				} else if (that.pwd != that.pwdRepeat) {
-					ElMessage({
-						message: 'The two password entries are inconsistent, please enter again',
+					ElNotification({
+						message: 'The two password are inconsistent!',
 						type: 'warning',
 						duration: 5000,
 					})
 				} else {
+					const loading = this.openFullScreen2();
 					api.resetPassward(that.email, that.code, that.pwd).then(function(response){
+					loading.close()
 					if(response.data.status == 200){
             that.$router.push({path : '/'})
-						ElMessage({
+						ElNotification({
 							message: 'Success!',
 							type: 'success',
 							duration: 5000,
@@ -139,7 +140,7 @@ import api from '../api/index';
           }
           else{
             that.errorMessage = response.data.msg
-						ElMessage({
+						ElNotification({
 							message: that.errorMessage,
 							type: 'error',
 							duration: 5000,
@@ -148,6 +149,17 @@ import api from '../api/index';
 				})
 				}
    		},
+			openFullScreen2(){
+				const loading = ElLoading.service({
+					lock: true,
+					text: 'Loading',
+					background: 'rgba(0, 0, 0, 0.7)',
+				})
+				// setTimeout(() => {
+				//   loading.close()
+				// }, 10000)
+				return loading
+			},
     },
 
     mounted() {

@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[config] deployment 5.0" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] register with sending email">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -126,104 +136,9 @@
       <workItem from="1666270771587" duration="317000" />
       <workItem from="1666349155106" duration="11987000" />
       <workItem from="1666400094257" duration="6313000" />
-    </task>
-    <task id="LOCAL-00026" summary="[fix] storage size">
-      <created>1665497489074</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1665497489074</updated>
-    </task>
-    <task id="LOCAL-00027" summary="[feat] upload image">
-      <created>1665560085116</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1665560085116</updated>
-    </task>
-    <task id="LOCAL-00028" summary="[feat] reset password">
-      <created>1665561336953</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1665561336953</updated>
-    </task>
-    <task id="LOCAL-00029" summary="[fix] logout underscore">
-      <created>1665648957889</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1665648957889</updated>
-    </task>
-    <task id="LOCAL-00030" summary="[fix] logout underscore">
-      <created>1665649139159</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1665649139159</updated>
-    </task>
-    <task id="LOCAL-00031" summary="[fix] cros origin">
-      <created>1665649643982</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1665649643982</updated>
-    </task>
-    <task id="LOCAL-00032" summary="[fix] upload image function rolls back to no id required">
-      <created>1665751206546</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1665751206546</updated>
-    </task>
-    <task id="LOCAL-00033" summary="[fix] upload image function rolls back to no id required">
-      <created>1665751253030</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1665751253030</updated>
-    </task>
-    <task id="LOCAL-00034" summary="[fix] location api were blocked">
-      <created>1665832838592</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1665832838592</updated>
-    </task>
-    <task id="LOCAL-00035" summary="[fix] location api were blocked">
-      <created>1665832855639</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1665832855639</updated>
-    </task>
-    <task id="LOCAL-00036" summary="[fix] location api were blocked">
-      <created>1665832916520</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1665832916520</updated>
-    </task>
-    <task id="LOCAL-00037" summary="[fix] login by email">
-      <created>1666158079586</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1666158079586</updated>
-    </task>
-    <task id="LOCAL-00038" summary="[config] v4 deployment">
-      <created>1666179326065</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1666179326065</updated>
-    </task>
-    <task id="LOCAL-00039" summary="[config] v4 deployment">
-      <created>1666179790158</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1666179790158</updated>
+      <workItem from="1666448223683" duration="6497000" />
+      <workItem from="1667631886629" duration="17405000" />
+      <workItem from="1667736213769" duration="1967000" />
     </task>
     <task id="LOCAL-00040" summary="[config] v4.1 deployment">
       <created>1666181007702</created>
@@ -470,7 +385,105 @@
       <option name="project" value="LOCAL" />
       <updated>1666400978599</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="[fix]  register error info">
+      <created>1666429458193</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1666429458193</updated>
+    </task>
+    <task id="LOCAL-00076" summary="[fix]  upload image for deployment">
+      <created>1666448401345</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1666448401346</updated>
+    </task>
+    <task id="LOCAL-00077" summary="[fix]  upload image for deployment">
+      <created>1666449322181</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1666449322181</updated>
+    </task>
+    <task id="LOCAL-00078" summary="[fix]  upload image for deployment">
+      <created>1666451186526</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1666451186526</updated>
+    </task>
+    <task id="LOCAL-00079" summary="[fix]  upload image for deployment">
+      <created>1666451673620</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1666451673620</updated>
+    </task>
+    <task id="LOCAL-00080" summary="[fix]  upload image for deployment">
+      <created>1666454420677</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1666454420678</updated>
+    </task>
+    <task id="LOCAL-00081" summary="[fix]  uploadImage2 for deployment">
+      <created>1667736803052</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1667736803053</updated>
+    </task>
+    <task id="LOCAL-00082" summary="[fix]  uploadImage2 for success">
+      <created>1667739347054</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1667739347054</updated>
+    </task>
+    <task id="LOCAL-00083" summary="[fix]  register with invalid email">
+      <created>1667741944661</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1667741944661</updated>
+    </task>
+    <task id="LOCAL-00084" summary="[fix] register with invalid email">
+      <created>1667742166590</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1667742166590</updated>
+    </task>
+    <task id="LOCAL-00085" summary="[fix] register with invalid email">
+      <created>1667742252203</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1667742252203</updated>
+    </task>
+    <task id="LOCAL-00086" summary="[fix] register with invalid email2">
+      <created>1667742751961</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1667742751961</updated>
+    </task>
+    <task id="LOCAL-00087" summary="[fix] register with sending email">
+      <created>1667743328906</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1667743328906</updated>
+    </task>
+    <task id="LOCAL-00088" summary="[fix] register with sending email">
+      <created>1667744129340</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1667744129340</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,14 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[fix] password in the login response" />
-    <MESSAGE value="[doc] documents for Zijie's part" />
-    <MESSAGE value="[chore] reconstruct project for simplifying deployment" />
-    <MESSAGE value="[feat] login by email" />
-    <MESSAGE value="[fix] reset password with invalid '}'" />
-    <MESSAGE value="[chore] dist files" />
-    <MESSAGE value="[feat] medicine image update" />
-    <MESSAGE value="[build] refactor dist folder" />
     <MESSAGE value="[fix] theme colour #6E78F7" />
     <MESSAGE value="[fix] image size of medicine" />
     <MESSAGE value="[fix] storage size" />
@@ -610,7 +615,15 @@
     <MESSAGE value="[fix] image uploading" />
     <MESSAGE value="[config] deployment 4.0" />
     <MESSAGE value="[config] deployment 5.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="[config] deployment 5.0" />
+    <MESSAGE value="[fix]  register error info" />
+    <MESSAGE value="[fix]  upload image for deployment" />
+    <MESSAGE value="[fix]  uploadImage2 for deployment" />
+    <MESSAGE value="[fix]  uploadImage2 for success" />
+    <MESSAGE value="[fix]  register with invalid email" />
+    <MESSAGE value="[fix] register with invalid email" />
+    <MESSAGE value="[fix] register with invalid email2" />
+    <MESSAGE value="[fix] register with sending email" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] register with sending email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
