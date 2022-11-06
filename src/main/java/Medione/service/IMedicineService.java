@@ -5,6 +5,7 @@ import Medione.pojo.SimpleMessage;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -33,4 +34,6 @@ public interface IMedicineService extends IService<Medicine> {
     Boolean takeMedicine(Integer id, Integer amount);
 
     void changeLocation(Integer locationid);
+
+    Boolean sendImage(File image);
 }
