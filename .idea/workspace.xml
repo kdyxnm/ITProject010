@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] register with invalid email2">
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] register with sending email">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MailController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,20 +139,6 @@
       <workItem from="1666448223683" duration="6497000" />
       <workItem from="1667631886629" duration="17405000" />
       <workItem from="1667736213769" duration="1967000" />
-    </task>
-    <task id="LOCAL-00038" summary="[config] v4 deployment">
-      <created>1666179326065</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1666179326065</updated>
-    </task>
-    <task id="LOCAL-00039" summary="[config] v4 deployment">
-      <created>1666179790158</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1666179790158</updated>
     </task>
     <task id="LOCAL-00040" summary="[config] v4.1 deployment">
       <created>1666181007702</created>
@@ -483,7 +469,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667742751961</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="[fix] register with sending email">
+      <created>1667743328906</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1667743328906</updated>
+    </task>
+    <task id="LOCAL-00088" summary="[fix] register with sending email">
+      <created>1667744129340</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1667744129340</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[build] refactor dist folder" />
     <MESSAGE value="[fix] theme colour #6E78F7" />
     <MESSAGE value="[fix] image size of medicine" />
     <MESSAGE value="[fix] storage size" />
@@ -623,7 +622,8 @@
     <MESSAGE value="[fix]  register with invalid email" />
     <MESSAGE value="[fix] register with invalid email" />
     <MESSAGE value="[fix] register with invalid email2" />
-    <option name="LAST_COMMIT_MESSAGE" value="[fix] register with invalid email2" />
+    <MESSAGE value="[fix] register with sending email" />
+    <option name="LAST_COMMIT_MESSAGE" value="[fix] register with sending email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
