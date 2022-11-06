@@ -24,9 +24,14 @@
               <SearchBar :key="this.user.numMedicine" @switch-event="handleSwitch"></SearchBar>
             </div>
 
-            <!-- <div v-show="displayMode == 'loading'" class="dynamic_content_container">
-              <h1>Loading ......</h1>
-            </div> -->
+            <div v-if="displayMode == 'empty'" class="dynamic_content_container">
+              <el-empty :description=emptyDescription />
+              <div>
+                <p class="empty_note" v-if="isPhone">Click ≡ on top left to open the side bar<br>Click Add Location on side bar<br>Then add locations where you may store drugs<br>Click Add Medicine on side bar<br>Then add medicine to your repository</p>
+                <p class="empty_note" v-if="!isPhone">Click Add Location on side bar<br>Then add locations where you may store drugs<br>Click Add Medicine on side bar<br>Then add medicine to your repository</p>            
+              </div>
+
+            </div>
 
             <div v-if="displayMode == 'default'" class="dynamic_content_container">
               <MedicineList :total="this.user.numMedicine" @switch-event="handleSwitch"></MedicineList>
@@ -98,7 +103,7 @@ export default {
     return {
       displayFlag : false,
       isPhone : true,
-      displayMode : 'default',
+      displayMode : null,
       dataReady : false,
       mediInfoId : null,
       blurResult : null,
@@ -111,7 +116,9 @@ export default {
         numMedicine : null,
         locations : null,
         userMatadata : null,
-      }
+      },
+
+      emptyDescription : "No User Data"
     }
   },
   components: {
@@ -200,15 +207,26 @@ export default {
         console.log("returned user data ...")
         console.log(res.data);
         that.loadUserData(res.data.data);
+        this.setDisplayMode()
         that.dataReady = true;
+        
       })
     },
 
     updateUserData(){
       console.log("updating user data")
       this.getUserData()
+    },
+
+    setDisplayMode(){
+      if(this.user.numMedicine === 0){
+        this.displayMode = 'empty'
+      }else{
+        this.displayMode = 'default'
+      }
     }
   },
+
   created(){
     this.isPhone = !(window.innerWidth > 992);
     this.displayFlag = (window.innerWidth > 992);
@@ -219,7 +237,9 @@ export default {
     console.log("Load user data form backend")
     this.getUserData()
     console.log("load finished")
+    console.log(this.user.numMedicine)
   },
+
   mounted() {
     // this.display_flag = (window.innerWidth > 992);
     // processAutoCompleteData();
@@ -257,6 +277,14 @@ export default {
     padding-top: 0px;
     margin-top: 0px;
     border-top: 0px;
+  }
+
+  .empty_note {
+    color: #6E78F7;
+    border-radius: 2em;
+    box-shadow: 6px 6px 6px #b8cbdd;
+    border: 1px solid #babbbd;
+    padding : 1em;
   }
 
   

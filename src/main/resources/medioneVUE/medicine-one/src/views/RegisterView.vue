@@ -110,29 +110,30 @@ import api from '../api/index';
 					console.log(1)
 					this.registerUser()
 				} else {
-					ElMessage({
-            message: 'Input does not meet requirements',
+					ElNotification({
+            message: 'Input does not meet requirements.',
             type: 'warning',
+						duration: 5000,
           })
 				}
 			},
       registerUser(){
         var that=this;
 				if(that.email.length < 1||that.code.length < 1||that.userName.length < 1||that.nickName.length < 1||that.pwd.length < 1||that.pwdRepeat.length < 1){
-					ElMessage({
+					ElNotification({
             message: 'You must complete all information!',
             type: 'warning',
 						duration: 5000,
           })
 				} else if (that.pwd.length <= 7) {
-					ElMessage({
+					ElNotification({
 						message: 'The password must be at least 8 characters!',
 						type: 'warning',
 						duration: 5000,
 					})
 				} else if (that.pwd != that.pwdRepeat) {
-					ElMessage({
-						message: 'The two password entries are inconsistent, please enter again',
+					ElNotification({
+						message: 'Password entries are inconsistent. Please enter again!',
 						type: 'warning',
 						duration: 5000,
 					})
@@ -140,7 +141,7 @@ import api from '../api/index';
 					api.register(that.email, that.code, that.userName, that.nickName, that.pwd).then(function(response){
 					if(response.data.status == 200){
             that.$router.push({path : '/'})
-						ElMessage({
+						ElNotification({
 							message: 'Success!',
 							type: 'success',
 							duration: 5000,
@@ -148,7 +149,7 @@ import api from '../api/index';
           }
           else{
             that.errorMessage = response.data.msg
-						ElMessage({
+						ElNotification({
 							message: that.errorMessage,
 							type: 'error',
 							duration: 5000,

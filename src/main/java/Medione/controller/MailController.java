@@ -30,10 +30,12 @@ public class MailController {
 
     @PostMapping("send")
     public R<User> send(HttpSession session, @RequestBody User user){
-
+        if (!user.getEmail().contains("@")  ){
+            return new R<>(404,"invalid email");
+        }
 
         if(mailService.sendMail(user.getEmail())!=null ){
-            return new R<>(200);
+            return new R<>(200,"email is sent!");
         }
 
         return new R<>(404);
