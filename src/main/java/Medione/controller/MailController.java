@@ -30,8 +30,12 @@ public class MailController {
 
     @PostMapping("send")
     public R<User> send(HttpSession session, @RequestBody User user){
-
-
+        if(! mailService.sendMail(user.getEmail()).contains("@") ){
+            return new R<>(404);
+        }
+        if(! mailService.sendMail(user.getEmail()).contains(".com") ){
+            return new R<>(404);
+        }
         if(mailService.sendMail(user.getEmail())!=null ){
             return new R<>(200);
         }
