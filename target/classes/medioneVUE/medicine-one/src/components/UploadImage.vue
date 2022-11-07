@@ -193,10 +193,10 @@ export default {
                     console.log(res)
                     progress.value = 100;
                     imageUrl.value = res.data.data;
-                    var requiredUrl = baseUrl + '/' + res.data.data
+                    var requiredUrl = imageUrl.value
                     console.log("upload success the url is " + requiredUrl)
                     // document.getElementById("thumbnail").src = requiredUrl;
-                    context.emit("uploaded", baseUrl + '/' + res.data.data);
+                    context.emit("uploaded", imageUrl.value);
                     setTimeout(() => {
                         isProgressVisible.value = false;
                         isSuccessLabelVisible.value = true;
