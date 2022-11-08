@@ -214,7 +214,7 @@ export default {
                     } else {
                         ElNotification({
                         title: 'Error',
-                        message: "Oops, image too large",
+                        message: "Oops, image size exceeds its maximum permitted size of 1MB",
                         type: 'error',
                     })
                     }
