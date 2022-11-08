@@ -191,10 +191,10 @@ export default {
                     // })
 
                     console.log(res)
-                    if(res.data.status == 200){
-                        progress.value = 100;
+                    if(res.data.status = 200){
+                         progress.value = 100;
                         imageUrl.value = res.data.data;
-                        var requiredUrl = imageUrl.value
+                        var requiredUrl = imageUrl.value 
                         console.log("upload success the url is " + requiredUrl)
                         // document.getElementById("thumbnail").src = requiredUrl;
                         context.emit("uploaded", imageUrl.value);
@@ -202,28 +202,33 @@ export default {
                             isProgressVisible.value = false;
                             isSuccessLabelVisible.value = true;
                         }, 200);
+                        // ElMessage({
+                        //     message: 'Image uploaded',
+                        //     type: 'success',
+                        // })
                         ElNotification({
                             title: 'Success',
-                            message: 'Image Upload Success',
+                            message: 'Image uploaded',
                             type: 'success',
                         })
                     } else {
                         ElNotification({
-                            title: 'Error',
-                            message: 'Oops, uploaded failed. Image too large',
-                            type: 'error',
-                        })
+                        title: 'Error',
+                        message: "Oops, image too large",
+                        type: 'error',
+                    })
                     }
-                    
+                   
                 },
                 () => {
                     // console.log(res)
                     isProgressVisible.value = false;
                     localImageUrl.value = "";
                     context.emit("uploaded", "");
+                    // ElMessage.error("Oops, uploaded failed")
                     ElNotification({
                         title: 'Error',
-                        message: 'Oops, uploaded failed',
+                        message: "Oops, uploaded failed",
                         type: 'error',
                     })
                 }
