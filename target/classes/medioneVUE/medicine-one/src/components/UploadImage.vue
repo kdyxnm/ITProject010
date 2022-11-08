@@ -191,7 +191,7 @@ export default {
                     // })
 
                     console.log(res)
-                    if(res.data.status = 200){
+                    if(res.data.status == 200){
                          progress.value = 100;
                         imageUrl.value = res.data.data;
                         var requiredUrl = imageUrl.value 
@@ -214,23 +214,32 @@ export default {
                     } else {
                         ElNotification({
                         title: 'Error',
-                        message: "Oops, image too large",
+                        message: "Oops, image size exceeds its maximum permitted size of 1MB",
                         type: 'error',
                     })
                     }
                    
                 },
-                () => {
-                    // console.log(res)
+                (res) => {
+                    console.log(res)
                     isProgressVisible.value = false;
                     localImageUrl.value = "";
                     context.emit("uploaded", "");
                     // ElMessage.error("Oops, uploaded failed")
-                    ElNotification({
-                        title: 'Error',
-                        message: "Oops, uploaded failed",
-                        type: 'error',
-                    })
+                    if(res.response.status == 500){
+                        ElNotification({
+                            title: 'Error',
+                            message: "Oops, image size exceeds its maximum permitted size of 1MB",
+                            type: 'error',
+                        })
+                    } else {
+                        ElNotification({
+                            title: 'Error',
+                            message: "Oops, upload failed",
+                            type: 'error',
+                        })
+                    }
+
                 }
             );
         }
