@@ -191,7 +191,7 @@ export default {
                     // })
 
                     console.log(res)
-                    if(res.data.status = 200){
+                    if(res.data.status == 200){
                          progress.value = 100;
                         imageUrl.value = res.data.data;
                         var requiredUrl = imageUrl.value 
