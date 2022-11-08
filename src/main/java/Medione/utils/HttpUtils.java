@@ -1,5 +1,7 @@
 package Medione.utils;
 
+import net.coobird.thumbnailator.Thumbnails;
+import net.coobird.thumbnailator.name.Rename;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -9,7 +11,9 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.awt.image.BufferedImage;
 import java.io.*;
+import java.util.UUID;
 
 /**
  * @ClassName HttpUtils
@@ -93,5 +97,28 @@ public class HttpUtils {
 
 
 
+
+    /**
+     *
+     * @param file file needed to compress
+     * @return path
+     */
+    public static File thumbnail(MultipartFile file) throws Exception {
+        String originalFilename = file.getOriginalFilename();
+        String ext = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
+        String name = UUID.randomUUID().toString().replaceAll("-", "");
+        Rename f = null;
+        File image = null;
+        System.out.println("size: "+file.getSize());
+        if (file.getSize()>1048576/4) { //4 bytes for a Long
+            image= Thumbnails.of(file.getInputStream()).scale(0.5f)
+                    .outputQuality(0.15f)
+                    .outputFormat(ext).asFiles(f).get(0);
+        }
+        else{
+            image = multipartFileToFile(file,name);
+        }
+        return image;
     }
+}
 

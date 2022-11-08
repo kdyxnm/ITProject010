@@ -162,12 +162,12 @@ export default {
 			var that=this;
 			api.addMediNote(this.mediId, that.userNote).then(res=>{
 			if(res.data.status == 200) {
-					ElMessage({
+					ElNotification({
             message: 'Update successful!',
             type: 'success',
           })
 				} else if(res.data.status == 404) {
-					ElMessage({
+					ElNotification({
             message: 'Update failed',
             type: 'error',
           })

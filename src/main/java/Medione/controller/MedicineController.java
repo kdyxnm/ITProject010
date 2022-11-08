@@ -199,7 +199,7 @@ public class MedicineController {
         Integer id = service.list().size() + 1;
         String imagePath = username+"_"+ id + "." + type;
         System.out.println("size: " + file.getSize());
-        File f =HttpUtils.multipartFileToFile(file,imagePath);
+        File f =HttpUtils.thumbnail(file);
 
         String result = HttpUtils.apiSendPostFile("https://sm.ms/api/v2/upload",f);
         String s ;

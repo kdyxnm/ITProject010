@@ -71,7 +71,8 @@
 
 
             <div v-if="displayMode == 'about'" class="dynamic_content_container">
-              <h1> About component version 2</h1>
+              <h1 style="font-size:2em">About Medicine One</h1>
+              <AboutContent></AboutContent>
             </div>
 
             
