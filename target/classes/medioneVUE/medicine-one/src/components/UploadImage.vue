@@ -191,27 +191,41 @@ export default {
                     // })
 
                     console.log(res)
-                    progress.value = 100;
-                    imageUrl.value = res.data.data;
-                    var requiredUrl = imageUrl.value
-                    console.log("upload success the url is " + requiredUrl)
-                    // document.getElementById("thumbnail").src = requiredUrl;
-                    context.emit("uploaded", imageUrl.value);
-                    setTimeout(() => {
-                        isProgressVisible.value = false;
-                        isSuccessLabelVisible.value = true;
-                    }, 200);
-                    ElMessage({
-                        message: 'Image uploaded',
-                        type: 'success',
-                    })
+                    if(res.data.status == 200){
+                        progress.value = 100;
+                        imageUrl.value = res.data.data;
+                        var requiredUrl = imageUrl.value
+                        console.log("upload success the url is " + requiredUrl)
+                        // document.getElementById("thumbnail").src = requiredUrl;
+                        context.emit("uploaded", imageUrl.value);
+                        setTimeout(() => {
+                            isProgressVisible.value = false;
+                            isSuccessLabelVisible.value = true;
+                        }, 200);
+                        ElNotification({
+                            title: 'Success',
+                            message: 'Image Upload Success',
+                            type: 'success',
+                        })
+                    } else {
+                        ElNotification({
+                            title: 'Error',
+                            message: 'Oops, uploaded failed. Image too large',
+                            type: 'error',
+                        })
+                    }
+                    
                 },
                 () => {
                     // console.log(res)
                     isProgressVisible.value = false;
                     localImageUrl.value = "";
                     context.emit("uploaded", "");
-                    ElMessage.error("Oops, uploaded failed")
+                    ElNotification({
+                        title: 'Error',
+                        message: 'Oops, uploaded failed',
+                        type: 'error',
+                    })
                 }
             );
         }

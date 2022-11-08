@@ -5,6 +5,7 @@ C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\config\WebConfi
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\pojo\DetailMessage.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\service\IMedicineService.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\service\ISendMailService.java
+C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\utils\HttpUtils.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\pojo\Location.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\controller\UserController.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\utils\BaseContext.java
@@ -29,6 +30,7 @@ C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\pojo\Medicine.j
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\service\impl\UserImpl.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\utils\RLocation.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\dao\UserDao.java
+C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\config\RestTemplateConfig.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\controller\DataGeneratorController.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\config\MpConfig.java
 C:\Users\su\Desktop\IT\Team10\ITProject010\src\main\java\Medione\utils\R.java
