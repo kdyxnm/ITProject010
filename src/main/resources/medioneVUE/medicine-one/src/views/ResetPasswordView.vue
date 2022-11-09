@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This view contains the reset password function
+*               fucntion about reset password, email verification
+* @author: Tianjin zhao
+* @update: Tianjin zhao(2022-11-7 15:24)
+*
+*/
 <template>
 	<div class="container">
 		<HeadBar :header="headerTitle" :btnStyle="headerStyle" class="phone_only" @open-side-bar-event="openSideBar"></HeadBar>

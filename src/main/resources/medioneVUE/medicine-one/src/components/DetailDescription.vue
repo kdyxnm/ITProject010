@@ -1,3 +1,13 @@
+/**
+/*
+* 
+* @description: This component contains medicine detail description,
+*               medicine detail description obtain from external database 
+* @author: Tianjin zhao
+* @update: Tianjin zhao(2022-11-8 19:14)
+*
+*/
+
 <template>
   <div class="demo-collapse">
     <el-collapse v-model="activeName" accordion>

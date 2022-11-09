@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains the information of about us
+* @author: Tianjin zhao
+* @update: Tianjin zhao(2022-11-7 15:24)
+*
+*/
+
 <template>
 	<div class="about_content">
 	<h1>

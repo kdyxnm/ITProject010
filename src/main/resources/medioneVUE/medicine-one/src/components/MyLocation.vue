@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains add location function, 
+*               function about add new location, delete location
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-4 11:16)
+*
+*/
 <template>
   <div class="my_location_container">
     <div class="location_contrainer" v-for="(loc,index) in this.locations" :key='loc'>

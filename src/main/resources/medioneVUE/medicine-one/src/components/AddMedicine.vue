@@ -1,3 +1,13 @@
+/**
+/*
+* 
+* @description: This component contains add medicine page function,
+*               function include add medicine, upload image, show medicine details
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-3 10:14)
+*
+*/
+
 <template>
   <div class="add_medi">
     <el-form :model="form" :label-width="this.formWidth" class="add_medi_form">
@@ -132,7 +142,7 @@ export default {
       onSubmit() {
         var validFlag = this.isFormValid(this.form)
         if(validFlag.type === "error"){
-          ElMessage.error(validFlag.msg)
+          ElNotification.error(validFlag.msg)
           return null
         } else if(validFlag.type === "warning"){
           ElNotification({

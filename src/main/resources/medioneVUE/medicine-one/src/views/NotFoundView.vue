@@ -1,3 +1,11 @@
+/**
+/*
+* 
+* @description: This view will be shown when website URL not found
+* @author: Yuchen Cao
+* @update: Yuchen Cao(2022-11-7 10:14)
+*
+*/
 <template>
   <div class="error-container">
       <div class="error-content">
