@@ -1,3 +1,11 @@
+/**
+/*
+* 
+* @description: This view list all the medicine general information
+* @author: Yuchen Cao
+* @update: Yuchen Cao(2022-11-7 15:24)
+*
+*/
 <template>
   <div class="common-layout" style="height:100%">
     <el-container style="height:100%">

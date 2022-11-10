@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains seach bar function
+*               function about blury search and accurate search for search medicine
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-4 11:16)
+*
+*/
 <template>
   <el-autocomplete
     v-model="state"

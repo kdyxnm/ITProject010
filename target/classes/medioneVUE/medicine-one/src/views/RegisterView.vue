@@ -1,4 +1,12 @@
-registerview.vue
+/**
+/*
+* 
+* @description: This view contains the register function
+*               fucntion about email verification, register a new user
+* @author: Tianjin zhao
+* @update: Tianjin zhao(2022-11-7 12:20)
+*
+*/
 <template>
 	<div class="container">
 		<HeadBar :header="headerTitle" :btnStyle="headerStyle" class="phone_only" @open-side-bar-event="openSideBar"></HeadBar>

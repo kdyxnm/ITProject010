@@ -2,6 +2,7 @@ package Medione.service.impl;
 
 import Medione.dao.LocationDao;
 import Medione.pojo.Location;
+import Medione.pojo.Medicine;
 import Medione.service.ILocationService;
 import Medione.service.IMedicineService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -28,7 +29,10 @@ public class LocationImpl extends ServiceImpl<LocationDao, Location> implements 
 
     @Override
     public Boolean deleteLocation(Integer locationid) {
-        return locationDao.deleteById(locationid) >0;
+        Location location = locationDao.selectById(locationid);
+        location.setEmail(" ");
+        location.setAddress(" ");
+        return locationDao.updateById(location)>0;
     }
 
     @Override

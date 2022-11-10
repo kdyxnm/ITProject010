@@ -1,6 +1,7 @@
 package Medione.controller;
 
 import Medione.pojo.DetailMessage;
+import Medione.pojo.Location;
 import Medione.pojo.Medicine;
 import Medione.pojo.Note;
 import Medione.service.ILocationService;
@@ -328,7 +329,15 @@ public class MedicineController {
         String username = medicine.getUsername();
         Integer locationid = medicine.getLocationid();
         String note = medicine.getNote();
-        String location = locationService.getLocation(locationid).getAddress();
+        Location locationS = locationService.getLocation(locationid);
+        String location = null;
+        if (locationS==null){
+            location = " ";
+        }
+        else{
+            location= locationS .getAddress();
+        }
+
         DetailMessage detailMessage = new DetailMessage(id,brandname,image,quantity,validity,dosage,
                 dosagetype,quantitytype,manufacturername,genericname,producttype,route,description,
                 usage,warnings,contraindications,adversereaction,overdosage,username,locationid,note,

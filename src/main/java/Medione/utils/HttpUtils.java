@@ -107,17 +107,12 @@ public class HttpUtils {
         String originalFilename = file.getOriginalFilename();
         String ext = originalFilename.substring(originalFilename.lastIndexOf(".") + 1);
         String name = UUID.randomUUID().toString().replaceAll("-", "");
-        Rename f = null;
+        Rename f = Rename.NO_CHANGE;
         File image = null;
         System.out.println("size: "+file.getSize());
-        if (file.getSize()>1048576/4) { //4 bytes for a Long
-            image= Thumbnails.of(file.getInputStream()).scale(0.5f)
-                    .outputQuality(0.15f)
-                    .outputFormat(ext).asFiles(f).get(0);
-        }
-        else{
-            image = multipartFileToFile(file,name);
-        }
+
+        image = multipartFileToFile(file,name);
+
         return image;
     }
 }

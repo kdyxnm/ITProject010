@@ -1,3 +1,11 @@
+/**
+/*
+* 
+* @description: This component contains the style of the sidebar for all web pages
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-3 10:16)
+*
+*/
 <template>
   <div class = "side_bar" id="side_bar">
     <div class = "side_bar_title">

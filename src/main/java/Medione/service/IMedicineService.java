@@ -35,5 +35,7 @@ public interface IMedicineService extends IService<Medicine> {
 
     void changeLocation(Integer locationid);
 
-    Boolean sendImage(File image);
+
+    List<Medicine> getListByLocation(Integer id);
+
 }

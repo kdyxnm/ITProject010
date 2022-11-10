@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains medicine list in the dashboard view
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-3 11:16)
+*
+*/
+
 <template>
   <div class="list_containder">
     <!-- <h1> {{ this.title }}</h1> -->
