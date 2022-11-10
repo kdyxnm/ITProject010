@@ -1,3 +1,11 @@
+/**
+/*
+* 
+* @description: This view contains the login function
+* @author: Yuchen Cao
+* @update: Yuchen Cao(2022-11-5 12:14)
+*
+*/
 <template>
   <div class="container">
     <div class = "website_header phone_only">

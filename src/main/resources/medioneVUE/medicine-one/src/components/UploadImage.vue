@@ -1,3 +1,11 @@
+/**
+/*
+* 
+* @description: This component contains upload medicine image function
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-1 10:16)
+*
+*/
 <template>
     <div class="uploader">
         <!-- <el-button type="primary" @click="addImage()" style="margin-top : 2em ; margin-bottom : 1em">Add Photo</el-button> -->

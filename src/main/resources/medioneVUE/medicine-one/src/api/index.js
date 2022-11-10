@@ -2,6 +2,7 @@ import axios from '../utils/request'
 import path from './path'
 import axios2 from "../utils/request2"
 
+// Encapsulation of backend API request
 const api = {
   login(username, pwd){
     var userinfo = {

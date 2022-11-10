@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains medicine list pagination function in the dashboard view
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-4 11:16)
+*
+*/
+
 <template>
   <div class = " flex all-center">
     <template v-if="total > 0">

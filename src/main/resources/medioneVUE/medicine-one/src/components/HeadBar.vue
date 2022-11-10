@@ -1,3 +1,12 @@
+/**
+/*
+* 
+* @description: This component contains the style of the headbar for all web pages
+* @author: Yuchen Cao
+* @update: Yuchen Cao (2022-11-3 10:16)
+*
+*/
+
 <template>
   <div class = "website_header">
     <button v-if="btnStyle == sidebar" @click="openNav" class="open_button">

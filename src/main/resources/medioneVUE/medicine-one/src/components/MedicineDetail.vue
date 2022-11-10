@@ -1,3 +1,13 @@
+/**
+/*
+* 
+* @description: This component contains medicine detail page function,
+*               function include connection with database show medicine information, 
+*               finish the medicine, delete the medicine, add note
+* @author: Tianjin zhao
+* @update: Tianjin zhao(2022-11-6 15:24)
+*
+*/
 <template>
 	<div class="overall_content">
 		<div class = "brief_description">
@@ -89,7 +99,7 @@
 				align-center
 				center
 			>
-				<span class="warning_text">Are you sure you have finished this medicine?</span>
+				<span class="warning_text">This operation will reduce one storage quantity of this medicine</span>
 				<template #footer>
 					<span class="dialog-footer">
 						<el-button @click="dialogFormVisible1 = false">Cancel</el-button>
