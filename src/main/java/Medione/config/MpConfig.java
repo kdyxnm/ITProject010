@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 
 /**
- * @ClassName
- * @Description
+ * @ClassName MpConfig
+ * @Description pagination configuration
  **/
 @Configuration
 public class MpConfig {

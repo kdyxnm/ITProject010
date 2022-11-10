@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Random;
 
 /**
- * @ClassName
- * @Description
+ * @ClassName DataGeneratorController
+ * @Description generate random testing data
  **/
 @RestController
 @RequestMapping("/generator")

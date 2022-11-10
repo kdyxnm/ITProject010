@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] fixing UploadImage.vue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02187f73e6074ba896891174dbd90098" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/344d64449d4e4e2c8460586922da6743" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/a8baf28766ca4b0596822b82d1974dfc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/b281cc5ceb5548f6945ab3fc60a9265b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/c2b4826e287b45e487e7052831cb6581" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/MedicineController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/IMedicineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/IMedicineService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/LocationImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/LocationImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/service/impl/MedicineImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/utils/HttpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/utils/HttpUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/config/WebConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/controller/MedicineController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/IMedicineService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/LocationImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/service/impl/MedicineImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Medione/utils/HttpUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Medione/utils/HttpUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/index.html" beforeDir="false" />
+    <list default="true" id="78593477-d99d-44df-9685-8a0700f1501c" name="Changes" comment="[fix] fixing after deleting location, cannot see medicine detailed pages">
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/config/MpConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/config/MpConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/controller/DataGeneratorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/controller/DataGeneratorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Medione/pojo/DetailMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Medione/pojo/DetailMessage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="deployment_branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

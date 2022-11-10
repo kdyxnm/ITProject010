@@ -3,6 +3,9 @@ package Medione.pojo;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
 
+ /** @ClassName DetailMessage
+  * @Description simple java class of DetailMessage of medicine
+**/
 @Data
 public class DetailMessage {
     private Integer id;
